@@ -26,9 +26,9 @@
       display: none;
     }
     #prices {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
+      -ms-overflow-style: none;  /* IE and Edge
+      scrollbar-width: none;  /* Firefox */
+    }
   </style>
 </head>
 <body class="text-[#FFFFFF] font-['Montserrat'] min-w-full overflow-x-hidden">
@@ -59,7 +59,7 @@
 
       <div class="absolute w-screen left-0 h-[1200px] bg-gradient-radial md:bg-gradient-radial-md from-[rgba(0,108,255,0.36)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
 
-      <div class="flex items-center justify-between pt-[40px]">
+      <div class="flex items-center justify-between pt-[40px] relative z-10">
         <div class="flex items-center">
           <div class="py-[10px]">
             <img src="/images/header-logo.svg" />
@@ -74,11 +74,12 @@
         </div>
         <div class="items-center gap-[40px] text-[16px] hidden lg:flex">
           <a href="https://trade.altex.mn/">Арилжаа</a>
-          <div>
+          <div class="relative group">
             Бидний тухай
             <img class="inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
-            <div class="flex">
-              
+            <div class="absolute flex-col hidden group-hover:flex">
+              <a href="https://altex.mn/second.html">Биржийн тухай</a>
+              <a href="https://altex.mn/our_team.html">Баг хамт олон</a>
             </div>
           </div>
           <div>
@@ -103,7 +104,9 @@
 
       <div class="text-[24px] text-[#13A9FD] mb-[40px]">Зах зээлийн тренд</div>
       <div class="overflow-hidden relative mb-[160px]">
-        <div id="prices" class="flex flex-nowrap gap-[24px] duration-1000 scroll-smooth snap-x overflow-x-scroll"></div>
+        <div id="prices" class="flex flex-nowrap gap-[24px] duration-1000 scroll-smooth snap-x overflow-x-scroll">
+          <div class="animate-spin rounded-full border-4 border-[#07184b] border-t-[#006CFF] w-[24px] h-[24px] mx-auto"></div>
+        </div>
         <div class="absolute top-0 w-[100px] h-[150px] bg-gradient-to-r from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center" onclick="scrollPrices('right')">
           <img class="rotate-180" src="/images/coin-arrow.svg" />
         </div>
@@ -321,19 +324,25 @@
 
   <script>
     fetch('https://altex.mn/ticker.php').then((res) => res.json()).then((res) => {
-      res.forEach((r) => {
-        document.getElementById("prices").innerHTML += `
-          <div class="snap-center relative rounded-[10px] border-solid border border-[#13A9FD] px-[17px] py-[24px] h-[150px] min-w-[200px]">
-            <div class="flex items-stretch">
-              <img src="https://altex.mn/images/${r.ticker}.svg" />
-              <div class="flex flex-col justify-between">
-                <div class="text-[#FD950D] ml-[8px] text-[20px] mt-[-5px]">${r.ticker}</div>
-                <div class="text-[#FFF] ml-[8px] text-[10px] opacity-50">${r.name}</div>
+      const elem = document.getElementById("prices");
+      if (res.length) {
+        elem.innerHTML = '';
+        res.forEach((r) => {
+          elem.innerHTML += `
+            <div class="snap-center relative rounded-[10px] border-solid border border-[#13A9FD] px-[17px] py-[24px] h-[150px] min-w-[200px]">
+              <div class="flex items-stretch">
+                <img src="https://altex.mn/images/${r.ticker}.svg" />
+                <div class="flex flex-col justify-between">
+                  <div class="text-[#FD950D] ml-[8px] text-[20px] mt-[-5px]">${r.ticker}</div>
+                  <div class="text-[#FFF] ml-[8px] text-[10px] opacity-50">${r.name}</div>
+                </div>
               </div>
-            </div>
-            <div class="text-[24px] mt-[21px]">$${parseFloat(r.value).toFixed(2)}</div>
-          </div>`;
-      });
+              <div class="text-[24px] mt-[21px]">$${parseFloat(r.value).toFixed(2)}</div>
+            </div>`;
+        });
+      } else {
+        elem.innerHTML = "Алдаа гарлаа"
+      }
     }).catch(console.error);
 
     function showMenu() {
