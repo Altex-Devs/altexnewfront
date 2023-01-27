@@ -32,15 +32,30 @@
   </style>
 </head>
 <body class="text-[#FFFFFF] font-['Montserrat'] min-w-full overflow-x-hidden">
-  <div id="menu" class="fixed top-0 l-0 w-screen h-screen bg-[#050F36] z-10 hidden lg:hidden p-[25px] py-[92px]">
+  <div id="menu" class="fixed top-0 l-0 w-screen h-screen bg-[#050F36] z-20 hidden lg:hidden p-[25px] py-[92px]">
     <div class="flex justify-between items-center mb-[40px]">
       <img src="/images/header-logo.svg" />
       <svg id="SVGDoc" onClick="hideMenu()" width="16" height="16" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fill-opacity="1"></path></g></g></svg>
     </div>
     <div class="flex flex-col gap-[32px] mb-[40px]">
       <a href="https://trade.altex.mn/">Арилжаа</a>
-      <a href="https://altex.mn/second.html">Бидний тухай</a>
-      <a href="https://altex.mn/market_news.php">Академи</a>
+      <div class="group">
+        Бидний тухай
+        <img class="inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
+        <div class="flex-col h-0 group-hover:h-[70px] group-hover:pt-[20px] w-[160px] gap-[10px] pt-0 overflow-hidden transition-[height]">
+          <a href="https://altex.mn/second.html">Биржийн тухай</a>
+          <a href="https://altex.mn/our_team.html">Баг хамт олон</a>
+        </div>
+      </div>
+      <div class="group">
+        Академи
+        <img class="inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
+        <div class="flex-col h-0 group-hover:h-[100px] group-hover:pt-[20px] w-[160px] gap-[10px] pt-0 overflow-hidden transition-[height]">
+          <a href="https://altex.mn/market_news.php">Зах зээлийн мэдээ</a>
+          <a href="https://altex.mn/crypto-basic.php">Крипто мэдлэг</a>
+          <a href="https://altex.mn/projects.php">Төслүүд</a>
+        </div>
+      </div>
     </div>
     <a class="inline-block rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] mr-[42px] mb-[32px]" href="https://trade.altex.mn/register">Бүртгүүлэх</a>
     <a class="inline-block rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] border-solid border-[1px] border-[#13A9FD] text-[#13A9FD]" href="https://trade.altex.mn/signin">Нэвтрэх</a>
@@ -77,14 +92,19 @@
           <div class="relative group">
             Бидний тухай
             <img class="inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
-            <div class="absolute flex-col hidden group-hover:flex">
+            <div class="absolute flex-col h-0 group-hover:h-[70px] gap-[10px] pt-[20px] transition-[height] overflow-hidden">
               <a href="https://altex.mn/second.html">Биржийн тухай</a>
               <a href="https://altex.mn/our_team.html">Баг хамт олон</a>
             </div>
           </div>
-          <div>
+          <div class="relative group">
             Академи
             <img class="inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
+            <div class="absolute flex-col h-0 group-hover:h-[100px]  w-[160px] gap-[10px] pt-[20px] transition-[height] overflow-hidden">
+              <a href="https://altex.mn/market_news.php">Зах зээлийн мэдээ</a>
+              <a href="https://altex.mn/crypto-basic.php">Крипто мэдлэг</a>
+              <a href="https://altex.mn/projects.php">Төслүүд</a>
+            </div>
           </div>
           <a href="https://trade.altex.mn/register" class="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF]">Бүртгүүлэх</a>
           <a href="https://trade.altex.mn/signin" class="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] border-solid border-[1px] border-[#13A9FD] text-[#13A9FD]">Нэвтрэх</a>
@@ -237,29 +257,29 @@
       </div>
 
       <div class="flex flex-row flex-wrap mb-[50px]">
-        <div class="basis-1/5 pl-[20px] mb-[30px]">
+        <div class="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px]">
           <div class="text-[rgba(19,169,253,1)] mb-[32px]">Бидний тухай</div>
           <a class="block mb-[16px]" href="https://altex.mn/second.html">Биржийн тухай</a>
           <a class="block mb-[16px]" href="https://altex.mn/our_team.html">Баг, хамт олон</a>
         </div>
-        <div class="basis-1/5 mb-[30px]">
+        <div class="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px]">
           <div class="text-[rgba(19,169,253,1)] mb-[32px]">Академи</div>
           <a href="https://altex.mn/index.php#:~:text=%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8-,%D0%97%D0%B0%D1%85%20%D0%B7%D1%8D%D1%8D%D0%BB%D0%B8%D0%B9%D0%BD%20%D0%BC%D1%8D%D0%B4%D1%8D%D1%8D,-%D0%9A%D1%80%D0%B8%D0%BF%D1%82%D0%BE%20%D0%BC%D1%8D%D0%B4%D0%BB%D1%8D%D0%B3" class="mb-[16px]">Зах зээлийн мэдээ</a>
           <a href="https://altex.mn/crypto-basic.php" class="block mb-[16px]">Крипто мэдлэг</a>
           <a href="https://altex.mn/projects.php" class="block mb-[16px]">Төслүүд</a>
         </div>
-        <div class="basis-1/5 mb-[30px]">
+        <div class="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px]">
           <div class="text-[rgba(19,169,253,1)] mb-[32px]">Үйлчилгээ</div>
           <a href="https://altex.mn/terms_service.html" class="block mb-[16px]">Үйлчилгээний нөхцөл</a>
           <a href="https://altex.mn/privacy_policy.html" class="block mb-[16px]">Нууцлалын бодлого</a>
           <a href="https://altex.mn/fees.html" class="block mb-[16px]">Шимтгэл</a>
         </div>
-        <div class="basis-1/5 mb-[30px]">
+        <div class="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px]">
           <div class="text-[rgba(19,169,253,1)] mb-[32px]">Тусламж</div>
           <a href="https://altex.mn/faq.html" class="block mb-[16px]">Түгээмэл асуултууд</a>
           <a href="https://altex.mn/feedback.html" class="block mb-[16px]">Санал хүсэлт</a>
         </div>
-        <div class="basis-1/5 mb-[30px]">
+        <div class="basis-full sm:basis-1 md:basis-2/3 lg:basis-1/5 mb-[30px]">
           <div class="text-[rgba(19,169,253,1)] mb-[32px]">Холбоо барих</div>
           <div class="mb-[16px] flex">
             <div class="mr-[16px] flex-none w-[20px] flex place-content-center">
