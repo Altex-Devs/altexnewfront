@@ -26,7 +26,7 @@
       display: none;
     }
     #prices {
-      -ms-overflow-style: none;  /* IE and Edge
+      -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
     }
   </style>
@@ -37,20 +37,20 @@
       <img src="/images/header-logo.svg" />
       <svg id="SVGDoc" onClick="hideMenu()" width="16" height="16" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fill-opacity="1"></path></g></g></svg>
     </div>
-    <div class="flex flex-col gap-[32px] mb-[40px]">
-      <a id="mobile_menu_trade" href="https://trade.altex.mn/">Арилжаа</a>
-      <div class="group">
-        <span id="mobile_menu_about_us">Бидний тухай</span>
-        <img class="inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
-        <div class="flex-col h-0 group-hover:h-[70px] group-hover:pt-[20px] w-[160px] gap-[10px] pt-0 overflow-hidden transition-[height]">
+    <div id="mobile_menu" class="flex flex-col gap-[15px] mb-[40px]">
+      <a id="mobile_menu_trade" class="pb-[10px]" href="https://trade.altex.mn/">Арилжаа</a>
+      <div>
+        <span id="mobile_menu_about_us" onclick="toggleMobileMenu(event)">Бидний тухай</span>
+        <img class="inline-block relative left-[5px] icon" src="/images/menu_arrow.svg" />
+        <div class="expander flex-col h-0 w-[160px] gap-[10px] pt-[10px] overflow-hidden transition-[height] pl-[15px]">
           <a id="mobile_menu_about_exchange" href="https://altex.mn/second.html">Биржийн тухай</a>
           <a id="mobile_menu_team" href="https://altex.mn/our_team.html">Баг хамт олон</a>
         </div>
       </div>
-      <div class="group">
-        <span id="mobile_menu_academy">Академи</span>
-        <img class="inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
-        <div class="flex-col h-0 group-hover:h-[100px] group-hover:pt-[20px] w-[160px] gap-[10px] pt-0 overflow-hidden transition-[height]">
+      <div>
+        <span id="mobile_menu_academy" onclick="toggleMobileMenu(event)">Академи</span>
+        <img class="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
+        <div class="expander flex-col h-0 w-[160px] gap-[10px] pt-[10px] overflow-hidden transition-[height] pl-[15px]">
           <a id="mobile_menu_market_news" href="https://altex.mn/market_news.php">Зах зээлийн мэдээ</a>
           <a id="mobile_menu_crypto_knowledge" href="https://altex.mn/crypto-basic.php">Крипто мэдлэг</a>
           <a id="mobile_menu_projects" href="https://altex.mn/projects.php">Төслүүд</a>
@@ -87,12 +87,12 @@
             </svg>
           </button>
         </div>
-        <div class="items-center gap-[40px] text-[16px] hidden lg:flex">
+        <div id="main_menu" class="items-center gap-[40px] text-[16px] hidden lg:flex">
           <a id="menu_trade" href="https://trade.altex.mn/">Арилжаа</a>
-          <div class="relative group">
-            <span id="menu_about_us">Бидний тухай</span>
-            <img class="inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
-            <div class="absolute w-max hidden group-hover:block left-[50%] translate-x-[-50%]">
+          <div class="relative">
+            <span id="menu_about_us" onclick="toggleMenu(event)">Бидний тухай</span>
+            <img class="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
+            <div class="expander absolute w-max hidden left-[50%] translate-x-[-50%]">
               <div class="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div class="flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
                 <a id="menu_about_exchange" class="hover:text-[#13A9FD]" href="https://altex.mn/second.html">Биржийн тухай</a>
@@ -123,7 +123,7 @@
           <div class="md:w-[60%] drop-shadow">
             <div id="jumbo_head" class="font-bold text-[28px] md:text-[40px] mb-[24px] leading-[3.25rem]">Дижитал санхүүг хялбараар</div>
             <div id="jumbo_desc" class="text text-[24px] mb-[40px] font-light">Дижитал хөрөнгө оруулалт хийх хамгийн найдвартай платформыг санал болгож байна.</div>
-            <a href="https://trade.altex.mn/" id="jumbo_button" class="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Арилжаанд оролцох</a>
+            <a href="https://trade.altex.mn/" target="_blank" id="jumbo_button" class="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Арилжаанд оролцох</a>
           </div>
         </div>
       </div>
@@ -133,10 +133,10 @@
         <div id="prices" class="flex flex-nowrap gap-[24px] duration-1000 scroll-smooth snap-x overflow-x-scroll">
           <div class="animate-spin rounded-full border-4 border-[#07184b] border-t-[#006CFF] w-[24px] h-[24px] mx-auto"></div>
         </div>
-        <div class="absolute top-0 w-[100px] h-[180px] bg-gradient-to-r from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center" onclick="scrollPrices('right')">
+        <div class="absolute top-0 w-[100px] h-[180px] bg-gradient-to-r from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onclick="scrollPrices('right')">
           <img class="rotate-180" src="/images/coin-arrow.svg" />
         </div>
-        <div class="absolute top-0 right-0 w-[100px] h-[180px] bg-gradient-to-l from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center" onclick="scrollPrices('left')">
+        <div class="absolute top-0 right-0 w-[100px] h-[180px] bg-gradient-to-l from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onclick="scrollPrices('left')">
           <img class="absolute right-0" src="/images/coin-arrow.svg" />
         </div>
       </div>
@@ -204,9 +204,9 @@
           <div class="flex flex-row gap-[24px] items-end flex-col sm:flex-row justify-items-stretch">
             <div class="w-full sm:basis-[75%]">
               <div id="referal_code_email" class="text-[#E6E7EB] mb-[8px]">Бүртгэлтэй и-мэйл</div>
-              <input type="text" id="name" class="rounded-[4px] w-full border-solid border-[.5px] border-[#E6E7EB] bg-[rgba(0,0,0,0)] w-full h-[48px] mb-[16px] p-[10px]" />
+              <input type="text" id="name" class="rounded-[4px] w-full border-solid border-[.5px] border-[#E6E7EB] focus-visible:border-[#006CFF] invalid:border-[#FF003D] bg-[rgba(0,0,0,0)] w-full h-[48px] mb-[16px] p-[10px] px-[16px] outline-none" />
               <div id="referal_code_promo" class="text-[#E6E7EB] mb-[8px]">Промо код</div>
-              <input type="text" id="promo" class="rounded-[4px] border-solid border-[.5px] border-[#E6E7EB] bg-[rgba(0,0,0,0)] w-full h-[48px] p-[10px]" />
+              <input type="text" id="promo" class="rounded-[4px] border-solid border-[.5px] border-[#E6E7EB] focus-visible:border-[#006CFF] invalid:border-[#FF003D] bg-[rgba(0,0,0,0)] w-full h-[48px] p-[10px] px-[16px] outline-none" />
             </div>
             <div class="w-full sm:basis-[25%]">
               <button onclick="submitPromo()" id="referal_code_send" class="rounded-[4px] w-full font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] w-full sm:w-auto hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Илгээх</button>
@@ -216,7 +216,7 @@
       </div>
 
       <div class="flex flex-col gap-[40px] md:gap-0 sm:flex-row items-center justify-items-stretch px-[24px] py-[40px] sm:p-[35px] sm:pl-[83px] rounded-[8px] bg-gradient-to-b from-[rgba(0,108,255,.4)] to-[rgba(27,51,123,.4)] overflow-hidden">
-        <div class="basis-2/5">
+        <div class="basis-[45%]">
           <div id="app_head" class="text-[#13A9FD] text-[24px] mb-[24px] leading-tight">Гар утасны аппликэйшн тун удахгүй</div>
           <div id="app_desc" class="text-[#fff] font-light mb-[40px]">Арилжаанд оролцох, хэтэвчээ удирдах хамгийн хялбар замыг санал болгож байна.</div>
           <div class="flex flex-wrap justify-center sm:justify-start gap-[14px] md:gap-[24px]">
@@ -224,8 +224,7 @@
             <img class="object-cover w-[133px]" src="/images/ios.svg" />
           </div>
         </div>
-        <div class="basis-auto md:basis-3/5 w-screen h-[300px] bg-[url('/images/Group%207634.png')] bg-cover bg-center">
-        </div>
+        <div class="basis-auto md:basis-[55%] w-screen h-[300px] bg-[url('/images/Group%207634.png')] bg-cover bg-center"></div>
       </div>
 
       <div class="pt-[160px] relative mb-[240px]">
@@ -256,7 +255,7 @@
           </div>
           <div class="text-right lg:text-left">
             <div id="start_trade_desc_bottom" class="font-light max-w-[210px] mb-[24px] hidden lg:block">Та бүртгэлээ үүсгээд арилжаагаа эхлүүлээрэй!</div>
-            <button id="start_trade_button" class="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF]">Бүртгүүлэх</button>
+            <button id="start_trade_button" class="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Бүртгүүлэх</button>
           </div>
         </div>
       </div>
@@ -387,22 +386,33 @@
     function submitPromo() {
       const nameInput = document.getElementById("name");
       const promoInput = document.getElementById("promo");
+      nameInput.setCustomValidity("");
+      promoInput.setCustomValidity("");
 
-      fetch("https://api.apispreadsheets.com/data/VrHiEVYyfwBHlXh1/", {
-        method: "POST",
-        body: JSON.stringify({"data": [{
-          "E-mail": nameInput.value,
-          "Referral code": promoInput.value
-        }]}),
-      }).then((res) =>{
-        if (res.status === 201){
-          alert("Амжилттай бүртгэгдлээ!");
-          nameInput.value = "";
-          promoInput.value = "";
-        } else {
-          alert('Бүртгэхэд асуудал гарлаа!');
+      if (nameInput.value && promoInput.value) {
+        fetch("https://api.apispreadsheets.com/data/VrHiEVYyfwBHlXh1/", {
+          method: "POST",
+          body: JSON.stringify({"data": [{
+            "E-mail": nameInput.value,
+            "Referral code": promoInput.value
+          }]}),
+        }).then((res) =>{
+          if (res.status === 201){
+            alert("Амжилттай бүртгэгдлээ!");
+            nameInput.value = "";
+            promoInput.value = "";
+          } else {
+            alert('Бүртгэхэд асуудал гарлаа!');
+          }
+        });
+      } else {
+        if (!nameInput.value) {
+          nameInput.setCustomValidity("Invalid field.");
         }
-      })
+        if (!promoInput.value) {
+          promoInput.setCustomValidity("Invalid field.");
+        }
+      }
     }
 
     function scrollPrices(direction) {
@@ -422,76 +432,7 @@
     }
 
     function lang_translate() {
-      if (localStorage.getItem('language_local') === 'mng') {
-        document.querySelector("#mobile_menu_trade").innerHTML = "Арилжаа";
-        document.querySelector("#mobile_menu_about_us").innerHTML = "Бидний тухай";
-        document.querySelector("#mobile_menu_about_exchange").innerHTML = "Биржийн тухай";
-        document.querySelector("#mobile_menu_team").innerHTML = "Баг хамт олон";
-        document.querySelector("#mobile_menu_academy").innerHTML = "Академи";
-        document.querySelector("#mobile_menu_market_news").innerHTML = "Зах зээлийн мэдээ";
-        document.querySelector("#mobile_menu_crypto_knowledge").innerHTML = "Крипто мэдлэг";
-        document.querySelector("#mobile_menu_projects").innerHTML = "Төслүүд";
-        document.querySelector("#mobile_menu_register").innerHTML = "Бүртгүүлэх";
-        document.querySelector("#mobile_menu_login").innerHTML = "Нэвтрэх";
-        document.querySelector("#translate-lang").innerHTML = "Eng";
-        document.querySelector("#industry-select").innerHTML = "Байгууллага";
-        document.querySelector("#menu_trade").innerHTML = "Арилжаа";
-        document.querySelector("#menu_about_us").innerHTML = "Бидний тухай";
-        document.querySelector("#menu_about_exchange").innerHTML = "Биржийн тухай";
-        document.querySelector("#menu_team").innerHTML = "Баг хамт олон";
-        document.querySelector("#menu_academy").innerHTML = "Академи";
-        document.querySelector("#menu_market_news").innerHTML = "Зах зээлийн мэдээ";
-        document.querySelector("#menu_crypto_knowledge").innerHTML = "Крипто мэдлэг";
-        document.querySelector("#menu_projects").innerHTML = "Төслүүд";
-        document.querySelector("#menu_register").innerHTML = "Бүртгүүлэх";
-        document.querySelector("#menu_login").innerHTML = "Нэвтрэх";
-        document.querySelector("#jumbo_head").innerHTML = "Дижитал санхүүг хялбараар";
-        document.querySelector("#jumbo_desc").innerHTML = "Дижитал хөрөнгө оруулалт хийх хамгийн найдвартай платформыг санал болгож байна.";
-        document.querySelector("#jumbo_button").innerHTML = "Арилжаанд оролцох";
-        document.querySelector("#market_trend").innerHTML = "Зах зээлийн тренд";
-        document.querySelector("#feature_1_head").innerHTML = "Нэгдсэн хөрвөх сан";
-        document.querySelector("#feature_1_desc").innerHTML = "Санхүүгийн байгууллагууд, маркет мэйкрүүдийн оролцоотой нэгдсэн хөрвөх сан";
-        document.querySelector("#feature_2_head").innerHTML = "Байгууллагын үйлчилгээ";
-        document.querySelector("#feature_2_desc").innerHTML = "Спот арилжаа, Брокер (OTC), Хөрөнгө оруулалтын багцийн үйлчилгээ";
-        document.querySelector("#feature_3_head").innerHTML = "Зах зээлийн өрсөлдөхүйц үнэ";
-        document.querySelector("#feature_3_desc").innerHTML = "Дижитал хөрөнгийг зах зээлд хамгийн өрсөлдөхүйц үнээр худалдаж авах, зарах боломж";
-        document.querySelector("#feature_4_head").innerHTML = "Зарлагын лимит";
-        document.querySelector("#feature_4_desc").innerHTML = "Крипто болон фиат валютын зарлага $7,000 - $100,000";
-        document.querySelector("#feature_5_head").innerHTML = "Хямд сүлжээний шимтгэл";
-        document.querySelector("#feature_5_desc").innerHTML = "Криптовалютын гүйлгээг хамгийн хямдаар хийх боломж";
-        document.querySelector("#referal_code_head").innerHTML = "Реферал код оруулах";
-        document.querySelector("#referal_code_desc").innerHTML = "Та бүртгэлээ баталгаажуулсан имэйл хаяг, промо кодоо илгээгээд урамшуулалд хамрагдаарай.";
-        document.querySelector("#referal_code_email").innerHTML = "Бүртгэлтэй и-мэйл";
-        document.querySelector("#referal_code_promo").innerHTML = "Промо код";
-        document.querySelector("#referal_code_send").innerHTML = "Илгээх";
-        document.querySelector("#app_head").innerHTML = "Гар утасны аппликэйшн тун удахгүй";
-        document.querySelector("#app_desc").innerHTML = "Арилжаанд оролцох, хэтэвчээ удирдах хамгийн хялбар замыг санал болгож байна.";
-        document.querySelector("#start_trade_head").innerHTML = "Арилжаагаа эхлүүлэх 4 алхам";
-        document.querySelector("#start_trade_desc").innerHTML = "Та бүртгэлээ үүсгээд арилжаагаа эхлүүлээрэй!";
-        document.querySelector("#start_trade_1").innerHTML = "Бүртгэл<br />үүсгэх";
-        document.querySelector("#start_trade_2").innerHTML = "Бүртгэл<br />баталгаажуулах";
-        document.querySelector("#start_trade_3").innerHTML = "Дансаа<br />цэнэглэх";
-        document.querySelector("#start_trade_4").innerHTML = "Арилжаа<br />хийх";
-        document.querySelector("#start_trade_desc_bottom").innerHTML = "Та бүртгэлээ үүсгээд арилжаагаа эхлүүлээрэй!";
-        document.querySelector("#start_trade_button").innerHTML = "Бүртгүүлэх";
-        document.querySelector("#footer_about_us").innerHTML = "Бидний тухай";
-        document.querySelector("#footer_about_exchange").innerHTML = "Биржийн тухай";
-        document.querySelector("#footer_team").innerHTML = "Баг, хамт олон";
-        document.querySelector("#footer_academy").innerHTML = "Академи";
-        document.querySelector("#footer_market_news").innerHTML = "Зах зээлийн мэдээ";
-        document.querySelector("#footer_crypto_knowledge").innerHTML = "Крипто мэдлэг";
-        document.querySelector("#footer_projects").innerHTML = "Төслүүд";
-        document.querySelector("#footer_service").innerHTML = "Үйлчилгээ";
-        document.querySelector("#footer_terms_of_service").innerHTML = "Үйлчилгээний нөхцөл";
-        document.querySelector("#footer_privacy_policy").innerHTML = "Нууцлалын бодлого";
-        document.querySelector("#footer_fee").innerHTML = "Шимтгэл";
-        document.querySelector("#footer_help").innerHTML = "Тусламж";
-        document.querySelector("#footer_faq").innerHTML = "Түгээмэл асуултууд";
-        document.querySelector("#footer_feedback").innerHTML = "Санал хүсэлт";
-        document.querySelector("#footer_contact").innerHTML = "Холбоо барих";
-        document.querySelector("#footer_address").innerHTML = "Сүхбаатар дүүрэг 1-р хороо, Жамъян Гүний гудамж-5, Хаан Даатгал компанийн байр";
-        document.querySelector("#bottom").innerHTML = "Зохиогчийн эрх © 2023 Бүх эрх хуулиар хамгаалагдсан";
-      } else {
+      if (localStorage.getItem('language_local') === 'eng') {
         document.querySelector("#mobile_menu_trade").innerHTML = "Trade";
         document.querySelector("#mobile_menu_about_us").innerHTML = "About";
         document.querySelector("#mobile_menu_about_exchange").innerHTML = "Digital Exchange";
@@ -560,10 +501,117 @@
         document.querySelector("#footer_contact").innerHTML = "Contact";
         document.querySelector("#footer_address").innerHTML = "Khaan Insurance building, Jamyan Gun street, Sukhbaatar district, 1st khoroo, Ulaanbaatar Mongolia";
         document.querySelector("#bottom").innerHTML = "Copyright © 2023 Choijin Altex LLC. All rights reserved";
+      } else {
+        document.querySelector("#mobile_menu_trade").innerHTML = "Арилжаа";
+        document.querySelector("#mobile_menu_about_us").innerHTML = "Бидний тухай";
+        document.querySelector("#mobile_menu_about_exchange").innerHTML = "Биржийн тухай";
+        document.querySelector("#mobile_menu_team").innerHTML = "Баг хамт олон";
+        document.querySelector("#mobile_menu_academy").innerHTML = "Академи";
+        document.querySelector("#mobile_menu_market_news").innerHTML = "Зах зээлийн мэдээ";
+        document.querySelector("#mobile_menu_crypto_knowledge").innerHTML = "Крипто мэдлэг";
+        document.querySelector("#mobile_menu_projects").innerHTML = "Төслүүд";
+        document.querySelector("#mobile_menu_register").innerHTML = "Бүртгүүлэх";
+        document.querySelector("#mobile_menu_login").innerHTML = "Нэвтрэх";
+        document.querySelector("#translate-lang").innerHTML = "Eng";
+        document.querySelector("#industry-select").innerHTML = "Байгууллага";
+        document.querySelector("#menu_trade").innerHTML = "Арилжаа";
+        document.querySelector("#menu_about_us").innerHTML = "Бидний тухай";
+        document.querySelector("#menu_about_exchange").innerHTML = "Биржийн тухай";
+        document.querySelector("#menu_team").innerHTML = "Баг хамт олон";
+        document.querySelector("#menu_academy").innerHTML = "Академи";
+        document.querySelector("#menu_market_news").innerHTML = "Зах зээлийн мэдээ";
+        document.querySelector("#menu_crypto_knowledge").innerHTML = "Крипто мэдлэг";
+        document.querySelector("#menu_projects").innerHTML = "Төслүүд";
+        document.querySelector("#menu_register").innerHTML = "Бүртгүүлэх";
+        document.querySelector("#menu_login").innerHTML = "Нэвтрэх";
+        document.querySelector("#jumbo_head").innerHTML = "Дижитал санхүүг хялбараар";
+        document.querySelector("#jumbo_desc").innerHTML = "Дижитал хөрөнгө оруулалт хийх хамгийн найдвартай платформыг санал болгож байна.";
+        document.querySelector("#jumbo_button").innerHTML = "Арилжаанд оролцох";
+        document.querySelector("#market_trend").innerHTML = "Зах зээлийн тренд";
+        document.querySelector("#feature_1_head").innerHTML = "Нэгдсэн хөрвөх сан";
+        document.querySelector("#feature_1_desc").innerHTML = "Санхүүгийн байгууллагууд, маркет мэйкрүүдийн оролцоотой нэгдсэн хөрвөх сан";
+        document.querySelector("#feature_2_head").innerHTML = "Байгууллагын үйлчилгээ";
+        document.querySelector("#feature_2_desc").innerHTML = "Спот арилжаа, Брокер (OTC), Хөрөнгө оруулалтын багцийн үйлчилгээ";
+        document.querySelector("#feature_3_head").innerHTML = "Зах зээлийн өрсөлдөхүйц үнэ";
+        document.querySelector("#feature_3_desc").innerHTML = "Дижитал хөрөнгийг зах зээлд хамгийн өрсөлдөхүйц үнээр худалдаж авах, зарах боломж";
+        document.querySelector("#feature_4_head").innerHTML = "Зарлагын лимит";
+        document.querySelector("#feature_4_desc").innerHTML = "Крипто болон фиат валютын зарлага $7,000 - $100,000";
+        document.querySelector("#feature_5_head").innerHTML = "Хямд сүлжээний шимтгэл";
+        document.querySelector("#feature_5_desc").innerHTML = "Криптовалютын гүйлгээг хамгийн хямдаар хийх боломж";
+        document.querySelector("#referal_code_head").innerHTML = "Реферал код оруулах";
+        document.querySelector("#referal_code_desc").innerHTML = "Та бүртгэлээ баталгаажуулсан имэйл хаяг, промо кодоо илгээгээд урамшуулалд хамрагдаарай.";
+        document.querySelector("#referal_code_email").innerHTML = "Бүртгэлтэй и-мэйл";
+        document.querySelector("#referal_code_promo").innerHTML = "Промо код";
+        document.querySelector("#referal_code_send").innerHTML = "Илгээх";
+        document.querySelector("#app_head").innerHTML = "Гар утасны аппликэйшн тун удахгүй";
+        document.querySelector("#app_desc").innerHTML = "Арилжаанд оролцох, хэтэвчээ удирдах хамгийн хялбар замыг санал болгож байна.";
+        document.querySelector("#start_trade_head").innerHTML = "Арилжаагаа эхлүүлэх 4 алхам";
+        document.querySelector("#start_trade_desc").innerHTML = "Та бүртгэлээ үүсгээд арилжаагаа эхлүүлээрэй!";
+        document.querySelector("#start_trade_1").innerHTML = "Бүртгэл<br />үүсгэх";
+        document.querySelector("#start_trade_2").innerHTML = "Бүртгэл<br />баталгаажуулах";
+        document.querySelector("#start_trade_3").innerHTML = "Дансаа<br />цэнэглэх";
+        document.querySelector("#start_trade_4").innerHTML = "Арилжаа<br />хийх";
+        document.querySelector("#start_trade_desc_bottom").innerHTML = "Та бүртгэлээ үүсгээд арилжаагаа эхлүүлээрэй!";
+        document.querySelector("#start_trade_button").innerHTML = "Бүртгүүлэх";
+        document.querySelector("#footer_about_us").innerHTML = "Бидний тухай";
+        document.querySelector("#footer_about_exchange").innerHTML = "Биржийн тухай";
+        document.querySelector("#footer_team").innerHTML = "Баг, хамт олон";
+        document.querySelector("#footer_academy").innerHTML = "Академи";
+        document.querySelector("#footer_market_news").innerHTML = "Зах зээлийн мэдээ";
+        document.querySelector("#footer_crypto_knowledge").innerHTML = "Крипто мэдлэг";
+        document.querySelector("#footer_projects").innerHTML = "Төслүүд";
+        document.querySelector("#footer_service").innerHTML = "Үйлчилгээ";
+        document.querySelector("#footer_terms_of_service").innerHTML = "Үйлчилгээний нөхцөл";
+        document.querySelector("#footer_privacy_policy").innerHTML = "Нууцлалын бодлого";
+        document.querySelector("#footer_fee").innerHTML = "Шимтгэл";
+        document.querySelector("#footer_help").innerHTML = "Тусламж";
+        document.querySelector("#footer_faq").innerHTML = "Түгээмэл асуултууд";
+        document.querySelector("#footer_feedback").innerHTML = "Санал хүсэлт";
+        document.querySelector("#footer_contact").innerHTML = "Холбоо барих";
+        document.querySelector("#footer_address").innerHTML = "Сүхбаатар дүүрэг 1-р хороо, Жамъян Гүний гудамж-5, Хаан Даатгал компанийн байр";
+        document.querySelector("#bottom").innerHTML = "Зохиогчийн эрх © 2023 Бүх эрх хуулиар хамгаалагдсан";
       }
     }
 
     lang_translate();
+
+    document.addEventListener("click", () => {
+      // Hide all menu
+      const mobileMenuExpanders = document.querySelectorAll("#mobile_menu .expander");
+      mobileMenuExpanders.forEach((mobileMenuExpander) => {
+        mobileMenuExpander.classList.remove("h-auto");
+      });
+
+      const menuExpanders = document.querySelectorAll("#main_menu .expander");
+      menuExpanders.forEach((menuExpander) => {
+        menuExpander.classList.add("hidden");
+        menuExpander.classList.remove("block");
+      });
+
+      const menuIcons = document.querySelectorAll(".icon");
+      menuIcons.forEach((menuIcon) => {
+        menuIcon.classList.remove("rotate-180");
+      });
+    });
+
+    function toggleMobileMenu(e) {
+      e.stopPropagation();
+      const parent = e.target.parentElement;
+      const icon = parent.querySelector(".icon");
+      const expander = parent.querySelector(".expander");
+      icon.classList.toggle("rotate-180");
+      expander.classList.toggle("h-auto");
+    }
+
+    function toggleMenu(e) {
+      e.stopPropagation();
+      const parent = e.target.parentElement;
+      const icon = parent.querySelector(".icon");
+      const expander = parent.querySelector(".expander");
+      icon.classList.toggle("rotate-180");
+      expander.classList.toggle("hidden");
+      expander.classList.toggle("block");
+    }
   </script>
 </body>
 </html>
