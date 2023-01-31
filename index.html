@@ -12,7 +12,7 @@
       theme: {
         extend: {
           backgroundImage: {
-            'gradient-radial-md': 'radial-gradient(450px at calc(100% - 300px) 400px, var(--tw-gradient-stops))',
+            'gradient-radial-md': 'radial-gradient(450px at calc(100% - 400px) 400px, var(--tw-gradient-stops))',
             'gradient-radial': 'radial-gradient(450px at calc(50%) 200px, var(--tw-gradient-stops))',
             'gradient-radial-left': 'radial-gradient(400px at 300px, var(--tw-gradient-stops))',
             'gradient-radial-bottom': 'radial-gradient(400px, var(--tw-gradient-stops))',
@@ -26,13 +26,21 @@
       display: none;
     }
     #prices {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
     }
   </style>
 </head>
 <body class="text-[#FFFFFF] font-['Montserrat'] min-w-full overflow-x-hidden">
-  <div id="menu" class="fixed top-0 l-0 w-screen h-screen bg-[#050F36] z-20 hidden lg:hidden p-[25px] py-[92px]">
+  <div id="promoSuccess" onclick="hidePromoSuccess()" class="fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(67,210,76,.5)] px-[24px] py-[30px] rounded-[8px] z-30">
+    <div class="relative flex items-center gap-[16px]">
+      <img src="/images/correct.svg" />
+      Таны мэдээллийг хүлээж авлаа!
+      <img class="absolute top-[-14px] right-[-8px] cursor-pointer" src="/images/close.svg" />
+    </div>
+  </div>
+
+  <div id="menu" class="fixed top-0 l-0 w-full h-screen bg-[#050F36] z-20 hidden lg:hidden p-[25px] py-[92px]">
     <div class="flex justify-between items-center mb-[40px]">
       <img src="/images/header-logo.svg" />
       <svg id="SVGDoc" onClick="hideMenu()" width="16" height="16" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fill-opacity="1"></path></g></g></svg>
@@ -40,17 +48,17 @@
     <div id="mobile_menu" class="flex flex-col gap-[15px] mb-[40px]">
       <a id="mobile_menu_trade" class="pb-[10px]" href="https://trade.altex.mn/">Арилжаа</a>
       <div>
-        <span id="mobile_menu_about_us" onclick="toggleMobileMenu(event)">Бидний тухай</span>
+        <span id="mobile_menu_about_us" class="mobile_menu" onclick="toggleMobileMenu(event)">Бидний тухай</span>
         <img class="inline-block relative left-[5px] icon" src="/images/menu_arrow.svg" />
-        <div class="expander flex-col h-0 w-[160px] gap-[10px] pt-[10px] overflow-hidden transition-[height] pl-[15px]">
+        <div class="expander flex-col max-h-0 w-[160px] gap-[10px] pt-[10px] overflow-hidden transition-[max-height] duration-700 pl-[15px]">
           <a id="mobile_menu_about_exchange" href="https://altex.mn/second.html">Биржийн тухай</a>
           <a id="mobile_menu_team" href="https://altex.mn/our_team.html">Баг хамт олон</a>
         </div>
       </div>
       <div>
-        <span id="mobile_menu_academy" onclick="toggleMobileMenu(event)">Академи</span>
+        <span id="mobile_menu_academy" class="mobile_menu" onclick="toggleMobileMenu(event)">Академи</span>
         <img class="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
-        <div class="expander flex-col h-0 w-[160px] gap-[10px] pt-[10px] overflow-hidden transition-[height] pl-[15px]">
+        <div class="expander flex-col max-h-0 w-[160px] gap-[10px] pt-[10px] overflow-hidden transition-[max-height] duration-700 pl-[15px]">
           <a id="mobile_menu_market_news" href="https://altex.mn/market_news.php">Зах зээлийн мэдээ</a>
           <a id="mobile_menu_crypto_knowledge" href="https://altex.mn/crypto-basic.php">Крипто мэдлэг</a>
           <a id="mobile_menu_projects" href="https://altex.mn/projects.php">Төслүүд</a>
@@ -90,9 +98,9 @@
         <div id="main_menu" class="items-center gap-[40px] text-[16px] hidden lg:flex">
           <a id="menu_trade" href="https://trade.altex.mn/">Арилжаа</a>
           <div class="relative">
-            <span id="menu_about_us" onclick="toggleMenu(event)">Бидний тухай</span>
+            <span id="menu_about_us" class="menu" onclick="toggleMenu(event)">Бидний тухай</span>
             <img class="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
-            <div class="expander absolute w-max hidden left-[50%] translate-x-[-50%]">
+            <div class="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
               <div class="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div class="flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
                 <a id="menu_about_exchange" class="hover:text-[#13A9FD]" href="https://altex.mn/second.html">Биржийн тухай</a>
@@ -100,10 +108,10 @@
               </div>
             </div>
           </div>
-          <div class="relative group">
-            <span id="menu_academy">Академи</span>
-            <img class="inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
-            <div class="absolute w-max hidden group-hover:block left-[50%] translate-x-[-50%]">
+          <div class="relative">
+            <span id="menu_academy" class="menu" onclick="toggleMenu(event)">Академи</span>
+            <img class="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
+            <div class="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
               <div class="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div class="flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
                 <a id="menu_market_news" class="hover:text-[#13A9FD]" href="https://altex.mn/market_news.php">Зах зээлийн мэдээ</a>
@@ -128,7 +136,7 @@
         </div>
       </div>
 
-      <div id="market_trend" class="text-[24px] text-[#13A9FD] mb-[40px]">Зах зээлийн тренд</div>
+      <div id="market_trend" class="text-[24px] text-[#13A9FD] font-medium mb-[40px]">Зах зээлийн тренд</div>
       <div class="overflow-hidden relative mb-[160px]">
         <div id="prices" class="flex flex-nowrap gap-[24px] duration-1000 scroll-smooth snap-x overflow-x-scroll">
           <div class="animate-spin rounded-full border-4 border-[#07184b] border-t-[#006CFF] w-[24px] h-[24px] mx-auto"></div>
@@ -144,36 +152,36 @@
       <div class="relative">
         <div class="absolute w-screen h-[800px] top-[-100px] left-[calc((100vw-100%)/-2)] bg-gradient-radial-left from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
         <div class="flex justify-between flex-col sm:flex-row flex-col-reverse">
-          <div class="flex flex-col gap-[56px] max-w-[500px]">
-            <div class="flex items-stretch gap-[24px]">
+          <div class="flex flex-col gap-[56px] max-w-[400px]">
+            <div class="flex items-start gap-[24px] h-[64px]">
               <img class="w-[64px]" src="/images/adv-1.svg" />
               <div class="flex flex-col">
                 <div id="feature_1_head" class="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Нэгдсэн хөрвөх сан</div>
                 <div id="feature_1_desc" class="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">Санхүүгийн байгууллагууд, маркет мэйкрүүдийн оролцоотой нэгдсэн хөрвөх сан</div>
               </div>
             </div>
-            <div class="flex items-stretch gap-[24px]">
+            <div class="flex items-start gap-[24px] h-[64px]">
               <img class="w-[64px]" src="/images/adv-2.svg" />
               <div class="flex flex-col">
                 <div id="feature_2_head" class="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Байгууллагын үйлчилгээ</div>
                 <div id="feature_2_desc" class="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">Спот арилжаа, Брокер (OTC), Хөрөнгө оруулалтын багцийн үйлчилгээ</div>
               </div>
             </div>
-            <div class="flex items-stretch gap-[24px]">
+            <div class="flex items-start gap-[24px] h-[64px]">
               <img class="w-[64px]" src="/images/adv-3.svg" />
               <div class="flex flex-col">
                 <div id="feature_3_head" class="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Зах зээлийн өрсөлдөхүйц үнэ</div>
                 <div id="feature_3_desc" class="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">Дижитал хөрөнгийг зах зээлд хамгийн өрсөлдөхүйц үнээр худалдаж авах, зарах боломж</div>
               </div>
             </div>
-            <div class="flex items-stretch gap-[24px]">
+            <div class="flex items-start gap-[24px] h-[64px]">
               <img class="w-[64px]" src="/images/adv-4.svg" />
               <div class="flex flex-col">
                 <div id="feature_4_head" class="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Зарлагын лимит</div>
                 <div id="feature_4_desc" class="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">Крипто болон фиат валютын зарлага $7,000 - $100,000</div>
               </div>
             </div>
-            <div class="flex items-stretch gap-[24px]">
+            <div class="flex items-start gap-[24px] h-[64px]">
               <img class="w-[64px]" src="/images/adv-5.svg" />
               <div class="flex flex-col">
                 <div id="feature_5_head" class="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Хямд сүлжээний шимтгэл</div>
@@ -182,7 +190,7 @@
             </div>
           </div>
           <div class="flex items-center">
-            <img class="w-[656px] relative rigth-auto sm:right-[-50px]" src="/images/Group 7632.png" />
+            <img class="w-[800px] relative rigth-auto sm:right-[-50px]" src="/images/Group 7632.png" />
           </div>
         </div>
       </div>
@@ -192,24 +200,24 @@
           <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/6_XMPt_1rDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div class="w-full sm:basis-1/2">
-          <div class="flex flex-row items-end mb-[24px] gap-[24px]">
+          <div id="referal_code_head" class="text-[#13A9FD] text-[24px] mb-[16px]">Реферал код оруулах</div>
+          <div class="flex flex-row items-center mb-[24px] gap-[24px]">
             <div class="basis-[75%]">
-              <div id="referal_code_head" class="text-[#13A9FD] text-[24px] mb-[16px]">Реферал код оруулах</div>
-              <div id="referal_code_desc" class="text-[#E6E7EB] text-[14px] font-light">Та бүртгэлээ баталгаажуулсан имэйл хаяг, промо кодоо илгээгээд урамшуулалд хамрагдаарай.</div>
+              <div id="referal_code_desc" class="text-[#E6E7EB] text-[14px] font-extralight">Та бүртгэлээ баталгаажуулсан имэйл хаяг, промо кодоо илгээгээд урамшуулалд хамрагдаарай.</div>
             </div>
-            <div class="basis-[25%]">
+            <div class="basis-[25%] max-h-[42px] flex items-center">
               <img src="/images/gift.svg" />
             </div>
           </div>
           <div class="flex flex-row gap-[24px] items-end flex-col sm:flex-row justify-items-stretch">
             <div class="w-full sm:basis-[75%]">
               <div id="referal_code_email" class="text-[#E6E7EB] mb-[8px]">Бүртгэлтэй и-мэйл</div>
-              <input type="text" id="name" class="rounded-[4px] w-full border-solid border-[.5px] border-[#E6E7EB] focus-visible:border-[#006CFF] invalid:border-[#FF003D] bg-[rgba(0,0,0,0)] w-full h-[48px] mb-[16px] p-[10px] px-[16px] outline-none" />
+              <input type="text" id="email" onchange="validatePromoEmail(event)" class="rounded-[4px] w-full border-solid border-[.5px] border-[#E6E7EB] focus-visible:border-[#006CFF] bg-[rgba(0,0,0,0)] w-full h-[48px] mb-[16px] p-[10px] px-[16px] outline-none font-extralight" />
               <div id="referal_code_promo" class="text-[#E6E7EB] mb-[8px]">Промо код</div>
-              <input type="text" id="promo" class="rounded-[4px] border-solid border-[.5px] border-[#E6E7EB] focus-visible:border-[#006CFF] invalid:border-[#FF003D] bg-[rgba(0,0,0,0)] w-full h-[48px] p-[10px] px-[16px] outline-none" />
+              <input type="text" id="promo" onchange="validatePromoCode(event)" class="rounded-[4px] border-solid border-[.5px] border-[#E6E7EB] focus-visible:border-[#006CFF] invalid:border-[#FF003D] bg-[rgba(0,0,0,0)] w-full h-[48px] p-[10px] px-[16px] outline-none font-extralight" />
             </div>
-            <div class="w-full sm:basis-[25%]">
-              <button onclick="submitPromo()" id="referal_code_send" class="rounded-[4px] w-full font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] w-full sm:w-auto hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Илгээх</button>
+            <div class="w-full sm:basis-[25%] flex justify-center">
+              <button onclick="submitPromo()" id="referal_code_send" class="rounded-[4px] w-auto md:w-full font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] sm:w-auto hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Илгээх</button>
             </div>
           </div>
         </div>
@@ -217,8 +225,11 @@
 
       <div class="flex flex-col gap-[40px] md:gap-0 sm:flex-row items-center justify-items-stretch px-[24px] py-[40px] sm:p-[35px] sm:pl-[83px] rounded-[8px] bg-gradient-to-b from-[rgba(0,108,255,.4)] to-[rgba(27,51,123,.4)] overflow-hidden">
         <div class="basis-[45%]">
-          <div id="app_head" class="text-[#13A9FD] text-[24px] mb-[24px] leading-tight">Гар утасны аппликэйшн тун удахгүй</div>
-          <div id="app_desc" class="text-[#fff] font-light mb-[40px]">Арилжаанд оролцох, хэтэвчээ удирдах хамгийн хялбар замыг санал болгож байна.</div>
+          <div id="app_head" class="text-[#13A9FD] text-[24px] mb-[24px] leading-[1.55]">
+            Гар утасны аппликэйшн<br />
+            <span class="font-bold">ТУН УДАХГҮЙ</span>
+          </div>
+          <div id="app_desc" class="text-[#fff] font-extralight mb-[40px]">Арилжаанд оролцох, хэтэвчээ удирдах хамгийн хялбар замыг санал болгож байна.</div>
           <div class="flex flex-wrap justify-center sm:justify-start gap-[14px] md:gap-[24px]">
             <img class="object-cover w-[133px]" src="/images/android.svg" />
             <img class="object-cover w-[133px]" src="/images/ios.svg" />
@@ -228,34 +239,37 @@
       </div>
 
       <div class="pt-[160px] relative mb-[240px]">
-        <div id="start_trade_head" class="text-[#13A9FD] text-[24px] mb-[24px] lg:mb-[40px]">Арилжаагаа эхлүүлэх 4 алхам</div>
+        <div id="start_trade_head" class="text-[#13A9FD] text-[24px] mb-[24px] lg:mb-[40px] font-medium">
+          Арилжаагаа эхлүүлэх
+          <span class="whitespace-nowrap">4 алхам</span>
+        </div>
         <div id="start_trade_desc" class="font-light mb-[24px] lg:hidden">Та бүртгэлээ үүсгээд арилжаагаа эхлүүлээрэй!</div>
         <div class="flex flex-col lg:flex-row gap-[32px] lg:gap-[70px]">
-          <div class="flex flex-row flex-wrap gap-y-[24px] gap-x-[30px] sm:gap-x-[50px]">
+          <div class="flex flex-row flex-wrap gap-y-[24px] gap-x-[50px]">
             <div class="relative w-[130px] h-[160px]">
               <div class="absolute lg:left-[-10px] top-[30px] lg:top-[34px] text-[100px] opacity-70 bg-clip-text text-transparent font-black leading-[72px] bg-gradient-to-b from-[rgba(19,169,253,1)] via-[rgba(0,108,255,0.64)] to-[rgba(5,15,54,0)]">1</div>
-              <img class="absolute top-0" src="/images/Path 5936.svg" />
+              <img class="absolute top-0 left-[10px]" src="/images/Path 5936.svg" />
               <div id="start_trade_1" class="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">Бүртгэл<br />үүсгэх</div>
             </div>
             <div class="relative w-[130px] h-[160px]">
               <div class="absolute lg:left-[-10px] top-[30px] lg:top-[34px] text-[100px] opacity-70 bg-clip-text text-transparent font-black leading-[72px] bg-gradient-to-b from-[rgba(19,169,253,1)] via-[rgba(0,108,255,0.64)] to-[rgba(5,15,54,0)]">2</div>
-              <img class="absolute top-0" src="/images/Path 5936.svg" />
+              <img class="absolute top-0 left-[10px]" src="/images/Path 5936.svg" />
               <div id="start_trade_2" class="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">Бүртгэл<br />баталгаажуулах</div>
             </div>
             <div class="relative w-[130px] h-[160px]">
               <div class="absolute lg:left-[-10px] top-[30px] lg:top-[34px] text-[100px] opacity-70 bg-clip-text text-transparent font-black leading-[72px] bg-gradient-to-b from-[rgba(19,169,253,1)] via-[rgba(0,108,255,0.64)] to-[rgba(5,15,54,0)]">3</div>
-              <img class="absolute top-0" src="/images/Path 5936.svg" />
+              <img class="absolute top-0 left-[10px]" src="/images/Path 5936.svg" />
               <div id="start_trade_3" class="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">Дансаа<br />цэнэглэх</div>
             </div>
             <div class="relative w-[130px] h-[160px]">
               <div class="absolute lg:left-[-10px] top-[30px] lg:top-[34px] text-[100px] opacity-70 bg-clip-text text-transparent font-black leading-[72px] bg-gradient-to-b from-[rgba(19,169,253,1)] via-[rgba(0,108,255,0.64)] to-[rgba(5,15,54,0)]">4</div>
-              <img class="absolute top-0" src="/images/Path 5936.svg" />
+              <img class="absolute top-0 left-[10px]" src="/images/Path 5936.svg" />
               <div id="start_trade_4" class="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">Арилжаа<br />хийх</div>
             </div>
           </div>
-          <div class="text-right lg:text-left">
+          <div class="text-center sm:text-left">
             <div id="start_trade_desc_bottom" class="font-light max-w-[210px] mb-[24px] hidden lg:block">Та бүртгэлээ үүсгээд арилжаагаа эхлүүлээрэй!</div>
-            <button id="start_trade_button" class="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Бүртгүүлэх</button>
+            <a href="https://trade.altex.mn/register" target="_blank" id="start_trade_button" class="inline-block rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Бүртгүүлэх</a>
           </div>
         </div>
       </div>
@@ -263,25 +277,25 @@
       <div class="flex flex-row flex-wrap mb-[50px]">
         <div class="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px]">
           <div id="footer_about_us" class="text-[rgba(19,169,253,1)] mb-[32px]">Бидний тухай</div>
-          <a id="footer_about_exchange" class="block mb-[16px]" href="https://altex.mn/second.html">Биржийн тухай</a>
-          <a id="footer_team" class="block mb-[16px]" href="https://altex.mn/our_team.html">Баг, хамт олон</a>
+          <a id="footer_about_exchange" class="block mb-[16px]" href="https://altex.mn/second.html" target="_blank">Биржийн тухай</a>
+          <a id="footer_team" class="block mb-[16px]" href="https://altex.mn/our_team.html" target="_blank">Баг, хамт олон</a>
         </div>
         <div class="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px]">
           <div id="footer_academy" class="text-[rgba(19,169,253,1)] mb-[32px]">Академи</div>
-          <a id="footer_market_news" href="https://altex.mn/index.php#:~:text=%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8-,%D0%97%D0%B0%D1%85%20%D0%B7%D1%8D%D1%8D%D0%BB%D0%B8%D0%B9%D0%BD%20%D0%BC%D1%8D%D0%B4%D1%8D%D1%8D,-%D0%9A%D1%80%D0%B8%D0%BF%D1%82%D0%BE%20%D0%BC%D1%8D%D0%B4%D0%BB%D1%8D%D0%B3" class="block mb-[16px]">Зах зээлийн мэдээ</a>
-          <a id="footer_crypto_knowledge" href="https://altex.mn/crypto-basic.php" class="block mb-[16px]">Крипто мэдлэг</a>
-          <a id="footer_projects" href="https://altex.mn/projects.php" class="block mb-[16px]">Төслүүд</a>
+          <a id="footer_market_news" href="https://altex.mn/index.php#:~:text=%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8-,%D0%97%D0%B0%D1%85%20%D0%B7%D1%8D%D1%8D%D0%BB%D0%B8%D0%B9%D0%BD%20%D0%BC%D1%8D%D0%B4%D1%8D%D1%8D,-%D0%9A%D1%80%D0%B8%D0%BF%D1%82%D0%BE%20%D0%BC%D1%8D%D0%B4%D0%BB%D1%8D%D0%B3" target="_blank" class="block mb-[16px]">Зах зээлийн мэдээ</a>
+          <a id="footer_crypto_knowledge" href="https://altex.mn/crypto-basic.php" target="_blank" class="block mb-[16px]">Крипто мэдлэг</a>
+          <a id="footer_projects" href="https://altex.mn/projects.php" target="_blank" class="block mb-[16px]">Төслүүд</a>
         </div>
         <div class="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px]">
           <div id="footer_service" class="text-[rgba(19,169,253,1)] mb-[32px]">Үйлчилгээ</div>
-          <a id="footer_terms_of_service" href="https://altex.mn/terms_service.html" class="block mb-[16px]">Үйлчилгээний нөхцөл</a>
-          <a id="footer_privacy_policy" href="https://altex.mn/privacy_policy.html" class="block mb-[16px]">Нууцлалын бодлого</a>
-          <a id="footer_fee" href="https://altex.mn/fees.html" class="block mb-[16px]">Шимтгэл</a>
+          <a id="footer_terms_of_service" href="https://altex.mn/terms_service.html" target="_blank" class="block mb-[16px]">Үйлчилгээний нөхцөл</a>
+          <a id="footer_privacy_policy" href="https://altex.mn/privacy_policy.html" target="_blank" class="block mb-[16px]">Нууцлалын бодлого</a>
+          <a id="footer_fee" href="https://altex.mn/fees.html" target="_blank" class="block mb-[16px]">Шимтгэл</a>
         </div>
         <div class="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px]">
           <div id="footer_help" class="text-[rgba(19,169,253,1)] mb-[32px]">Тусламж</div>
-          <a id="footer_faq" href="https://altex.mn/faq.html" class="block mb-[16px]">Түгээмэл асуултууд</a>
-          <a id="footer_feedback" href="https://altex.mn/feedback.html" class="block mb-[16px]">Санал хүсэлт</a>
+          <a id="footer_faq" href="https://altex.mn/faq.html" target="_blank" class="block mb-[16px]">Түгээмэл асуултууд</a>
+          <a id="footer_feedback" href="https://altex.mn/feedback.html" target="_blank" class="block mb-[16px]">Санал хүсэлт</a>
         </div>
         <div class="basis-full min-[310px]:basis-full md:basis-2/3 lg:basis-1/5 mb-[30px]">
           <div id="footer_contact" class="text-[rgba(19,169,253,1)] mb-[32px]">Холбоо барих</div>
@@ -317,30 +331,30 @@
             </div>
           </div>
           </div>
-          <div class="flex gap-[30px] flex-wrap">
-            <a href="https://www.facebook.com/altex.mn">
+          <div class="flex justify-between sm:justify-start sm:flex-wrap sm:gap-[30px]">
+            <a href="https://www.facebook.com/altex.mn" target="_blank">
               <img src="/images/fb.svg" />
             </a>
-            <a href="https://twitter.com/altex_mn">
+            <a href="https://twitter.com/altex_mn" target="_blank">
               <img src="/images/tw.svg" />
             </a>
-            <a href="https://www.instagram.com/accounts/login/?next=/altex.mn/">
+            <a href="https://www.instagram.com/accounts/login/?next=/altex.mn/" target="_blank">
               <img src="/images/ins.svg" />
             </a>
-            <a href="https://t.me/altexmn">
+            <a href="https://t.me/altexmn" target="_blank">
               <img src="/images/tel.svg" />
             </a>
-            <a href="https://www.youtube.com/channel/UC0cP-OEOj_b2LJaSW8vxjHA">
+            <a href="https://www.youtube.com/channel/UC0cP-OEOj_b2LJaSW8vxjHA" target="_blank">
               <img src="/images/tube.svg" />
             </a>
-            <a href="https://www.linkedin.com/company/altex-digital-exchange/">
+            <a href="https://www.linkedin.com/company/altex-digital-exchange/" target="_blank">
               <img src="/images/linkedin.svg" />
             </a>
           </div>
         </div>
       </div>
 
-      <div class="absolute w-screen left-0 h-[48px] bg-[#0A1540] flex items-center">
+      <div class="absolute w-full left-0 h-[48px] bg-[#0A1540] flex items-center">
         <div id="bottom" class="text-[#CDCDCE] leading-1 inline-block text-center w-full text-[12px]">Зохиогчийн эрх © 2023 Бүх эрх хуулиар хамгаалагдсан</div>
       </div>
     </div>
@@ -361,7 +375,7 @@
                   <div class="text-[#FFF] ml-[8px] ${r.ticker === 'BAT' ? 'text-[9px]' : 'text-[10px]'} opacity-50">${r.name}</div>
                 </div>
               </div>
-              <div class="text-[24px] mt-[21px] mb-[5px]">$${parseFloat(r.value).toFixed(2)}</div>
+              <div class="text-[24px] mt-[21px] mb-[5px]">$${parseFloat(r.value).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
               <div class="text-[12px] text-[#${r.temp < 0 ? '13A9FD' : 'FDAE13'}]">
                 <span class="mr-[15px] mb-[2px]">( ${r.temp.toFixed(2)}% )</span>
                 <img src="https://altex.mn/images/bit-${r.temp < 0 ? 'down' : 'up'}.svg" class="inline" />
@@ -383,43 +397,80 @@
       document.body.classList.remove("overflow-hidden");
     }
 
-    function submitPromo() {
-      const nameInput = document.getElementById("name");
-      const promoInput = document.getElementById("promo");
-      nameInput.setCustomValidity("");
-      promoInput.setCustomValidity("");
-
-      if (nameInput.value && promoInput.value) {
-        fetch("https://api.apispreadsheets.com/data/VrHiEVYyfwBHlXh1/", {
-          method: "POST",
-          body: JSON.stringify({"data": [{
-            "E-mail": nameInput.value,
-            "Referral code": promoInput.value
-          }]}),
-        }).then((res) =>{
-          if (res.status === 201){
-            alert("Амжилттай бүртгэгдлээ!");
-            nameInput.value = "";
-            promoInput.value = "";
-          } else {
-            alert('Бүртгэхэд асуудал гарлаа!');
-          }
-        });
+    function validatePromoEmail(e) {
+      if (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(e.target.value).toLowerCase())) {
+        e.target.classList.add("border-[#43D24C]");
+        e.target.classList.remove("border-[#FF003D]");
       } else {
-        if (!nameInput.value) {
-          nameInput.setCustomValidity("Invalid field.");
+        e.target.classList.remove("border-[#43D24C]");
+        e.target.classList.add("border-[#FF003D]");
+      }
+    }
+
+    function validatePromoCode(e) {
+      if (e.target.value) {
+        e.target.classList.add("border-[#43D24C]");
+        e.target.classList.remove("border-[#FF003D]");
+      } else {
+        e.target.classList.remove("border-[#43D24C]");
+        e.target.classList.add("border-[#FF003D]");
+      }
+    }
+
+    function hidePromoSuccess() {
+      document.querySelector("#promoSuccess").classList.add("hidden");
+    }
+
+    function submitPromo() {
+      const emailInput = document.getElementById("email");
+      const promoInput = document.getElementById("promo");
+      emailInput.classList.remove("border-[#43D24C]");
+      emailInput.classList.remove("border-[#FF003D]");
+      promoInput.classList.remove("border-[#43D24C]");
+      promoInput.classList.remove("border-[#FF003D]");
+
+      if (emailInput.value && promoInput.value) {
+        if (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(emailInput.value).toLowerCase())) {
+          fetch("https://api.apispreadsheets.com/data/VrHiEVYyfwBHlXh1/", {
+            method: "POST",
+            body: JSON.stringify({"data": [{
+              "E-mail": emailInput.value,
+              "Referral code": promoInput.value
+            }]}),
+          }).then((res) =>{
+            if (res.status === 201) {
+              document.querySelector("#promoSuccess").classList.remove("hidden");
+              emailInput.value = "";
+              promoInput.value = "";
+            } else {
+              alert('Бүртгэхэд асуудал гарлаа!');
+            }
+          });
+        }
+      } else {
+        if (!emailInput.value) {
+          emailInput.classList.add("border-[#43D24C]");
+          emailInput.classList.remove("border-[#FF003D]");
         }
         if (!promoInput.value) {
-          promoInput.setCustomValidity("Invalid field.");
+          promoInput.classList.add("border-[#43D24C]");
+          promoInput.classList.remove("border-[#FF003D]");
         }
       }
     }
 
     function scrollPrices(direction) {
-      document.getElementById("prices").scrollBy({
-        left: (direction === 'left' ? 1 : -1)*200,
-        behavior: "smooth"
-      })
+      const elem = document.getElementById("prices");
+      if (direction === 'left' && elem.scrollLeft > elem.offsetWidth) {
+        elem.scrollLeft = 0;
+      } else if (direction === 'right' && elem.scrollLeft === 0) {
+        elem.scrollLeft = elem.offsetWidth;
+      } else {
+        elem.scrollBy({
+          left: (direction === 'left' ? 1 : -1)*200,
+          behavior: "smooth"
+        });
+      }
     }
 
     function change_lang() {
@@ -460,30 +511,30 @@
         document.querySelector("#jumbo_button").innerHTML = "Trade now";
         document.querySelector("#market_trend").innerHTML = "Market trends";
         document.querySelector("#feature_1_head").innerHTML = "Aggregated Liquidity";
-        document.querySelector("#feature_1_desc").innerHTML = "Access a deep liquidity ecosystem through order book aggregation technology between partner exchanges.";
-        document.querySelector("#feature_2_head").innerHTML = "Corporate service";
-        document.querySelector("#feature_2_desc").innerHTML = "Spot trading, Broker (OTC), Investment portfolio service";
-        document.querySelector("#feature_3_head").innerHTML = "Competitive market price";
-        document.querySelector("#feature_3_desc").innerHTML = "Oportunity for buy/sell digital assets by competetive price on market";
-        document.querySelector("#feature_4_head").innerHTML = "Withdrawal limit";
-        document.querySelector("#feature_4_desc").innerHTML = "Withdrawal limit for crypto and fiat $7,000 - $100,000";
-        document.querySelector("#feature_5_head").innerHTML = "Lower fee";
-        document.querySelector("#feature_5_desc").innerHTML = "Make crypto transfer with lower fee";
+        document.querySelector("#feature_1_desc").innerHTML = "Access a deep liquidity ecosystem through order book aggregation technology";
+        document.querySelector("#feature_2_head").innerHTML = "Institutional services";
+        document.querySelector("#feature_2_desc").innerHTML = "Spot trading, Brokerage (OTC), Investment portfolio";
+        document.querySelector("#feature_3_head").innerHTML = "Competitive rates";
+        document.querySelector("#feature_3_desc").innerHTML = "Buy and sell digital assets quickly and easily at the most competitive rates";
+        document.querySelector("#feature_4_head").innerHTML = "Withdrawal limits";
+        document.querySelector("#feature_4_desc").innerHTML = "Cash and crypto withdrawal limits up to $100,000";
+        document.querySelector("#feature_5_head").innerHTML = "Low transaction fee";
+        document.querySelector("#feature_5_desc").innerHTML = "Effortless and quick transaction with low fee";
         document.querySelector("#referal_code_head").innerHTML = "Rereral code";
         document.querySelector("#referal_code_desc").innerHTML = "Please send us your registration email and promo code and receive bonus.";
         document.querySelector("#referal_code_email").innerHTML = "Registration email";
         document.querySelector("#referal_code_promo").innerHTML = "Promo code";
         document.querySelector("#referal_code_send").innerHTML = "Send";
-        document.querySelector("#app_head").innerHTML = "Mobile application Coming soon";
+        document.querySelector("#app_head").innerHTML = "Mobile application<br /><span class='font-semibold'>COMING SOON</span>";
         document.querySelector("#app_desc").innerHTML = "Easiest way to buy and sell cryptocurrencies and manage your wallet";
-        document.querySelector("#start_trade_head").innerHTML = "4 steps to start trading";
-        document.querySelector("#start_trade_desc").innerHTML = "Create registration and start trading!";
-        document.querySelector("#start_trade_1").innerHTML = "Make<br />registration";
-        document.querySelector("#start_trade_2").innerHTML = "Verify<br />KYC";
-        document.querySelector("#start_trade_3").innerHTML = "Deposit<br />account";
-        document.querySelector("#start_trade_4").innerHTML = "Start<br />trade";
-        document.querySelector("#start_trade_desc_bottom").innerHTML = "Create registration and start trading!";
-        document.querySelector("#start_trade_button").innerHTML = "Register";
+        document.querySelector("#start_trade_head").innerHTML = "<span class='whitespace-nowrap'>4 Easy Steps</span> to Get Started";
+        document.querySelector("#start_trade_desc").innerHTML = "Take your first step into the crypto trading journey today!";
+        document.querySelector("#start_trade_1").innerHTML = "Sign<br />up";
+        document.querySelector("#start_trade_2").innerHTML = "Get<br />verified";
+        document.querySelector("#start_trade_3").innerHTML = "Cash<br />in";
+        document.querySelector("#start_trade_4").innerHTML = "<br />Trade";
+        document.querySelector("#start_trade_desc_bottom").innerHTML = "Take your first step into the crypto trading journey today!";
+        document.querySelector("#start_trade_button").innerHTML = "Create account";
         document.querySelector("#footer_about_us").innerHTML = "About";
         document.querySelector("#footer_about_exchange").innerHTML = "About us";
         document.querySelector("#footer_team").innerHTML = "Our team";
@@ -543,15 +594,15 @@
         document.querySelector("#referal_code_email").innerHTML = "Бүртгэлтэй и-мэйл";
         document.querySelector("#referal_code_promo").innerHTML = "Промо код";
         document.querySelector("#referal_code_send").innerHTML = "Илгээх";
-        document.querySelector("#app_head").innerHTML = "Гар утасны аппликэйшн тун удахгүй";
+        document.querySelector("#app_head").innerHTML = "Гар утасны аппликэйшн<br /><span class='font-semibold'>ТУН УДАХГҮЙ</span>";
         document.querySelector("#app_desc").innerHTML = "Арилжаанд оролцох, хэтэвчээ удирдах хамгийн хялбар замыг санал болгож байна.";
-        document.querySelector("#start_trade_head").innerHTML = "Арилжаагаа эхлүүлэх 4 алхам";
-        document.querySelector("#start_trade_desc").innerHTML = "Та бүртгэлээ үүсгээд арилжаагаа эхлүүлээрэй!";
+        document.querySelector("#start_trade_head").innerHTML = "Арилжаагаа эхлүүлэх <span class='whitespace-nowrap'>4 алхам</span>";
+        document.querySelector("#start_trade_desc").innerHTML = "Өнөөдөр бүртгэлээ үүсгээд арилжаагаа эхлүүлээрэй!";
         document.querySelector("#start_trade_1").innerHTML = "Бүртгэл<br />үүсгэх";
         document.querySelector("#start_trade_2").innerHTML = "Бүртгэл<br />баталгаажуулах";
         document.querySelector("#start_trade_3").innerHTML = "Дансаа<br />цэнэглэх";
         document.querySelector("#start_trade_4").innerHTML = "Арилжаа<br />хийх";
-        document.querySelector("#start_trade_desc_bottom").innerHTML = "Та бүртгэлээ үүсгээд арилжаагаа эхлүүлээрэй!";
+        document.querySelector("#start_trade_desc_bottom").innerHTML = "Өнөөдөр бүртгэлээ үүсгээд арилжаагаа эхлүүлээрэй!";
         document.querySelector("#start_trade_button").innerHTML = "Бүртгүүлэх";
         document.querySelector("#footer_about_us").innerHTML = "Бидний тухай";
         document.querySelector("#footer_about_exchange").innerHTML = "Биржийн тухай";
@@ -575,32 +626,13 @@
 
     lang_translate();
 
-    document.addEventListener("click", () => {
-      // Hide all menu
-      const mobileMenuExpanders = document.querySelectorAll("#mobile_menu .expander");
-      mobileMenuExpanders.forEach((mobileMenuExpander) => {
-        mobileMenuExpander.classList.remove("h-auto");
-      });
-
-      const menuExpanders = document.querySelectorAll("#main_menu .expander");
-      menuExpanders.forEach((menuExpander) => {
-        menuExpander.classList.add("hidden");
-        menuExpander.classList.remove("block");
-      });
-
-      const menuIcons = document.querySelectorAll(".icon");
-      menuIcons.forEach((menuIcon) => {
-        menuIcon.classList.remove("rotate-180");
-      });
-    });
-
     function toggleMobileMenu(e) {
       e.stopPropagation();
       const parent = e.target.parentElement;
       const icon = parent.querySelector(".icon");
       const expander = parent.querySelector(".expander");
       icon.classList.toggle("rotate-180");
-      expander.classList.toggle("h-auto");
+      expander.classList.toggle("max-h-[140px]");
     }
 
     function toggleMenu(e) {
@@ -609,8 +641,29 @@
       const icon = parent.querySelector(".icon");
       const expander = parent.querySelector(".expander");
       icon.classList.toggle("rotate-180");
-      expander.classList.toggle("hidden");
-      expander.classList.toggle("block");
+      expander.classList.toggle("max-h-[140px]");
+    }
+
+    document.addEventListener("click", hideMenus);
+
+    // Hide all menu
+    function hideMenus (e) {
+      if (!e.target.closest(".menu") || !e.target.closest(".mobile_menu")) {
+        const mobileMenuExpanders = document.querySelectorAll("#mobile_menu .expander");
+        mobileMenuExpanders.forEach((mobileMenuExpander) => {
+          mobileMenuExpander.classList.remove("max-h-[140px]");
+        });
+
+        const menuExpanders = document.querySelectorAll("#main_menu .expander");
+        menuExpanders.forEach((menuExpander) => {
+          menuExpander.classList.remove("max-h-[140px]");
+        });
+
+        const menuIcons = document.querySelectorAll(".icon");
+        menuIcons.forEach((menuIcon) => {
+          menuIcon.classList.remove("rotate-180");
+        });
+      }
     }
   </script>
 </body>
