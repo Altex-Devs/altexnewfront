@@ -32,11 +32,27 @@
   </style>
 </head>
 <body class="text-[#FFFFFF] font-['Montserrat'] min-w-full overflow-x-hidden">
-  <div id="promoSuccess" onclick="hidePromoSuccess()" class="fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(67,210,76,.5)] px-[24px] py-[30px] rounded-[8px] z-30">
+  <div id="promoSuccess" class="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(67,210,76,.5)] px-[24px] py-[30px] rounded-[8px] z-30">
     <div class="relative flex items-center gap-[16px]">
       <img src="/images/correct.svg" />
-      Таны мэдээллийг хүлээж авлаа!
-      <img class="absolute top-[-14px] right-[-8px] cursor-pointer" src="/images/close.svg" />
+      Таны мэдээллийг хүлээж авлаа.
+      <img class="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="/images/close.svg" />
+    </div>
+  </div>
+
+  <div id="promoFail" class="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(255,0,61,.32)] px-[24px] py-[30px] rounded-[8px] z-30">
+    <div class="relative flex items-center gap-[16px]">
+      <img src="/images/error.svg" />
+      Алдаа гарлаа, та дахин оролдоно уу!
+      <img class="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="/images/close.svg" />
+    </div>
+  </div>
+
+  <div id="promoAlert" class="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(254,103,3,.32)] px-[24px] py-[30px] rounded-[8px] z-30">
+    <div class="relative flex items-center gap-[16px]">
+      <img src="/images/warning.svg" />
+      И-мэйл, промо кодоо зөв оруулна уу!
+      <img class="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="/images/close.svg" />
     </div>
   </div>
 
@@ -97,9 +113,9 @@
         </div>
         <div id="main_menu" class="items-center gap-[40px] text-[16px] hidden lg:flex">
           <a id="menu_trade" href="https://trade.altex.mn/">Арилжаа</a>
-          <div class="relative">
-            <span id="menu_about_us" class="menu" onclick="toggleMenu(event)">Бидний тухай</span>
-            <img class="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
+          <div class="relative cursor-pointer" onclick="toggleMenu(event)">
+            <span id="menu_about_us" class="menu">Бидний тухай</span>
+            <img class="icon inline-block relative ml-[5px]" src="/images/menu_arrow.svg" />
             <div class="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
               <div class="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div class="flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
@@ -108,9 +124,9 @@
               </div>
             </div>
           </div>
-          <div class="relative">
-            <span id="menu_academy" class="menu" onclick="toggleMenu(event)">Академи</span>
-            <img class="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
+          <div class="relative cursor-pointer" onclick="toggleMenu(event)">
+            <span id="menu_academy" class="menu">Академи</span>
+            <img class="icon inline-block relative ml-[5px]" src="/images/menu_arrow.svg" />
             <div class="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
               <div class="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div class="flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
@@ -417,44 +433,45 @@
       }
     }
 
-    function hidePromoSuccess() {
-      document.querySelector("#promoSuccess").classList.add("hidden");
+    function hidePromoNotif(e) {
+      e.target.closest(".notif").classList.add("hidden");
     }
 
     function submitPromo() {
       const emailInput = document.getElementById("email");
       const promoInput = document.getElementById("promo");
-      emailInput.classList.remove("border-[#43D24C]");
-      emailInput.classList.remove("border-[#FF003D]");
-      promoInput.classList.remove("border-[#43D24C]");
-      promoInput.classList.remove("border-[#FF003D]");
 
-      if (emailInput.value && promoInput.value) {
-        if (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(emailInput.value).toLowerCase())) {
-          fetch("https://api.apispreadsheets.com/data/VrHiEVYyfwBHlXh1/", {
-            method: "POST",
-            body: JSON.stringify({"data": [{
-              "E-mail": emailInput.value,
-              "Referral code": promoInput.value
-            }]}),
-          }).then((res) =>{
-            if (res.status === 201) {
-              document.querySelector("#promoSuccess").classList.remove("hidden");
-              emailInput.value = "";
-              promoInput.value = "";
-            } else {
-              alert('Бүртгэхэд асуудал гарлаа!');
-            }
-          });
-        }
+      document.querySelector("#promoSuccess").classList.add("hidden");
+      document.querySelector("#promoFail").classList.add("hidden");
+      document.querySelector("#promoAlert").classList.add("hidden");
+
+      if (emailInput.value && /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(emailInput.value).toLowerCase()) && promoInput.value) {
+        fetch("https://api.apispreadsheets.com/data/VrHiEVYyfwBHlXh1/", {
+          method: "POST",
+          body: JSON.stringify({"data": [{
+            "E-mail": emailInput.value,
+            "Referral code": promoInput.value
+          }]}),
+        }).then((res) => {
+          if (res.status === 201) {
+            document.querySelector("#promoSuccess").classList.remove("hidden");
+            emailInput.value = "";
+            promoInput.value = "";
+          } else {
+            document.querySelector("#promoFail").classList.remove("hidden");
+          }
+        });
       } else {
+        document.querySelector("#promoAlert").classList.remove("hidden");
+
         if (!emailInput.value) {
-          emailInput.classList.add("border-[#43D24C]");
-          emailInput.classList.remove("border-[#FF003D]");
+          emailInput.classList.add("border-[#FF003D]");
+          emailInput.classList.remove("border-[#43D24C]");
         }
+
         if (!promoInput.value) {
-          promoInput.classList.add("border-[#43D24C]");
-          promoInput.classList.remove("border-[#FF003D]");
+          promoInput.classList.add("border-[#FF003D]");
+          promoInput.classList.remove("border-[#43D24C]");
         }
       }
     }
