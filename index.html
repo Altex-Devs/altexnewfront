@@ -37,7 +37,7 @@
   <div id="promoSuccess" class="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(67,210,76,.5)] px-[24px] py-[30px] rounded-[8px] z-30">
     <div class="relative flex items-center gap-[16px]">
       <img src="/images/correct.svg" />
-      Таны мэдээллийг хүлээж авлаа.
+      <span id="notif_success">Таны мэдээллийг хүлээж авлаа.</span>
       <img class="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="/images/close.svg" />
     </div>
   </div>
@@ -45,7 +45,7 @@
   <div id="promoFail" class="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(255,0,61,.32)] px-[24px] py-[30px] rounded-[8px] z-30">
     <div class="relative flex items-center gap-[16px]">
       <img src="/images/error.svg" />
-      Алдаа гарлаа, та дахин оролдоно уу!
+      <span id="notif_fail">Алдаа гарлаа, та дахин оролдоно уу!</span>
       <img class="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="/images/close.svg" />
     </div>
   </div>
@@ -53,17 +53,17 @@
   <div id="promoAlert" class="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(254,103,3,.32)] px-[24px] py-[30px] rounded-[8px] z-30">
     <div class="relative flex items-center gap-[16px]">
       <img src="/images/warning.svg" />
-      И-мэйл, промо кодоо зөв оруулна уу!
+      <span id="notif_alert">И-мэйл, промо кодоо зөв оруулна уу!</span>
       <img class="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="/images/close.svg" />
     </div>
   </div>
 
   <div id="newsletter" class="fixed hidden flex justify-center items-center backdrop-blur-sm top-0 l-0 w-full h-screen z-20">
     <div class="relative w-[600px] max-w-[100%] bg-[#0E1A43] px-[25px] py-[50px] sm:p-[100px] sm:py-[70px] rounded-[8px] m-[15px]">
-      <div class="text-[#13A9FD] text-[24px] font-medium mb-[20px]">Цахим сонинд бүртгүүлэх</div>
-      <p class="font-extralight mb-[20px]">Та манайд бүртгүүлж хамгийн сүүлийн үеийн мэдээллийг тогтмол аваарай.</p>
+      <div id="newsletter_title" class="text-[#13A9FD] text-[24px] font-medium mb-[20px]">Цахим сонинд бүртгүүлэх</div>
+      <p id="newsletter_desc" class="font-extralight mb-[20px]">Та манайд бүртгүүлж хамгийн сүүлийн үеийн мэдээллийг тогтмол аваарай.</p>
       <input type="email" id="newsletteremail" class="rounded-[4px] w-full border-solid border-[.5px] border-[#E6E7EB] focus-visible:border-[#006CFF] bg-[rgba(0,0,0,0)] w-full h-[48px] mb-[16px] p-[10px] px-[16px] outline-none font-extralight" placeholder="И-мэйл" onchange="validateNewsletterEmail(event)" />
-      <button onclick="submitNewsletter()" class="rounded-[4px] w-full font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Илгээх</button>
+      <button id="newsletter_send" onclick="submitNewsletter()" class="rounded-[4px] w-full font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Илгээх</button>
       <img class="absolute top-[16px] right-[16px] cursor-pointer" onclick="hideNewsletter()" src="/images/close.svg" />
     </div>
   </div>
@@ -100,10 +100,8 @@
   <div class="bg-[#050F36] w-full">
     <div class="container mx-auto pt-[48px] px-[16px] max-w-[1232px]">
       <div class="flex items-center bg-[#0A1540] h-[48px] w-full absolute left-0 top-0 text-[#696F86] text-[14px]">
-        <div class="container mx-auto text-right px-[16px] max-w-[1232px] overflow-auto font-light">
-          |
-          <span id="translate-lang" class="mx-[24px] cursor-pointer" onclick="change_lang()">Eng</span>
-          |
+        <div class="container mx-auto text-right px-[16px] max-w-[1232px] overflow-auto font-light text-[#E6E7EB]">
+          <span id="translate-lang" class="px-[24px] cursor-pointer border-x-[1px] border-[#3B4466]" onclick="change_lang()">Eng</span>
           <a href="https://altex.mn/corporate.php" id="industry-select" class="ml-[24px]">Байгууллага</a>
         </div>
       </div>
@@ -636,6 +634,13 @@
         document.querySelector("#footer_contact").innerHTML = "Contact";
         document.querySelector("#footer_address").innerHTML = "Khaan Insurance building, Jamyan Gun street, Sukhbaatar district, 1st khoroo, Ulaanbaatar Mongolia";
         document.querySelector("#bottom").innerHTML = "Copyright © 2023 Choijin Altex LLC. All rights reserved";
+        document.querySelector("#notif_success").innerHTML = "Successfully sent.";
+        document.querySelector("#notif_fail").innerHTML = "Error appears, please try again!";
+        document.querySelector("#notif_alert").innerHTML = "Verify your email and promo code!";
+        document.querySelector("#newsletter_title").innerHTML = "Join our newsletter";
+        document.querySelector("#newsletter_desc").innerHTML = "Subscribe to our newsletter to receive the latest news.";
+        document.querySelector("#newsletteremail").placeholder = "E-mail";
+        document.querySelector("#newsletter_send").innerHTML = "Submit";
       } else {
         document.querySelector("#title").innerHTML = "ALTEX Дижитал Бирж";
         document.querySelector("#mobile_menu_trade").innerHTML = "Арилжаа";
@@ -706,6 +711,13 @@
         document.querySelector("#footer_contact").innerHTML = "Холбоо барих";
         document.querySelector("#footer_address").innerHTML = "Сүхбаатар дүүрэг 1-р хороо, Жамъян Гүний гудамж-5, Хаан Даатгал компанийн байр";
         document.querySelector("#bottom").innerHTML = "Зохиогчийн эрх © 2023 Бүх эрх хуулиар хамгаалагдсан";
+        document.querySelector("#notif_success").innerHTML = "Таны мэдээллийг хүлээж авлаа.";
+        document.querySelector("#notif_fail").innerHTML = "Алдаа гарлаа, та дахин оролдоно уу!";
+        document.querySelector("#notif_alert").innerHTML = "И-мэйл, промо кодоо зөв оруулна уу!";
+        document.querySelector("#newsletter_title").innerHTML = "Цахим сонинд бүртгүүлэх";
+        document.querySelector("#newsletter_desc").innerHTML = "Та манайд бүртгүүлж хамгийн сүүлийн үеийн мэдээллийг тогтмол аваарай.";
+        document.querySelector("#newsletteremail").placeholder = "И-мэйл";
+        document.querySelector("#newsletter_send").innerHTML = "Илгээх";
       }
     }
 
