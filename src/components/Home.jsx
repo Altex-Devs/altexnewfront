@@ -1,11 +1,62 @@
+/* eslint-disable jsx-a11y/alt-text */
+import { useEffect } from "react";
+import { FormattedMessage } from 'react-intl';
+
 function Home() {
+  useEffect(() => {
+    fetch('https://altex.mn/ticker.php').then((res) => res.json()).then((res) => {
+      const elem = document.getElementById("prices");
+      if (res.length) {
+        elem.innerHTML = '';
+        res.forEach((r) => {
+          elem.innerHTML += `
+            <div class="snap-center relative rounded-[10px] border-solid border border-[#13A9FD] px-[17px] py-[24px] min-w-[200px]">
+              <div class="flex items-stretch">
+                <img src="https://altex.mn/images/${r.ticker}.svg" />
+                <div class="flex flex-col justify-between">
+                  <div class="text-[#FD950D] ml-[8px] text-[20px] mt-[-5px]">${r.ticker}</div>
+                  <div class="text-[#FFF] ml-[8px] ${r.ticker === 'BAT' ? 'text-[9px]' : 'text-[10px]'} opacity-50">${r.name}</div>
+                </div>
+              </div>
+              <div class="text-[24px] mt-[21px] mb-[5px]">$${parseFloat(r.value).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
+              <div class="text-[12px] text-[#${r.temp < 0 ? '13A9FD' : 'FDAE13'}]">
+                <span class="mr-[15px] mb-[2px]">( ${r.temp.toFixed(2)}% )</span>
+                <img src="https://altex.mn/images/bit-${r.temp < 0 ? 'down' : 'up'}.svg" class="inline" />
+              </div>
+            </div>`;
+        });
+
+      } else {
+        elem.innerHTML = "Алдаа гарлаа"
+      }
+    }).catch(console.error);
+
+    const interval = setInterval(() => scrollPrices("left"), 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const scrollPrices = (direction) => {
+    const elem = document.getElementById("prices");
+    if (direction === 'left' && elem.scrollLeft > elem.offsetWidth) {
+      elem.scrollLeft = 0;
+    } else if (direction === 'right' && elem.scrollLeft === 0) {
+      elem.scrollLeft = elem.offsetWidth;
+    } else {
+      elem.scrollBy({
+        left: (direction === 'left' ? 1 : -1)*200,
+        behavior: "smooth"
+      });
+    }
+  }
+  
   return (
     <>
       <div id="promoSuccess" className="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(67,210,76,.5)] px-[24px] py-[30px] rounded-[8px] z-30">
         <div className="relative flex items-center gap-[16px]">
           <img src="/images/correct.svg" />
           <span id="notif_success">Таны мэдээллийг хүлээж авлаа.</span>
-          <img className="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="/images/close.svg" />
+          <img className="absolute top-[-14px] right-[-8px] cursor-pointer" onClick="hidePromoNotif(event)" src="/images/close.svg" />
         </div>
       </div>
 
@@ -13,7 +64,7 @@ function Home() {
         <div className="relative flex items-center gap-[16px]">
           <img src="/images/error.svg" />
           <span id="notif_fail">Алдаа гарлаа, та дахин оролдоно уу!</span>
-          <img className="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="/images/close.svg" />
+          <img className="absolute top-[-14px] right-[-8px] cursor-pointer" onClick="hidePromoNotif(event)" src="/images/close.svg" />
         </div>
       </div>
 
@@ -21,7 +72,7 @@ function Home() {
         <div className="relative flex items-center gap-[16px]">
           <img src="/images/warning.svg" />
           <span id="notif_alert">И-мэйл, промо кодоо зөв оруулна уу!</span>
-          <img className="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="/images/close.svg" />
+          <img className="absolute top-[-14px] right-[-8px] cursor-pointer" onClick="hidePromoNotif(event)" src="/images/close.svg" />
         </div>
       </div>
 
@@ -29,9 +80,9 @@ function Home() {
         <div className="relative w-[600px] max-w-[100%] bg-[#0E1A43] px-[25px] py-[50px] sm:p-[100px] sm:py-[70px] rounded-[8px] m-[15px]">
           <div id="newsletter_title" className="text-[#13A9FD] text-[24px] font-medium mb-[20px]">Цахим сонинд бүртгүүлэх</div>
           <p id="newsletter_desc" className="font-extralight mb-[20px]">Та манайд бүртгүүлж хамгийн сүүлийн үеийн мэдээллийг тогтмол аваарай.</p>
-          <input type="email" id="newsletteremail" className="rounded-[4px] w-full border-solid border-[.5px] border-[#E6E7EB] focus-visible:border-[#006CFF] bg-[rgba(0,0,0,0)] w-full h-[48px] mb-[16px] p-[10px] px-[16px] outline-none font-extralight" placeholder="И-мэйл" onchange="validateNewsletterEmail(event)" />
-          <button id="newsletter_send" onclick="submitNewsletter()" className="rounded-[4px] w-full font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Илгээх</button>
-          <img className="absolute top-[16px] right-[16px] cursor-pointer" onclick="hideNewsletter()" src="/images/close.svg" />
+          <input type="email" id="newsletteremail" className="rounded-[4px] border-solid border-[.5px] border-[#E6E7EB] focus-visible:border-[#006CFF] bg-[rgba(0,0,0,0)] w-full h-[48px] mb-[16px] p-[10px] px-[16px] outline-none font-extralight" placeholder="И-мэйл" onchange="validateNewsletterEmail(event)" />
+          <button id="newsletter_send" onClick="submitNewsletter()" className="rounded-[4px] w-full font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Илгээх</button>
+          <img className="absolute top-[16px] right-[16px] cursor-pointer" onClick="hideNewsletter()" src="/images/close.svg" />
         </div>
       </div>
 
@@ -41,9 +92,11 @@ function Home() {
           <svg id="SVGDoc" onClick="hideMenu()" width="16" height="16" version="1.1" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fillOpacity="1"></path></g></g></svg>
         </div>
         <div id="mobile_menu" className="flex flex-col gap-[15px] mb-[40px]">
-          <a id="mobile_menu_trade" className="pb-[10px]" href="https://trade.altex.mn/">Арилжаа</a>
+          <a id="mobile_menu_trade" className="pb-[10px]" href="https://trade.altex.mn/">
+            <FormattedMessage id="mobile_menu_trade" />
+          </a>
           <div>
-            <span id="mobile_menu_about_us" className="mobile_menu" onclick="toggleMobileMenu(event)">Бидний тухай</span>
+            <span id="mobile_menu_about_us" className="mobile_menu" onClick="toggleMobileMenu(event)">Бидний тухай</span>
             <img className="inline-block relative left-[5px] icon" src="/images/menu_arrow.svg" />
             <div className="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden transition-[max-height] duration-700 pl-[15px]">
               <a id="mobile_menu_about_exchange" className="block" href="https://altex.mn/second.html">Биржийн тухай</a>
@@ -51,7 +104,7 @@ function Home() {
             </div>
           </div>
           <div>
-            <span id="mobile_menu_academy" className="mobile_menu" onclick="toggleMobileMenu(event)">Академи</span>
+            <span id="mobile_menu_academy" className="mobile_menu" onClick="toggleMobileMenu(event)">Академи</span>
             <img className="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
             <div className="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden transition-[max-height] duration-700 pl-[15px]">
               <a id="mobile_menu_market_news" className="block" href="https://altex.mn/market_news.php">Зах зээлийн мэдээ</a>
@@ -64,7 +117,7 @@ function Home() {
         <a id="mobile_menu_login" className="inline-block rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] border-solid border-[1px] border-[#13A9FD] text-[#13A9FD]" href="https://trade.altex.mn/signin">Нэвтрэх</a>
       </div>
 
-      <div className="absolute w-screen left-0 h-[1200px] bg-gradient-radial md:bg-gradient-radial-md from-[rgba(0,108,255,0.36)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
+      <div className="absolute top-[48px] w-screen left-0 h-[1200px] bg-gradient-radial md:bg-gradient-radial-md from-[rgba(0,108,255,0.36)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
 
       <div className="md:relative mb-[80px] md:mb-[28px]">
         <div style={{'background-image': 'url("/images/hero-pic.svg")'}} className="absolute w-screen md:w-[1151px] h-[620px] top-0 left-0 md:left-auto md:right-[-450px] lg:right-[-300px] bg-[length:600px] md:bg-auto bg-center bg-no-repeat pointer-events-none"></div>
@@ -72,7 +125,7 @@ function Home() {
           <div className="md:w-[60%] drop-shadow">
             <div id="jumbo_head" className="font-bold text-[28px] md:text-[40px] mb-[24px] leading-[3.25rem]">Дижитал санхүүг хялбараар</div>
             <div id="jumbo_desc" className="text text-[24px] mb-[40px] font-light">Дижитал хөрөнгө оруулалт хийх хамгийн найдвартай платформыг санал болгож байна.</div>
-            <a href="https://trade.altex.mn/" target="_blank" id="jumbo_button" className="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Арилжаанд оролцох</a>
+            <a href="https://trade.altex.mn/" target="_blank" id="jumbo_button" className="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]" rel="noreferrer">Арилжаанд оролцох</a>
           </div>
         </div>
       </div>
@@ -82,10 +135,10 @@ function Home() {
         <div id="prices" className="flex flex-nowrap gap-[24px] duration-1000 scroll-smooth snap-x overflow-x-scroll">
           <div className="animate-spin rounded-full border-4 border-[#07184b] border-t-[#006CFF] w-[24px] h-[24px] mx-auto"></div>
         </div>
-        <div className="absolute top-0 w-[100px] h-[180px] bg-gradient-to-r from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onclick="scrollPrices('right')">
+        <div className="absolute top-0 w-[100px] h-[180px] bg-gradient-to-r from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onClick="scrollPrices('right')">
           <img className="rotate-180" src="/images/coin-arrow.svg" />
         </div>
-        <div className="absolute top-0 right-0 w-[100px] h-[180px] bg-gradient-to-l from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onclick="scrollPrices('left')">
+        <div className="absolute top-0 right-0 w-[100px] h-[180px] bg-gradient-to-l from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onClick="scrollPrices('left')">
           <img className="absolute right-0" src="/images/coin-arrow.svg" />
         </div>
       </div>
@@ -100,7 +153,9 @@ function Home() {
                 <img className="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-1.svg" />
               </div>
               <div className="flex flex-col">
-                <div id="feature_1_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Нэгдсэн хөрвөх сан</div>
+                <div id="feature_1_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">
+                  <FormattedMessage id="mobile_menu_trade" />
+                </div>
                 <div id="feature_1_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">Санхүүгийн байгууллагууд, маркет мэйкрүүдийн оролцоотой нэгдсэн хөрвөх сан</div>
               </div>
             </div>
@@ -173,7 +228,7 @@ function Home() {
               <input type="text" id="promo" onchange="validatePromoCode(event)" className="rounded-[4px] border-solid border-[.5px] border-[#E6E7EB] focus-visible:border-[#006CFF] invalid:border-[#FF003D] bg-[rgba(0,0,0,0)] w-full h-[48px] p-[10px] px-[16px] outline-none font-extralight" />
             </div>
             <div className="w-full sm:basis-[25%] flex justify-center">
-              <button onclick="submitPromo()" id="referal_code_send" className="rounded-[4px] w-auto md:w-full font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] sm:w-auto hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Илгээх</button>
+              <button onClick="submitPromo()" id="referal_code_send" className="rounded-[4px] w-auto md:w-full font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] sm:w-auto hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Илгээх</button>
             </div>
           </div>
         </div>
@@ -226,7 +281,7 @@ function Home() {
           </div>
           <div className="text-center sm:text-left">
             <div id="start_trade_desc_bottom" className="font-light max-w-[210px] mb-[24px] hidden lg:block">Та бүртгэлээ үүсгээд арилжаагаа эхлүүлээрэй!</div>
-            <a href="https://trade.altex.mn/register" target="_blank" id="start_trade_button" className="inline-block rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Бүртгүүлэх</a>
+            <a href="https://trade.altex.mn/register" target="_blank" id="start_trade_button" className="inline-block rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]" rel="noreferrer">Бүртгүүлэх</a>
           </div>
         </div>
       </div>
