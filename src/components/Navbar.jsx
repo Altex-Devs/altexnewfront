@@ -62,7 +62,7 @@ const Navbar = (props) => {
 
   return (
     <>
-      <div id="menu" className="fixed top-0 l-0 w-full h-screen bg-[#050F36] z-20 hidden lg:hidden p-[25px] py-[92px]">
+      <div id="menu" className="fixed top-0 l-0 w-screen h-screen bg-[#050F36] z-20 hidden lg:hidden p-[25px] py-[92px]">
         <div className="flex justify-between items-center mb-[40px]">
           <img src="/images/header-logo.svg" />
           <svg id="SVGDoc" onClick={hideMenu} width="16" height="16" version="1.1" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fillOpacity="1"></path></g></g></svg>
@@ -96,15 +96,15 @@ const Navbar = (props) => {
       <div className="flex items-center bg-[#0A1540] h-[48px] w-full absolute left-0 top-0 text-[#696F86] text-[14px]">
         <div className="container mx-auto text-right px-[16px] max-w-[1232px] overflow-auto font-light text-[#E6E7EB]">
           <span id="translate_lang" className="px-[24px] cursor-pointer border-x-[1px] border-[#3B4466]" onClick={() => {changeLocale('en')}}>Eng</span>
-          <a href="https://altex.mn/corporate.php" id="industry_select" className="ml-[24px]">Байгууллага</a>
+          <a href="/corporate" id="industry_select" className="ml-[24px]">Байгууллага</a>
         </div>
       </div>
 
-      <div className="flex items-center justify-between pt-[40px] relative z-10">
+      <div className="flex items-center justify-between pt-[40px] relative z-20">
         <div className="flex items-center">
-          <div className="py-[10px]">
+          <a href="/" className="py-[10px]">
             <img src="/images/header-logo.svg" />
-          </div>
+          </a>
         </div>
         <div className="lg:hidden">
           <button className="text-white rounded-full p-2" onClick={showMenu}>
