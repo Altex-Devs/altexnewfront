@@ -10,6 +10,7 @@ import Layout from "./components/Layout";
 import mn from "./locales/mn.json";
 import en from "./locales/en.json";
 import Corporate from "./components/Corporate";
+import About from "./components/About";
 
 const messages = {
   mn: mn,
@@ -36,6 +37,7 @@ function App() {
           <Route element={<Layout setLocale={setLocale} />}>
             <Route path="/" element={<Home />} />
             <Route path="/corporate" element={<Corporate />} />
+            <Route path="/about" element={<About />} />
           </Route>
         </Routes>
       </Router>

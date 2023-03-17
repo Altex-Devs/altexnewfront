@@ -114,7 +114,7 @@ const Navbar = (props) => {
           </button>
         </div>
         <div id="main_menu" className="items-center gap-[40px] text-[16px] hidden lg:flex">
-          <a id="menu_trade" href="https://trade.altex.mn/">Арилжаа</a>
+          <a id="menu_trade" href="/about">Арилжаа</a>
           <div className="relative cursor-pointer" onClick={(event) => toggleMenu(event)}>
             <span id="menu_about_us" className="menu">Бидний тухай</span>
             <img className="icon inline-block relative ml-[5px]" src="/images/menu_arrow.svg" />
