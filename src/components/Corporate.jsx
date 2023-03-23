@@ -29,7 +29,7 @@ const Corporate = () => {
 
       <p className="font-light text-[18px]">Бид хөрөнгө оруулагчид болон байгууллагуудад зориулсан уян хатан виртуал хөрөнгө оруулалтын үйлчилгээг анх удаа дотоодын зах зээлд нэвтрүүлсэн бөгөөд та бүхэнд дараах боломжийг олгож байна.</p>
 
-      <div className="flex gap-[24px] mt-[64px] mb-[240px] font-light">
+      <div className="flex flex-col md:flex-row gap-[24px] mt-[64px] mb-[240px] font-light">
         <div className="rounded-[8px] border-[#13A9FD] border px-[48px] py-[40px]">
           <img src="/images/Group 7818.svg" alt="" className="mb-[16px]"/>
           <div className="text-[#13A9FD] font-bold mb-[8px]">Хөрөнгийн удирдлага</div>

@@ -62,7 +62,7 @@ const Navbar = (props) => {
 
   return (
     <>
-      <div id="menu" className="fixed top-0 l-0 w-screen h-screen bg-[#050F36] z-20 hidden lg:hidden p-[25px] py-[92px]">
+      <div id="menu" className="fixed top-0 left-0 w-screen h-screen bg-[#050F36] z-20 hidden lg:hidden p-[25px] py-[92px]">
         <div className="flex justify-between items-center mb-[40px]">
           <img src="/images/header-logo.svg" />
           <svg id="SVGDoc" onClick={hideMenu} width="16" height="16" version="1.1" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fillOpacity="1"></path></g></g></svg>
@@ -75,7 +75,7 @@ const Navbar = (props) => {
             <span id="mobile_menu_about_us" className="mobile_menu" onClick={(event) => toggleMobileMenu(event)}>Бидний тухай</span>
             <img className="inline-block relative left-[5px] icon" src="/images/menu_arrow.svg" />
             <div className="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden transition-[max-height] duration-700 pl-[15px]">
-              <a id="mobile_menu_about_exchange" className="block" href="https://altex.mn/second.html">Биржийн тухай</a>
+              <a id="mobile_menu_about_exchange" className="block" href="/about">Биржийн тухай</a>
               <a id="mobile_menu_team" className="block" href="https://altex.mn/our_team.html">Баг хамт олон</a>
             </div>
           </div>
@@ -100,7 +100,7 @@ const Navbar = (props) => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between pt-[40px] relative z-20">
+      <div className="flex items-center justify-between pt-[40px] relative z-10">
         <div className="flex items-center">
           <a href="/" className="py-[10px]">
             <img src="/images/header-logo.svg" />
@@ -114,14 +114,14 @@ const Navbar = (props) => {
           </button>
         </div>
         <div id="main_menu" className="items-center gap-[40px] text-[16px] hidden lg:flex">
-          <a id="menu_trade" href="/about">Арилжаа</a>
+          <a id="menu_trade" href="https://trade.altex.mn/">Арилжаа</a>
           <div className="relative cursor-pointer" onClick={(event) => toggleMenu(event)}>
             <span id="menu_about_us" className="menu">Бидний тухай</span>
             <img className="icon inline-block relative ml-[5px]" src="/images/menu_arrow.svg" />
             <div className="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
               <div className="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div className="backdrop-blur-sm flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
-                <a id="menu_about_exchange" className="hover:text-[#13A9FD]" href="https://altex.mn/second.html">Биржийн тухай</a>
+                <a id="menu_about_exchange" className="hover:text-[#13A9FD]" href="/about">Биржийн тухай</a>
                 <a id="menu_team" className="hover:text-[#13A9FD]" href="https://altex.mn/our_team.html">Баг хамт олон</a>
               </div>
             </div>
