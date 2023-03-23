@@ -76,7 +76,7 @@ const Navbar = (props) => {
             <img className="inline-block relative left-[5px] icon" src="/images/menu_arrow.svg" />
             <div className="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden transition-[max-height] duration-700 pl-[15px]">
               <a id="mobile_menu_about_exchange" className="block" href="/about">Биржийн тухай</a>
-              <a id="mobile_menu_team" className="block" href="https://altex.mn/our_team.html">Баг хамт олон</a>
+              <a id="mobile_menu_team" className="block" href="/team">Баг хамт олон</a>
             </div>
           </div>
           <div>
@@ -122,7 +122,7 @@ const Navbar = (props) => {
               <div className="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div className="backdrop-blur-sm flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
                 <a id="menu_about_exchange" className="hover:text-[#13A9FD]" href="/about">Биржийн тухай</a>
-                <a id="menu_team" className="hover:text-[#13A9FD]" href="https://altex.mn/our_team.html">Баг хамт олон</a>
+                <a id="menu_team" className="hover:text-[#13A9FD]" href="/team">Баг хамт олон</a>
               </div>
             </div>
           </div>
