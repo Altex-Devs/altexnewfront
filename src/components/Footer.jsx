@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
         <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px]">
           <div id="footer_service" className="text-[rgba(19,169,253,1)] mb-[32px]">Үйлчилгээ</div>
-          <a id="footer_terms_of_service" href="https://altex.mn/terms_service.html" target="_blank" className="block mb-[16px]" rel="noreferrer">Үйлчилгээний нөхцөл</a>
+          <a id="footer_terms_of_service" href="/termsofuse" className="block mb-[16px]" rel="noreferrer">Үйлчилгээний нөхцөл</a>
           <a id="footer_privacy_policy" href="https://altex.mn/privacy_policy.html" target="_blank" className="block mb-[16px]" rel="noreferrer">Нууцлалын бодлого</a>
           <a id="footer_fee" href="https://altex.mn/fees.html" target="_blank" className="block mb-[16px]" rel="noreferrer">Шимтгэл</a>
         </div>

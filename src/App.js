@@ -13,6 +13,7 @@ import Corporate from "./components/Corporate";
 import About from "./components/About";
 import Team from "./components/Team";
 import Howto from "./components/Howto";
+import TermsOfUse from "./components/TermsOfUse";
 
 const messages = {
   mn: mn,
@@ -42,6 +43,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/team" element={<Team />} />
             <Route path="/howto" element={<Howto />} />
+            <Route path="/termsofuse" element={<TermsOfUse />} />
           </Route>
         </Routes>
       </Router>
