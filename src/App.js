@@ -12,6 +12,7 @@ import en from "./locales/en.json";
 import Corporate from "./components/Corporate";
 import About from "./components/About";
 import Team from "./components/Team";
+import Howto from "./components/Howto";
 
 const messages = {
   mn: mn,
@@ -40,6 +41,7 @@ function App() {
             <Route path="/corporate" element={<Corporate />} />
             <Route path="/about" element={<About />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/howto" element={<Howto />} />
           </Route>
         </Routes>
       </Router>
