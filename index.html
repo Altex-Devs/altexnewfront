@@ -33,28 +33,28 @@
   </style>
   <title id="title">ALTEX Дижитал Бирж</title>
 </head>
-<body class="text-[#FFFFFF] font-['Montserrat'] min-w-full overflow-x-hidden">
+<body class="p-0 m-0 text-[#FFFFFF] font-['Montserrat'] min-w-full overflow-x-hidden">
   <div id="promoSuccess" class="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(67,210,76,.5)] px-[24px] py-[30px] rounded-[8px] z-30">
     <div class="relative flex items-center gap-[16px]">
-      <img src="/images/correct.svg" />
+      <img src="./images/correct.svg" />
       <span id="notif_success">Таны мэдээллийг хүлээж авлаа.</span>
-      <img class="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="/images/close.svg" />
+      <img class="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="./images/close.svg" />
     </div>
   </div>
 
   <div id="promoFail" class="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(255,0,61,.32)] px-[24px] py-[30px] rounded-[8px] z-30">
     <div class="relative flex items-center gap-[16px]">
-      <img src="/images/error.svg" />
+      <img src="./images/error.svg" />
       <span id="notif_fail">Алдаа гарлаа, та дахин оролдоно уу!</span>
-      <img class="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="/images/close.svg" />
+      <img class="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="./images/close.svg" />
     </div>
   </div>
 
   <div id="promoAlert" class="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(254,103,3,.32)] px-[24px] py-[30px] rounded-[8px] z-30">
     <div class="relative flex items-center gap-[16px]">
-      <img src="/images/warning.svg" />
+      <img src="./images/warning.svg" />
       <span id="notif_alert">И-мэйл, промо кодоо зөв оруулна уу!</span>
-      <img class="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="/images/close.svg" />
+      <img class="absolute top-[-14px] right-[-8px] cursor-pointer" onclick="hidePromoNotif(event)" src="./images/close.svg" />
     </div>
   </div>
 
@@ -64,20 +64,20 @@
       <p id="newsletter_desc" class="font-extralight mb-[20px]">Та манайд бүртгүүлж хамгийн сүүлийн үеийн мэдээллийг тогтмол аваарай.</p>
       <input type="email" id="newsletteremail" class="rounded-[4px] w-full border-solid border-[.5px] border-[#E6E7EB] focus-visible:border-[#006CFF] bg-[rgba(0,0,0,0)] w-full h-[48px] mb-[16px] p-[10px] px-[16px] outline-none font-extralight" placeholder="И-мэйл" onchange="validateNewsletterEmail(event)" />
       <button id="newsletter_send" onclick="submitNewsletter()" class="rounded-[4px] w-full font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Илгээх</button>
-      <img class="absolute top-[16px] right-[16px] cursor-pointer" onclick="hideNewsletter()" src="/images/close.svg" />
+      <img class="absolute top-[16px] right-[16px] cursor-pointer" onclick="hideNewsletter()" src="./images/close.svg" />
     </div>
   </div>
 
   <div id="menu" class="fixed top-0 l-0 w-full h-screen bg-[#050F36] z-20 hidden lg:hidden p-[25px] py-[92px]">
     <div class="flex justify-between items-center mb-[40px]">
-      <img src="/images/header-logo.svg" />
-      <svg id="SVGDoc" onClick="hideMenu()" width="16" height="16" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fill-opacity="1"></path></g></g></svg>
+      <img src="./images/header-logo.svg" />
+      <svg id="SVGDoc" onClick="hideMenu()" width="16" height="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fill-opacity="1"></path></g></g></svg>
     </div>
     <div id="mobile_menu" class="flex flex-col gap-[15px] mb-[40px]">
       <a id="mobile_menu_trade" class="pb-[10px]" href="https://trade.altex.mn/">Арилжаа</a>
       <div>
         <span id="mobile_menu_about_us" class="mobile_menu" onclick="toggleMobileMenu(event)">Бидний тухай</span>
-        <img class="inline-block relative left-[5px] icon" src="/images/menu_arrow.svg" />
+        <img class="inline-block relative left-[5px] icon" src="./images/menu_arrow.svg" />
         <div class="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden transition-[max-height] duration-700 pl-[15px]">
           <a id="mobile_menu_about_exchange" class="block" href="https://altex.mn/second.html">Биржийн тухай</a>
           <a id="mobile_menu_team" class="block" href="https://altex.mn/our_team.html">Баг хамт олон</a>
@@ -85,7 +85,7 @@
       </div>
       <div>
         <span id="mobile_menu_academy" class="mobile_menu" onclick="toggleMobileMenu(event)">Академи</span>
-        <img class="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
+        <img class="icon inline-block relative left-[5px]" src="./images/menu_arrow.svg" />
         <div class="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden transition-[max-height] duration-700 pl-[15px]">
           <a id="mobile_menu_market_news" class="block" href="https://altex.mn/market_news.php">Зах зээлийн мэдээ</a>
           <a id="mobile_menu_crypto_knowledge" class="block" href="https://altex.mn/crypto-basic.php">Крипто мэдлэг</a>
@@ -111,7 +111,7 @@
       <div class="flex items-center justify-between pt-[40px] relative z-10">
         <div class="flex items-center">
           <div class="py-[10px]">
-            <img src="/images/header-logo.svg" />
+            <img src="./images/header-logo.svg" />
           </div>
         </div>
         <div class="lg:hidden">
@@ -125,7 +125,7 @@
           <a id="menu_trade" href="https://trade.altex.mn/">Арилжаа</a>
           <div class="relative cursor-pointer" onclick="toggleMenu(event)">
             <span id="menu_about_us" class="menu">Бидний тухай</span>
-            <img class="icon inline-block relative ml-[5px]" src="/images/menu_arrow.svg" />
+            <img class="icon inline-block relative ml-[5px]" src="./images/menu_arrow.svg" />
             <div class="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
               <div class="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div class="backdrop-blur-sm flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
@@ -136,7 +136,7 @@
           </div>
           <div class="relative cursor-pointer" onclick="toggleMenu(event)">
             <span id="menu_academy" class="menu">Академи</span>
-            <img class="icon inline-block relative ml-[5px]" src="/images/menu_arrow.svg" />
+            <img class="icon inline-block relative ml-[5px]" src="./images/menu_arrow.svg" />
             <div class="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
               <div class="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div class="backdrop-blur-sm flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
@@ -152,7 +152,7 @@
       </div>
 
       <div class="md:relative mb-[80px] md:mb-[28px]">
-        <div class="absolute w-screen md:w-[1151px] h-[620px] top-0 left-0 md:left-auto md:right-[-450px] lg:right-[-300px] bg-[url('/images/hero-pic.svg')] bg-[length:600px] md:bg-auto bg-center bg-no-repeat pointer-events-none"></div>
+        <div class="absolute w-screen md:w-[1151px] h-[620px] top-0 left-0 md:left-auto md:right-[-450px] lg:right-[-300px] bg-[url('./images/hero-pic.svg')] bg-[length:600px] md:bg-auto bg-center bg-no-repeat pointer-events-none touch-none"></div>
         <div class="flex items-center md:h-[600px] relative mt-[400px] md:mt-auto">
           <div class="md:w-[60%] drop-shadow">
             <div id="jumbo_head" class="font-bold text-[28px] md:text-[40px] mb-[24px] leading-[3.25rem]">Дижитал санхүүг хялбараар</div>
@@ -168,10 +168,10 @@
           <div class="animate-spin rounded-full border-4 border-[#07184b] border-t-[#006CFF] w-[24px] h-[24px] mx-auto"></div>
         </div>
         <div class="absolute top-0 w-[100px] h-[180px] bg-gradient-to-r from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onclick="scrollPrices('right')">
-          <img class="rotate-180" src="/images/coin-arrow.svg" />
+          <img class="rotate-180" src="./images/coin-arrow.svg" />
         </div>
         <div class="absolute top-0 right-0 w-[100px] h-[180px] bg-gradient-to-l from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onclick="scrollPrices('left')">
-          <img class="absolute right-0" src="/images/coin-arrow.svg" />
+          <img class="absolute right-0" src="./images/coin-arrow.svg" />
         </div>
       </div>
 
@@ -182,7 +182,7 @@
             <div class="flex items-start gap-[24px] h-[64px]">
               <div class="relative">
                 <div class="absolute w-[40px] h-[40px] bg-gradient-to-b from-[#13A9FD] to-[#0073C6] rounded-full z-10 top-[3px] left-[3px]"></div>
-                <img class="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-1.svg" />
+                <img class="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="./images/adv-1.svg" />
               </div>
               <div class="flex flex-col">
                 <div id="feature_1_head" class="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Нэгдсэн хөрвөх сан</div>
@@ -192,7 +192,7 @@
             <div class="flex items-start gap-[24px] h-[64px]">
               <div class="relative">
                 <div class="absolute w-[40px] h-[40px] bg-gradient-to-b from-[#13A9FD] to-[#0073C6] rounded-full z-10 top-[3px] left-[3px]"></div>
-                <img class="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-2.svg" />
+                <img class="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="./images/adv-2.svg" />
               </div>
               <div class="flex flex-col">
                 <div id="feature_2_head" class="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Байгууллагын үйлчилгээ</div>
@@ -202,7 +202,7 @@
             <div class="flex items-start gap-[24px] h-[64px]">
               <div class="relative">
                 <div class="absolute w-[40px] h-[40px] bg-gradient-to-b from-[#13A9FD] to-[#0073C6] rounded-full z-10 top-[3px] left-[3px]"></div>
-                <img class="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-3.svg" />
+                <img class="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="./images/adv-3.svg" />
               </div>
               <div class="flex flex-col">
                 <div id="feature_3_head" class="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Зах зээлийн өрсөлдөхүйц үнэ</div>
@@ -212,7 +212,7 @@
             <div class="flex items-start gap-[24px] h-[64px]">
               <div class="relative">
                 <div class="absolute w-[40px] h-[40px] bg-gradient-to-b from-[#13A9FD] to-[#0073C6] rounded-full z-10 top-[3px] left-[3px]"></div>
-                <img class="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-4.svg" />
+                <img class="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="./images/adv-4.svg" />
               </div>
               <div class="flex flex-col">
                 <div id="feature_4_head" class="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Зарлагын лимит</div>
@@ -222,7 +222,7 @@
             <div class="flex items-start gap-[24px] h-[64px]">
               <div class="relative">
                 <div class="absolute w-[40px] h-[40px] bg-gradient-to-b from-[#13A9FD] to-[#0073C6] rounded-full z-10 top-[3px] left-[3px]"></div>
-                <img class="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-5.svg" />
+                <img class="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="./images/adv-5.svg" />
               </div>
               <div class="flex flex-col">
                 <div id="feature_5_head" class="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Хямд сүлжээний шимтгэл</div>
@@ -231,7 +231,7 @@
             </div>
           </div>
           <div class="flex items-center">
-            <img class="w-[800px] relative rigth-auto sm:right-[-50px]" src="/images/Group 7632.png" />
+            <img class="w-[800px] relative rigth-auto sm:right-[-50px]" src="./images/Group 7632.png" />
           </div>
         </div>
       </div>
@@ -247,7 +247,7 @@
               <div id="referal_code_desc" class="text-[#E6E7EB] text-[14px] font-extralight">Та бүртгэлээ баталгаажуулсан имэйл хаяг, промо кодоо илгээгээд урамшуулалд хамрагдаарай.</div>
             </div>
             <div class="basis-[25%] max-h-[42px] flex items-center">
-              <img src="/images/gift.svg" />
+              <img src="./images/gift.svg" />
             </div>
           </div>
           <div class="flex flex-row gap-[24px] items-end flex-col sm:flex-row justify-items-stretch">
@@ -272,15 +272,15 @@
           </div>
           <div id="app_desc" class="text-[#fff] font-extralight mb-[40px]">Арилжаанд оролцох, хэтэвчээ удирдах хамгийн хялбар замыг санал болгож байна.</div>
           <div class="flex flex-wrap justify-center sm:justify-start gap-[14px] md:gap-[24px]">
-            <img class="object-cover w-[133px]" src="/images/android.svg" />
-            <img class="object-cover w-[133px]" src="/images/ios.svg" />
+            <img class="object-cover w-[133px]" src="./images/android.svg" />
+            <img class="object-cover w-[133px]" src="./images/ios.svg" />
           </div>
         </div>
-        <div class="basis-auto md:basis-[55%] w-screen h-[300px] bg-[url('/images/Group%207634.png')] bg-cover bg-center"></div>
+        <div class="basis-auto md:basis-[55%] w-screen h-[300px] bg-[url('./images/Group%207634.png')] bg-cover bg-center"></div>
       </div>
 
       <div class="pt-[160px] relative mb-[240px]">
-        <div class="absolute top-0 w-[800px] h-[800px] top-[-30px] right-[-90px] bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
+        <div class="absolute left-[-16px] top-0 w-screen h-[800px] top-[-30px] right-[-90px] bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
         <div id="start_trade_head" class="text-[#13A9FD] text-[24px] mb-[24px] lg:mb-[40px] font-medium">
           Арилжаагаа эхлүүлэх
           <span class="whitespace-nowrap">4 алхам</span>
@@ -290,22 +290,22 @@
           <div class="flex flex-row flex-wrap gap-y-[24px] gap-x-[50px]">
             <div class="relative w-[130px] h-[160px]">
               <div class="absolute lg:left-[-10px] top-[30px] lg:top-[34px] text-[100px] opacity-70 bg-clip-text text-transparent font-black leading-[72px] bg-gradient-to-b from-[rgba(19,169,253,1)] via-[rgba(0,108,255,0.64)] to-[rgba(5,15,54,0)]">1</div>
-              <img class="absolute top-0 left-[10px]" src="/images/Path 5936.svg" />
+              <img class="absolute top-0 left-[10px]" src="./images/Path 5936.svg" />
               <div id="start_trade_1" class="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">Бүртгэл<br />үүсгэх</div>
             </div>
             <div class="relative w-[130px] h-[160px]">
               <div class="absolute lg:left-[-10px] top-[30px] lg:top-[34px] text-[100px] opacity-70 bg-clip-text text-transparent font-black leading-[72px] bg-gradient-to-b from-[rgba(19,169,253,1)] via-[rgba(0,108,255,0.64)] to-[rgba(5,15,54,0)]">2</div>
-              <img class="absolute top-0 left-[10px]" src="/images/Path 5936.svg" />
+              <img class="absolute top-0 left-[10px]" src="./images/Path 5936.svg" />
               <div id="start_trade_2" class="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">Бүртгэл<br />баталгаажуулах</div>
             </div>
             <div class="relative w-[130px] h-[160px]">
               <div class="absolute lg:left-[-10px] top-[30px] lg:top-[34px] text-[100px] opacity-70 bg-clip-text text-transparent font-black leading-[72px] bg-gradient-to-b from-[rgba(19,169,253,1)] via-[rgba(0,108,255,0.64)] to-[rgba(5,15,54,0)]">3</div>
-              <img class="absolute top-0 left-[10px]" src="/images/Path 5936.svg" />
+              <img class="absolute top-0 left-[10px]" src="./images/Path 5936.svg" />
               <div id="start_trade_3" class="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">Дансаа<br />цэнэглэх</div>
             </div>
             <div class="relative w-[130px] h-[160px]">
               <div class="absolute lg:left-[-10px] top-[30px] lg:top-[34px] text-[100px] opacity-70 bg-clip-text text-transparent font-black leading-[72px] bg-gradient-to-b from-[rgba(19,169,253,1)] via-[rgba(0,108,255,0.64)] to-[rgba(5,15,54,0)]">4</div>
-              <img class="absolute top-0 left-[10px]" src="/images/Path 5936.svg" />
+              <img class="absolute top-0 left-[10px]" src="./images/Path 5936.svg" />
               <div id="start_trade_4" class="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">Арилжаа<br />хийх</div>
             </div>
           </div>
@@ -343,19 +343,19 @@
           <div id="footer_contact" class="text-[rgba(19,169,253,1)] mb-[32px]">Холбоо барих</div>
           <div class="mb-[16px] flex">
             <div class="mr-[16px] flex-none w-[20px] flex place-content-center">
-              <img class="object-center" src="/images/Icon metro-phone.svg" />
+              <img class="object-center" src="./images/Icon metro-phone.svg" />
             </div>
             <span>7505 7775</span>
           </div>
           <div class="mb-[16px] flex">
             <div class="mr-[16px] flex-none w-[20px] flex place-content-center">
-              <img src="/images/mail.svg" />
+              <img src="./images/mail.svg" />
             </div>
             <span>contact@altex.mn</span>
           </div>
           <div class="mb-[16px] flex">
             <div class="mr-[16px] flex-none w-[20px]">
-              <img src="/images/Icon material-location-on.svg" />
+              <img src="./images/Icon material-location-on.svg" />
             </div>
             <span id="footer_address">Сүхбаатар дүүрэг 1-р хороо, Жамъян Гүний гудамж-5, Хаан Даатгал компанийн байр</span>
           </div>
@@ -366,31 +366,30 @@
         <div class="mb-[20px]">
           <div class="flex justify-between items-center mb-[40px] md:mb-[24px]">
             <div class="">
-              <img src="/images/altex-footer-logo.svg" />
+              <img src="./images/altex-footer-logo.svg" />
             </div>
             <div class="relative w-[100px]">
-              <img class="sm:absolute object-cover" src="/images/iso.svg" />
+              <img class="sm:absolute object-cover" src="./images/iso.svg" />
             </div>
-          </div>
           </div>
           <div class="flex justify-between sm:justify-start sm:flex-wrap sm:gap-[30px]">
             <a href="https://www.facebook.com/altex.mn" target="_blank">
-              <img src="/images/fb.svg" />
+              <img src="./images/fb.svg" />
             </a>
             <a href="https://twitter.com/altex_mn" target="_blank">
-              <img src="/images/tw.svg" />
+              <img src="./images/tw.svg" />
             </a>
             <a href="https://www.instagram.com/accounts/login/?next=/altex.mn/" target="_blank">
-              <img src="/images/ins.svg" />
+              <img src="./images/ins.svg" />
             </a>
             <a href="https://t.me/altexmn" target="_blank">
-              <img src="/images/tel.svg" />
+              <img src="./images/tel.svg" />
             </a>
             <a href="https://www.youtube.com/channel/UC0cP-OEOj_b2LJaSW8vxjHA" target="_blank">
-              <img src="/images/tube.svg" />
+              <img src="./images/tube.svg" />
             </a>
             <a href="https://www.linkedin.com/company/altex-digital-exchange/" target="_blank">
-              <img src="/images/linkedin.svg" />
+              <img src="./images/linkedin.svg" />
             </a>
           </div>
         </div>
@@ -411,7 +410,7 @@
           elem.innerHTML += `
             <div class="snap-center relative rounded-[10px] border-solid border border-[#13A9FD] px-[17px] py-[24px] min-w-[200px]">
               <div class="flex items-stretch">
-                <img src="https://altex.mn/images/${r.ticker}.svg" />
+                <img src="https://altex.mn./images/${r.ticker}.svg" />
                 <div class="flex flex-col justify-between">
                   <div class="text-[#FD950D] ml-[8px] text-[20px] mt-[-5px]">${r.ticker}</div>
                   <div class="text-[#FFF] ml-[8px] ${r.ticker === 'BAT' ? 'text-[9px]' : 'text-[10px]'} opacity-50">${r.name}</div>
@@ -420,7 +419,7 @@
               <div class="text-[24px] mt-[21px] mb-[5px]">$${parseFloat(r.value).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
               <div class="text-[12px] text-[#${r.temp < 0 ? '13A9FD' : 'FDAE13'}]">
                 <span class="mr-[15px] mb-[2px]">( ${r.temp.toFixed(2)}% )</span>
-                <img src="https://altex.mn/images/bit-${r.temp < 0 ? 'down' : 'up'}.svg" class="inline" />
+                <img src="https://altex.mn./images/bit-${r.temp < 0 ? 'down' : 'up'}.svg" class="inline" />
               </div>
             </div>`;
         });
