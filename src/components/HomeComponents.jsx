@@ -93,7 +93,7 @@ function HomeComponents() {
 
       <div className="relative">
         <div className="absolute w-screen h-[800px] top-[-100px] left-[calc((100vw-100%)/-2)] bg-gradient-radial-left from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
-        <div className="flex justify-between sm:flex-row flex-col-reverse">
+        <div className="flex justify-between md:flex-row flex-col-reverse">
           <div className="flex flex-col gap-[56px] max-w-[400px]">
             <div className="flex items-start gap-[24px] h-[64px]">
               <div className="relative">

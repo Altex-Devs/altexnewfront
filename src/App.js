@@ -14,6 +14,7 @@ import About from "./components/About";
 import Team from "./components/Team";
 import Howto from "./components/Howto";
 import TermsOfUse from "./components/TermsOfUse";
+import CryptoBasics from "./components/CryptoBadics";
 
 const messages = {
   mn: mn,
@@ -44,6 +45,7 @@ function App() {
             <Route path="/team" element={<Team />} />
             <Route path="/howto" element={<Howto />} />
             <Route path="/termsofuse" element={<TermsOfUse />} />
+            <Route path="/cryptobasics" element={<CryptoBasics />} />
           </Route>
         </Routes>
       </Router>

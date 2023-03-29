@@ -29,20 +29,20 @@ function Trend() {
       }
     }).catch(console.error);
 
-    const interval = setInterval(() => scrollPrices("left"), 5000);
+    const interval = setInterval(() => scrollPrices("right"), 5000);
 
     return () => clearInterval(interval);
   }, []);
 
   const scrollPrices = (direction) => {
     const elem = document.getElementById("prices");
-    if (direction === 'left' && elem.scrollLeft > elem.offsetWidth) {
+    if (direction === 'right' && elem.scrollLeft > elem.scrollWidth - elem.offsetWidth - 100) {
       elem.scrollLeft = 0;
-    } else if (direction === 'right' && elem.scrollLeft === 0) {
-      elem.scrollLeft = elem.offsetWidth;
+    } else if (direction === 'left' && elem.scrollLeft === 0) {
+      elem.scrollLeft = elem.scrollWidth;
     } else {
       elem.scrollBy({
-        left: (direction === 'left' ? 1 : -1)*200,
+        left: (direction === 'right' ? 1 : -1)*200,
         behavior: "smooth"
       });
     }
@@ -55,10 +55,10 @@ function Trend() {
         <div id="prices" className="flex flex-nowrap gap-[24px] duration-1000 scroll-smooth snap-x overflow-x-scroll">
           <div className="animate-spin rounded-full border-4 border-[#07184b] border-t-[#006CFF] w-[24px] h-[24px] mx-auto"></div>
         </div>
-        <div className="absolute top-0 w-[100px] h-[180px] bg-gradient-to-r from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onClick={() => scrollPrices('right')}>
+        <div className="absolute top-0 w-[100px] h-[180px] bg-gradient-to-r from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onClick={() => scrollPrices('left')}>
           <img alt="left" className="rotate-180" src="/images/coin-arrow.svg" />
         </div>
-        <div className="absolute top-0 right-0 w-[100px] h-[180px] bg-gradient-to-l from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onClick={() => scrollPrices('left')}>
+        <div className="absolute top-0 right-0 w-[100px] h-[180px] bg-gradient-to-l from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onClick={() => scrollPrices('right')}>
           <img alt="right" className="absolute right-0" src="/images/coin-arrow.svg" />
         </div>
       </div>

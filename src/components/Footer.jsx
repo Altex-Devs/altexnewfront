@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px]">
           <div id="footer_academy" className="text-[rgba(19,169,253,1)] mb-[32px]">Академи</div>
           <a id="footer_market_news" href="https://altex.mn/index.php#:~:text=%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8-,%D0%97%D0%B0%D1%85%20%D0%B7%D1%8D%D1%8D%D0%BB%D0%B8%D0%B9%D0%BD%20%D0%BC%D1%8D%D0%B4%D1%8D%D1%8D,-%D0%9A%D1%80%D0%B8%D0%BF%D1%82%D0%BE%20%D0%BC%D1%8D%D0%B4%D0%BB%D1%8D%D0%B3" target="_blank" className="block mb-[16px]" rel="noreferrer">Зах зээлийн мэдээ</a>
-          <a id="footer_crypto_knowledge" href="https://altex.mn/crypto-basic.php" target="_blank" className="block mb-[16px]" rel="noreferrer">Крипто мэдлэг</a>
+          <a id="footer_crypto_knowledge" href="/cryptobasics" className="block mb-[16px]">Крипто мэдлэг</a>
           <a id="footer_projects" href="https://altex.mn/projects.php" target="_blank" className="block mb-[16px]" rel="noreferrer">Төслүүд</a>
           <a id="howto" href="/howto" className="block mb-[16px]" rel="noreferrer">Гарын авлага</a>
         </div>
