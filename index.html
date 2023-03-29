@@ -167,17 +167,17 @@
         <div id="prices" class="flex flex-nowrap gap-[24px] duration-1000 scroll-smooth snap-x overflow-x-scroll">
           <div class="animate-spin rounded-full border-4 border-[#07184b] border-t-[#006CFF] w-[24px] h-[24px] mx-auto"></div>
         </div>
-        <div class="absolute top-0 w-[100px] h-[180px] bg-gradient-to-r from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onclick="scrollPrices('right')">
+        <div class="absolute top-0 w-[100px] h-[180px] bg-gradient-to-r from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onclick="scrollPrices('left')">
           <img class="rotate-180" src="./images/coin-arrow.svg" />
         </div>
-        <div class="absolute top-0 right-0 w-[100px] h-[180px] bg-gradient-to-l from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onclick="scrollPrices('left')">
+        <div class="absolute top-0 right-0 w-[100px] h-[180px] bg-gradient-to-l from-[rgba(5,15,54,1)] to-[rgba(5,15,54,0)] flex items-center cursor-pointer" onclick="scrollPrices('right')">
           <img class="absolute right-0" src="./images/coin-arrow.svg" />
         </div>
       </div>
 
       <div class="relative">
         <div class="absolute w-screen h-[800px] top-[-100px] left-[calc((100vw-100%)/-2)] bg-gradient-radial-left from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
-        <div class="flex justify-between flex-col sm:flex-row flex-col-reverse">
+        <div class="flex justify-between flex-col md:flex-row flex-col-reverse">
           <div class="flex flex-col gap-[56px] max-w-[400px]">
             <div class="flex items-start gap-[24px] h-[64px]">
               <div class="relative">
@@ -231,7 +231,7 @@
             </div>
           </div>
           <div class="flex items-center">
-            <img class="w-[800px] relative rigth-auto sm:right-[-50px]" src="./images/Group 7632.png" />
+            <img class="w-[800px] relative rigth-auto md:right-[-50px]" src="./images/Group 7632.png" />
           </div>
         </div>
       </div>
@@ -555,19 +555,19 @@
 
     function scrollPrices(direction) {
       const elem = document.getElementById("prices");
-      if (direction === 'left' && elem.scrollLeft > elem.offsetWidth) {
+      if (direction === 'right' && elem.scrollLeft > elem.scrollWidth - elem.offsetWidth - 100) {
         elem.scrollLeft = 0;
-      } else if (direction === 'right' && elem.scrollLeft === 0) {
-        elem.scrollLeft = elem.offsetWidth;
+      } else if (direction === 'left' && elem.scrollLeft === 0) {
+        elem.scrollLeft = elem.scrollWidth;
       } else {
         elem.scrollBy({
-          left: (direction === 'left' ? 1 : -1)*200,
+          left: (direction === 'right' ? 1 : -1)*200,
           behavior: "smooth"
         });
       }
     }
 
-    setInterval(() => scrollPrices("left"), 5000);
+    setInterval(() => scrollPrices("right"), 5000);
 
     function change_lang() {
       if (localStorage.getItem('language_local') === 'mng') {
