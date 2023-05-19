@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px]">
           <div id="footer_help" className="text-[rgba(19,169,253,1)] mb-[32px]">Тусламж</div>
           <a id="footer_faq" href="https://altex.mn/faq.html" target="_blank" className="block mb-[16px]" rel="noreferrer">Түгээмэл асуултууд</a>
-          <a id="footer_feedback" href="https://altex.mn/feedback.html" target="_blank" className="block mb-[16px]" rel="noreferrer">Санал хүсэлт</a>
+          <a id="footer_feedback" href="/feedback" className="block mb-[16px]">Санал хүсэлт</a>
         </div>
         <div className="basis-full min-[310px]:basis-full md:basis-2/3 lg:basis-1/5 mb-[30px]">
           <div id="footer_contact" className="text-[rgba(19,169,253,1)] mb-[32px]">Холбоо барих</div>

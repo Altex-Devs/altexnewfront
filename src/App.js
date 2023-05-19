@@ -16,6 +16,8 @@ import Howto from "./components/Howto";
 import TermsOfUse from "./components/TermsOfUse";
 import CryptoBasics from "./components/CryptoBadics";
 import Fee from "./components/Fee";
+import Feedback from "./components/Feedback";
+import NotFound from "./components/NotFound";
 
 const messages = {
   mn: mn,
@@ -48,6 +50,8 @@ function App() {
             <Route path="/termsofuse" element={<TermsOfUse />} />
             <Route path="/cryptobasics" element={<CryptoBasics />} />
             <Route path="/fee" element={<Fee />} />
+            <Route path="/feedback" element={<Feedback />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </Router>

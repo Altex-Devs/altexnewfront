@@ -10,6 +10,7 @@ module.exports = {
         'gradient-radial': 'radial-gradient(450px at calc(50%) 200px, var(--tw-gradient-stops))',
         'gradient-radial-left': 'radial-gradient(400px at 300px, var(--tw-gradient-stops))',
         'gradient-radial-bottom': 'radial-gradient(400px, var(--tw-gradient-stops))',
+        'gradient-radial-center': 'radial-gradient(50vw, var(--tw-gradient-stops))',
       }
     },
   },
