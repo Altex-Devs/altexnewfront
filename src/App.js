@@ -18,6 +18,7 @@ import CryptoBasics from "./components/CryptoBadics";
 import Fee from "./components/Fee";
 import Feedback from "./components/Feedback";
 import NotFound from "./components/NotFound";
+import FAQ from "./components/FAQ";
 
 const messages = {
   mn: mn,
@@ -51,6 +52,7 @@ function App() {
             <Route path="/cryptobasics" element={<CryptoBasics />} />
             <Route path="/fee" element={<Fee />} />
             <Route path="/feedback" element={<Feedback />} />
+            <Route path="/faq" element={<FAQ />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

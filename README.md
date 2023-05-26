@@ -10,3 +10,9 @@ Start dev server on port 3000:
 Build to `build` folder:
 
     npm run build
+
+Surge deploy:
+
+    cd build
+    cp index.html 200.html
+    surge

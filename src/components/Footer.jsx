@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 /* eslint-disable jsx-a11y/alt-text */
 const Footer = () => {
   return (
@@ -23,7 +25,7 @@ const Footer = () => {
         </div>
         <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px]">
           <div id="footer_help" className="text-[rgba(19,169,253,1)] mb-[32px]">Тусламж</div>
-          <a id="footer_faq" href="https://altex.mn/faq.html" target="_blank" className="block mb-[16px]" rel="noreferrer">Түгээмэл асуултууд</a>
+          <Link id="footer_faq" to="/faq" className="block mb-[16px]">Түгээмэл асуултууд</Link>
           <a id="footer_feedback" href="/feedback" className="block mb-[16px]">Санал хүсэлт</a>
         </div>
         <div className="basis-full min-[310px]:basis-full md:basis-2/3 lg:basis-1/5 mb-[30px]">

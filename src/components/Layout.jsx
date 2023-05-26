@@ -75,7 +75,7 @@ const Layout = (props) => {
         </div>
       </div>
 
-      <div className="container mx-auto pt-[48px] px-[16px] max-w-[1232px]">
+      <div className="container mx-auto pt-[48px] max-w-[1200px]">
         <Navbar setLocale={props.setLocale} />
         <Outlet />
         <Footer />
