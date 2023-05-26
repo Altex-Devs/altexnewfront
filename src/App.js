@@ -19,6 +19,7 @@ import Fee from "./components/Fee";
 import Feedback from "./components/Feedback";
 import NotFound from "./components/NotFound";
 import FAQ from "./components/FAQ";
+import News from "./components/News";
 
 const messages = {
   mn: mn,
@@ -53,6 +54,7 @@ function App() {
             <Route path="/fee" element={<Fee />} />
             <Route path="/feedback" element={<Feedback />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/news" element={<News />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

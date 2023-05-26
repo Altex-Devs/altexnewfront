@@ -77,7 +77,7 @@ const Item = ({title, children}) => {
 
   return (
     <>
-      <div className={`${expanded ? "max-h-[350px]" : "max-h-[67px]"} rounded-[8px] bg-[#FFFFFF] text-[#35363B] p-[24px] overflow-hidden transition-[max-height] duration-500 mb-[24px]`} onClick={() => setExpanded(!expanded)}>
+      <div className={`${expanded ? "max-h-[350px]" : "max-h-[67px]"} rounded-[8px] bg-[#FFFFFF] text-[#35363B] p-[24px] overflow-hidden transition-[max-height] duration-500 mb-[24px] drop-shadow-[6px_6px_18px_rgba(0,108,255,0.04)]`} onClick={() => setExpanded(!expanded)}>
         <div className="flex justify-between items-center font-bold mb-[14px]">
           <div>{title}</div>
           <svg className={`${expanded && "-scale-y-100"} transition-transform`} width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
