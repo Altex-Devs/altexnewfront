@@ -19,7 +19,9 @@ import Fee from "./components/Fee";
 import Feedback from "./components/Feedback";
 import NotFound from "./components/NotFound";
 import FAQ from "./components/FAQ";
-import News from "./components/News";
+import NewsList from "./components/NewsList";
+import NewsShow from "./components/NewsShow";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 const messages = {
   mn: mn,
@@ -50,11 +52,13 @@ function App() {
             <Route path="/team" element={<Team />} />
             <Route path="/howto" element={<Howto />} />
             <Route path="/termsofuse" element={<TermsOfUse />} />
+            <Route path="/privacypolicy" element={<PrivacyPolicy />} />
             <Route path="/cryptobasics" element={<CryptoBasics />} />
             <Route path="/fee" element={<Fee />} />
             <Route path="/feedback" element={<Feedback />} />
             <Route path="/faq" element={<FAQ />} />
-            <Route path="/news" element={<News />} />
+            <Route path="/news" element={<NewsList />} />
+            <Route path="/news/*" element={<NewsShow />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
