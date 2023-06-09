@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import {
+  useNavigate,
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from './firebase';
 import {IntlProvider} from 'react-intl';
 import Home from "./components/Home";
 import Layout from "./components/Layout";
@@ -22,6 +25,8 @@ import FAQ from "./components/FAQ";
 import NewsList from "./components/NewsList";
 import NewsShow from "./components/NewsShow";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import NewsEdit from "./components/News/NewsEdit";
+import Auth from "./components/Auth";
 
 const messages = {
   mn: mn,
@@ -59,6 +64,8 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/news" element={<NewsList />} />
             <Route path="/news/*" element={<NewsShow />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/admin/news/create" element={<RequireAuth><NewsEdit /></RequireAuth>} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
@@ -68,3 +75,14 @@ function App() {
 }
 
 export default App;
+
+function RequireAuth({ children }) {
+  const [user, loading] = useAuthState(auth);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!loading && !user) navigate("/auth");
+  }, [user, loading, navigate]);
+
+  return user && children;
+}
