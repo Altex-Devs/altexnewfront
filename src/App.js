@@ -22,11 +22,12 @@ import Fee from "./components/Fee";
 import Feedback from "./components/Feedback";
 import NotFound from "./components/NotFound";
 import FAQ from "./components/FAQ";
-import NewsList from "./components/NewsList";
-import NewsShow from "./components/NewsShow";
+import Posts from "./components/Posts/Posts";
+import Post from "./components/Posts/Post";
 import PrivacyPolicy from "./components/PrivacyPolicy";
-import NewsEdit from "./components/News/NewsEdit";
+import PostEdit from "./components/Posts/PostEdit";
 import Auth from "./components/Auth";
+import PostsAdmin from "./components/Posts/PostsAdmin";
 
 const messages = {
   mn: mn,
@@ -62,10 +63,12 @@ function App() {
             <Route path="/fee" element={<Fee />} />
             <Route path="/feedback" element={<Feedback />} />
             <Route path="/faq" element={<FAQ />} />
-            <Route path="/news" element={<NewsList />} />
-            <Route path="/news/*" element={<NewsShow />} />
+            <Route path="/:type" element={<Posts />} />
+            <Route path="/:type/:postId" element={<Post />} />
             <Route path="/auth" element={<Auth />} />
-            <Route path="/admin/news/create" element={<RequireAuth><NewsEdit /></RequireAuth>} />
+            <Route path="/admin/:type" element={<RequireAuth><PostsAdmin /></RequireAuth>} />
+            <Route path="/admin/:type/create" element={<RequireAuth><PostEdit /></RequireAuth>} />
+            <Route path="/admin/:type/edit/:postId" element={<RequireAuth><PostEdit /></RequireAuth>} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
