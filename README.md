@@ -7,8 +7,7 @@ Altex HomePage Development
 
 ### ⚙️ Tech `stack` 
 <img style='margin:10px' src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="60" alt="React">
- <img style='margin:10px'  src="https://www.svgrepo.com/show/353735/firebase.svg
-" width="60" alt="FireBase">
+ <img style='margin:10px'  src="https://www.svgrepo.com/show/353735/firebase.svg" width="60" alt="FireBase">
 <img style='margin:10px'  src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" width="60" alt="Tailwind">
 
 ### `Prerequisites`
