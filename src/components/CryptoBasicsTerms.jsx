@@ -1,4 +1,6 @@
-function CryptoBasics() {
+import { Link } from "react-router-dom";
+
+function CryptoBasicsTerms() {
   return (
     <>
       <div className="relative bg-[#F5F5F5] mt-[40px] mb-[77px] w-screen -left-[calc(50vw-50%)] text-[#35363B] font-light">
@@ -7,13 +9,13 @@ function CryptoBasics() {
           <div className="font-light text-[14px] mb-[80px] text-[#3973C5]">Нүүр &gt; Академи &gt; Крипто мэдлэг &gt; Нэр томьёоны тайлбар</div>
 
           <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#CDCDCE] text-[18px] font-medium gap-[40px] mb-[24px]">
-            <div className="relative">
+            <Link to="/posts/basics" className="relative text-[#CDCDCE]">
               КРИПТО МЭДЛЭГ
+            </Link>
+            <div className="relative">
+              НЭР ТОМЬЁОНЫ ТАЙЛБАР
               <div className="absolute h-[2px] w-full bg-[#13A9FD] bottom-[-17px]"></div>
             </div>
-            <a href="/user" className="relative text-[#CDCDCE]">
-              НЭР ТОМЬЁОНЫ ТАЙЛБАР
-            </a>
           </div>
 
           <div className="flex gap-[8px] flex-wrap mb-[40px]">
@@ -105,4 +107,4 @@ function CryptoBasics() {
   );
 }
 
-export default CryptoBasics;
+export default CryptoBasicsTerms;

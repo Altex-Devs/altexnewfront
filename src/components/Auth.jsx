@@ -22,7 +22,7 @@ const Auth = () => {
 
   useEffect(() => {
     if (user) {
-      navigate("/admin/news/create");
+      navigate("/admin");
     }
   }, [user, navigate]);
 

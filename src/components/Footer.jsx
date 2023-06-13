@@ -12,7 +12,7 @@ const Footer = () => {
         </div>
         <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px] pr-[15px]">
           <div id="footer_academy" className="text-[rgba(19,169,253,1)] mb-[32px]">Академи</div>
-          <Link id="footer_market_news" to="/news" className="block mb-[16px]">Зах зээлийн мэдээ</Link>
+          <Link id="footer_market_news" to="/posts/news" className="block mb-[16px]">Зах зээлийн мэдээ</Link>
           <Link id="footer_crypto_knowledge" to="/cryptobasics" className="block mb-[16px]">Крипто мэдлэг</Link>
           <a id="footer_projects" href="https://altex.mn/projects.php" target="_blank" className="block mb-[16px]" rel="noreferrer">Төслүүд</a>
           <Link id="howto" to="/howto" className="block mb-[16px]">Гарын авлага</Link>
