@@ -17,16 +17,18 @@ import About from "./components/About";
 import Team from "./components/Team";
 import Howto from "./components/Howto";
 import TermsOfUse from "./components/TermsOfUse";
-import CryptoBasics from "./components/CryptoBadics";
+import CryptoBasicsTerms from "./components/CryptoBasicsTerms";
 import Fee from "./components/Fee";
 import Feedback from "./components/Feedback";
 import NotFound from "./components/NotFound";
 import FAQ from "./components/FAQ";
-import NewsList from "./components/NewsList";
-import NewsShow from "./components/NewsShow";
+import Posts from "./components/Posts/Posts";
+import Post from "./components/Posts/Post";
 import PrivacyPolicy from "./components/PrivacyPolicy";
-import NewsEdit from "./components/News/NewsEdit";
+import PostEdit from "./components/Posts/PostEdit";
 import Auth from "./components/Auth";
+import PostsAdmin from "./components/Posts/PostsAdmin";
+import Admin from "./components/Admin";
 
 const messages = {
   mn: mn,
@@ -58,14 +60,17 @@ function App() {
             <Route path="/howto" element={<Howto />} />
             <Route path="/termsofuse" element={<TermsOfUse />} />
             <Route path="/privacypolicy" element={<PrivacyPolicy />} />
-            <Route path="/cryptobasics" element={<CryptoBasics />} />
+            <Route path="/cryptoterms" element={<CryptoBasicsTerms />} />
             <Route path="/fee" element={<Fee />} />
             <Route path="/feedback" element={<Feedback />} />
             <Route path="/faq" element={<FAQ />} />
-            <Route path="/news" element={<NewsList />} />
-            <Route path="/news/*" element={<NewsShow />} />
+            <Route path="/posts/:type" element={<Posts />} />
+            <Route path="/posts/:type/:postId" element={<Post />} />
             <Route path="/auth" element={<Auth />} />
-            <Route path="/admin/news/create" element={<RequireAuth><NewsEdit /></RequireAuth>} />
+            <Route path="/admin" element={<RequireAuth><Admin /></RequireAuth>} />
+            <Route path="/admin/posts/:type" element={<RequireAuth><PostsAdmin /></RequireAuth>} />
+            <Route path="/admin/posts/:type/create" element={<RequireAuth><PostEdit /></RequireAuth>} />
+            <Route path="/admin/posts/:type/edit/:postId" element={<RequireAuth><PostEdit /></RequireAuth>} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

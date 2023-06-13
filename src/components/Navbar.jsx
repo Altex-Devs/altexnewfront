@@ -84,7 +84,7 @@ const Navbar = (props) => {
             <span id="mobile_menu_academy" className="mobile_menu" onClick={(event) => toggleMobileMenu(event)}>Академи</span>
             <img className="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
             <div className="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden transition-[max-height] duration-700 pl-[15px]">
-              <Link id="mobile_menu_market_news" className="block" to="/news">Зах зээлийн мэдээ</Link>
+              <Link id="mobile_menu_market_news" className="block" to="/posts/news">Зах зээлийн мэдээ</Link>
               <a id="mobile_menu_crypto_knowledge" className="block" href="/cryptobasics">Крипто мэдлэг</a>
               <a id="mobile_menu_projects" className="block" href="https://altex.mn/projects.php">Төслүүд</a>
             </div>
@@ -133,7 +133,7 @@ const Navbar = (props) => {
             <div className="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
               <div className="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div className="backdrop-blur-sm flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
-                <Link id="menu_market_news" className="hover:text-[#13A9FD] cursor-pointer" to="/news">Зах зээлийн мэдээ</Link>
+                <Link id="menu_market_news" className="hover:text-[#13A9FD] cursor-pointer" to="/posts/news">Зах зээлийн мэдээ</Link>
                 <a id="menu_crypto_knowledge" className="hover:text-[#13A9FD] cursor-pointer" href="/cryptobasics">Крипто мэдлэг</a>
                 <a id="menu_projects" className="hover:text-[#13A9FD] cursor-pointer" href="https://altex.mn/projects.php">Төслүүд</a>
               </div>
