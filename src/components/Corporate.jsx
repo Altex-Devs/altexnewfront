@@ -6,7 +6,7 @@ const Corporate = () => {
     <>
       <div className="relative top-[-100px]">
         <div className="relative flex flex-col justify-center h-[688px] z-10 justify-items-start items-start gap-[24px]">
-          <div className="text-[40px] font-bold opacity-50">
+          <div className="text-[40px] font-bold">
             Дижитал хөрөнгө оруулалтыг хялбараар
           </div>
           <p className="max-w-[800px] text-[24px] font-light leading-[30px]">Байгууллагад зориулсан дижитал хөрөнгө оруулалтын хамгийн найдвартай платформыг санал болгож байна.</p>
@@ -21,31 +21,40 @@ const Corporate = () => {
 
       <Trend />
 
-      <div className="text-[#13A9FD] text-[24px] mb-[24px]">
+     
+
+
+     <div className="mx-[-180px] bg-[#0B163F] h-[682px] mb-[180px]">
+     <div className="mx-[180px] py-[80px]">
+     <div className="text-[#13A9FD] text-[24px] mb-[24px] ">
         Байгууллагын үйлчилгээ
       </div>
 
       <p className="font-light text-[18px] mb-[40px]">Дижитал хөрөнгө нь хөгжлийнхөө 4-р шат руу орж, олон улсын томоохон байгууллагуудын хөрөнгө оруулалтын чиг хандлага дижитал буюу крипто зах зээл рүү аль хэдийн шилжээд эхэлсэн нь түүний өсөн нэмэгдэж буй үнэ цэн, цаг үеийг мэдэрсэн ухаалаг хөрөнгө оруулалт болж байна.</p>
 
-      <p className="font-light text-[18px]">Бид хөрөнгө оруулагчид болон байгууллагуудад зориулсан уян хатан виртуал хөрөнгө оруулалтын үйлчилгээг анх удаа дотоодын зах зээлд нэвтрүүлсэн бөгөөд та бүхэнд дараах боломжийг олгож байна.</p>
-
-      <div className="flex flex-col md:flex-row gap-[24px] mt-[64px] mb-[240px] font-light">
-        <div className="rounded-[8px] border-[#13A9FD] border px-[48px] py-[40px]">
+      <p className="font-light text-[18px]">Бид хөрөнгө оруулагчид болон байгууллагуудад зориулсан уян хатан <span className="font-bold">виртуал хөрөнгө оруулалтын</span> үйлчилгээг анх удаа дотоодын зах зээлд нэвтрүүлсэн бөгөөд та бүхэнд <span className="font-bold">дараах боломжийг</span> олгож байна.</p>
+      
+      <div className="grid grid-cols-3 md:flex-row gap-[24px] mt-[64px] mb-[240px] font-light">
+        <div className="rounded-[8px] w-[384px] border-[#13A9FD] border px-[48px] py-[40px]">
           <img src="/images/Group 7818.svg" alt="" className="mb-[16px]"/>
           <div className="text-[#13A9FD] font-bold mb-[8px]">Хөрөнгийн удирдлага</div>
           <p className="text-[14px]">Хугацаа, эрсдэл, өгөөж зэргийг тооцон богино, дунд, урт хугацааны хөрөнгө оруулалтын багц бүрдүүлэх үйлчилгээ</p>
         </div>
-        <div className="rounded-[8px] border-[#13A9FD] border px-[48px] py-[40px]">
+        <div className="rounded-[8px] w-[384px] border-[#13A9FD] border px-[48px] py-[40px]">
           <img src="/images/Union 57.svg" alt="" className="mb-[16px]"/>
-          <div className="text-[#13A9FD] font-bold mb-[8px]">Хөрөнгийн удирдлага</div>
-          <p className="text-[14px]">Хугацаа, эрсдэл, өгөөж зэргийг тооцон богино, дунд, урт хугацааны хөрөнгө оруулалтын багц бүрдүүлэх үйлчилгээ</p>
+          <div className="text-[#13A9FD] font-bold mb-[8px]">Арбитраж</div>
+          <p className="text-[14px]">Бирж хоорондын ханшийн зөрүүг ашиглан эрсдэлгүй ашиг хийх боломж</p>
         </div>
-        <div className="rounded-[8px] border-[#13A9FD] border px-[48px] py-[40px]">
+        <div className="rounded-[8px] w-[384px] border-[#13A9FD] border px-[48px] py-[40px]">
           <img src="/images/Union 58.svg" alt="" className="mb-[16px]"/>
-          <div className="text-[#13A9FD] font-bold mb-[8px]">Хөрөнгийн удирдлага</div>
-          <p className="text-[14px]">Хугацаа, эрсдэл, өгөөж зэргийг тооцон богино, дунд, урт хугацааны хөрөнгө оруулалтын багц бүрдүүлэх үйлчилгээ</p>
+          <div className="text-[#13A9FD] font-bold mb-[8px]">Спот арилжаа</div>
+          <p className="text-[14px]">Эрсдэлгүй урт болон богино хугацаанд арилжаа хийх боломж</p>
         </div>
       </div>
+     </div>
+     </div>
+    
+     
 
       <HomeComponents />
     </>
