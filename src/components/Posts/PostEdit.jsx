@@ -8,7 +8,7 @@ import { ref, uploadBytesResumable } from 'firebase/storage';
 const PostEdit =  () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState((new Date()).toJSON().slice(0, 10));
   const [image, setImage] = useState("");
   const [percent, setPercent] = useState(0);
   const navigate = useNavigate();
@@ -51,7 +51,7 @@ const PostEdit =  () => {
         createdAt: serverTimestamp(),
         type: type,
       });
-      navigate(`/${type}/${docRef.id}`);
+      navigate(`/posts/${type}/${docRef.id}`);
     }
   }
 
@@ -75,22 +75,27 @@ const PostEdit =  () => {
   }
 
   return <>
-    <div className="text-black">
-      <h2>Using CKEditor 5 build in React</h2>
-      <input type="text" value={title} onChange={(e) => setTitle(e.currentTarget.value)} />
-      <input type="file" onChange={upload} />
-      {percent && percent < 100 && <>
-        <div className="rounded bg-white w-full h-[50px]">
-          <div className={`rounded bg-green-400 w-[${percent}%] h-[50px]`}>{Math.floor(percent)}%</div>
-        </div>
-      </>}
-      {image && <>
-        <img src={image} alt="post_image" />
-      </>}
-      <input type="date" value={date} onChange={(e) => setDate(e.currentTarget.value)} />
-      <Editor content={content} setContent={setContent} />
-      <button onClick={save}>Save</button>
-    </div>
+    Title<br />
+    <input type="text" value={title} onChange={(e) => setTitle(e.currentTarget.value)} className="text-black" /><br /><br />
+
+    Tumbnail<br />
+    <input type="file" onChange={upload} />
+    {percent > 0 && percent < 100 && <>
+      <div className="rounded bg-white w-full h-[50px]">
+        <div className={`rounded bg-green-400 w-[${percent}%] h-[50px]`}>{Math.floor(percent)}%</div>
+      </div>
+    </>}
+    {image && <>
+      <img src={image} alt="post_image" />
+    </>}<br /><br />
+
+    Date<br />
+    <input type="date" value={date} onChange={(e) => setDate(e.currentTarget.value)} className="text-black" /><br /><br />
+
+    Content<br />
+    <Editor content={content} setContent={setContent} /><br /><br />
+
+    <button className="rounded bg-[rgba(255,255,255,.5)] py-[10px] px-[15px]" onClick={save}>Save</button>
   </>;
 }
 

@@ -7,7 +7,9 @@ import PostsAdminItem from "./PostsAdminItem";
 function PostsAdmin() {
   const [posts, setPosts] = useState([]);
   const {type} = useParams();
-  const paginateBy = 2;
+  const [cursorAtEnd, setCursorAtEnd] = useState(false);
+  const [cursorAtStart, setCursorAtStart] = useState(true);
+  const paginateBy = 10;
 
   useEffect(() => {
     getPosts();
@@ -17,33 +19,47 @@ function PostsAdmin() {
   const getPosts = (direction) => {
     let q;
     if (direction === "next") {
-      console.log(posts[posts.length-1].ref);
       q = query(collection(db, "posts"), where("type", "==", type), orderBy("date", "desc"), startAfter(posts[posts.length-1].ref), limit(paginateBy));
-    } if (direction === "prev") {
-      q = query(collection(db, "posts"), where("type", "==", type), orderBy("date", "desc"), endBefore(posts[0]), limit(paginateBy));
+    } else if (direction === "prev") {
+      q = query(collection(db, "posts"), where("type", "==", type), orderBy("date", "desc"), endBefore(posts[0].ref), limit(paginateBy));
     } else {
-      q = query(collection(db, "posts"), where("type", "==", type), orderBy("date", "desc"), endBefore(null), limit(paginateBy));
+      q = query(collection(db, "posts"), where("type", "==", type), orderBy("date", "desc"), limit(paginateBy));
     }
 
     getDocs(q).then((querySnapshot) => {
-      console.log(querySnapshot.docs[querySnapshot.docs.length-1]);
       const data = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ref: doc,
         ...doc.data()
       }));
-      setPosts(data);
+
+      if (data.length) {
+        setPosts(data);
+
+        if (direction === "next") {
+          setCursorAtStart(false);
+        } else if (direction === "prev") {
+          setCursorAtEnd(false);
+        }
+      } else {
+        if (direction === "next") {
+          setCursorAtEnd(true);
+        } else if (direction === "prev") {
+          setCursorAtStart(true);
+        }
+      }
     });
   }
 
   return (
     <>
-      <Link to={`/admin/${type}/create`}>Create</Link>
+      <Link to="/admin">Back to Admin</Link><br />
+      <Link to={`/admin/posts/${type}/create`}>Create</Link>
       <br />
       {posts.map((post) => <PostsAdminItem key={post.id} post={post} getPosts={getPosts} />)}
       <br />
-      <button onClick={() => getPosts("prev")}>Prev</button>
-      <button onClick={() => getPosts("next")}>Next</button>
+      <button className="disabled:opacity-50" onClick={() => getPosts("prev")} disabled={cursorAtStart}>Prev</button>
+      <button className="disabled:opacity-50 float-right" onClick={() => getPosts("next")} disabled={cursorAtEnd}>Next</button>
     </>
   );
 }

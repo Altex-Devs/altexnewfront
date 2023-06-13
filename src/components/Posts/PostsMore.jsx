@@ -12,7 +12,7 @@ function PostsMore({posts, type}) {
               <div className="text-[#03040A] text-[18px] font-bold mb-[40px]">{post.title}​</div>
               <div className="flex justify-between items-center">
                 <div className="text-[#707070] font-light">{post.date}</div>
-                <Link className="text-[14px] text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]" to={`/${type}/${post.id}`}>Цааш үзэх</Link>
+                <Link className="text-[14px] text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]" to={`/posts/${type}/${post.id}`}>Цааш үзэх</Link>
               </div>
             </div>
           </div>

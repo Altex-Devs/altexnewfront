@@ -70,7 +70,7 @@ function Post() {
 
           <PostsMore posts={posts} type={type} />
 
-          <Link to="/news" className="block text-[#3973C5] text-[18px] underline mt-[24px] text-right">Бүгдийг харах</Link>
+          <Link to={`/posts/${type}`} className="block text-[#3973C5] text-[18px] underline mt-[24px] text-right">Бүгдийг харах</Link>
         </div>
       </div>
     </>

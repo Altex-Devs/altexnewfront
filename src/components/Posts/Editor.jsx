@@ -14,7 +14,7 @@ const Editor = ({ content, setContent }) => {
   }
 
   return (
-    <>
+    <div className="text-black">
       <CKEditor
         editor={ClassicEditor}
         data={content}
@@ -27,7 +27,7 @@ const Editor = ({ content, setContent }) => {
         <input type="file" className="custom-file-input" id="addiamge" onChange={upload} />
         <label className="custom-file-label" htmlFor="addiamge" data-browse="Зураг сонгох">Зураг оруулах</label>
       </div>
-    </>
+    </div>
   );
 }
 

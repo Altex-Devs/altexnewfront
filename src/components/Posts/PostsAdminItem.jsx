@@ -14,7 +14,7 @@ function PostsAdminItem({post, getPosts}) {
   return (
     <div>
       {post.title}
-      [<Link to={`/admin/${post.type}/edit/${post.id}`}>Edit</Link>]
+      [<Link to={`/admin/posts/${post.type}/edit/${post.id}`}>Edit</Link>]
       [<button onClick={remove}>Remove</button>]
     </div>
   );
