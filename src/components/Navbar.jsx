@@ -97,7 +97,7 @@ const Navbar = (props) => {
       <div className="flex items-center bg-[#0A1540] h-[48px] w-full absolute left-0 top-0 text-[#696F86] text-[14px]">
         <div className="container mx-auto text-right px-[16px] max-w-[1232px] overflow-auto font-light text-[#E6E7EB]">
           <span id="translate_lang" className="px-[24px] cursor-pointer border-x-[1px] border-[#3B4466]" onClick={() => {changeLocale('en')}}>Eng</span>
-          <a href="/corporate" id="industry_select" className="ml-[24px]">Байгууллага</a>
+          <a href="/" id="industry_select" className="ml-[24px]">Хувь хүн</a>
         </div>
       </div>
 
