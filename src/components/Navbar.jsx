@@ -17,6 +17,11 @@ const Navbar = (props) => {
     document.getElementById('menu').classList.add("hidden");
     document.body.classList.remove("overflow-hidden");
   }
+  
+  function showMenu() {
+    document.getElementById('menu').classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
+  }
 
   function toggleMenu(e) {
     e.stopPropagation();
@@ -26,6 +31,7 @@ const Navbar = (props) => {
     icon.classList.toggle("rotate-180");
     expander.classList.toggle("max-h-[140px]");
   }
+  
 
   function toggleMobileMenu(e) {
     e.stopPropagation();
@@ -36,11 +42,8 @@ const Navbar = (props) => {
     expander.classList.toggle("max-h-[140px]");
   }
 
-  function showMenu() {
-    document.getElementById('menu').classList.remove("hidden");
-    document.body.classList.add("overflow-hidden");
-  }
 
+  
   // Hide all menu
   function hideMenus (e) {
     if (!e.target.closest(".menu") || !e.target.closest(".mobile_menu")) {
@@ -63,8 +66,8 @@ const Navbar = (props) => {
 
   return (
     <>
-      <div id="menu" className="fixed top-0 left-0 w-screen h-screen bg-[#050F36] z-30 hidden lg:hidden p-[25px] py-[92px]">
-        <div className="flex justify-between items-center mb-[40px]">
+      <div id="menu" className="fixed  top-0 left-0 w-screen h-screen bg-[#050F36] z-30 hidden lg:hidden p-[25px]  py-[92px] ">
+        <div className="flex justify-between items-center mb-[40px] ">
           <img src="/images/header-logo.svg" />
           <svg id="SVGDoc" onClick={hideMenu} width="16" height="16" version="1.1" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fillOpacity="1"></path></g></g></svg>
         </div>
@@ -81,6 +84,7 @@ const Navbar = (props) => {
             </div>
           </div>
           <div>
+            
             <span id="mobile_menu_academy" className="mobile_menu" onClick={(event) => toggleMobileMenu(event)}>Академи</span>
             <img className="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
             <div className="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden transition-[max-height] duration-700 pl-[15px]">
@@ -100,7 +104,7 @@ const Navbar = (props) => {
           <a href="/" id="industry_select" className="ml-[24px]">Хувь хүн</a>
         </div>
       </div>
-
+      <div className="sticky top-0 z-40">
       <div className="flex items-center justify-between pt-[40px] relative z-20">
         <div className="flex items-center">
           <a href="/" className="py-[10px]">
@@ -123,7 +127,7 @@ const Navbar = (props) => {
               <div className="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div className="backdrop-blur-sm flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
                 <a id="menu_about_exchange" className="hover:text-[#13A9FD] cursor-pointer" href="/about">Биржийн тухай</a>
-                <a id="menu_team" className="hover:text-[#13A9FD] cursor-pointer" href="/team">Баг хамт олон</a>
+                <a id="menu_team" className="hover:text-[#13A9FD] cursor-pointer" href="/team">Баг 1хамт олон</a>
               </div>
             </div>
           </div>
@@ -143,6 +147,8 @@ const Navbar = (props) => {
           <a id="menu_login" href="https://trade.altex.mn/signin" target="_blank" className="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] border-solid border-[1px] border-[#13A9FD] text-[#13A9FD] leading-[18px] hover:bg-[rgba(19,169,253,.16)]" rel="noreferrer">Нэвтрэх</a>
         </div>
       </div>
+      </div>
+      
     </>
   );
 }

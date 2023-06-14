@@ -1,7 +1,7 @@
 function NotFound() {
   return (
     <>
-      <div className="absolute top-[48px] w-screen left-0 h-[1200px] bg-gradient-radial-center from-[rgba(0,108,255,0.36)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
+      <div className="absolute top-[48px] w-screen left-0 h-[1200px]  bg-gradient-radial-center from-[rgba(0,108,255,0.36)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
 
       <div className="container mx-auto flex flex-col items-center mt-[240px] mb-[400px]">
         <svg className="mx-auto mb-[40px] max-w-full" width="622" height="247" viewBox="0 0 622 247" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,9 +44,9 @@ function NotFound() {
             </filter>
           </defs>
         </svg>
-        <div className="text-[24px] font-extralight mx-auto mb-[24px]">ХУУДАС ОЛДСОНГҮЙ!</div>
-        <div className="text-[#9EA4C0] text-[24px] font-extralight mx-auto mb-[81px]">Таны хайж буй хуудсын хайлтын илэрц олдсонгүй.</div>
-        <a href="/" className="w-fit rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF]">Нүүр хуудас руу буцах</a>
+        <div className="text-[24px] font-Montserrat z-10 mx-auto mb-[24px]">ХУУДАС ОЛДСОНГҮЙ!</div>
+        <div className="text-[#9EA4C0] text-[24px] font-Montserrat mx-auto mb-[80px]">Таны хайж буй хуудсын хайлтын илэрц олдсонгүй.</div>
+        <a href="/" className="w-fit rounded-[4px] font-bold text-[14px] z-10  w-[220px] h-[48px] grid justify-center content-center bg-gradient-to-b from-[#13A9FD] to-[#006CFF]">Нүүр хуудас руу буцах</a>
       </div>
     </>
   );
