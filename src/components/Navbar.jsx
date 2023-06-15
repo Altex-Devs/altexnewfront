@@ -23,15 +23,31 @@ const Navbar = (props) => {
     document.body.classList.add("overflow-hidden");
   }
 
-  function toggleMenu(e) {
+  function toggleMenu(e,section) {
     e.stopPropagation();
     const parent = e.target.parentElement;
     const icon = parent.querySelector(".icon");
     const expander = parent.querySelector(".expander");
     icon.classList.toggle("rotate-180");
-    expander.classList.toggle("max-h-[140px]");
-  }
-  
+    const isExpanded = expander.classList.contains("max-h-[140px]");
+
+    const allExpanders = document.querySelectorAll(".expander");
+    const allIcons = document.querySelectorAll(".icon");
+
+    allExpanders.forEach((exp) => {
+      exp.classList.remove("max-h-[140px]");
+    });
+    allIcons.forEach((icn) => {
+      icn.classList.remove("rotate-180");
+    });
+    if (!isExpanded) {
+      expander.classList.add("max-h-[140px]");
+      icon.classList.add("rotate-180");
+    } else {
+      expander.classList.remove("max-h-[140px]");
+      icon.classList.remove("rotate-180");
+    }
+}
 
   function toggleMobileMenu(e) {
     e.stopPropagation();
@@ -120,7 +136,7 @@ const Navbar = (props) => {
         </div>
         <div id="main_menu" className="items-center gap-[40px] text-[16px] hidden lg:flex">
           <a id="menu_trade" className="cursor-pointer" href="https://trade.altex.mn/">Арилжаа</a>
-          <div className="relative cursor-pointer" onClick={(event) => toggleMenu(event)}>
+          <div className="relative cursor-pointer" onClick={(event) => toggleMenu(event,'Бидний тухай')}>
             <span id="menu_about_us" className="menu">Бидний тухай</span>
             <img className="icon inline-block relative ml-[5px]" src="/images/menu_arrow.svg" />
             <div className="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
@@ -131,7 +147,7 @@ const Navbar = (props) => {
               </div>
             </div>
           </div>
-          <div className="relative cursor-pointer" onClick={(event) => toggleMenu(event)}>
+          <div className="relative cursor-pointer" onClick={(event) => toggleMenu(event,'Академи')}>
             <span id="menu_academy" className="menu">Академи</span>
             <img className="icon inline-block relative ml-[5px]" src="/images/menu_arrow.svg" />
             <div className="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
