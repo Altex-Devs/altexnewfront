@@ -143,7 +143,7 @@ const Navbar = (props) => {
               <div className="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div className="backdrop-blur-sm flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
                 <a id="menu_about_exchange" className="hover:text-[#13A9FD] cursor-pointer" href="/about">Биржийн тухай</a>
-                <a id="menu_team" className="hover:text-[#13A9FD] cursor-pointer" href="/team">Баг 1хамт олон</a>
+                <a id="menu_team" className="hover:text-[#13A9FD] cursor-pointer" href="/team">Баг хамт олон</a>
               </div>
             </div>
           </div>

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 function PostsMore({posts, type}) {
   return (
     <>
-      <div className="grid lg:grid-cols-3 gap-[24px]">
+      <div className="grid lg:grid-cols-3 gap-[24px] ">
 
         {posts.map((post) => <div key={post.id}>
-          <div className="bg-white rounded flex flex-col">
+          <div className="bg-white rounded flex flex-col w-[316px] h-[340px]">
             <div className="aspect-video bg-cover rounded-t" style={{backgroundImage: `url("${post.image}")`}}></div>
             <div className="pt-[18px] px-[16px] pb-[24px] flex flex-col justify-between grow">
               <div className="text-[#03040A] text-[18px] font-bold mb-[40px]">{post.title}​</div>

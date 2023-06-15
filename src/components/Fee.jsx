@@ -363,6 +363,7 @@ function Fee() {
       setShow(buttonId)
     }
   }
+
   return (
     <>
       <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#1E274A] text-[18px] font-medium gap-[40px] mt-[80px] mb-[40px]">
