@@ -1,11 +1,19 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FormattedMessage } from 'react-intl';
 import { Link } from "react-router-dom";
 
 /* eslint-disable jsx-a11y/alt-text */
 const Navbar = (props) => {
+  const [navbarBg, setNavbarBg] = useState(false); 
   useEffect(() => {
     document.addEventListener("click", hideMenus);
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
   }, []);
   
   const changeLocale = (locale) => {
@@ -30,7 +38,6 @@ const Navbar = (props) => {
     const expander = parent.querySelector(".expander");
     icon.classList.toggle("rotate-180");
     const isExpanded = expander.classList.contains("max-h-[140px]");
-
     const allExpanders = document.querySelectorAll(".expander");
     const allIcons = document.querySelectorAll(".icon");
 
@@ -58,8 +65,6 @@ const Navbar = (props) => {
     expander.classList.toggle("max-h-[140px]");
   }
 
-
-  
   // Hide all menu
   function hideMenus (e) {
     if (!e.target.closest(".menu") || !e.target.closest(".mobile_menu")) {
@@ -80,9 +85,18 @@ const Navbar = (props) => {
     }
   }
 
+  const handleScroll = () => {
+    const scrollTop = window.pageYOffset;
+    if (scrollTop > 0) {
+      setNavbarBg(true);
+    } else {
+      setNavbarBg(false);
+    }
+  };
+
   return (
     <>
-      <div id="menu" className="fixed  top-0 left-0 w-screen h-screen bg-[#050F36] z-30 hidden lg:hidden p-[25px]  py-[92px] ">
+      <div id="menu" className={`fixed  top-0 left-0 w-screen h-screen bg-[#050F36] z-30 hidden lg:hidden p-[25px] ${navbarBg ? "bg-[#050F36]" : ""}  py-[92px]`}>
         <div className="flex justify-between items-center mb-[40px] ">
           <img src="/images/header-logo.svg" />
           <svg id="SVGDoc" onClick={hideMenu} width="16" height="16" version="1.1" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fillOpacity="1"></path></g></g></svg>
@@ -121,7 +135,7 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className="sticky top-0 z-40">
-      <div className="flex items-center justify-between pt-[40px] relative z-20">
+      <div className={`flex items-center justify-between pt-[40px] relative z-20 bg-[]`}>
         <div className="flex items-center">
           <a href="/" className="py-[10px]">
             <img src="/images/header-logo.svg" />

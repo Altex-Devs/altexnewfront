@@ -1,5 +1,11 @@
 import { useState } from "react";
-
+import Mana from '../SVG/altex.mn-fee-coin-icons/decentraland-mana-logo.svg'
+import Link from '../SVG/altex.mn-fee-coin-icons/Link-coin.svg'
+import Sushi from '../SVG/altex.mn-fee-coin-icons/Sushi-coin.svg'
+import Snx from '../SVG/altex.mn-fee-coin-icons/Snx-coin.svg'
+import Ogn from '../SVG/altex.mn-fee-coin-icons/Ogn-coin.svg'
+import Comp from '../SVG/altex.mn-fee-coin-icons/Comp-coin.svg'
+import Aave from '../SVG/altex.mn-fee-coin-icons/aave-coin.svg'
 const json = [
   {
     name:'BTC',
@@ -15,7 +21,7 @@ const json = [
   </svg>,
     fee:'0.001',
     feeLower:'0.005',
-    proof:'0.3',
+    proof:'1.1',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
@@ -32,7 +38,7 @@ const json = [
   </svg>,
     fee:'0.01',
     feeLower:'0.01',
-    proof:'4',
+    proof:'16',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
@@ -44,21 +50,21 @@ const json = [
   </svg>,
     fee:'0.002',
     feeLower:'0.1',
-    proof:'110',
+    proof:'250',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
   {
     name:'BCH',
     pat:<svg className="inline-block mr-[8px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g fill="none" fill-rule="evenodd">
-    <circle cx="16" cy="16" fill="#8dc351" r="16"/>
-    <path d="M21.207 10.534c-.776-1.972-2.722-2.15-4.988-1.71l-.807-2.813-1.712.491.786 2.74c-.45.128-.908.27-1.363.41l-.79-2.758-1.711.49.805 2.813c-.368.114-.73.226-1.085.328l-.003-.01-2.362.677.525 1.83s1.258-.388 1.243-.358c.694-.199 1.035.139 1.2.468l.92 3.204c.047-.013.11-.029.184-.04l-.181.052 1.287 4.49c.032.227.004.612-.48.752.027.013-1.246.356-1.246.356l.247 2.143 2.228-.64c.415-.117.825-.227 1.226-.34l.817 2.845 1.71-.49-.807-2.815a65.74 65.74 0 001.372-.38l.802 2.803 1.713-.491-.814-2.84c2.831-.991 4.638-2.294 4.113-5.07-.422-2.234-1.724-2.912-3.471-2.836.848-.79 1.213-1.858.642-3.3zm-.65 6.77c.61 2.127-3.1 2.929-4.26 3.263l-1.081-3.77c1.16-.333 4.704-1.71 5.34.508zm-2.322-5.09c.554 1.935-2.547 2.58-3.514 2.857l-.98-3.419c.966-.277 3.915-1.455 4.494.563z" fill="#ffffff" fill-rule="nonzero"/>
+    <g id="bitcoin-cash-bch-logo" transform="translate(-0.4 -0.4)">
+      <circle id="Ellipse_1680" data-name="Ellipse 1680" cx="16" cy="16" r="16" transform="translate(0.4 0.4)" fill="#0ac18e"/>
+      <path id="symbol_1_" d="M205.741,151.777c-.808-1.833-2.665-2.224-4.939-1.845l-.731-2.833-1.722.445.718,2.824c-.453.114-.918.212-1.38.343l-.718-2.808-1.722.445.731,2.833c-.371.106-3.477.9-3.477.9l.473,1.845s1.265-.355,1.253-.327a.916.916,0,0,1,1.188.5l2.008,7.763a.637.637,0,0,1-.5.739c.029.016-1.253.322-1.253.322l.188,2.151s3.077-.788,3.482-.89l.739,2.865,1.722-.445-.739-2.886q.71-.165,1.384-.343l.735,2.869,1.722-.445-.739-2.861c2.653-.645,4.526-2.318,4.143-4.877a3.979,3.979,0,0,0-3.331-2.951,2.845,2.845,0,0,0,.763-3.335Zm-.829,6.755c.343,2.535-3.18,2.845-4.343,3.151l-1.012-3.792C200.724,157.585,204.332,156.3,204.912,158.532Zm-2.122-5.163c.363,2.253-2.649,2.514-3.62,2.763l-.922-3.441C199.222,152.451,202.051,151.284,202.79,153.369Z" transform="translate(-184.285 -140.738)" fill="#fff"/>
     </g>
-    </svg>,
-    fee:'0.002',
+  </svg>,
+    fee:'0.001',
     feeLower:'0.01',
-    proof:'58',
+    proof:'260',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
@@ -72,7 +78,7 @@ const json = [
     </svg> ,
     fee:'16',
     feeLower:'5',
-    proof:'7,000',
+    proof:'30,000',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
@@ -91,71 +97,34 @@ const json = [
     </svg>,
     fee:'0.75',
     feeLower:'1.8',
-    proof:'1,000',
+    proof:'6,000',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
   {
     name:'COMP',
-    pat:<svg className="inline-block mr-[8px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-        <stop offset="0" stop-color="#fdae13"/>
-        <stop offset="1" stop-color="#fe6703"/>
-      </linearGradient>
-      <clipPath id="clip-COMP">
-        <rect width="48" height="48"/>
-      </clipPath>
-    </defs>
-    <g id="COMP" clip-path="url(#clip-COMP)">
-      <g id="Rectangle_5195" data-name="Rectangle 5195" fill="none" stroke="#13a9fd" stroke-width="1">
-        <rect width="48" height="48" rx="10" stroke="none"/>
-        <rect x="0.5" y="0.5" width="47" height="47" rx="9.5" fill="none"/>
-      </g>
-      <path id="Path_5264" data-name="Path 5264" d="M530.474,417.945a2.007,2.007,0,0,1-.974-1.714v-3.9a.843.843,0,0,1,.851-.837.861.861,0,0,1,.426.114l8.91,5.137a1.672,1.672,0,0,1,.843,1.449v4.044a1.009,1.009,0,0,1-1.014,1.007,1.04,1.04,0,0,1-.534-.148Zm13.281-7.411a1.679,1.679,0,0,1,.843,1.449v8.209a.666.666,0,0,1-.346.583l-1.95,1.085a.342.342,0,0,1-.079.032v-4.558a1.676,1.676,0,0,0-.826-1.441l-7.825-4.628V406.12a.843.843,0,0,1,.851-.837.861.861,0,0,1,.426.114Zm3.9-6.063a1.673,1.673,0,0,1,.845,1.451v11.989a.678.678,0,0,1-.358.59l-1.849.987v-8.347a1.677,1.677,0,0,0-.822-1.439l-8-4.744v-4.88a.843.843,0,0,1,1.273-.725Z" transform="translate(-514.5 -387.24)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
-    </g>
-  </svg>
-    ,
+    pat: <img className="w-[32px] h-[32px] inline-block mr-[8px]" src={Comp} alt="Your SVG" />,
     fee:'0.2',
     feeLower:'0.2',
-    proof:'135',
+    proof:'850',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
   {
     name:'AAVE',
-    pat:<svg className="inline-block mr-[8px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="none"> <circle fill="#2EBAC6" cx="16" cy="16" r="16"></circle> <path d="M22.934 21.574l-5.35-13.532C17.28 7.342 16.834 7 16.243 7h-.473c-.592 0-1.039.343-1.341 1.042l-2.327 5.896h-1.761c-.528.002-.956.448-.96 1v.014c.004.553.432.999.96 1.001h.946l-2.221 5.621a1.235 1.235 0 00-.066.384c0 .315.092.562.263.754.17.192.407.288.71.288a.933.933 0 00.552-.192c.17-.123.289-.302.38-.507l2.446-6.348h1.696c.527-.002.955-.449.96-1.001v-.027c-.005-.553-.433-1-.96-1.001h-.907l1.866-4.867L21.093 22.3c.092.205.21.384.381.507.161.122.354.19.553.192.302 0 .539-.096.71-.288.17-.192.262-.439.262-.754a.944.944 0 00-.065-.384z" fill="#FFF"></path> </g> </g></svg>,
+    pat: <img className="w-[32px] h-[32px] inline-block mr-[8px]" src={Aave} alt="Your SVG" />,
     fee:'0.25',
     feeLower:'0.2',
-    proof:'80',
+    proof:'460',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
   {
     name:'LINK',
-    image:'https://altex.mn/images/USDT-TABLE.svg',
-    pat: <svg width="32" height="32" viewBox="0 0 48 48">    
-    <defs>
-      <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-        <stop offset="0" stop-color="#fdae13"/>
-        <stop offset="1" stop-color="#fe6703"/>
-      </linearGradient>
-      <clipPath id="clip-LINK">
-        <rect width="48" height="48"/>
-      </clipPath>
-    </defs>
-    <g id="LINK" clip-path="url(#clip-LINK)">
-      <g id="Layer_2" data-name="Layer 2" transform="translate(14 12)">
-        <g id="Layer_1" data-name="Layer 1">
-          <path id="Path_5192" data-name="Path 5192" d="M10.5,0,8.278,1.266,2.222,4.734,0,6V18l2.222,1.266,6.111,3.468L10.556,24l2.222-1.266,6-3.468L21,18V6L18.778,4.734,12.722,1.266ZM4.444,15.468V8.532L10.5,5.064l6.056,3.468v6.936L10.5,18.936Z" fill="url(#linear-gradient)"/>
-        </g>
-      </g>
-    </g>
-  </svg>,
+    pat: <img className="w-[32px] h-[32px] inline-block mr-[8px]" src={Link} alt="Your SVG" />,
     fee:'0.6',
     feeLower:'1.7',
-    proof:'850',
+    proof:'4200',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
@@ -169,7 +138,7 @@ const json = [
     </svg>,
     fee:'23',
     feeLower:'55.6',
-    proof:'23,000',
+    proof:'100,000',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
@@ -181,9 +150,9 @@ const json = [
     <path d="M22.313 9c.494.057.994.088 1.482.176.967.183 1.283.643 1.119 1.576-.066.378-.31.611-.698.674a5.12 5.12 0 01-.698.05c-3.173.007-6.353.013-9.526.026-.48 0-.955.044-1.422.12-1.574.246-2.166.87-2.298 2.388-.06.713-.06.713.685.713h13.028c.205.006.402.044.573.15.58.354.435.908.402 1.419-.026.41-.283.636-.724.718a3.341 3.341 0 01-.56.038h-12.99c-.48 0-.473 0-.434.454.033.416.06.826.165 1.229.197.75.678 1.216 1.455 1.424.862.233 1.751.284 2.64.29 3.1.019 6.195.013 9.296.013.395 0 .763.05.994.397.448.668.099 1.6-.685 1.84-.671.208-1.376.258-2.074.265-2.91.05-5.82.057-8.73 0a15.91 15.91 0 01-2.672-.296c-2.074-.41-3.108-1.418-3.457-3.41-.079-.46-.125-.926-.184-1.387v-3.636c.04-.36.072-.718.119-1.071.276-2.257 1.33-3.366 3.647-3.857.823-.177 1.665-.215 2.495-.297C16.27 9 19.29 9 22.313 9z" fill="#ffffff"/>
     </g>
     </svg>,
-    fee:'23',
+    fee:'22',
     feeLower:'31.3',
-    proof:'14,000',
+    proof:'75,000',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
@@ -204,59 +173,25 @@ const json = [
     </svg>,
     fee:'55',
     feeLower:'55.6',
-    proof:'70,000',
+    proof:'150,000',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
   {
     name:'MANA',
-    pat:<svg className="inline-block mr-[8px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-    <filter id="a">
-    <feColorMatrix in="SourceGraphic" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"/>
-    </filter>
-    </defs>
-    <g fill="none" fill-rule="evenodd">
-    <circle fill="#FF2D55" fill-rule="nonzero" cx="16" cy="16" r="16"/>
-    <g filter="url(#a)">
-    <path d="M12.793 11.534l-7.045 8.454A10.912 10.912 0 015 16C5 9.923 9.923 5 16 5c6.078 0 11 4.923 11 11 0 3.36-1.507 6.369-3.883 8.387H8.883A11.511 11.511 0 017.2 22.6h12.562v-4.763l3.965 4.763H24.8l-5.043-6.05-1.392 1.672-5.571-6.688zM19.758 9.4a2.751 2.751 0 000 5.5 2.751 2.751 0 000-5.5zm-6.963-1.991a1.376 1.376 0 100 2.751 1.376 1.376 0 000-2.751zM9.989 25.212h12.023A10.97 10.97 0 0116 27a10.97 10.97 0 01-6.011-1.788zm7.843-6.346l-2.426 2.909H6.639a11.056 11.056 0 01-.891-1.787h7.046V12.82l5.038 6.045z" fill="#16141A" fill-rule="nonzero"/>
-    </g>
-    </g>
-    </svg>,
+    pat: <img className="w-[32px] h-[32px] inline-block mr-[8px]" src={Mana} alt="Your SVG" />,
     fee:'10',
     feeLower:'20',
-    proof:'10,000',
+    proof:'15,000',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
   {
     name:'SUSHI',
-    pat: <svg width="32" height="32" viewBox="0 0 48 48">    
-    <defs>
-      <linearGradient id="linear-gradient" x1="0.299" x2="0.387" y2="0.69" gradientUnits="objectBoundingBox">
-        <stop offset="0" stop-color="#03b8ff"/>
-        <stop offset="1" stop-color="#fa52a0"/>
-      </linearGradient>
-    </defs>
-    <g id="sushi" transform="translate(-2140 -6476)">
-      <circle id="Ellipse_19" data-name="Ellipse 19" cx="18" cy="18" r="18" transform="translate(2140 6476)" fill="#0e0e23"/>
-      <g id="Group_980" data-name="Group 980" transform="translate(-0.499 -42.5)">
-        <path id="Union_85" data-name="Union 85" d="M6.285,16.837C1.675,13.607-.979,9.5.336,7.279L.313,7.263l4.217-6.1.01-.015c1.47-2.1,6.431-1.276,11.117,2.007,4.778,3.1,7.351,7.478,5.973,9.575l-4.227,6.2-.044-.03A3.4,3.4,0,0,1,14.527,20C12.3,20,9.237,18.905,6.285,16.837Z" transform="translate(2147.5 6526.5)" fill="#fff"/>
-        <g id="Group_979" data-name="Group 979" transform="translate(2148.219 6527.051)">
-          <path id="Union_84" data-name="Union 84" d="M5.875,15.856c-4.309-3.041-6.789-6.914-5.56-9L.292,6.839l3.95-5.754C5.617-.89,10.254-.117,14.634,2.975c4.465,2.92,6.87,7.042,5.582,9.017h0l-3.95,5.839-.041-.028a3.162,3.162,0,0,1-2.647,1.028A14.539,14.539,0,0,1,5.875,15.856Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
-          <path id="Path_448" data-name="Path 448" d="M20.846,14.512h0l-3.95,5.84h0c-1.374,1.975-5.939,1.111-10.319-1.895a26.362,26.362,0,0,1-2.387-1.962,3.3,3.3,0,0,0,2.057-1.209c1.374-1.46,2.061-1.8,2.662-1.718.6,0,1.288.6,2.4,2.061s2.662,1.889,3.607,1.116c.086-.086.172-.086.258-.172.773-.6,1.031-.859,2.49-3.607a2.7,2.7,0,0,1,3.177-1.288A3.255,3.255,0,0,1,20.846,14.512Z" transform="translate(-0.63 -2.52)" fill="#0e0f23"/>
-          <path id="Path_449" data-name="Path 449" d="M20.42,12.788c-1.2,1.718-5.41.859-9.447-1.975C6.851,7.979,4.447,4.372,5.649,2.655S11.059,1.8,15.1,4.63,21.536,11.071,20.42,12.788Zm-3.779-2.576c-.6.859-2.662.429-4.723-.945C9.943,7.893,8.741,6.09,9.342,5.231S12,4.8,14.065,6.176C16.04,7.55,17.242,9.353,16.641,10.212Z" transform="translate(-0.805 -1.14)" fill="#fff" fill-rule="evenodd"/>
-          <path id="Path_450" data-name="Path 450" d="M4.544,4.58c0-.086-.086-.172-.172-.086S4.2,4.58,4.2,4.666a2.185,2.185,0,0,1,.172.6c0,.086.086.172.172.086.086,0,.172-.086.086-.172A1.677,1.677,0,0,0,4.544,4.58Z" transform="translate(-0.644 -1.519)" fill="#fff"/>
-          <path id="Path_451" data-name="Path 451" d="M5.058,6.18c0-.086-.086-.172-.172-.086S4.8,6.18,4.8,6.266a15.372,15.372,0,0,0,5.5,6.183c.086.086.172,0,.258,0,.086-.086,0-.172,0-.258A14.932,14.932,0,0,1,5.058,6.18Z" transform="translate(-0.729 -1.745)" fill="#fff"/>
-          <path id="Path_452" data-name="Path 452" d="M17.172,16c-.086,0-.172,0-.172.086s0,.172.086.172c.258.086.6.172.859.258.086,0,.172,0,.172-.086s0-.172-.086-.172C17.773,16.172,17.429,16.086,17.172,16Z" transform="translate(-2.452 -3.149)" fill="#fff"/>
-          <path id="Path_453" data-name="Path 453" d="M18.972,16.4a.172.172,0,1,0,0,.344,8.464,8.464,0,0,0,2.061.086.172.172,0,1,0,0-.344A8.3,8.3,0,0,1,18.972,16.4Z" transform="translate(-2.706 -3.206)" fill="#fff"/>
-        </g>
-      </g>
-    </g>
-  </svg>,
+    pat: <img className="w-[32px] h-[32px] inline-block mr-[8px]" src={Sushi} alt="Your SVG" />,
     fee:'5',
     feeLower:'2',
-    proof:'3,800',
+    proof:'30,000',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
@@ -270,7 +205,7 @@ const json = [
     </svg>,
     fee:'15',
     feeLower:'0.4',
-    proof:'7,000',
+    proof:'30,000',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
@@ -287,7 +222,7 @@ const json = [
     </svg>,
     fee:'4',
     feeLower:'5',
-    proof:'3,000',
+    proof:'15,000',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
     
@@ -305,7 +240,7 @@ const json = [
     </svg>,
     fee:'0.002',
     feeLower:'0.04',
-    proof:'0.8',
+    proof:'4',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
@@ -319,45 +254,32 @@ const json = [
     </svg>,
     fee:'30',
     feeLower:'10',
-    proof:'7,000',
+    proof:'30,000',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
   {
     name:'SNX',
-    pat:<svg className="inline-block mr-[8px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g fill="none">
-    <circle fill="#5FCDF9" cx="16" cy="16" r="16"/>
-    <path d="M11.092 12.264a.617.617 0 00-.493-.24h-3.98a.13.13 0 01-.086-.035.11.11 0 01-.033-.077v-2.8a.11.11 0 01.033-.077.097.097 0 01.086-.034h4.206c1.06 0 1.975.454 2.747 1.359l1.023 1.303-1.992 2.534-1.511-1.933zm7.351-1.917c.768-.896 1.688-1.346 2.76-1.346h4.193a.102.102 0 01.078.026.1.1 0 01.025.085v2.8c0 .03-.008.056-.025.077a.084.084 0 01-.078.034h-3.98a.617.617 0 00-.492.24L17.99 15.99l2.945 3.752c.12.141.296.227.477.223h3.98a.09.09 0 01.077.034.14.14 0 01.025.09v2.8a.12.12 0 01-.025.077.084.084 0 01-.078.034h-4.189c-1.072 0-1.984-.454-2.748-1.359l-2.44-3.108-2.439 3.108c-.768.905-1.688 1.36-2.76 1.36H6.62a.09.09 0 01-.078-.035.121.121 0 01-.025-.09v-2.8c0-.03.009-.056.025-.077a.084.084 0 01.078-.034h3.98c.189 0 .37-.09.493-.24l2.879-3.67 4.472-5.707z" fill="#FFF"/>
-    </g>
-    </svg>,
+    pat: <img className="w-[32px] h-[32px] inline-block mr-[8px]" src={Snx} alt="Your SVG" />,
     fee:'3',
     feeLower:'6',
-    proof:'2,800',
+    proof:'10,000',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   },
   {
     name:'OGN',
-    pat:<svg className="inline-block mr-[8px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g id="Layer_1" data-name="Layer 1">
-    <path id="SVGID" d="M18,0A18,18,0,1,1,0,18,18,18,0,0,1,18,0Z" fill="#1a82ff"/>
-    <path id="SVGID-2" data-name="SVGID" d="M899.488,769.677a8.981,8.981,0,0,1-13.15,0,12.9,12.9,0,0,1,0-14.812,8.978,8.978,0,0,1,13.15,0,12.9,12.9,0,0,1,0,14.812Z" transform="translate(-874.907 -744.265)" fill="#fff"/>
-    <path id="SVGID-3" data-name="SVGID" d="M1468.2,1529.837a3,3,0,0,0,1.9-.608,3.4,3.4,0,0,0,1.131-1.649,11.818,11.818,0,0,0,.494-2,13.5,13.5,0,0,0,.143-2.025,15.69,15.69,0,0,0-.159-2.359l-6.407,6.677A3,3,0,0,0,1468.2,1529.837Z" transform="translate(-1450.228 -1505.553)" fill="#1a82ff"/>
-    <path id="SVGID-4" data-name="SVGID" d="M1400.964,1140.1a3,3,0,0,0-1.9.608,3.4,3.4,0,0,0-1.131,1.649,11.57,11.57,0,0,0-.494,2,13.5,13.5,0,0,0-.143,2.025q0,.7.045,1.331l6.111-6.367A2.891,2.891,0,0,0,1400.964,1140.1Z" transform="translate(-1382.927 -1128.373)" fill="#1a82ff"/>
-    <path id="SVGID-5" data-name="SVGID" d="M856.687,1073.665l-.787-.755,5.967-6.22.787.755Zm11.242-6.49-.787-.755,5.967-6.22.787.755Z" transform="translate(-847.096 -1049.295)" fill="#1a82ff"/>
-  </g>
-</svg>,
+    pat: <img className="w-[32px] h-[32px] inline-block mr-[8px]" src={Ogn} alt="Your SVG" />,
     fee:'30',
     feeLower:'70',
-    proof:'35,000',
+    proof:'300,000',
     feeSize:"Шимтгэлгүй",
     feeSizeLower:'0'
   }
 ]
 
 function Fee() {
-  const [show, setShow] = useState('button2')
+  const [show, setShow] = useState('button1')
   const toggle = (buttonId) =>{
     if(buttonId !== show){
       setShow(buttonId)
@@ -403,7 +325,7 @@ function Fee() {
            </svg>
             USD
           </div>
-          <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">Шимтгэлгүй</div>
+          <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">0.25%</div>
           <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">$3.0</div>
           <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">-</div>
 
@@ -454,13 +376,13 @@ function Fee() {
            </svg>
             USD
           </div>
-          <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">1%</div>
+          <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">0%</div>
           <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">$3.0</div>
-          <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">$7,000.0</div>
+          <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">$3,000.0</div>
 
-          <div className="col-span-2 row-[span_21] flex justify-center items-center p-[100px]">
+          <div className="col-span-2 row-[span_21] flex mt-[248px] p-[100px]">
             <span>
-              Та нэг өдөрт хийх зарлагын дүнг өсгөх хүсэлтэй бол <a href="#_" className="text-[#3973C5] underline">ЭНД</a> дарж хүсэлтээ илгээнэ үү.
+              Та нэг өдөрт хийх зарлагын дүнг өсгөх хүсэлтэй бол <a href="/feedback" className="text-[#3973C5] underline">ЭНД</a> дарж хүсэлтээ илгээнэ үү.
             </span>
           </div>
           {json.map((data)=>{
@@ -480,10 +402,11 @@ function Fee() {
       </div>
       )}
       {show === "button3" && (
-        <div className="w-full grid grid-cols-2 gap-[8px] min-w-[700px] overflow-x-auto">
+        <div className="w-full grid grid-cols-2 gap-[8px] min-w-[700px] overflow-x-auto block">
           <div className="relative">
             <div className="text-center  h-[40px] bg-[#101C47] grid content-center ">
             Maker
+            <div className="group">
             <div className="absolute right-[16px] top-[8px] ">
               <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
@@ -491,19 +414,35 @@ function Fee() {
                 <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.53846C7.32682 3.53846 3.53846 7.32682 3.53846 12C3.53846 16.6732 7.32682 20.4615 12 20.4615C16.6732 20.4615 20.4615 16.6732 20.4615 12C20.4615 7.32682 16.6732 3.53846 12 3.53846ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z" fill="#ffffff"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.64103C12.4248 7.64103 12.7692 7.98542 12.7692 8.41026V12.5128C12.7692 12.9377 12.4248 13.2821 12 13.2821C11.5752 13.2821 11.2308 12.9377 11.2308 12.5128V8.41026C11.2308 7.98542 11.5752 7.64103 12 7.64103Z" fill="#ffffff"/> <path d="M13.0256 15.5897C13.0256 16.1562 12.5664 16.6154 12 16.6154C11.4336 16.6154 10.9744 16.1562 10.9744 15.5897C10.9744 15.0233 11.4336 14.5641 12 14.5641C12.5664 14.5641 13.0256 15.0233 13.0256 15.5897Z" fill="#ffffff"/> </g>
               </svg>
               </div>
+              <div className="absolute left-[436px] z-10">
+                <div class="w-16 hidden group-hover:block overflow-hidden inline-block absolute top-[-6px] left-[115px]">
+                  <div class=" h-[8px] bg-white w-[10px] bg-black rotate-45 transform origin-bottom-left"></div>
+                </div>
+                <span className="w-[238px] text-left rounded h-[62px] p-[8px] border bg-white font-normal text-[8px] text-[#000000] hidden  group-hover:block">Та захиалгаа өгснөөр тэр даруй арилжаа хийгдэхгүй болж Maker болж таны захиалга захиалгын дэвтэрт үлдэж, дараа нь өөр хүн биелүүлэх/тохируулахыг хүлээнэ.</span>
+              </div>
+            </div>
             </div>
             <div className="grid text-center h-[40px mt-[24px] content-center mb-[256px]">0.25%</div>
           </div>
           <div className="relative">
             <div className="text-center h-[40px] bg-[#101C47] grid content-center">
               Taker
-              <div className="absolute right-[16px] top-[8px] ">
+              <div className="group">
+              <div className="absolute right-[16px] top-[8px] group-hover">
               <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
                 <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.53846C7.32682 3.53846 3.53846 7.32682 3.53846 12C3.53846 16.6732 7.32682 20.4615 12 20.4615C16.6732 20.4615 20.4615 16.6732 20.4615 12C20.4615 7.32682 16.6732 3.53846 12 3.53846ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z" fill="#ffffff"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.64103C12.4248 7.64103 12.7692 7.98542 12.7692 8.41026V12.5128C12.7692 12.9377 12.4248 13.2821 12 13.2821C11.5752 13.2821 11.2308 12.9377 11.2308 12.5128V8.41026C11.2308 7.98542 11.5752 7.64103 12 7.64103Z" fill="#ffffff"/> <path d="M13.0256 15.5897C13.0256 16.1562 12.5664 16.6154 12 16.6154C11.4336 16.6154 10.9744 16.1562 10.9744 15.5897C10.9744 15.0233 11.4336 14.5641 12 14.5641C12.5664 14.5641 13.0256 15.0233 13.0256 15.5897Z" fill="#ffffff"/> </g>
               </svg>
               </div>
+              <div className="absolute left-[336px]">
+                <div class="w-16 hidden group-hover:block overflow-hidden inline-block absolute top-[-6px] left-[215px]">
+                  <div class=" h-[8px] bg-white w-[10px] bg-black rotate-45 transform origin-bottom-left"></div>
+                </div>
+                <span className="w-[236px] text-left rounded h-[38px] p-[8px] border bg-white font-normal text-[8px] text-[#000000] hidden  group-hover:block">Захиалгын дэвтэрт байгаа захиалгатай шууд таарч захиалга өгч буй арилжаачин</span>
+              </div>
+              </div>
+
             </div>
             <div className="grid text-center h-[40px] mt-[24px] content-center mb-[256px]">0.35%</div>
           </div>

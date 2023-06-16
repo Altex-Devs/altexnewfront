@@ -1,0 +1,22 @@
+<svg id="decentraland-mana-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.854" y1="0.146" x2="0.146" y2="0.854" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff2d55"/>
+      <stop offset="1" stop-color="#ffbc5b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a524b3"/>
+      <stop offset="1" stop-color="#ff2d55"/>
+    </linearGradient>
+  </defs>
+  <ellipse id="Ellipse_61" data-name="Ellipse 61" cx="16" cy="15.927" rx="16" ry="15.927" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+  <path id="Path_678" data-name="Path 678" d="M125.7,0V12.222h10.185Z" transform="translate(-114.424 10.285)" fill-rule="evenodd" fill="url(#linear-gradient-2)"/>
+  <path id="Path_679" data-name="Path 679" d="M16.7,142.222H26.885V130Z" transform="translate(-15.379 -119.715)" fill="#fff" fill-rule="evenodd"/>
+  <path id="Path_680" data-name="Path 680" d="M40,320a16.549,16.549,0,0,0,3.2,3.259h19.22a16.549,16.549,0,0,0,3.2-3.259Z" transform="translate(-36.78 -294.518)" fill="#fc9965" fill-rule="evenodd"/>
+  <path id="Path_681" data-name="Path 681" d="M80,360a15.634,15.634,0,0,0,19.109,0Z" transform="translate(-73.521 -331.259)" fill="#ff2d55" fill-rule="evenodd"/>
+  <path id="Path_682" data-name="Path 682" d="M252.3,0V8.963h7.472Z" transform="translate(-230.925 16.682)" fill-rule="evenodd" fill="url(#linear-gradient-2)"/>
+  <path id="Path_683" data-name="Path 683" d="M37.2,280H16.7a16.226,16.226,0,0,0,1.9,3.259h18.61V280Z" transform="translate(-15.379 -257.646)" fill="#ffbc5b" fill-rule="evenodd"/>
+  <path id="Path_684" data-name="Path 684" d="M176.7,218.963h7.464V210Z" transform="translate(-162.598 -193.318)" fill="#fff" fill-rule="evenodd"/>
+  <ellipse id="Ellipse_62" data-name="Ellipse 62" cx="4.074" cy="4.074" rx="4.074" ry="4.074" transform="translate(17.422 6.361)" fill="#ffc95b"/>
+  <ellipse id="Ellipse_63" data-name="Ellipse 63" cx="2.037" cy="2.037" rx="2.037" ry="2.037" transform="translate(9.32 4.074)" fill="#ffc95b"/>
+</svg>
