@@ -16,7 +16,7 @@ function Team() {
         </div>
       </div>
       <div className="absolute  w-[1500px] h-[1500px] bottom-[-600px] left-[600px] bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] " ></div>
-      <div className="absolute w-[1500px] h-[1500px] top-[500px] right-[400px]bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] " ></div>
+      <div className="absolute w-[1500px] h-[1500px] top-[500px] right-[400px] bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] " ></div>
 
       <div className="flex flex-col lg:flex-row gap-[24px] pb-[160px] mt-[160px] items-center border-b-[0.5px] border-b-[#13A9FD] leading-[35px] ">
         <div className="grow font-extralight ">
