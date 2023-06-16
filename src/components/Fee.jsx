@@ -378,7 +378,7 @@ function Fee() {
           </div>
           <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">0%</div>
           <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">$3.0</div>
-          <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">$3,000.0</div>
+          <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">$30,000.0</div>
 
           <div className="col-span-2 row-[span_21] flex mt-[248px] p-[100px]">
             <span>
@@ -418,11 +418,11 @@ function Fee() {
                 <div class="w-16 hidden group-hover:block overflow-hidden inline-block absolute top-[-6px] left-[115px]">
                   <div class=" h-[8px] bg-white w-[10px] bg-black rotate-45 transform origin-bottom-left"></div>
                 </div>
-                <span className="w-[238px] text-left rounded h-[62px] p-[8px] border bg-white font-normal text-[8px] text-[#000000] hidden  group-hover:block">Та захиалгаа өгснөөр тэр даруй арилжаа хийгдэхгүй болж Maker болж таны захиалга захиалгын дэвтэрт үлдэж, дараа нь өөр хүн биелүүлэх/тохируулахыг хүлээнэ.</span>
+                <span className="w-[258px] text-left rounded h-[78px] p-[8px] border bg-white font-normal text-[10px] text-[#000000] hidden  group-hover:block">Та захиалгаа өгснөөр тэр даруй арилжаа хийгдэхгүй болж Maker болж таны захиалга захиалгын дэвтэрт үлдэж, дараа нь өөр хүн биелүүлэх/тохируулахыг хүлээнэ.</span>
               </div>
             </div>
             </div>
-            <div className="grid text-center h-[40px mt-[24px] content-center mb-[256px]">0.25%</div>
+            <div className="grid text-center h-[40px] mt-[24px] content-center mb-[256px]">0.25%</div>
           </div>
           <div className="relative">
             <div className="text-center h-[40px] bg-[#101C47] grid content-center">
@@ -439,7 +439,7 @@ function Fee() {
                 <div class="w-16 hidden group-hover:block overflow-hidden inline-block absolute top-[-6px] left-[215px]">
                   <div class=" h-[8px] bg-white w-[10px] bg-black rotate-45 transform origin-bottom-left"></div>
                 </div>
-                <span className="w-[236px] text-left rounded h-[38px] p-[8px] border bg-white font-normal text-[8px] text-[#000000] hidden  group-hover:block">Захиалгын дэвтэрт байгаа захиалгатай шууд таарч захиалга өгч буй арилжаачин</span>
+                <span className="w-[240px] text-left rounded h-[52px] p-[8px] border bg-white font-normal text-[10px] text-[#000000] hidden  group-hover:block">Захиалгын дэвтэрт байгаа захиалгатай шууд таарч захиалга өгч буй арилжаачин</span>
               </div>
               </div>
 
