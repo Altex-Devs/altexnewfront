@@ -1,9 +1,7 @@
 function NotFound() {
   return (
     <>
-      <div className="absolute top-[48px] w-screen left-0   w-[1500px] h-[1200px] bottom-[-100]  right-0 bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
-      
-
+      <div className="absolute top-[-250px] right-[1px] h-[1500px] w-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgba(0,108,255,0.26)] via-[rgba(19,169,253,0)] to-[rgba(19,169,253,0)]"></div>
       <div className="container mx-auto flex flex-col items-center mt-[240px] mb-[400px]">
         <svg className="mx-auto mb-[40px] max-w-full" width="622" height="247" viewBox="0 0 622 247" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_2_4004)">
