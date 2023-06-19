@@ -114,7 +114,7 @@ const Navbar = (props) => {
             </div>
           </div>
           <div>
-            
+
             <span id="mobile_menu_academy" className="mobile_menu" onClick={(event) => toggleMobileMenu(event)}>Академи</span>
             <img className="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
             <div className="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden transition-[max-height] duration-700 pl-[15px]">
@@ -135,7 +135,7 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className="sticky top-0 z-40">
-      <div className={`flex items-center justify-between pt-[40px] relative z-20 bg-[]`}>
+      <div className={`flex  items-center justify-between py-[40px] relative z-20 bg-[]`}>
         <div className="flex items-center">
           <a href="/" className="py-[10px]">
             <img src="/images/header-logo.svg" />
@@ -162,7 +162,9 @@ const Navbar = (props) => {
             </div>
           </div>
           <div className="relative cursor-pointer" onClick={(event) => toggleMenu(event,'Академи')}>
-            <span id="menu_academy" className="menu">Академи</span>
+            <div>
+            <span id="menu_academy" className="menu">
+            <FormattedMessage id="menu_academy" value="Арилжаа" />
             <img className="icon inline-block relative ml-[5px]" src="/images/menu_arrow.svg" />
             <div className="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
               <div className="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
@@ -171,6 +173,8 @@ const Navbar = (props) => {
                 <a id="menu_crypto_knowledge" className="hover:text-[#13A9FD] cursor-pointer" href="/cryptobasics">Крипто мэдлэг</a>
                 <a id="menu_projects" className="hover:text-[#13A9FD] cursor-pointer" href="https://altex.mn/projects.php">Төслүүд</a>
               </div>
+            </div>
+            </span>
             </div>
           </div>
           <a id="menu_register" href="https://trade.altex.mn/register" target="_blank" className="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]" rel="noreferrer">Бүртгүүлэх</a>
