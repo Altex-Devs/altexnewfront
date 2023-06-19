@@ -29,6 +29,7 @@ import PostEdit from "./components/Posts/PostEdit";
 import Auth from "./components/Auth";
 import PostsAdmin from "./components/Posts/PostsAdmin";
 import Admin from "./components/Admin";
+import AdminFeedback from "./components/Posts/AdminFeedback";
 
 const messages = {
   mn: mn,
@@ -71,6 +72,7 @@ function App() {
             <Route path="/admin/posts/:type" element={<RequireAuth><PostsAdmin /></RequireAuth>} />
             <Route path="/admin/posts/:type/create" element={<RequireAuth><PostEdit /></RequireAuth>} />
             <Route path="/admin/posts/:type/edit/:postId" element={<RequireAuth><PostEdit /></RequireAuth>} />
+            <Route path="/admin/posts/AdminFeedback" element={<RequireAuth><AdminFeedback /></RequireAuth>} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
