@@ -67,7 +67,7 @@ function HomeComponents() {
 
   return (
     <>
-      <div id="promoSuccess" className="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(67,210,76,.5)] px-[24px] py-[30px] rounded-[8px] z-30">
+      <div id="promoSuccess" className="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[60px] right-[50px] max-w-[512px] bg-[rgba(67,210,76,.5)] px-[24px] py-[30px] rounded-[8px] z-50">
         <div className="relative flex items-center gap-[16px]">
           <img src="/images/correct.svg" />
           <span id="notif_success">Таны мэдээллийг хүлээж авлаа.</span>
@@ -75,7 +75,7 @@ function HomeComponents() {
         </div>
       </div>
 
-      <div id="promoFail" className="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(255,0,61,.32)] px-[24px] py-[30px] rounded-[8px] z-30">
+      <div id="promoFail" className="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(255,0,61,.32)] px-[24px] py-[30px] rounded-[8px] z-50">
         <div className="relative flex items-center gap-[16px]">
           <img src="/images/error.svg" />
           <span id="notif_fail">Алдаа гарлаа, та дахин оролдоно уу!</span>
@@ -83,7 +83,7 @@ function HomeComponents() {
         </div>
       </div>
 
-      <div id="promoAlert" className="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(254,103,3,.32)] px-[24px] py-[30px] rounded-[8px] z-30">
+      <div id="promoAlert" className="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(254,103,3,.32)] px-[24px] py-[30px] rounded-[8px] z-0">
         <div className="relative flex items-center gap-[16px]">
           <img src="/images/warning.svg" />
           <span id="notif_alert">И-мэйл, промо кодоо зөв оруулна уу!</span>
