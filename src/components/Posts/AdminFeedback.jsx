@@ -65,8 +65,10 @@ const AdminFeedback = ()=>{
                 <td class="px-6 py-4">
                 {feedback.title}
                 </td>
-                <td class="px-6 py-4">
-                <div className='flex items-center justify-start overflow-y-auto h-[100px]'>{feedback.message}</div>
+                <td class="px-6 py-4 relative">
+                <div className=' flex items-center justify-start overflow-y-auto h-[200px]'>
+                    {feedback.message}
+                </div>
                 </td>
                 <td class="px-6 py-4">
                 {feedback.timestamp}
