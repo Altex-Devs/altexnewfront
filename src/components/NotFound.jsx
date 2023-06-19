@@ -1,9 +1,9 @@
 function NotFound() {
   return (
     <>
-      <div className="absolute top-[-250px] right-[1px] h-[1500px] w-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgba(0,108,255,0.26)] via-[rgba(19,169,253,0)] to-[rgba(19,169,253,0)]"></div>
-      <div className="container mx-auto flex flex-col items-center mt-[240px] mb-[400px]">
-        <svg className="mx-auto mb-[40px] max-w-full" width="622" height="247" viewBox="0 0 622 247" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div className="absolute top-[-300px] right-[1px] h-[1600px] w-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgba(0,108,255,0.26)] via-[rgba(19,169,253,0)] to-[rgba(19,169,253,0)]"></div>
+      <div className="container mx-auto flex flex-col items-center mt-[180px] mb-[400px]">
+        <svg className="mx-auto mb-[42px] max-w-full" width="500" height="270" viewBox="0 0 622 147" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_2_4004)">
             <path d="M114.167 20.532L17 151.147V183.214H128.011V226.465H174.521V183.213H208.1V144.385H174.521V105.847H129.477V144.384H74.039L164.223 20.532H114.167Z" stroke="#13A9FD" strokeWidth="2" />
           </g>
@@ -43,8 +43,7 @@ function NotFound() {
             </filter>
           </defs>
         </svg>
-        <div className="text-[24px] font-Montserrat z-10 mx-auto mb-[24px]">ХУУДАС ОЛДСОНГҮЙ!</div>
-        <div className="text-[#9EA4C0] text-[24px] font-Montserrat mx-auto mb-[80px]">Таны хайж буй хуудсын хайлтын илэрц олдсонгүй.</div>
+        <div className="text-[white] text-[16px] font-Montserrat mx-auto mb-[48px]">Таны хайж буй хуудсын хайлтын илэрц олдсонгүй.</div>
         <a href="/" className="w-fit rounded-[4px] font-bold text-[14px] z-10 px-[24px]  w-[220px] h-[48px] grid justify-center content-center bg-gradient-to-b from-[#13A9FD] to-[#006CFF]">Нүүр хуудас руу буцах</a>
       </div>
     </>
