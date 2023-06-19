@@ -1,8 +1,8 @@
 function NotFound() {
   return (
     <>
-      <div className="absolute top-[-300px] right-[1px] h-[1600px] w-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgba(0,108,255,0.26)] via-[rgba(19,169,253,0)] to-[rgba(19,169,253,0)]"></div>
-      <div className="container mx-auto flex flex-col items-center mt-[180px] mb-[400px]">
+      <div className="absolute top-[-200px] right-[1px] h-[1600px] w-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgba(0,108,255,0.26)] via-[rgba(19,169,253,0)] to-[rgba(19,169,253,0)]"></div>
+      <div className="container mx-auto flex flex-col items-center mt-[100px] mb-[400px]">
         <svg className="mx-auto mb-[42px] max-w-full" width="500" height="270" viewBox="0 0 622 147" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_2_4004)">
             <path d="M114.167 20.532L17 151.147V183.214H128.011V226.465H174.521V183.213H208.1V144.385H174.521V105.847H129.477V144.384H74.039L164.223 20.532H114.167Z" stroke="#13A9FD" strokeWidth="2" />
