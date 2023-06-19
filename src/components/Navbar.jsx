@@ -87,7 +87,7 @@ const Navbar = (props) => {
 
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
-    if (scrollTop > 0) {
+    if (scrollTop > 48) {
       setNavbarBg(true);
     } else {
       setNavbarBg(false);
@@ -128,14 +128,14 @@ const Navbar = (props) => {
         <a id="mobile_menu_login" className="inline-block rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] border-solid border-[1px] border-[#13A9FD] text-[#13A9FD]" href="https://trade.altex.mn/signin">Нэвтрэх</a>
       </div>
 
-      <div className="flex items-center bg-[#0A1540] h-[48px] w-full absolute left-0 top-0 text-[#696F86] text-[14px]">
-        <div className="container mx-auto text-right px-[16px] max-w-[1232px] overflow-auto font-light text-[#E6E7EB]">
+      <div className="flex items-center  bg-[#0A1540] h-[48px] w-full absolute left-0 top-0 text-[#696F86] text-[14px]">
+        <div className="container mx-auto text-right px-[34px] max-w-[1232px] overflow-auto font-light text-[#E6E7EB]">
           <span id="translate_lang" className="px-[24px] cursor-pointer border-x-[1px] border-[#3B4466]" onClick={() => {changeLocale('en')}}>Eng</span>
           <a href="/" id="industry_select" className="ml-[24px]">Хувь хүн</a>
         </div>
       </div>
-      <div className="sticky top-0 z-40">
-      <div className={`flex  items-center justify-between py-[40px] relative z-20 bg-[]`}>
+      <div className={`sticky fixed transition-[500] ease-in-out delay-10000 scroll-smooth z-40 ${navbarBg ? "bg-[#050F36] top-0" : "top-[48px]"}`}>
+      <div className={`flex  container mx-auto py-[40px] items-center justify-between px-[55px] relative z-20 bg-[]`}>
         <div className="flex items-center">
           <a href="/" className="py-[10px]">
             <img src="/images/header-logo.svg" />
