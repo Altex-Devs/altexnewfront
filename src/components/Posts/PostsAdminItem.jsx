@@ -12,10 +12,23 @@ function PostsAdminItem({post, getPosts}) {
   }
 
   return (
-    <div>
-      {post.title}
-      [<Link to={`/admin/posts/${post.type}/edit/${post.id}`}>Edit</Link>]
-      [<button onClick={remove}>Remove</button>]
+    <div className="p-5 bg-[#fff] font-sans w-max text-[#000] shadow">
+      <div className="border-b rounded p-1 w-[950px] flex justify-between shadow-lg">
+          <div className="flex items-center">
+            {post.title}
+          </div>
+          <div className="flex">
+            <Link  to={`/admin/posts/${post.type}/edit/${post.id}`}>
+            <div className="mx-2 border rounded shadow-lg p-2 flex justify-center bg-[#84cc16] w-[100px]">
+                Edit
+            </div>
+            </Link>
+            <div className="mx-2 border p-2 rounded shadow-lg flex justify-center flex bg-[#ef4444] w-[100px]">
+              <button onClick={remove}>Remove</button>
+            </div>
+          
+        </div>
+      </div>
     </div>
   );
 }

@@ -67,14 +67,16 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/posts/:type" element={<Posts />} />
             <Route path="/posts/:type/:postId" element={<Post />} />
-            <Route path="/auth" element={<Auth />} />
-            <Route path="/admin" element={<RequireAuth><Admin /></RequireAuth>} />
+            
+            <Route path="*" element={<NotFound />} />
+          </Route>
+
+          <Route path="/admin" element={<RequireAuth><Admin /></RequireAuth>} />
             <Route path="/admin/posts/:type" element={<RequireAuth><PostsAdmin /></RequireAuth>} />
             <Route path="/admin/posts/:type/create" element={<RequireAuth><PostEdit /></RequireAuth>} />
             <Route path="/admin/posts/:type/edit/:postId" element={<RequireAuth><PostEdit /></RequireAuth>} />
             <Route path="/admin/posts/AdminFeedback" element={<RequireAuth><AdminFeedback /></RequireAuth>} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
+            <Route path="/auth" element={<Auth />} />
         </Routes>
       </Router>
     </IntlProvider>
