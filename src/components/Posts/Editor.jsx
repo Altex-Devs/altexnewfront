@@ -23,9 +23,9 @@ const Editor = ({ content, setContent }) => {
         }}
       />
 
-      <div className="custom-file">
+      <div className="custom-file mt-2">
         <input type="file" className="custom-file-input" id="addiamge" onChange={upload} />
-        <label className="custom-file-label" htmlFor="addiamge" data-browse="Зураг сонгох">Зураг оруулах</label>
+        <label className="custom-file-label border cursor-pointer bg-[#ddd] p-[6px] " htmlFor="addiamge" data-browse="Зураг сонгох">Зураг оруулах</label>
       </div>
     </div>
   );

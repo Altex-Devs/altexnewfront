@@ -5,8 +5,8 @@ import { getFirestore, collection,  onSnapshot ,getDocs, query, where } from 'fi
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
 
-const db = getFirestore(app);
 
+const db = getFirestore(app);
 
 function Admin() {
   const [feedbacksCount, setFeedbacksCount] = useState(0);
@@ -15,6 +15,7 @@ function Admin() {
   const [manageNewsQuantity, setManageNewsQuantity] = useState(0);
   const [manageProjectQuantity, setManageProjectQuantity] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+
 
   const navigate = useNavigate();
   
@@ -63,11 +64,13 @@ function Admin() {
     setIsOpen(!isOpen);
   };
 
+
+
   return (
     <>
        <div className="bg-[#f5f6f8]  text-center leading-7 font-sans bg-[#eeeff3]">
      
-     <div className={`flex h-[70px] bg-[#6c757d] items-center text-[#fff] font-sans text-[25px]  `}>
+     <div className={`flex h-[70px] bg-[#006cff] items-center text-[#fff] font-sans text-[25px]  `}>
      <div className="">
      <svg xmlns="http://www.w3.org/2000/svg" width="300" height="40" viewBox="0 0 116 40">
        <g id="Group_6354" data-name="Group 6354" transform="translate(0 -0.001)">
@@ -86,7 +89,7 @@ function Admin() {
      </svg>
      </div>
      
-     <div className="bg-[#6c757d] text-[20px] w-full flex justify-end items-center ">
+     <div className="bg-[] text-[20px] w-full flex justify-end items-center ">
      <div className="relative inline-block text-left">
       <div>
         <button
@@ -136,13 +139,13 @@ function Admin() {
       )}
     </div>
     </div>
-    
-
      </div>
      
    
    <div className="flex">
-     <div className="w-[300px] bg-[#fff] text-[#6e768e] h-screen p-4 px-8">
+     <div className="w-[300px] bg-[#fff] text-[14px] text-[#6e768e] h-screen p-4 px-8">
+          <Link className="flex mt-6 text-[#006cff]" to="/admin">Dashboard</Link>
+         <br />
          <Link className="flex" to="/admin/posts/news">Manage News</Link>
          <br />
          <Link className="flex" to="/admin/posts/basics">Manage Crypto Basics</Link>
@@ -151,7 +154,6 @@ function Admin() {
          <br /> 
          <Link className="flex" to="/admin/posts/AdminFeedback" >Feedback</Link>
      </div>
-     
      <div>
       <h1 className='text-[#6e768e] text-[40px] flex font-[500] p-10'>Welcome To Admin</h1>
      <div className="flex text-[#000] grid grid-cols-4 my-10">
@@ -160,7 +162,7 @@ function Admin() {
               <div className="flex items-center justify-center ml-4">
                 <div className=" rounded-full bg-[#f5f6f8] w-[50px] h-[50px] border-4 flex items-center justify-center text-white text-[24px] font-bold">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="10px" height="20px" viewBox="0 0 1920 1920">
-                    <path fill='#6c757d' d="M84 0v1423.143h437.875V1920l621.235-496.857h692.39V0z" fill-rule="evenodd"/>
+                    <path fill='#006cff' d="M84 0v1423.143h437.875V1920l621.235-496.857h692.39V0z" fill-rule="evenodd"/>
                 </svg>
                 </div>
               </div>
@@ -175,7 +177,7 @@ function Admin() {
             <div className='flex justify-between py-8 px-4'>
               <div className="flex items-center justify-center ml-4">
               <div className=" rounded-full bg-[#f5f6f8] w-[50px] h-[50px] border-4 flex items-center justify-center text-white text-[24px] font-bold">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="#6c757d" width="10px" height="20px" viewBox="0 0 48 48">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#006cff" width="10px" height="20px" viewBox="0 0 48 48">
                 <g id="Layer_2" data-name="Layer 2">
                   <g id="invisible_box" data-name="invisible box">
                     <rect width="48" height="48" fill="none"/>
@@ -200,7 +202,7 @@ function Admin() {
             <div className='flex justify-between py-8 px-4'>
               <div className="flex items-center justify-center ml-4">
               <div className=" rounded-full bg-[#f5f6f8] w-[50px] h-[50px] border-4 flex items-center justify-center text-white text-[24px] font-bold">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="#6c757d" width="10px" height="20px" viewBox="0 0 24 24"><path d="M8.5,23a9.044,9.044,0,0,0,3.506-.682A7,7,0,1,0,15,9V5.333C15,2.9,12.145,1,8.5,1S2,2.9,2,5.333V18.667C2,21.1,4.855,23,8.5,23ZM15,11a5,5,0,1,1-5,5A5.006,5.006,0,0,1,15,11ZM8.5,3C11.152,3,13,4.23,13,5.333S11.152,7.667,8.5,7.667,4,6.437,4,5.333,5.848,3,8.5,3ZM4,8.482A8.466,8.466,0,0,0,8.5,9.667,8.466,8.466,0,0,0,13,8.482V9.3A7.024,7.024,0,0,0,9.219,12.06c-.239.021-.476.051-.719.051-2.652,0-4.5-1.23-4.5-2.333Zm0,4.445A8.383,8.383,0,0,0,8.268,14.1,6.981,6.981,0,0,0,8,16c0,.178.014.353.027.528C5.636,16.39,4,15.257,4,14.222Zm0,4.444a8.462,8.462,0,0,0,4.49,1.184,7.01,7.01,0,0,0,1.479,2.3A7.835,7.835,0,0,1,8.5,21C5.848,21,4,19.77,4,18.667Z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#006cff" width="10px" height="20px" viewBox="0 0 24 24"><path d="M8.5,23a9.044,9.044,0,0,0,3.506-.682A7,7,0,1,0,15,9V5.333C15,2.9,12.145,1,8.5,1S2,2.9,2,5.333V18.667C2,21.1,4.855,23,8.5,23ZM15,11a5,5,0,1,1-5,5A5.006,5.006,0,0,1,15,11ZM8.5,3C11.152,3,13,4.23,13,5.333S11.152,7.667,8.5,7.667,4,6.437,4,5.333,5.848,3,8.5,3ZM4,8.482A8.466,8.466,0,0,0,8.5,9.667,8.466,8.466,0,0,0,13,8.482V9.3A7.024,7.024,0,0,0,9.219,12.06c-.239.021-.476.051-.719.051-2.652,0-4.5-1.23-4.5-2.333Zm0,4.445A8.383,8.383,0,0,0,8.268,14.1,6.981,6.981,0,0,0,8,16c0,.178.014.353.027.528C5.636,16.39,4,15.257,4,14.222Zm0,4.444a8.462,8.462,0,0,0,4.49,1.184,7.01,7.01,0,0,0,1.479,2.3A7.835,7.835,0,0,1,8.5,21C5.848,21,4,19.77,4,18.667Z"/></svg>
                 </div>
               </div>
               <div>
@@ -216,7 +218,7 @@ function Admin() {
               <div className="flex items-center justify-center ml-4">
               <div className=" rounded-full bg-[#f5f6f8] w-[50px] h-[50px] border-4 flex items-center justify-center text-white text-[24px] font-bold">
               <svg xmlns="http://www.w3.org/2000/svg" xmlnsXxlink="http://www.w3.org/1999/xlink" width="10px" height="20px" viewBox="0 0 512 512" version="1.1">                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="Combined-Shape" fill="#6c757d" transform="translate(64.000000, 34.346667)">
+                      <g id="Combined-Shape" fill="#006cff" transform="translate(64.000000, 34.346667)">
                           <path d="M192,7.10542736e-15 L384,110.851252 L384,332.553755 L192,443.405007 L1.42108547e-14,332.553755 L1.42108547e-14,110.851252 L192,7.10542736e-15 Z M42.666,157.654 L42.6666667,307.920144 L170.666,381.82 L170.666,231.555 L42.666,157.654 Z M341.333,157.655 L213.333,231.555 L213.333,381.82 L341.333333,307.920144 L341.333,157.655 Z M192,49.267223 L66.1333333,121.936377 L192,194.605531 L317.866667,121.936377 L192,49.267223 Z"></path>
                       </g>
                   </g>
