@@ -200,20 +200,24 @@ function Howto() {
       video:'images/how-to-videos/how-to-register/2.mp4',
       info:[
         {
-          desc:'1. www.altex.mn хуудас руу орж "Бүртгүүлэх" товчин дээр дарна.',
-          img:'images/Desktop/Burtgel-uusgeh/Intersection.png'
+          desc:'1. www.altex.mn хуудас руу орж баруун дээд товчин дээр дарна.',
+          img:'images/Mobile/Burtgel-uusgeh/1.png'
         },
         {
-          desc:'2. Өөрийн и-мэйл хаяг, утасны дугаараа оруулан бүртгүүлнэ.',
-          img:'images/Desktop/Burtgel-uusgeh/1.png'
+          desc:'2. "Бүртгүүлэх" товчин дээр дарна.',
+          img:'images/Mobile/Burtgel-uusgeh/2.png'
         },
         {
-          desc:'3. Таны бүртгүүлсэн и-мэйл хаягт бүртгэл үүссэнийг баталгаажуулах и-мэйл очих бөгөөд баталгаажуулах товчийг дарна.',
-          img:'images/Desktop/Burtgel-uusgeh/2.png'
+          desc:'3. Өөрийн и-мэйл хаяг, утасны дугаараа оруулан бүртгүүлнэ.',
+          img:'images/Mobile/Burtgel-uusgeh/3.png'
         },
         {
-          desc:'4. Нууц үг шинээр оруулснаар таньд бүртгэл үүснэ.',
-          img:'images/Desktop/Burtgel-uusgeh/3.png'
+          desc:'4. Таны бүртгүүлсэн и-мэйл хаягт бүртгэл үүссэнийг баталгаажуулах и-мэйл очих бөгөөд баталгаажуулах товчийг дарна.',
+          img:'images/Mobile/Burtgel-uusgeh/4.png'
+        },
+        {
+          desc:'5. Нууц үг шинээр оруулснаар таньд бүртгэл үүснэ.',
+          img:'images/Mobile/Burtgel-uusgeh/5.png'
         }
       ]
     },
@@ -284,7 +288,7 @@ function Howto() {
         },
         {
           desc:'10. Дэлгэцэнд гарах зааврын дагуу дараах 4 үйлдлийг хийж гүйцэтгээд Үргэлжүүлэх товчийг дарна.',
-          img:'images/Mobile/Burtgel-batalgaajuulah /10.png'
+          img:'images/Mobile/Burtgel-batalgaajuulah/10.png'
         },
         {
           desc:'11. Таны илгээсэн мэдээллийг бид нягталж үзээд баталгаажуулалт амжилттай болсон эсэх мэдээллийг таны бүртгэлтэй имэйлээр илгээх болно.',
