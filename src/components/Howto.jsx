@@ -269,7 +269,7 @@ function Howto() {
           img:'images/mobile/burtgel-batalgaajulah/2.svg'        },
         {
           desc:'3. Гарч ирсэн сонголтоос Хувь хүн буюу Personal сонголтыг сонгоно.',
-          img:'images/mobile/Burtgel-batalgaajulah/3.svg'        },
+          img:'images/mobile/burtgel-batalgaajulah/3.svg'        },
         {
           desc:'4. Бүртгэл баталгаажуулалт 4 алхмаас бүрдэх бөгөөд Үргэлжүүлэх товчийг дарж Алхам 1 рүү шилжинэ.',
           img:'images/mobile/burtgel-batalgaajulah/4.svg'        },
@@ -295,7 +295,7 @@ function Howto() {
         },
         {
           desc:'10. Дэлгэцэнд гарах зааврын дагуу дараах 4 үйлдлийг хийж гүйцэтгээд Үргэлжүүлэх товчийг дарна.',
-          img:'images/mobile/burtgel-batalgaajulah /10.svg'
+          img:'images/mobile/burtgel-batalgaajulah/10.svg'
         },
         {
           desc:'11. Таны илгээсэн мэдээллийг бид нягталж үзээд баталгаажуулалт амжилттай болсон эсэх мэдээллийг таны бүртгэлтэй имэйлээр илгээх болно.',
