@@ -197,7 +197,7 @@ function HomeComponents() {
         <div style={{backgroundImage: 'url("/images/Group%207634.png")'}} className="basis-auto md:basis-[55%] w-screen h-[300px] bg-cover bg-center"></div>
       </div>
 
-      <div className="pt-[160px] relative mb-[240px]">
+      <div className="pt-[160px] relative mb-[80px] xl:mb-[240px] lg:mb-[240px]">
         <div className="absolute left-[-15px]  lg:left-[100px] xl:left-[100px] xl:right-[112px] lg:right-[112px] w-screen h-[800px] top-[-80px]  bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
         <div id="start_trade_head" className="text-[#13A9FD] text-[24px] mb-[24px] lg:mb-[40px] font-medium">
           Арилжаагаа эхлүүлэх&nbsp;
