@@ -168,12 +168,12 @@ function HomeComponents() {
               <img src="/images/gift.svg" />
             </div>
           </div>
-          <div className="flex flex-row gap-[24px] items-end sm:flex-row justify-items-stretch">
+          <div className="lg:flex xl:flex flex-row gap-[24px] items-end sm:flex-row justify-items-stretch ">
             <div className="w-full sm:basis-[75%]">
               <div id="referal_code_email" className="text-[#E6E7EB] mb-[8px]">Бүртгэлтэй и-мэйл</div>
               <input type="text" id="email" onChange={(event) => validatePromoEmail(event)} className="rounded-[4px] border-solid border-[.5px] border-[#E6E7EB] focus-visible:border-[#006CFF] bg-[rgba(0,0,0,0)] w-full h-[48px] mb-[16px] p-[10px] px-[16px] outline-none font-extralight" />
               <div id="referal_code_promo" className="text-[#E6E7EB] mb-[8px]">Промо код</div>
-              <input type="text" id="promo" onChange={(event) => validatePromoCode(event)} className="rounded-[4px] border-solid border-[.5px] border-[#E6E7EB] focus-visible:border-[#006CFF] invalid:border-[#FF003D] bg-[rgba(0,0,0,0)] w-full h-[48px] p-[10px] px-[16px] outline-none font-extralight" />
+              <input type="text" id="promo" onChange={(event) => validatePromoCode(event)} className="rounded-[4px] border-solid border-[.5px] mb-[24px] lg:mb-[0px] xl:mb-[0px]  border-[#E6E7EB] focus-visible:border-[#006CFF] invalid:border-[#FF003D] bg-[rgba(0,0,0,0)] w-full h-[48px] p-[10px] px-[16px] outline-none font-extralight" />
             </div>
             <div className="w-full sm:basis-[25%] flex justify-center">
               <button onClick={submitPromo} id="referal_code_send" className="rounded-[4px] w-auto md:w-full font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] sm:w-auto hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Илгээх</button>
