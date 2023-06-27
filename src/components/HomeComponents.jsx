@@ -198,7 +198,7 @@ function HomeComponents() {
       </div>
 
       <div className="pt-[160px] relative mb-[240px]">
-        <div className="absolute left-[100px] right-[112px] w-screen h-[800px] top-[-80px] right-[-90px] bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
+        <div className="absolute left-[-15px]  lg:left-[100px] xl:left-[100px] xl:right-[112px] lg:right-[112px] w-screen h-[800px] top-[-80px]  bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
         <div id="start_trade_head" className="text-[#13A9FD] text-[24px] mb-[24px] lg:mb-[40px] font-medium">
           Арилжаагаа эхлүүлэх&nbsp;
           <span className="whitespace-nowrap">4 алхам</span>
