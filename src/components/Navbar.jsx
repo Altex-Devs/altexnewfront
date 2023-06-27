@@ -135,9 +135,9 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className={`sticky fixed transition-[500] ease-in-out delay-10000 scroll-smooth z-40 ${navbarBg ? "bg-[#050F36] top-0" : "top-[48px]"}`}>
-      <div className={`flex  container mx-auto py-[40px] items-center justify-between px-[55px] relative z-20 bg-[]`}>
+      <div className={`flex  container mx-auto py-[40px] items-center justify-between px-[25px] phone:px-[5px] relative z-20 bg-[]`}>
         <div className="flex items-center">
-          <a href="/" className="py-[10px]">
+          <a href="/" className="py-[1px]">
             <img src="/images/header-logo.svg" />
           </a>
         </div>
@@ -164,7 +164,7 @@ const Navbar = (props) => {
           <div className="relative cursor-pointer" onClick={(event) => toggleMenu(event,'Академи')}>
             <div>
             <span id="menu_academy" className="menu">
-            <FormattedMessage id="menu_academy" defaultMessage="Академи" />
+            <FormattedMessage id="menu_academy" value="Академи" />
             <img className="icon inline-block relative ml-[5px]" src="/images/menu_arrow.svg" />
             <div className="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
               <div className="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
