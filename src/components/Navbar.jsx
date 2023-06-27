@@ -97,10 +97,16 @@ const Navbar = (props) => {
   return (
     <>
       <div id="menu" className={`fixed  top-0 left-0 w-screen h-screen bg-[#050F36] z-50 hidden lg:hidden p-[20px] ${navbarBg ? "bg-[#050F36]" : ""}  py-[92px]`}>
-        <div className="flex justify-between items-center mb-[40px] ">
+        <div className="flex justify-between items-center mb-[40px] mt-[-3px]">
           <img src="/images/header-logo.svg" />
-          <svg id="SVGDoc" onClick={hideMenu} width="16" height="16" version="1.1" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fillOpacity="1"></path></g></g></svg>
+          <svg id="SVGDoc" className="mr-[10px]" onClick={hideMenu} width="16" height="16" version="1.1" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fillOpacity="1"></path></g></g></svg>
         </div>
+        <div className="flex items-center  bg-[#0A1540] h-[48px] w-full absolute left-0 top-0 text-[#696F86] text-[14px]">
+        <div className="container mx-auto text-right px-[34px] max-w-[1232px] overflow-auto font-light text-[#E6E7EB]">
+          <span id="translate_lang" className="px-[24px] cursor-pointer border-x-[1px] border-[#3B4466]" onClick={() => {changeLocale('en')}}>Eng</span>
+          <a href="/" id="industry_select" className="ml-[24px]">Хувь хүн</a>
+        </div>
+      </div>
         <div id="mobile_menu" className="flex flex-col gap-[15px] mb-[40px]">
           <a id="mobile_menu_trade" className="pb-[10px]" href="https://trade.altex.mn/">
             <FormattedMessage id="mobile_menu_trade" />
@@ -108,7 +114,7 @@ const Navbar = (props) => {
           <div>
             <span id="mobile_menu_about_us" className="mobile_menu" onClick={(event) => toggleMobileMenu(event)}>Бидний тухай</span>
             <img className="inline-block relative left-[5px] icon" src="/images/menu_arrow.svg" />
-            <div className="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden transition-[max-height] duration-700 pl-[15px]">
+            <div className="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden space-y-4 transition-[max-height] duration-700 pl-[15px]">
               <a id="mobile_menu_about_exchange" className="block" href="/about">Биржийн тухай</a>
               <a id="mobile_menu_team" className="block" href="/team">Баг хамт олон</a>
             </div>
@@ -117,7 +123,7 @@ const Navbar = (props) => {
 
             <span id="mobile_menu_academy" className="mobile_menu" onClick={(event) => toggleMobileMenu(event)}>Академи</span>
             <img className="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
-            <div className="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden transition-[max-height] duration-700 pl-[15px]">
+            <div className="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden space-y-4 transition-[max-height] duration-700 pl-[15px]">
               <Link id="mobile_menu_market_news" className="block" to="/posts/news">Зах зээлийн мэдээ</Link>
               <a id="mobile_menu_crypto_knowledge" className="block" href="/cryptobasics">Крипто мэдлэг</a>
               <a id="mobile_menu_projects" className="block" href="https://altex.mn/projects.php">Төслүүд</a>
