@@ -134,8 +134,8 @@ const Navbar = (props) => {
           <a href="/" id="industry_select" className="ml-[24px]">Хувь хүн</a>
         </div>
       </div>
-      <div className={`sticky fixed transition-[500] ease-in-out delay-10000 scroll-smooth z-40 ${navbarBg ? "bg-[#050F36] top-0" : "top-[48px]"}`}>
-      <div className={`flex  container mx-auto py-[40px] items-center justify-between px-[25px] phone:px-[5px] relative z-20 bg-[]`}>
+      <div className={`sticky fixed transition-[500] ease-in-out delay-10000 scroll-smooth lg:z-40 xl:z-40 ${navbarBg ? "bg-[#050F36] top-0" : "top-[48px]"}`}>
+      <div className={`flex  container mx-auto py-[40px] items-center justify-between px-[20px] xl:px-[55px] lg:px-[55px]  relative z-20 bg-[]`}>
         <div className="flex items-center">
           <a href="/" className="py-[1px]">
             <img src="/images/header-logo.svg" />
