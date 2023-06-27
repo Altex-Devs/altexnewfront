@@ -164,7 +164,7 @@ const Navbar = (props) => {
           <div className="relative cursor-pointer" onClick={(event) => toggleMenu(event,'Академи')}>
             <div>
             <span id="menu_academy" className="menu">
-            <FormattedMessage id="menu_academy" value="Академи" />
+            <FormattedMessage id="menu_academy" defaultMessage="Академи" />
             <img className="icon inline-block relative ml-[5px]" src="/images/menu_arrow.svg" />
             <div className="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
               <div className="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
