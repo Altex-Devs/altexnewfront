@@ -115,7 +115,7 @@ function Howto() {
           img:'images/desktop/burtgel-batalgaajuulah/9.svg'
         },
         {
-          desc:'10. Дэлгэцэнд гарах зааврын дагуу дараах 4 үйлдлийг хийж гүйцэтгээд Үргэлжүүлэх товчийг дарна.',
+          desc:'10. Дэлгэцэнд гарах зааврын дагуу дараах 4 үйлдлийг хийж гүйцэтгээд Илгээх товчийг дарна.',
           img:'images/desktop/burtgel-batalgaajuulah/10.svg'
         },
         {
