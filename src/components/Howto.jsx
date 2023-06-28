@@ -51,7 +51,7 @@ function Howto() {
     },
     {
       title:'2FA хамгаалалтаа идэвхжүүлэх',
-      video:'images/how-to-videos/2fa/1.mp4',
+      video:'images/how-to-videos/how-to-enable-2fa/1.mp4',
       info:[
         {
           desc:'1. Google Authenticator app-ыг өөрийн утасны Playstore болон Appstore-с татаж авна.',
@@ -230,7 +230,7 @@ function Howto() {
     },
     {
       title:'2FA хамгаалалтаа идэвхжүүлэх',
-      video:'images/how-to-videos/2fa/2.mp4',
+      video:'images/how-to-videos/how-to-enable-2fa/2.mp4',
       info:[
         {
           desc:'1. Google Authenticator app-ыг өөрийн утасны Playstore болон Appstore-с татаж авна.',
