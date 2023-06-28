@@ -55,8 +55,8 @@ function Howto() {
       info:[
         {
           desc:'1. Google Authenticator app-ыг өөрийн утасны Playstore болон Appstore-с татаж авна.',
-          img:'images/android.svg',
-          img1:'images/desktop/2fa/Allitems-02.svg',
+          img1:'images/android.svg',
+          img:'images/desktop/2fa/Allitems-02.svg',
           img2:'images/ios.svg'
         },
         {
@@ -486,8 +486,8 @@ function Howto() {
                     <div className="mb-[24px]" key={innerIndex}>
                       <div className="mb-[16px] ml-[30px] mr-[120px]">{data.desc}</div>
                       <div className="w-[384px] md:max-w-2xl h-[max] mb-[24px] flex mx-auto">
-                        {data.img1 && <img src={data.img1} alt="Burtgel uusgeh" />}
-                        {data.img && <a  className="inline-block ml-[10px]" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&pli=1"><img className="inline-block mt-4" src={data.img} alt="Burtgel uusgeh" /></a>}
+                        {data.img && <img src={data.img} alt="Burtgel uusgeh" />}
+                        {data.img1 && <a  className="inline-block ml-[10px]" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&pli=1"><img className="inline-block mt-4" src={data.img1} alt="Burtgel uusgeh" /></a>}
                         {data.img2 && <a  className="inline-block ml-[10px]" href="https://apps.apple.com/us/app/google-authenticator/id388497605"><img className="mt-4" src={data.img2} alt="Burtgel uusgeh" /></a>}
                       </div>
                       {data.dans && <div className="text-[14px] ml-[3rem] mb-[16px] text-[#E7E8ED]">{data.dans}</div>}
