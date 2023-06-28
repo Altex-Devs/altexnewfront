@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 
 /* eslint-disable jsx-a11y/alt-text */
 const Footer = () => {

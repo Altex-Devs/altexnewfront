@@ -10,12 +10,12 @@ function Posts() {
   const [cursorAtEnd, setCursorAtEnd] = useState(false);
   const [cursorAtStart, setCursorAtStart] = useState(true);
   const [totalPosts, setTotalPosts] = useState(0);
-  const [displayedPosts, setDisplayedPosts] = useState(6);
   const [startIdx, setStartIdx] = useState(0);
   const paginateBy = 7;
 
   useEffect(() => {
     getPosts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getPosts = (direction) => {
