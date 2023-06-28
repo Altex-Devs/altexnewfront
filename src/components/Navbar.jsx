@@ -188,9 +188,9 @@ const Navbar = (props) => {
             <div className="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
               <div className="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div className="backdrop-blur-sm flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
-                <Link id="menu_market_news" className="hover:text-[#13A9FD] cursor-pointer" to="/posts/news">Зах зээлийн мэдээ</Link>
-                <a id="menu_crypto_knowledge" className="hover:text-[#13A9FD] cursor-pointer" href="/cryptobasics">Крипто мэдлэг</a>
-                <a id="menu_projects" className="hover:text-[#13A9FD] cursor-pointer" href="https://altex.mn/projects.php">Төслүүд</a>
+                <a id="menu_market_news" className="hover:text-[#13A9FD] cursor-pointer" href="/posts/news">Зах зээлийн мэдээ</a>
+                <a id="menu_crypto_knowledge" className="hover:text-[#13A9FD] cursor-pointer" href="/posts/basics">Крипто мэдлэг</a>
+                <a id="menu_projects" className="hover:text-[#13A9FD] cursor-pointer" href="/posts/projects">Төслүүд</a>
               </div>
             </div>
             </span>
