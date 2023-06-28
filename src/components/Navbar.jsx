@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 /* eslint-disable jsx-a11y/alt-text */
 const Navbar = (props) => {
   const [navbarBg, setNavbarBg] = useState(false); 
+  const [isHuunHidden, setIsHuunHidden] = useState(true);
+  const [isBayguulagHidden, setIsBayguulagHidden] = useState(false);
   useEffect(() => {
     document.addEventListener("click", hideMenus);
   }, []);
@@ -94,6 +96,16 @@ const Navbar = (props) => {
     }
   };
 
+  const handleHuunClick = () => {
+    setIsHuunHidden(true);
+    setIsBayguulagHidden(false);
+  };
+
+  const handleBayguulagClick = () => {
+    setIsHuunHidden(false);
+    setIsBayguulagHidden(true);
+  };
+
   return (
     <>
       <div id="menu" className={`fixed  top-0 left-0 w-screen h-screen bg-[#050F36] z-50 hidden lg:hidden p-[20px] ${navbarBg ? "bg-[#050F36]" : ""}  py-[92px]`}>
@@ -137,7 +149,8 @@ const Navbar = (props) => {
       <div className="flex items-center  bg-[#0A1540] h-[48px] w-full absolute left-0 top-0 text-[#696F86] text-[14px]">
         <div className="container mx-auto text-right px-[34px] max-w-[1232px] overflow-auto font-light text-[#E6E7EB]">
           <span id="translate_lang" className="px-[24px] cursor-pointer border-x-[1px] border-[#3B4466]" onClick={() => {changeLocale('en')}}>Eng</span>
-          <a href="/" id="industry_select" className="ml-[24px]">Хувь хүн</a>
+          <Link to="/" id="industry_select" className={`ml-[24px] ${isHuunHidden ? 'hidden' : ''}`} onClick={handleHuunClick}>Хувь хүн</Link>
+          <Link to="/corporate" id="industry_select" className={`ml-[24px] ${isBayguulagHidden ? 'hidden' : ''}`} onClick={handleBayguulagClick}>Байгууллага</Link>
         </div>
       </div>
       <div className={`sticky fixed transition-[500] ease-in-out delay-10000 scroll-smooth z-40 ${navbarBg ? "bg-[#050F36] top-0" : "top-[48px]"}`}>
