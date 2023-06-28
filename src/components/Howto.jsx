@@ -427,10 +427,10 @@ function Howto() {
           </div>
         </div>
 
-        <div className="rounded-[8px] mt-[84px] text-[16px] bg-[#101C47] text-[#E6E7EB]  pt-0">
+        <div className="rounded-[8px] text-[16px] bg-[#101C47] text-[#E6E7EB]  pt-0">
         
         {activeSection === 'КОМПЬЮТЕР' && (
-          <div className="max-w-[800px] mx-auto mt-[80px] mb-[240px]">
+          <div className="max-w-[800px] mx-auto ">
           {jsonD.map((item, index) => (
           <div key={index} className="rounded-[8px] bg-[#101C47] text-[#E6E7EB] p-[24px] pt-0 ">
             <div onClick={() => handleTitleClick(index)} className="cursor-pointer flex pb-[17px] pt-[24px] justify-between border-b-[1px] border-b-[#283359]">
@@ -522,7 +522,7 @@ function Howto() {
           
 
         {activeSection === 'ГАР УТАС' && (
-            <div className="max-w-[800px] mx-auto mt-[80px] mb-[240px]">
+            <div className="max-w-[800px] mx-auto ">
             {jsonM.map((item, index) => (
               <div key={index} className="rounded-[8px] bg-[#101C47] text-[#E6E7EB] p-[24px] pt-0 ">
               <div onClick={() => handleTitleClick(index)} className="cursor-pointer flex pb-[17px] pt-[24px] justify-between border-b-[1px] border-b-[#283359]">
