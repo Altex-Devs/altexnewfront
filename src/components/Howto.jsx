@@ -400,19 +400,26 @@ function Howto() {
     <>
       <div className="max-w-[800px] mx-auto mt-[80px] mb-[240px] transition-all delay-150 duration-300 ease-in-out">
         <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#1E274A] text-[18px] font-medium gap-[40px] mb-[24px]">
+        
         <div
-            className={`cursor-pointer relative  ${activeSection === 'КОМПЬЮТЕР' ? 'text-[##626880]' : 'text-[#626880]'}`}
+            className={`cursor-pointer relative flex ${activeSection === 'КОМПЬЮТЕР' ? 'text-[##626880]' : 'text-[#626880]'}`}
             onClick={() => handleSectionClick('КОМПЬЮТЕР')}
           >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20px" className="mt-1 mr-[8px]" height="20px" viewBox="0 0 24 24" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 4.34315 3.34315 3 5 3H19C20.6569 3 22 4.34315 22 6V15C22 16.6569 20.6569 18 19 18H13V19H15C15.5523 19 16 19.4477 16 20C16 20.5523 15.5523 21 15 21H9C8.44772 21 8 20.5523 8 20C8 19.4477 8.44772 19 9 19H11V18H5C3.34315 18 2 16.6569 2 15V6ZM5 5C4.44772 5 4 5.44772 4 6V15C4 15.5523 4.44772 16 5 16H19C19.5523 16 20 15.5523 20 15V6C20 5.44772 19.5523 5 19 5H5Z" fill={activeSection === 'КОМПЬЮТЕР' ? '#fff' : '#626880'}/>
+          </svg>
             КОМПЬЮТЕР
             {activeSection === 'КОМПЬЮТЕР' && (
               <div className="absolute h-[2px] w-full bg-[#13A9FD] bottom-[-17px]"></div>
             )}
           </div>
           <div
-            className={`cursor-pointer relative ${activeSection === 'ГАР УТАС' ? 'text-[##626880]' : 'text-[#626880]'}`}
+            className={`cursor-pointer relative flex ${activeSection === 'ГАР УТАС' ? 'text-[##626880]' : 'text-[#626880]'}`}
             onClick={() => handleSectionClick('ГАР УТАС')}
           >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20px" className="mt-1 mr-[8px]" height="20px" viewBox="0 0 24 24" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14.795 2h-5.59c-1.115 0-1.519.116-1.926.334a2.272 2.272 0 0 0-.945.945C6.116 3.686 6 4.09 6 5.205v13.59c0 1.114.116 1.519.334 1.926.218.407.538.727.945.945.407.218.811.334 1.926.334h5.59c1.114 0 1.519-.116 1.926-.334.407-.218.727-.538.945-.945.218-.407.334-.811.334-1.926V5.205c0-1.115-.116-1.519-.334-1.926a2.272 2.272 0 0 0-.945-.945C16.314 2.116 15.91 2 14.795 2zM8 17.995V6.005h8v11.99H8z" fill={activeSection === 'ГАР УТАС' ? '#fff' : '#626880'}/>
+            </svg>
             ГАР УТАС
             {activeSection === 'ГАР УТАС' && (
               <div className="absolute h-[2px] w-full bg-[#13A9FD] bottom-[-17px]"></div>
