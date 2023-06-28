@@ -139,7 +139,7 @@ function Posts() {
                     className="relative inline-flex items-center rounded-l-md px-1 py-1 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
                   >
                     <span className="sr-only">Previous</span>
-                    <svg className="h-3 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path
                         fillRule="evenodd"
                         d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
@@ -154,7 +154,7 @@ function Posts() {
                         return (
                           <button
                             key={index}
-                            className={`relative mx-1 z-10 inline-flex items-center border text-[10px] text-[#000] rounded px-[12px] py-[4px] ${
+                            className={`relative mx-1 flex justify-center z-10 inline-flex items-center border text-[10px] text-[#000] w-[32px] h-[32px] rounded p-[10px] ${
                               startIdx === index * 6 ? "border-[#006CFF] text-[#006CFF]" : "border-[#C2C2C2] bg-white"
                             }`}
                             onClick={() => handlePageClick(index)}
@@ -179,7 +179,7 @@ function Posts() {
                     className="relative inline-flex items-center rounded-r-md px-1 py-1 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
                   >
                     <span className="sr-only">Next</span>
-                    <svg className="h-3 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <svg className="h-5 w-5 " viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path
                         fillRule="evenodd"
                         d="M7.21 14.77a.75.75 0 01.02-1.06l4.468-4.22L7.232 5.82a.75.75 0 011.038-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
@@ -188,10 +188,6 @@ function Posts() {
                     </svg>
                   </button>
                 </nav>
-
-                <div className="text-[12px]  font-light">
-                  {posts.length} of {totalPosts}
-                </div>
               </div>
             </>
             }
