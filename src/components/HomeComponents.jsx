@@ -83,7 +83,7 @@ function HomeComponents() {
         </div>
       </div>
 
-      <div id="promoAlert" className="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(254,103,3,.32)] px-[24px] py-[30px] rounded-[8px] z-0">
+      <div id="promoAlert" className="notif backdrop-blur fixed hidden w-[calc(100%-100px)] box-border font-bold top-[50px] right-[50px] max-w-[512px] bg-[rgba(254,103,3,.32)] px-[24px] py-[30px] rounded-[8px] z-50">
         <div className="relative flex items-center gap-[16px]">
           <img src="/images/warning.svg" />
           <span id="notif_alert">И-мэйл, промо кодоо зөв оруулна уу!</span>
@@ -171,9 +171,9 @@ function HomeComponents() {
           <div className="lg:flex xl:flex flex-row gap-[24px] items-end sm:flex-row justify-items-stretch ">
             <div className="w-full sm:basis-[75%]">
               <div id="referal_code_email" className="text-[#E6E7EB] mb-[8px]">Бүртгэлтэй и-мэйл</div>
-              <input type="text" id="email" onChange={(event) => validatePromoEmail(event)} className="rounded-[4px] border-solid border-[.5px] border-[#E6E7EB] focus-visible:border-[#006CFF] bg-[rgba(0,0,0,0)] w-full h-[48px] mb-[16px] p-[10px] px-[16px] outline-none font-extralight" />
+              <input type="text" id="email" onChange={(event) => validatePromoEmail(event)} className="rounded-[4px] border-solid border-[.5px]  focus-visible:border-[#006CFF] bg-[rgba(0,0,0,0)] w-full h-[48px] mb-[16px] p-[10px] px-[16px] outline-none font-extralight" autoComplete="off"/>
               <div id="referal_code_promo" className="text-[#E6E7EB] mb-[8px]">Промо код</div>
-              <input type="text" id="promo" onChange={(event) => validatePromoCode(event)} className="rounded-[4px] border-solid border-[.5px] mb-[24px] lg:mb-[0px] xl:mb-[0px]  border-[#E6E7EB] focus-visible:border-[#006CFF] invalid:border-[#FF003D] bg-[rgba(0,0,0,0)] w-full h-[48px] p-[10px] px-[16px] outline-none font-extralight" />
+              <input type="text" id="promo" onChange={(event) => validatePromoCode(event)} className="rounded-[4px] border-solid border-[.5px] mb-[24px] lg:mb-[0px] xl:mb-[0px]  focus-visible:border-[#006CFF] invalid:border-[#FF003D] bg-[rgba(0,0,0,0)] w-full h-[48px] p-[10px] px-[16px] outline-none font-extralight" />
             </div>
             <div className="w-full sm:basis-[25%] flex justify-center">
               <button onClick={submitPromo} id="referal_code_send" className="rounded-[4px] w-auto md:w-full font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] sm:w-auto hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Илгээх</button>
