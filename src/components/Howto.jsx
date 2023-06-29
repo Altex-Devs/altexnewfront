@@ -578,7 +578,7 @@ function Howto() {
   
             {
               activeIndex === index && (
-                <div className="max-w-[800px] mx-auto mt-[100px] mb-[240px]">
+                <div className="max-w-[800px] mx-auto mt-[100px] mb-[22px]">
                   {item.info.map((data, innerIndex) => (
                     <div className="mb-[24px]" key={innerIndex}>
                       <div className="mb-[16px] ml-[30px] mr-[120px]">{data.desc}</div>
