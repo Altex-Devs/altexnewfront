@@ -37,6 +37,13 @@
       <feComposite operator="in" in2="blur-4"/>
       <feComposite in="SourceGraphic"/>
     </filter>
+    <filter xmlns="http://www.w3.org/2000/svg" id="Rectangle_5765" x="9" y="391" width="95" height="28" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-color="#ffa900"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
   </defs>
   <g id="Group_7810" data-name="Group 7810" transform="translate(-625 -2016)">
     <g id="Group_7809" data-name="Group 7809" transform="translate(-4672 -15004)">
@@ -63,6 +70,12 @@
     </g>
     <g transform="matrix(1, 0, 0, 1, 625, 2016)" filter="url(#Rectangle_5733)">
       <g id="Rectangle_5733-2" data-name="Rectangle 5733" transform="translate(18 305)" fill="none" stroke="#fdae13" stroke-width="1">
+        <rect width="77" height="10" rx="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="76" height="9" rx="0.5" fill="none"/>
+      </g>
+    </g>
+    <g xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 625, 2016)" filter="url(#Rectangle_5765)">
+      <g id="Rectangle_5765-2" data-name="Rectangle 5765" transform="translate(18 400)" fill="none" stroke="#fdae13" stroke-width="1">
         <rect width="77" height="10" rx="1" stroke="none"/>
         <rect x="0.5" y="0.5" width="76" height="9" rx="0.5" fill="none"/>
       </g>
