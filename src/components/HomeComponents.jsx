@@ -133,8 +133,8 @@ function HomeComponents() {
                 <img className="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-4.svg" />
               </div>
               <div className="flex flex-col">
-                <div id="feature_4_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Зарлагын лимит</div>
-                <div id="feature_4_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">Крипто болон фиат валютын зарлага $7,000 - $100,000</div>
+                <div id="feature_4_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Зарлагын дээд лимит</div>
+                <div id="feature_4_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">Крипто болон фиат валютын зарлага $30,000 - $200,000 </div>
               </div>
             </div>
             <div className="flex items-start gap-[24px] h-[64px]">
