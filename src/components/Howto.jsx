@@ -595,15 +595,17 @@ function Howto() {
                         {data.imgDans2 && <img className="w-[212px] h-[98px]" src={data.imgDans2} alt="Burtgel uusgeh" />}
                         {data.imgDans3 && <img className="w-[212px] h-[98px]" src={data.imgDans3} alt="Burtgel uusgeh" />}
                         </div>
-                        {data.alert && <div className="flex text-[12px] text-[#E7E8ED] w-max mt-[40px] ml-[3rem] items-center py-[16px] bg-[#0E1940]">
-                        {data.alert && <svg className="mr-[3px] ml-[2px]" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 48 48">
+                        {data.alert && <div className="flex items-center px-2 py-[16px] mx-8 text-[12px] text-[#E7E8ED] w-max mt-[40px]  bg-[#0E1940]">
+                        
+                        {data.alert && <svg className=" mr-[3px] ml-[2px]" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 48 48">
                           <g id="Group_7638" data-name="Group 7638" transform="translate(-459 -256)">
                             <rect id="Rectangle_5298" data-name="Rectangle 5298" width="48" height="48" rx="24" transform="translate(459 256)" fill="#fff"/>
                             <rect id="Rectangle_5564" data-name="Rectangle 5564" width="4.849" height="17.092" rx="2.424" transform="translate(485.424 294.546) rotate(180)" fill="#000"/>
                             <rect id="Rectangle_5565" data-name="Rectangle 5565" width="4.849" height="5.092" rx="2.424" transform="translate(485.424 271.546) rotate(180)" fill="#000"/>
                           </g>
                         </svg>}
-                        {data.alert && <div className="">{data.alert}</div>}
+                        {data.alert && <div className="pr-[10px]">{data.alert}</div>}
+                        
 
                         </div>}
                     </div>
