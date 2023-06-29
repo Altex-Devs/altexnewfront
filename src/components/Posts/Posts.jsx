@@ -90,7 +90,6 @@ function Posts() {
     const newStartIdx = index * 6;
     setStartIdx(newStartIdx);
   };
-  console.log(window.location.pathname)
 
   return (
     <>
