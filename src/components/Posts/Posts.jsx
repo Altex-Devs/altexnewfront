@@ -90,14 +90,24 @@ function Posts() {
     const newStartIdx = index * 6;
     setStartIdx(newStartIdx);
   };
+  console.log(window.location.pathname)
 
   return (
     <>
       <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] mt-[40px] pt-[80px] pb-[240px]">
         <div className="container mx-auto pt-[48px] max-w-[996px]">
-          <div className="font-light text-[14px] mb-[80px] text-[#3973C5]">
-            Нүүр &gt; Академи &gt; Крипто мэдлэг
-          </div>
+                <div className="font-light text-[14px] mb-[80px] text-[#3973C5]">
+          Нүүр &gt; Академи &gt; 
+          {window.location.pathname === "/posts/projects" ? (
+            " Төслүүд"
+          ) : window.location.pathname === "/posts/basics" ? (
+            " Крипто мэдлэг"
+          ) : window.location.pathname === "/posts/news" ? (
+            " Зах зээлийн мэдээ"
+          ) : (
+            ""
+          )}
+        </div>
 
           {type === "basics" && (
             <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#CDCDCE] text-[18px] font-medium gap-[40px] mb-[24px]">
