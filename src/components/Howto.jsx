@@ -485,8 +485,8 @@ function Howto() {
                   {item.info.map((data, innerIndex) => (
                     <div className="mb-[24px]" key={innerIndex}>
                       <div className="mb-[16px] ml-[30px] mr-[120px]">{data.desc}</div>
-                      <div className="w-[384px] md:max-w-2xl h-[max] mb-[24px] flex mx-auto">
-                        {data.img && <img src={data.img} alt="Burtgel uusgeh" />}
+                      <div className="w-[384px] md:max-w-3xl h-[max] mb-[24px] flex mx-auto">
+                        {data.img && <img className="w-max h-max" src={data.img} alt="Burtgel uusgeh" />}
                         {data.img1 && <a  className="inline-block ml-[10px]" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&pli=1"><img className="inline-block mt-4" src={data.img1} alt="Burtgel uusgeh" /></a>}
                         {data.img2 && <a  className="inline-block ml-[10px]" href="https://apps.apple.com/us/app/google-authenticator/id388497605"><img className="mt-4" src={data.img2} alt="Burtgel uusgeh" /></a>}
                       </div>
