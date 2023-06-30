@@ -502,7 +502,7 @@ function Howto() {
                         {data.alert && <div className="flex items-center px-2 py-[16px] mx-6 text-[12px] text-[#E7E8ED] w-full mt-[40px]  bg-[#0E1940]">
                         
                         
-                        {data.alert && <svg className=" mr-[3px] ml-[2px]" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 48 48">
+                        {data.alert && <svg className=" mr-[4px] ml-[2px] w-max" xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 48 48">
                           <g id="Group_7638" data-name="Group 7638" transform="translate(-459 -256)">
                             <rect id="Rectangle_5298" data-name="Rectangle 5298" width="48" height="48" rx="24" transform="translate(459 256)" fill="#fff"/>
                             <rect id="Rectangle_5564" data-name="Rectangle 5564" width="4.849" height="17.092" rx="2.424" transform="translate(485.424 294.546) rotate(180)" fill="#000"/>
