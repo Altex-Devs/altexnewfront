@@ -17,6 +17,10 @@ function Howto() {
     setShowVideoModal(false);
   };
   const handleTitleClick = (index) => {
+    window.scrollTo({
+      top: 100,
+      behavior: 'smooth',
+    })
     if (activeIndex === index) {
       setactiveIndex('');
     } else {
@@ -25,7 +29,6 @@ function Howto() {
     }
   };
   
-
   const jsonD = [
     {
       title:'Бүртгэл үүсгэх',
@@ -178,7 +181,7 @@ function Howto() {
           img:'images/desktop/withdraw/4.png'
         },
         {
-          desc:'5. Утасныхаа Google Authenticator аппликэйшний баталгаажуулах 6 оронтой тоог бичиж оруулснаар таны хүлээн авах банкны мэдээлэл хадгалагдана. (Ингэснээр та дараагийн удаад зарлага хийхдээ банкны мэдээллээ шинээр оруулах шаардлагагүй болно.)',
+          desc:'5. Утасныхаа Google Authenticator аппликэйшний баталгаажуулах 6 оронтой тоог бичиж оруулснаар таны хүлээн авах банкны мэдээлэл хадгалагдана. "Ингэснээр та дараагийн удаад зарлага хийхдээ банкны мэдээллээ шинээр оруулах шаардлагагүй болно."',
           img:'images/desktop/withdraw/5.png'
         },
         {
@@ -484,20 +487,20 @@ function Howto() {
                 <div className="max-w-[800px] mx-auto mt-[100px] mb-[22px]">
                   {item.info.map((data, innerIndex) => (
                     <div className="mb-[24px]" key={innerIndex}>
-                      <div className="mb-[16px] ml-[30px] mr-[120px]">{data.desc}</div>
+                      <div className="py-7 px-6 xl:mr-[120px] xl:ml-[30px] xl:mb-[16px] lg:mr-[120px] lg:ml-[30px] lg:mb-[16px] md:mr-[120px] md:ml-[30px] md:mb-[16px]">{data.desc}</div>
                       <div className="w-[284px] 3xl:w-[584px] 2xl:w-[584px] xl:w-[584px] lg:w-[384px] md:w-[284px] md:max-w-3xl h-[max] mb-[24px] flex mx-auto justify-center">
                         {data.img && <img className="w-max h-max" src={data.img} alt="Burtgel uusgeh" />}
                         {data.img1 && <a  className="inline-block ml-[10px]" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&pli=1"><img className="inline-block mt-4" src={data.img1} alt="Burtgel uusgeh" /></a>}
                         {data.img2 && <a  className="inline-block ml-[10px]" href="https://apps.apple.com/us/app/google-authenticator/id388497605"><img className="mt-4" src={data.img2} alt="Burtgel uusgeh" /></a>}
                       </div>
                       {data.dans && <div className="text-[14px] ml-[3rem] mb-[16px] text-[#E7E8ED]">{data.dans}</div>}
-                      <div className="flex gap-[24px] ml-[3rem]">
+                      <div className=" gap-[24px] grid grid-cols-3 px-4">
+                        {data.imgDans1 && <img className="" src={data.imgDans1} alt="Burtgel uusgeh" />}
+                        {data.imgDans2 && <img className="" src={data.imgDans2} alt="Burtgel uusgeh" />}
+                        {data.imgDans3 && <img className="" src={data.imgDans3} alt="Burtgel uusgeh" />}
+                      </div>
+                        {data.alert && <div className="flex items-center px-2 py-[16px] mx-6 text-[12px] text-[#E7E8ED] w-full mt-[40px]  bg-[#0E1940]">
                         
-                        {data.imgDans1 && <img className="w-[212px] h-[98px]" src={data.imgDans1} alt="Burtgel uusgeh" />}
-                        {data.imgDans2 && <img className="w-[212px] h-[98px]" src={data.imgDans2} alt="Burtgel uusgeh" />}
-                        {data.imgDans3 && <img className="w-[212px] h-[98px]" src={data.imgDans3} alt="Burtgel uusgeh" />}
-                        </div>
-                        {data.alert && <div className="flex items-center px-2 py-[16px] mx-8 text-[12px] text-[#E7E8ED] w-max mt-[40px]  bg-[#0E1940]">
                         
                         {data.alert && <svg className=" mr-[3px] ml-[2px]" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 48 48">
                           <g id="Group_7638" data-name="Group 7638" transform="translate(-459 -256)">
@@ -508,7 +511,6 @@ function Howto() {
                         </svg>}
                         {data.alert && <div className="pr-[10px]">{data.alert}</div>}
                         
-
                         </div>}
                     </div>
                   ))}
