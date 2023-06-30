@@ -3,10 +3,11 @@ import { FormattedMessage } from 'react-intl';
 import { Link } from "react-router-dom";
 
 /* eslint-disable jsx-a11y/alt-text */
-const Navbar = (props) => {
+const Navbar = ({ locale, setLocale }) => {
   const [navbarBg, setNavbarBg] = useState(false); 
   const [isHuunHidden, setIsHuunHidden] = useState(true);
   const [isBayguulagHidden, setIsBayguulagHidden] = useState(false);
+
   useEffect(() => {
     document.addEventListener("click", hideMenus);
   }, []);
@@ -18,9 +19,10 @@ const Navbar = (props) => {
     };
   }, []);
   
-  const changeLocale = (locale) => {
-    props.setLocale(locale);
-    localStorage.setItem('language_local', locale);
+  const changeLocale = () => {
+    const to = locale === "en" ? "mn" : "en";
+    setLocale(to);
+    localStorage.setItem('language_local', to);
   };
 
   function hideMenu() {
@@ -115,7 +117,9 @@ const Navbar = (props) => {
         </div>
         <div className="flex items-center  bg-[#0A1540] h-[48px] w-full absolute left-0 top-0 text-[#696F86] text-[14px]">
         <div className="container mx-auto text-right px-[34px] max-w-[1232px] overflow-auto font-light text-[#E6E7EB]">
-          <span id="translate_lang" className="px-[24px] cursor-pointer border-x-[1px] border-[#3B4466]" onClick={() => {changeLocale('en')}}>Eng</span>
+          <span id="translate_lang" className="px-[24px] cursor-pointer border-x-[1px] border-[#3B4466]" onClick={() => {changeLocale()}}>
+            {locale === "en" ? "Mon" : "Eng"}
+          </span>
           <a href="/" id="industry_select" className="ml-[24px]">Хувь хүн</a>
         </div>
       </div>
@@ -148,7 +152,9 @@ const Navbar = (props) => {
 
       <div className="flex items-center  bg-[#0A1540] h-[48px] w-full absolute left-0 top-0 text-[#696F86] text-[14px]">
         <div className="container mx-auto text-right px-[34px] max-w-[1232px] overflow-auto font-light text-[#E6E7EB]">
-          <span id="translate_lang" className="px-[24px] cursor-pointer border-x-[1px] border-[#3B4466]" onClick={() => {changeLocale('en')}}>Eng</span>
+          <span id="translate_lang" className="px-[24px] cursor-pointer border-x-[1px] border-[#3B4466]" onClick={() => {changeLocale()}}>
+            {locale === "en" ? "Mon" : "Eng"}
+          </span>
           <Link to="/" id="industry_select" className={`ml-[24px] ${isHuunHidden ? 'hidden' : ''}`} onClick={handleHuunClick}>Хувь хүн</Link>
           <Link to="/corporate" id="industry_select" className={`ml-[24px] ${isBayguulagHidden ? 'hidden' : ''}`} onClick={handleBayguulagClick}>Байгууллага</Link>
         </div>

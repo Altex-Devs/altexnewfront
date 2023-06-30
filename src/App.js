@@ -53,7 +53,7 @@ function App() {
     <IntlProvider messages={messages[locale]} locale={locale}>
       <Router>
         <Routes>
-          <Route element={<Layout setLocale={setLocale} />}>
+          <Route element={<Layout locale={locale} setLocale={setLocale} />}>
             <Route path="/" element={<Home />} />
             <Route path="/corporate" element={<Corporate />} />
             <Route path="/about" element={<About />} />

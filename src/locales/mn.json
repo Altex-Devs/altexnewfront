@@ -74,5 +74,15 @@
     "newsletter_title": "Цахим сонинд бүртгүүлэх",
     "newsletter_desc": "Та манайд бүртгүүлж хамгийн сүүлийн үеийн мэдээллийг тогтмол аваарай.",
     "newsletteremail": "И-мэйл",
-    "newsletter_send": "Илгээх"
+    "newsletter_send": "Илгээх",
+    "feedback_title": "Санал хүсэлт илгээх",
+    "feedback_details": "Та өөрийн илгээх санал хүсэлтээ доорх хуудсанд бөглөж оруулна уу. Бид таны хүсэлтийг хүлээн авч шийдвэрлэхдээ таатай байх болно. Танд баярлалаа.",
+    "feedback_name": "Нэр",
+    "feedback_phone": "Утас",
+    "feedback_email": "И-мэйл",
+    "feedback_subject": "Гарчиг",
+    "feedback_message": "Санал хүсэлт",
+    "feedback_submit": "Илгээх",
+    "feedback_fail_message": "Таны мэдээллийг хүлээж авлаа.",
+    "feedback_success_message": "Алдаа гарлаа, та дахин оролдоно уу!"
 }

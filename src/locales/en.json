@@ -74,5 +74,15 @@
     "newsletter_title": "Join our newsletter",
     "newsletter_desc": "Subscribe to our newsletter to receive the latest news.",
     "newsletteremail": "E-mail",
-    "newsletter_send": "Submit"
+    "newsletter_send": "Submit",
+    "feedback_title": "Give us feedback",
+    "feedback_details": "Please fill out the form below to submit your feedback. We will review your request and get back to you right away. Thank you.",
+    "feedback_name": "Name",
+    "feedback_phone": "Phone number",
+    "feedback_email": "Email",
+    "feedback_subject": "Subject",
+    "feedback_message": "Message",
+    "feedback_submit": "Submit",
+    "feedback_fail_message": "Failed, please try again!",
+    "feedback_success_message": "Your information has been received!"
 }

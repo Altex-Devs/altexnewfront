@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import Navbar from "./Navbar"
 
-const Layout = (props) => {  
+const Layout = ({ locale, setLocale }) => {  
   useEffect(() => {
     if (!localStorage.getItem("newsletter")) {
       document.querySelector("#newsletter").classList.remove("hidden");
@@ -76,7 +76,7 @@ const Layout = (props) => {
       </div>
 
       <div>
-        <Navbar setLocale={props.setLocale} />
+        <Navbar locale={locale} setLocale={setLocale} />
       <div className="container mx-auto pt-[48px] max-w-[1200px] px-[15px]">
         <Outlet />
         <Footer />
