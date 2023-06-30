@@ -14,7 +14,7 @@ function FAQ() {
         <div className="container mx-auto pt-[48px] max-w-[1200px]">
           <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#CDCDCE] text-[18px] font-medium gap-[40px] mb-[24px]">
             <div className={`relative cursor-pointer  ${show === "button1" ? "active text-[#35363B]" : "text-[#CDCDCE]"}`} onClick={() => toggle("button1")}>
-              ХЭРЭГЛЭГЧИЙН ҮЙЛЧИЛГЭЭ
+            ХАРИЛЦАГЧИЙН БҮРТГЭЛ
               <div className={`absolute h-[2px] w-full bg-[#13A9FD] bottom-[-17px] ${show === "button1" ? "visible" : "hidden"}`}></div>            
             </div>
             <div className={`relative cursor-pointer ${show === "button2" ? "active text-[#35363B]" : "text-[#CDCDCE]"}`} onClick={() => toggle("button2")}>
@@ -23,8 +23,8 @@ function FAQ() {
             </div>
           </div>
           {show === "button1" && (
-            <div className="ХЭРЭГЛЭГЧИЙН ҮЙЛЧИЛГЭЭ">
-          <Item title="1. Алтекс хаягаа хэрхэн устгах вэ?">
+            <div className="Харилцагчийн бүртгэл">
+          <Item title="1. Хэрхэн бүртгэлээ баталгаажуулах вэ?">
               <ul className="list-disc leading-6 px-14 text-[0.9rem] font-sans">
                 <li><span className="font-bold">www.altex.mn</span> хуудсанд өөрийн үүсгэсэн <span className="font-bold">бүртгэлээрээ нэвтэрч орно.</span></li>
                 <li><span className="font-bold">Тохиргоо</span> цэсрүү орж <span className="font-bold">Verify хэсэгт</span> байрлах <span className="font-bold">Verify now</span> товчин дээр дарна.</li>
@@ -236,7 +236,7 @@ function FAQ() {
             <Item title="6. Флоат данс гэж юу вэ?">
                 <div className="font-sans text-[0.9rem] ">
                   <div>Алтекс дижитал бирж дээр зөвхөн бүртгэлтэй харилцагчид хоорондоо арилжаа хийхээс гадна олон улсын нэгдсэн хөрвөх сантай арилжаа хийж болдог. Тухайн арилжаанд оролцохын тулд Алтекс дижитал бирж нь олон улсын дансанд мөнгө байршуулдаг ба биржийн харилцагчид хөрвөх сангаас токен худалдаж авсан тохиолдолд дансанд байршуулсан мөнгө багасч эсрэгээр бирж дээр токен зарсан тохиолдолд ихсэх зарчмаар арилжаа явагддаг. </div>
-                  <div>Энэхүү мөнгө байршуулдаг дансыг Флоат гэж нэрлэдэг. </div>
+                  <div className="py-6">Энэхүү мөнгө байршуулдаг дансыг Флоат гэж нэрлэдэг. </div>
                 </div>
             </Item>
   
