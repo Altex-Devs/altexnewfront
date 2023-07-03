@@ -596,25 +596,29 @@ function Howto() {
                         
                       </div>
                       {data.dans && <div className="text-[14px] ml-[3rem] mb-[16px] text-[#E7E8ED]">{data.dans}</div>}
-                      <div className="flex gap-[24px] ml-[3rem]">
-                        
-                        {data.imgDans1 && <img className="w-[212px] h-[98px]" src={data.imgDans1} alt="Burtgel uusgeh" />}
-                        {data.imgDans2 && <img className="w-[212px] h-[98px]" src={data.imgDans2} alt="Burtgel uusgeh" />}
-                        {data.imgDans3 && <img className="w-[212px] h-[98px]" src={data.imgDans3} alt="Burtgel uusgeh" />}
+                      <div className=" gap-[24px] grid grid-cols-3 px-4">
+                        {data.imgDans1 && <img className="" src={data.imgDans1} alt="Burtgel uusgeh" />}
+                        {data.imgDans2 && <img className="" src={data.imgDans2} alt="Burtgel uusgeh" />}
+                        {data.imgDans3 && <img className="" src={data.imgDans3} alt="Burtgel uusgeh" />}
+                      </div>
+                        {data.alert && (
+                        <div className="flex items-center py-2 mx-2 sm:text-[#E7E8ED] sm:border-none md:mx-6 text-[10px] md:text-[0.7rem] text-[#E7E8ED] max-w-[800px] mt-4 bg-[#0E1940]">
+                          {data.alert && (
+                            <svg
+                              className="mr-1 w-8 h-8 md:mr-2  ml-1 md:ml-3 sm:w-3 sm:h-3"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 48 48"
+                            >
+                              <g id="Group_7638" data-name="Group 7638" transform="translate(-459 -256)">
+                                <rect id="Rectangle_5298" data-name="Rectangle 5298" width="48" height="48" rx="24" transform="translate(459 256)" fill="#fff" />
+                                <rect id="Rectangle_5564" data-name="Rectangle 5564" width="4.849" height="17.092" rx="2.424" transform="translate(485.424 294.546) rotate(180)" fill="#000" />
+                                <rect id="Rectangle_5565" data-name="Rectangle 5565" width="4.849" height="5.092" rx="2.424" transform="translate(485.424 271.546) rotate(180)" fill="#000" />
+                              </g>
+                            </svg>
+                          )}
+                          {data.alert && <div className=" md:pr-4 ">{data.alert}</div>}
                         </div>
-                        {data.alert && <div className="flex items-center px-2 py-[16px] mx-8 text-[12px] text-[#E7E8ED] w-max mt-[40px]  bg-[#0E1940]">
-                        
-                        {data.alert && <svg className=" mr-[3px] ml-[2px]" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 48 48">
-                          <g id="Group_7638" data-name="Group 7638" transform="translate(-459 -256)">
-                            <rect id="Rectangle_5298" data-name="Rectangle 5298" width="48" height="48" rx="24" transform="translate(459 256)" fill="#fff"/>
-                            <rect id="Rectangle_5564" data-name="Rectangle 5564" width="4.849" height="17.092" rx="2.424" transform="translate(485.424 294.546) rotate(180)" fill="#000"/>
-                            <rect id="Rectangle_5565" data-name="Rectangle 5565" width="4.849" height="5.092" rx="2.424" transform="translate(485.424 271.546) rotate(180)" fill="#000"/>
-                          </g>
-                        </svg>}
-                        {data.alert && <div className="pr-[10px]">{data.alert}</div>}
-                        
-
-                        </div>}
+                      )}
                     </div>
                     
                   ))}
