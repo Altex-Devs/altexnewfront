@@ -112,8 +112,6 @@ function FAQ() {
               </ul>
           </Item>
 
-         
-
           <Item title="11. Хувь хүний бүртгэл баталгаажуулахад ямар бичиг баримтууд шаардлагатай вэ?">
               <ul className="list-disc leading-2 list-inside px-14 text-[0.9rem] font-montserrat">
                 <li>Таны хүчинтэй бичиг баримт (Иргэний үнэмлэх эсхүл Гадаад паспорт)</li>
@@ -283,19 +281,22 @@ function FAQ() {
 }
 
 const Item = ({title, children}) => {
-  const [expanded, setExpanded] = useState(false);
-
+  const [expanded, setExpanded] = useState('');
+  const handleClick = () => {
+    setExpanded(!expanded);
+  };
+  console.log(expanded)
   return (
     <>
-      <div className={`${expanded ? "max-h-[800px]" : "max-h-[68px]"} rounded-[8px] bg-[#FFFFFF] text-[#35363B] p-[24px] overflow-hidden transition-[max-height] duration-500 mb-[24px] drop-shadow-[6px_6px_18px_rgba(0,108,255,0.04)]`} onClick={() => setExpanded(!expanded)}>
-        <div className="flex justify-between items-center font-bold mb-[14px] cursor-pointer">
+      <div className={`${expanded ? "max-h-[800px]" : "max-h-[68px]"} rounded-[8px] bg-[#FFFFFF] text-[#35363B] p-[16px] md:p-[24px] lg:p-[24px] xl:p-[24px] sm:p-[24px] overflow-hidden transition-[max-height] duration-500 mb-[24px] drop-shadow-[6px_6px_18px_rgba(0,108,255,0.04)]`} onClick={handleClick}>
+        <div className="flex justify-between items-center font-bold mb-[14px] cursor-pointer" >
           <div className="font-montserrat">{title}</div>
           <svg className={`bg-[rgba(0,108,255,0.16)] p-1 rounded w-6 h-6 transition-transform delay-100 duration-700 transform ${expanded ? 'rotate-180' : ''}`} width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.00438 6.28702L14.0544 0.330021C14.2698 0.118282 14.5598 -0.000366211 14.8619 -0.000366211C15.164 -0.000366211 15.4539 0.118282 15.6694 0.330021C15.7746 0.434253 15.8582 0.55831 15.9152 0.695024C15.9722 0.831737 16.0016 0.978395 16.0016 1.12652C16.0016 1.27465 15.9722 1.4213 15.9152 1.55802C15.8582 1.69473 15.7746 1.81879 15.6694 1.92302L8.81338 8.67302C8.60368 8.87741 8.32416 8.99451 8.03139 9.00064C7.73862 9.00677 7.45446 8.90146 7.23638 8.70602L0.336384 1.92902C0.230772 1.82499 0.146904 1.701 0.0896573 1.56426C0.0324108 1.42752 0.00292969 1.28076 0.00292969 1.13252C0.00292969 0.98428 0.0324108 0.83752 0.0896573 0.700779C0.146904 0.564038 0.230772 0.440047 0.336384 0.33602C0.551824 0.124281 0.841811 0.00563335 1.14388 0.00563335C1.44596 0.00563335 1.73594 0.124281 1.95138 0.33602L8.00438 6.28702Z" fill="#006CFF" />
           </svg>
-        </div>
+        </div>  
         <div className={`transition-all duration-700  ${expanded ? 'mt-0':'mt-[100px]'}`}>
-        {children}
+          {children}
         </div>
       </div>
     </>
