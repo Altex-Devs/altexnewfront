@@ -289,12 +289,11 @@ const Item = ({ title, children }) => {
       setExpandedItems(prevItems => [...prevItems, title]);
     }
   };
-
   return (
     <div>
       <div
-        className={`cursor-pointer p-[24px] rounded-[8px] bg-[#FFFFFF] mb-[24px] text-[#35363B] px-[18px] overflow-hidden transition-[max-height] duration-500 drop-shadow-[6px_6px_18px_rgba(0,108,255,0.04)] ${
-          expandedItems.includes(title) ? "max-h-[800px] mb-0 rounded-b-[0px] pb-0" : ""
+        className={`cursor-pointer p-[24px] rounded-[8px] bg-[#FFFFFF]  text-[#35363B] px-[18px] overflow-hidden transition-[max-height] duration-500 drop-shadow-[6px_6px_18px_rgba(0,108,255,0.04)] ${
+          expandedItems.includes(title) ? "max-h-[800px] mb-0 rounded-b-[0px] pb-0" : "mb-[24px]"
         }`}
         onClick={handleClick}
       >
@@ -325,4 +324,5 @@ const Item = ({ title, children }) => {
     </div>
   );
 };
+
 export default FAQ;
