@@ -1,5 +1,5 @@
 {
-  "name": "Altex homepage",
+  "name": "altex_homepage",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,8 +13,7 @@
     "react-icons": "^4.10.1",
     "react-intl": "^6.2.10",
     "react-router-dom": "^6.8.2",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

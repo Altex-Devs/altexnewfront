@@ -1,4 +1,4 @@
-{
+const mn = {
     "title": "ALTEX Дижитал Бирж",
     "mobile_menu_trade": "Арилжаа",
     "mobile_menu_about_us": "Бидний тухай",
@@ -75,6 +75,7 @@
     "newsletter_desc": "Та манайд бүртгүүлж хамгийн сүүлийн үеийн мэдээллийг тогтмол аваарай.",
     "newsletteremail": "И-мэйл",
     "newsletter_send": "Илгээх",
+
     "feedback_title": "Санал хүсэлт илгээх",
     "feedback_details": "Та өөрийн илгээх санал хүсэлтээ доорх хуудсанд бөглөж оруулна уу. Бид таны хүсэлтийг хүлээн авч шийдвэрлэхдээ таатай байх болно. Танд баярлалаа.",
     "feedback_name": "Нэр",
@@ -84,5 +85,28 @@
     "feedback_message": "Санал хүсэлт",
     "feedback_submit": "Илгээх",
     "feedback_fail_message": "Таны мэдээллийг хүлээж авлаа.",
-    "feedback_success_message": "Алдаа гарлаа, та дахин оролдоно уу!"
+    "feedback_success_message": "Алдаа гарлаа, та дахин оролдоно уу!",
+
+    "faq_title": "Түгээмэл асуултууд",
+    "faq_title_customer_service": "Хэрэглэгчийн үйлчилгээ",
+    "faq_title_settlement": "Төлбөр тооцоо",
+    "faq_a1": `
+        <ul class="list-disc leading-6 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
+            <li><span class="font-bold">www.altex.mn</span> хуудсанд өөрийн үүсгэсэн <span class="font-bold">бүртгэлээрээ нэвтэрч орно.</span></li>
+            <li><span class="font-bold">Тохиргоо</span> цэсрүү орж <span class="font-bold">Verify хэсэгт</span> байрлах <span class="font-bold">Verify now</span> товчин дээр дарна.</li>
+            <li>Гарч ирсэн сонголтоос <span class="font-bold">Хувь хүн буюу Personal</span> сонголтыг сонгоно.</li>
+            <li>Бүртгэл баталгаажуулалт 4 алхмаас бүрдэх бөгөөд <span class="font-bold">Үргэлжлүүлэх</span> товчийг дарж <span class="font-bold">Алхам 1 рүү шилжинэ</span>.</li>
+            <li>Үүнээс өмнө бичиг баримтын зургийг хэрхэн хуулж оруулах зөвлөгөөг сайтар <span class="font-bold">уншиж танилцаарай</span>.</li>
+            <li>Бичиг баримтын төрлөөс <span class="font-bold">Иргэний үнэмлэх</span> эсвэл <span class="font-bold">Гадаад паспортын</span> аль нэгийг сонгоно .</li>
+            <li><span class="font-bold">Иргэний үнэмлэхийг сонгосон</span> бол үнэмлэхийн <span class="font-bold">урд</span> болон <span class="font-bold">ард талын зургийг</span> дараах дарааллаар хуулж оруулаад <span class="font-bold">Үргэлжлүүлэх</span> товчийг дарна.</li>
+            <li><span class="font-bold">Гадаад паспортыг сонгосон</span> бол <span class="font-bold">хувийн мэдээлэл бүхий хуудсын зургийг</span> оруулахаас гадна <span class="font-bold">e-mongolia-гаас хаягийн бүртгэлийн лавлагааг</span> авч оруулах шаардлагатайг анхаарна уу.</li>
+            <li><span class="font-bold">Алхам 2</span> дээр <span class="font-bold">камерыг нээж</span> дэлгэцний дээр гарах <span class="font-bold">notification</span> цонхонд <span class="font-bold">allow</span> товчийг дарснаар таны видео сельфиг хийж эхэлнэ.</li>
+            <li>Дэлгэцэнд гарах зааврын дагуу дараах 4 үйлдлийг хийж гүйцэтгээд <span class="font-bold">Үргэлжлүүлэх</span> товчийг дарна.</li>
+            <li><span class="font-bold">Алхам 3</span> нь хувийн мэдээллийн хэсэг бөгөөд <span class="font-bold">ажил эрхлэлт, холбоо барих</span> болон <span class="font-bold">хаягийн мэдээллийг</span> бичиж оруулаад <span class="font-bold">Үргэлжлүүлэх</span> товчийг дарна уу.</li>
+            <li><span class="font-bold">Алхам 4</span> дээр эхний 3 алхам дээр оруулсан мэдээллүүдээ нягталж <span class="font-bold">Үйлчилгээний нөхцөл</span> болон <span class="font-bold">Нууцлалын бодлогыг</span> уншиж танилцаад хүлээн <span class="font-bold">зөвшөөрсний дараа Илгээх</span> товчийг дарж хувийн мэдээллүүдээ илгээнэ.</li>
+            <li>Таны илгээсэн мэдээллийг бид нягталж үзээд <span class="font-bold">баталгаажуулалт амжилттай болсон эсэх</span> мэдээллийг таны <span class="font-bold">бүртгэлтэй имэйлээр илгээх болно</span>.</li>
+        </ul>
+    `,
 }
+
+export default mn;

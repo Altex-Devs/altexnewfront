@@ -10,8 +10,8 @@ import { auth } from './firebase';
 import {IntlProvider} from 'react-intl';
 import Home from "./components/Home";
 import Layout from "./components/Layout";
-import mn from "./locales/mn.json";
-import en from "./locales/en.json";
+import mn from "./locales/mn";
+import en from "./locales/en";
 import Corporate from "./components/Corporate";
 import About from "./components/About";
 import Team from "./components/Team";
@@ -50,7 +50,7 @@ function App() {
   }, []);
 
   return (
-    <IntlProvider messages={messages[locale]} locale={locale}>
+    <IntlProvider messages={messages[locale]} locale={locale} defaultLocale="mn">
       <Router>
         <Routes>
           <Route element={<Layout locale={locale} setLocale={setLocale} />}>
