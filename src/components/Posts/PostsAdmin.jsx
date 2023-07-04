@@ -109,7 +109,7 @@ function PostsAdmin(props) {
 
   return (
     <>
-    <div className="bg-[#f5f6f8]  text-center leading-7 font-sans bg-[#eeeff3]">
+    <div className=" text-center leading-7 font-sans bg-[#eeeff3]">
         <div>
         <div className={`flex h-[70px] bg-[#006cff] items-center text-[#fff] font-sans text-[25px]  `}>
      <div className="">

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FormattedMessage } from 'react-intl';
-import { Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 
 /* eslint-disable jsx-a11y/alt-text */
 const Navbar = ({ locale, setLocale }) => {
@@ -120,12 +120,14 @@ const Navbar = ({ locale, setLocale }) => {
           <span id="translate_lang" className="px-[24px] cursor-pointer border-x-[1px] border-[#3B4466]" onClick={() => {changeLocale()}}>
             {locale === "en" ? "Mon" : "Eng"}
           </span>
-          <a href="/" id="industry_select" className="ml-[24px]">Хувь хүн</a>
+          <a href="/" id="industry_select" className="ml-[24px]">
+            <FormattedMessage id="industry_select"/>
+          </a>
         </div>
       </div>
         <div id="mobile_menu" className="flex flex-col gap-[15px] mb-[40px]">
           <a id="mobile_menu_trade" className="pb-[10px]" href="https://trade.altex.mn/">
-            <FormattedMessage id="mobile_menu_trade" />
+            <FormattedMessage id="mobile_menu_trade"/>
           </a>
           <div>
             <span id="mobile_menu_about_us" className="mobile_menu" onClick={(event) => toggleMobileMenu(event)}>Бидний тухай</span>
@@ -155,11 +157,15 @@ const Navbar = ({ locale, setLocale }) => {
           <span id="translate_lang" className="px-[24px] cursor-pointer border-x-[1px] border-[#3B4466]" onClick={() => {changeLocale()}}>
             {locale === "en" ? "Mon" : "Eng"}
           </span>
-          <Link to="/" id="industry_select" className={`ml-[24px] ${isHuunHidden ? 'hidden' : ''}`} onClick={handleHuunClick}>Хувь хүн</Link>
-          <Link to="/corporate" id="industry_select" className={`ml-[24px] ${isBayguulagHidden ? 'hidden' : ''}`} onClick={handleBayguulagClick}>Байгууллага</Link>
+          <Link to="/" id="industry_select" className={`ml-[24px] ${isHuunHidden ? 'hidden' : ''}`} onClick={handleHuunClick}>
+            <FormattedMessage id="industry_select" />
+          </Link>
+          <Link to="/corporate" id="industry_select" className={`ml-[24px] ${isBayguulagHidden ? 'hidden' : ''}`} onClick={handleBayguulagClick}>
+            <FormattedMessage id="industry_select"/>
+          </Link>
         </div>
       </div>
-      <div className={`sticky fixed transition-[500] ease-in-out delay-10000 scroll-smooth z-40 ${navbarBg ? "bg-[#050F36] top-0" : "top-[48px]"}`}>
+      <div className={`sticky transition-[500] ease-in-out delay-10000 scroll-smooth z-40 ${navbarBg ? "bg-[#050F36] top-0" : "top-[48px]"}`}>
       <div className={`flex  container mx-auto py-[40px] items-center justify-between px-[20px] xl:px-[55px] lg:px-[55px]  relative z-20 bg-[]`}>
         <div className="flex items-center">
           <a href="/" className="py-[1px]">
@@ -174,15 +180,23 @@ const Navbar = ({ locale, setLocale }) => {
           </button>
         </div>
         <div id="main_menu" className="items-center gap-[40px] text-[16px] hidden lg:flex">
-          <a id="menu_trade" className="cursor-pointer" href="https://trade.altex.mn/">Арилжаа</a>
+          <a id="menu_trade" className="cursor-pointer" href="https://trade.altex.mn/">
+            <FormattedMessage id="menu_trade" />
+          </a>
           <div className="relative cursor-pointer" onClick={(event) => toggleMenu(event,'Бидний тухай')}>
-            <span id="menu_about_us" className="menu">Бидний тухай</span>
+            <span id="menu_about_us" className="menu">
+              <FormattedMessage id="menu_about_us" />
+            </span>
             <img className="icon inline-block relative ml-[5px]" src="/images/menu_arrow.svg" />
             <div className="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
               <div className="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div className="backdrop-blur-sm flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
-                <a id="menu_about_exchange" className="hover:text-[#13A9FD] cursor-pointer" href="/about">Биржийн тухай</a>
-                <a id="menu_team" className="hover:text-[#13A9FD] cursor-pointer" href="/team">Баг хамт олон</a>
+                <a id="menu_about_exchange" className="hover:text-[#13A9FD] cursor-pointer" href="/about">
+                  <FormattedMessage id="menu_about_exchange" />
+                </a>
+                <a id="menu_team" className="hover:text-[#13A9FD] cursor-pointer" href="/team">
+                  <FormattedMessage id="menu_team" />
+                </a>
               </div>
             </div>
           </div>
@@ -194,16 +208,26 @@ const Navbar = ({ locale, setLocale }) => {
             <div className="expander absolute w-max max-h-0 left-[50%] translate-x-[-50%] transition-[max-height] duration-700 overflow-hidden">
               <div className="absolute left-[50%] translate-x-[-50%] border-x-[8px] border-b-[10px] border-transparent border-b-[rgba(3,4,10,.12)]"></div>
               <div className="backdrop-blur-sm flex flex-col mt-[10px] gap-[16px] bg-[rgba(3,4,10,.12)] p-[16px] rounded-[4px] text-[14px]">
-                <a id="menu_market_news" className="hover:text-[#13A9FD] cursor-pointer" href="/posts/news">Зах зээлийн мэдээ</a>
-                <a id="menu_crypto_knowledge" className="hover:text-[#13A9FD] cursor-pointer" href="/posts/basics">Крипто мэдлэг</a>
-                <a id="menu_projects" className="hover:text-[#13A9FD] cursor-pointer" href="/posts/projects">Төслүүд</a>
+                <a id="menu_market_news" className="hover:text-[#13A9FD] cursor-pointer" href="/posts/news">
+                  <FormattedMessage id="menu_market_news" />
+                </a>
+                <a id="menu_crypto_knowledge" className="hover:text-[#13A9FD] cursor-pointer" href="/posts/basics">
+                  <FormattedMessage id="menu_crypto_knowledge" />
+                </a>
+                <a id="menu_projects" className="hover:text-[#13A9FD] cursor-pointer" href="/posts/projects">
+                  <FormattedMessage id="menu_projects" />
+                </a>
               </div>
             </div>
             </span>
             </div>
           </div>
-          <a id="menu_register" href="https://trade.altex.mn/register" target="_blank" className="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]" rel="noreferrer">Бүртгүүлэх</a>
-          <a id="menu_login" href="https://trade.altex.mn/signin" target="_blank" className="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] border-solid border-[1px] border-[#13A9FD] text-[#13A9FD] leading-[18px] hover:bg-[rgba(19,169,253,.16)]" rel="noreferrer">Нэвтрэх</a>
+          <a id="menu_register" href="https://trade.altex.mn/register" target="_blank" className="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]" rel="noreferrer">
+            <FormattedMessage id="menu_register"/>
+          </a>
+          <a id="menu_login" href="https://trade.altex.mn/signin" target="_blank" className="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] border-solid border-[1px] border-[#13A9FD] text-[#13A9FD] leading-[18px] hover:bg-[rgba(19,169,253,.16)]" rel="noreferrer">
+            <FormattedMessage id="menu_login" />
+          </a>
         </div>
       </div>
       </div>

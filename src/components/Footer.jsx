@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 
 /* eslint-disable jsx-a11y/alt-text */
 const Footer = () => {
@@ -5,31 +6,63 @@ const Footer = () => {
     <>
       <div className="flex flex-row flex-wrap lg:flex-nowrap mb-[50px] pt-[160px]">
         <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px] pr-[15px]">
-          <div id="footer_about_us" className="text-[rgba(19,169,253,1)] mb-[32px]">Бидний тухай</div>
-          <a id="footer_about_exchange" className="block mb-[16px]" href="/about" target="_blank" rel="noreferrer">Биржийн тухай</a>
-          <a id="footer_team" className="block mb-[16px]" href="/team" target="_blank" rel="noreferrer">Баг, хамт олон</a>
+          <div id="footer_about_us" className="text-[rgba(19,169,253,1)] mb-[32px]">
+            <FormattedMessage id="footer_about_us"/>
+          </div>
+          <a id="footer_about_exchange" className="block mb-[16px]" href="/about" target="_blank" rel="noreferrer">
+            <FormattedMessage id="footer_about_exchange"/>
+          </a>
+          <a id="footer_team" className="block mb-[16px]" href="/team" target="_blank" rel="noreferrer">
+            <FormattedMessage id="footer_team"/>
+          </a>
         </div>
         <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px] pr-[15px]">
-          <div id="footer_academy" className="text-[rgba(19,169,253,1)] mb-[32px]">Академи</div>
-          <a id="footer_market_news" href="/posts/news" className="block mb-[16px]">Зах зээлийн мэдээ</a>
-          <a id="footer_crypto_knowledge" href="/posts/basics" className="block mb-[16px]">Крипто мэдлэг</a>
-          <a id="footer_projects" href="/posts/projects" target="_blank" className="block mb-[16px]" rel="noreferrer">Төслүүд</a>
+          <div id="footer_academy" className="text-[rgba(19,169,253,1)] mb-[32px]">
+            <FormattedMessage id="footer_academy" />
+          </div>
+          <a id="footer_market_news" href="/posts/news" className="block mb-[16px]">
+            <FormattedMessage id="footer_market_news"/>
+          </a>
+          <a id="footer_crypto_knowledge" href="/posts/basics" className="block mb-[16px]">
+            <FormattedMessage id="footer_crypto_knowledge"/>
+          </a>
+          <a id="footer_projects" href="/posts/projects" target="_blank" className="block mb-[16px]" rel="noreferrer">
+            <FormattedMessage id="footer_projects" />
+          </a>
         </div>
         <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px] pr-[15px]">
-          <div id="footer_service" className="text-[rgba(19,169,253,1)] mb-[32px]">Үйлчилгээ</div>
-          <a id="footer_terms_of_service" href="/termsofuse" className="block mb-[16px]">Үйлчилгээний нөхцөл</a>
-          <a href="/privacypolicy" id="footer_privacy_policy" className="block mb-[16px]">Нууцлалын бодлого</a>
-          <a id="footer_fee" href="/fee" className="block mb-[16px]">Шимтгэл</a>
+          <div id="footer_service" className="text-[rgba(19,169,253,1)] mb-[32px]">
+            <FormattedMessage id="footer_service"/>
+          </div>
+          <a id="footer_terms_of_service" href="/termsofuse" className="block mb-[16px]">
+            <FormattedMessage id="footer_terms_of_service"/>
+          </a>
+          <a href="/privacypolicy" id="footer_privacy_policy" className="block mb-[16px]">
+            <FormattedMessage id="footer_privacy_policy"/>
+          </a>
+          <a id="footer_fee" href="/fee" className="block mb-[16px]">
+            <FormattedMessage id="footer_fee"/>
+          </a>
         </div>
         <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px] pr-[15px]">
-          <div id="footer_help" className="text-[rgba(19,169,253,1)] mb-[32px]">Тусламж</div>
-          <a id="footer_faq" href="/faq" className="block mb-[16px]">Түгээмэл асуултууд</a>
-          <a id="footer_feedback" href="/feedback" className="block mb-[16px]">Санал хүсэлт</a>
-          <a id="howto" href="/howto" className="block mb-[16px]">Заавар</a>
+          <div id="footer_help" className="text-[rgba(19,169,253,1)] mb-[32px]">
+            <FormattedMessage id="footer_help"/>
+          </div>
+          <a id="footer_faq" href="/faq" className="block mb-[16px]">
+            <FormattedMessage id="footer_faq"/>
+          </a>
+          <a id="footer_feedback" href="/feedback" className="block mb-[16px]">
+            <FormattedMessage id="footer_feedback"/>
+          </a>
+          <a id="howto" href="/howto" className="block mb-[16px]">
+            <FormattedMessage id="howto"/>
+          </a>
 
         </div>
         <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px] pr-[15px]">
-          <div id="footer_contact" className="text-[rgba(19,169,253,1)] mb-[32px]">Холбоо барих</div>
+          <div id="footer_contact" className="text-[rgba(19,169,253,1)] mb-[32px]">
+            <FormattedMessage id="footer_contact"/>
+          </div>
           <div className="mb-[16px] flex">
             <div className="mr-[16px] flex-none w-[20px] flex place-content-center">
               <img className="object-center" src="/images/Icon metro-phone.svg" />

@@ -37,6 +37,7 @@ function Post() {
       setPosts(data);
     });
   }, [postId, type]);
+  console.log(content)
 
   return (
     <>
@@ -55,7 +56,7 @@ function Post() {
             {createdAt && <>
               <img className="mb-[25px] w-full" src={image} alt="News_header_image" />
             </>}
-            <div className="text-[#35363B] text-[18px] leading-7 mb-[40px]" dangerouslySetInnerHTML={{ __html: content }}></div>
+            <div className="text-[#35363B] text-[16px] leading-9 mb-[40px]" dangerouslySetInnerHTML={{ __html: content }}></div>
             <div className="inline-block rounded bg-[#0075FF] text-white text-[14px] font-bold py-[12px] pl-[18px] pr-[20px] cursor-pointer mr-[24px]">
               <svg className="inline-block mr-[23px]" width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11.214 13.5L11.836 9.157H7.946V6.338C7.90756 6.02587 7.93971 5.70909 8.04008 5.41106C8.14045 5.11302 8.30648 4.84132 8.5259 4.61604C8.74533 4.39076 9.01256 4.21763 9.30785 4.10945C9.60315 4.00127 9.91897 3.96079 10.232 3.991H12.001V0.293C10.9636 0.113582 9.91371 0.0156159 8.861 0C5.661 0 3.561 2.08 3.561 5.846V9.156H0V13.5H3.562V24H7.946V13.5H11.214Z" fill="white" />
