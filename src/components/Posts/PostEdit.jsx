@@ -215,7 +215,7 @@ const PostEdit =  () => {
             </div>
           )}
           {image && (
-            <img className='w-[1000px] mt-4' src={image} alt='post_image' />
+            <img className='w-[1000px] mt-4 mb-[24px]' src={image} alt='post_image' />
           )}
         </div>
         <div className='mt-8'>
@@ -226,7 +226,7 @@ const PostEdit =  () => {
         </div>
         <div className='flex justify-between'>
           <button
-            className='text-[#000] flex items-center bg-[#006cff] text-white rounded-xl p-2 h-full mt-10 px-7 border w-max '
+            className='flex items-center bg-[#006cff] text-white rounded-xl p-2 h-full mt-10 px-7 border w-max '
             onClick={() => window.history.go(-1)}
           >
             

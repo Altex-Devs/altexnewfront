@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import {FormattedMessage} from "react-intl";
+
 
 function Trend() {
   useEffect(() => {
@@ -50,7 +52,9 @@ function Trend() {
 
   return (
     <>
-      <div id="market_trend" className="text-[24px] text-[#13A9FD] font-medium mb-[40px]">Зах зээлийн тренд</div>
+      <div id="market_trend" className="text-[24px] text-[#13A9FD] font-medium mb-[40px]">
+        <FormattedMessage id='market_trend' defaultMessage='Зах зээлийн тренд'/>
+      </div>
       <div className="overflow-hidden relative mb-[160px]">
         <div id="prices" className="flex flex-nowrap gap-[24px] duration-1000 scroll-smooth snap-x overflow-x-scroll">
           <div className="animate-spin rounded-full border-4 border-[#07184b] border-t-[#006CFF] w-[24px] h-[24px] mx-auto"></div>

@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { FormattedMessage } from 'react-intl';
 
+
 function HomeComponents() {
   const submitPromo = () => {
     const emailInput = document.getElementById("email");
@@ -64,6 +65,8 @@ function HomeComponents() {
       e.target.classList.add("border-[#FF003D]");
     }
   }
+  
+
 
   return (
     <>
@@ -104,7 +107,9 @@ function HomeComponents() {
                 <div id="feature_1_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">
                   <FormattedMessage id="mobile_menu_trade" />
                 </div>
-                <div id="feature_1_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">Санхүүгийн байгууллагууд, маркет мэйкрүүдийн оролцоотой нэгдсэн хөрвөх сан</div>
+                <div id="feature_1_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">
+                  <FormattedMessage id="feature_1_desc"/>
+                </div>
               </div>
             </div>
             <div className="flex items-start gap-[24px] h-[64px]">
@@ -113,8 +118,12 @@ function HomeComponents() {
                 <img className="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-2.svg" />
               </div>
               <div className="flex flex-col">
-                <div id="feature_2_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Байгууллагын үйлчилгээ</div>
-                <div id="feature_2_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">Спот арилжаа, Брокер (OTC), Хөрөнгө оруулалтын багцийн үйлчилгээ</div>
+                <div id="feature_2_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">
+                  <FormattedMessage id='feature_2_head' />
+                </div>
+                <div id="feature_2_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">
+                  <FormattedMessage id="feature_2_desc"/>
+                </div>
               </div>
             </div>
             <div className="flex items-start gap-[24px] h-[64px]">
@@ -123,8 +132,12 @@ function HomeComponents() {
                 <img className="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-3.svg" />
               </div>
               <div className="flex flex-col">
-                <div id="feature_3_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Зах зээлийн өрсөлдөхүйц үнэ</div>
-                <div id="feature_3_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">Дижитал хөрөнгийг зах зээлд хамгийн өрсөлдөхүйц үнээр худалдаж авах, зарах боломж</div>
+                <div id="feature_3_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">
+                  <FormattedMessage id='feature_3_head' />
+                </div>
+                <div id="feature_3_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">
+                  <FormattedMessage id='feature_3_desc'/>
+                </div>
               </div>
             </div>
             <div className="flex items-start gap-[24px] h-[64px]">
@@ -133,8 +146,12 @@ function HomeComponents() {
                 <img className="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-4.svg" />
               </div>
               <div className="flex flex-col">
-                <div id="feature_4_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Зарлагын дээд лимит</div>
-                <div id="feature_4_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">Крипто болон фиат валютын зарлага $30,000 - $200,000 </div>
+                <div id="feature_4_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">
+                  <FormattedMessage id='feature_4_head'/>
+                </div>
+                <div id="feature_4_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">
+                  <FormattedMessage id='feature_4_desc'/>
+                </div>
               </div>
             </div>
             <div className="flex items-start gap-[24px] h-[64px]">
@@ -143,8 +160,12 @@ function HomeComponents() {
                 <img className="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-5.svg" />
               </div>
               <div className="flex flex-col">
-                <div id="feature_5_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">Хямд сүлжээний шимтгэл</div>
-                <div id="feature_5_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">Криптовалютын гүйлгээг хамгийн хямдаар хийх боломж</div>
+                <div id="feature_5_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">
+                  <FormattedMessage id='feature_5_head' />
+                </div>
+                <div id="feature_5_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">
+                  <FormattedMessage id='feature_5_desc' />
+                </div>
               </div>
             </div>
           </div>
@@ -159,10 +180,14 @@ function HomeComponents() {
           <iframe className="w-full aspect-video" src="https://www.youtube.com/embed/6_XMPt_1rDg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         </div>
         <div className="w-full sm:basis-1/2">
-          <div id="referal_code_head" className="text-[#13A9FD] text-[24px] mb-[16px]">Реферал код оруулах</div>
+          <div id="referal_code_head" className="text-[#13A9FD] text-[24px] mb-[16px]">
+            <FormattedMessage id='referal_code_head'/>
+          </div>
           <div className="flex flex-row items-center mb-[24px] gap-[24px]">
             <div className="basis-[75%]">
-              <div id="referal_code_desc" className="text-[#E6E7EB] text-[14px] font-extralight">Та бүртгэлээ баталгаажуулсан имэйл хаяг, промо кодоо илгээгээд урамшуулалд хамрагдаарай.</div>
+              <div id="referal_code_desc" className="text-[#E6E7EB] text-[14px] font-extralight">
+                <FormattedMessage id='referal_code_desc' />
+              </div>
             </div>
             <div className="basis-[25%] max-h-[42px] flex items-center">
               <img src="/images/gift.svg" />
@@ -170,13 +195,19 @@ function HomeComponents() {
           </div>
           <div className="lg:flex xl:flex flex-row gap-[24px] items-end sm:flex-row justify-items-stretch ">
             <div className="w-full sm:basis-[75%]">
-              <div id="referal_code_email" className="text-[#E6E7EB] mb-[8px]">Бүртгэлтэй и-мэйл</div>
+              <div id="referal_code_email" className="text-[#E6E7EB] mb-[8px]">
+                <FormattedMessage id='referal_code_email'/>
+              </div>
               <input type="text" id="email" onChange={(event) => validatePromoEmail(event)} className="rounded-[4px] border-solid border-[.5px]  focus-visible:border-[#006CFF] bg-[rgba(0,0,0,0)] w-full h-[48px] mb-[16px] p-[10px] px-[16px] outline-none font-extralight" autoComplete="off"/>
-              <div id="referal_code_promo" className="text-[#E6E7EB] mb-[8px]">Промо код</div>
+              <div id="referal_code_promo" className="text-[#E6E7EB] mb-[8px]">
+                <FormattedMessage id='referal_code_promo'/>
+              </div>
               <input type="text" id="promo" onChange={(event) => validatePromoCode(event)} className="rounded-[4px] border-solid border-[.5px] mb-[24px] lg:mb-[0px] xl:mb-[0px]  focus-visible:border-[#006CFF] invalid:border-[#FF003D] bg-[rgba(0,0,0,0)] w-full h-[48px] p-[10px] px-[16px] outline-none font-extralight" />
             </div>
             <div className="w-full sm:basis-[25%] flex justify-center">
-              <button onClick={submitPromo} id="referal_code_send" className="rounded-[4px] w-auto md:w-full font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] sm:w-auto hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Илгээх</button>
+              <button onClick={submitPromo} id="referal_code_send" className="rounded-[4px] w-auto md:w-full font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] sm:w-auto hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">
+                <FormattedMessage id='referal_code_send' />
+              </button>
             </div>
           </div>
         </div>
@@ -185,10 +216,12 @@ function HomeComponents() {
       <div className="flex flex-col gap-[40px] md:gap-0 sm:flex-row items-center justify-items-stretch px-[24px] py-[40px] sm:p-[35px] sm:pl-[83px] rounded-[8px] bg-gradient-to-b from-[rgba(0,108,255,.4)] to-[rgba(27,51,123,.4)] overflow-hidden">
         <div className="basis-[45%]">
           <div id="app_head" className="text-[#13A9FD] text-[24px] mb-[24px] leading-[1.55]">
-            Гар утасны аппликэйшн<br />
-            <span className="font-bold">ТУН УДАХГҮЙ</span>
+            <FormattedMessage id='app_head'/><br/> 
+            <FormattedMessage id='app_heading'/>
           </div>
-          <div id="app_desc" className="text-[#fff] font-extralight mb-[40px]">Арилжаанд оролцох, хэтэвчээ удирдах хамгийн хялбар замыг санал болгож байна.</div>
+          <div id="app_desc" className="text-[#fff] font-extralight mb-[40px]">
+            <FormattedMessage id='app_desc' />
+          </div>
           <div className="flex flex-wrap justify-center sm:justify-start gap-[14px] md:gap-[24px]">
             <img className="object-cover w-[133px]" src="/images/android.svg" />
             <img className="object-cover w-[133px]" src="/images/ios.svg" />
@@ -200,10 +233,12 @@ function HomeComponents() {
       <div className="pt-[160px] relative mb-[40px] xl:mb-[240px] lg:mb-[240px]">
         <div className="absolute left-[-15px]  lg:left-[100px] xl:left-[100px] xl:right-[112px] lg:right-[112px] w-screen h-[800px] top-[-80px]  bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
         <div id="start_trade_head" className="text-[#13A9FD] text-[24px] mb-[24px] lg:mb-[40px] font-medium">
-          Арилжаагаа эхлүүлэх&nbsp;
-          <span className="whitespace-nowrap">4 алхам</span>
+       
+          <FormattedMessage id="start_trade_head" />
+        
         </div>
-        <div id="start_trade_desc" className="font-light mb-[24px] lg:hidden">Та бүртгэлээ үүсгээд арилжаагаа эхлүүлээрэй!</div>
+        <div id="start_trade_desc" className="font-light mb-[24px] lg:hidden" >
+        </div>
         <div className="flex flex-col lg:flex-row gap-[32px] lg:gap-[70px]">
           <div className="flex flex-row flex-wrap gap-y-[24px] gap-x-[50px]">
             <div className="relative w-[130px] h-[160px]">

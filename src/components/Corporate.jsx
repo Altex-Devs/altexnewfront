@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 import HomeComponents from "./HomeComponents";
 import Trend from "./Trend";
 
@@ -27,7 +28,7 @@ const Corporate = () => {
      <div className="mx-[-180px] bg-[#0B163F] h-[682px] mb-[180px]">
      <div className="mx-[180px] py-[80px]">
      <div className="text-[#13A9FD] text-[24px] mb-[24px] ">
-        Байгууллагын үйлчилгээ
+        <FormattedMessage id="feature_2_head"/>
       </div>
 
       <p className="font-light text-[18px] mb-[40px]">Дижитал хөрөнгө нь хөгжлийнхөө 4-р шат руу орж, олон улсын томоохон байгууллагуудын хөрөнгө оруулалтын чиг хандлага дижитал буюу крипто зах зээл рүү аль хэдийн шилжээд эхэлсэн нь түүний өсөн нэмэгдэж буй үнэ цэн, цаг үеийг мэдэрсэн ухаалаг хөрөнгө оруулалт болж байна.</p>

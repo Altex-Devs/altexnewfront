@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
 function CryptoBasicsTerms() {
@@ -9,8 +10,8 @@ function CryptoBasicsTerms() {
           <div className="font-light text-[14px] mb-[80px] text-[#3973C5]">Нүүр &gt; Академи &gt; Крипто мэдлэг &gt; Нэр томьёоны тайлбар</div>
 
           <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#CDCDCE] text-[18px] font-medium gap-[40px] mb-[24px]">
-            <Link to="/posts/basics" className="relative text-[#CDCDCE]">
-              КРИПТО МЭДЛЭГ
+            <Link to="/posts/basics" className="relative uppercase text-[#CDCDCE]">
+              <FormattedMessage id="footer_crypto_knowledge"/>
             </Link>
             <div className="relative">
               НЭР ТОМЬЁОНЫ ТАЙЛБАР

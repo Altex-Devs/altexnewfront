@@ -17,10 +17,10 @@ function Home() {
   <div className="flex items-center md:h-[600px] relative mt-[400px] md:mt-auto">
     <div className="md:w-[60%] drop-shadow">
       <div id="jumbo_head" className="font-bold text-[28px] md:text-[40px] mb-[24px] leading-[3.25rem]">
-        <FormattedMessage id="jumbo.head" defaultMessage="Дижитал санхүүг хялбараар" />
+        <FormattedMessage id="jumbo_head" defaultMessage="Дижитал санхүүг хялбараар" />
       </div>
       <div id="jumbo_desc" className="text text-[24px] mb-[40px] font-light">
-        <FormattedMessage id="jumbo.desc" defaultMessage="Дижитал хөрөнгө оруулалт хийх хамгийн найдвартай платформыг санал болгож байна." />
+        <FormattedMessage id="jumbo_desc" defaultMessage="Дижитал хөрөнгө оруулалт хийх хамгийн найдвартай платформыг санал болгож байна." />
       </div>
       <a
         href="https://trade.altex.mn/"
@@ -29,7 +29,7 @@ function Home() {
         className="rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]"
         rel="noreferrer"
       >
-        <FormattedMessage id="jumbo.button" defaultMessage="Арилжаанд оролцох" />
+        <FormattedMessage id="jumbo_button" defaultMessage="Арилжаанд оролцох" />
       </a>
     </div>
   </div>

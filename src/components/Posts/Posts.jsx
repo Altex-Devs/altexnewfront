@@ -3,6 +3,7 @@ import PostsMore from "./PostsMore";
 import { useEffect, useState } from "react";
 import { collection, endBefore, getDocs, limit, orderBy, query, startAfter, where } from "firebase/firestore";
 import { db } from "../../firebase";
+import { FormattedMessage } from "react-intl";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
@@ -96,7 +97,7 @@ function Posts() {
       <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] mt-[40px] pt-[80px] pb-[240px]">
         <div className="container mx-auto pt-[48px] max-w-[996px]">
                 <div className="font-light text-[14px] mb-[80px] text-[#3973C5]">
-          Нүүр &gt; Академи &gt; 
+          <a href="/">Нүүр</a> &gt; Академи &gt; 
           {window.location.pathname === "/posts/projects" ? (
             " Төслүүд"
           ) : window.location.pathname === "/posts/basics" ? (
@@ -110,8 +111,8 @@ function Posts() {
 
           {type === "basics" && (
             <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#CDCDCE] text-[18px] font-medium gap-[40px] mb-[24px]">
-              <div className="relative text-[#35363B]">
-                КРИПТО МЭДЛЭГ
+              <div className="relative text-[#35363B] uppercase">
+                <FormattedMessage id="footer_crypto_knowledge"/>
                 <div className="absolute h-[2px] w-full bg-[#13A9FD] bottom-[-17px]"></div>
               </div>
               <Link to="/cryptoterms" className="relative text-[#CDCDCE]">
@@ -128,7 +129,7 @@ function Posts() {
                   {cursorAtStart && <>
                     <div className="inline-block text-[12px] font-light rounded bg-[#FDAE13] py-[4px] px-[8px] mb-[23px]">Хамгийн сүүлийн</div>
                   </>}
-                  <div className="text-[#03040A] text-[32px] font-bold">{posts[0].title}​</div>
+                  <div className="text-[#03040A] text-[28px] font-bold">{posts[0].title}​</div>
                 </div>
                 <div className="flex justify-between items-center ">
                   <div className="text-[#707070] font-light">{posts[0].date}</div>
@@ -140,7 +141,7 @@ function Posts() {
               <PostsMore posts={posts.slice(startIdx, startIdx + 6)} type={type} />
 
 
-              <div className="mt-[15px] flex justify-center mt-[60px] w-full">
+              <div className=" flex justify-center mt-[60px] w-full">
                 <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
                   <button
                     onClick={handlePreviousPage}
@@ -163,7 +164,7 @@ function Posts() {
                         return (
                           <button
                             key={index}
-                            className={`relative mx-1 flex justify-center z-10 inline-flex items-center border text-[10px] text-[#000] w-[32px] h-[32px] rounded p-[10px] ${
+                            className={`relative mx-1 justify-center z-10 inline-flex items-center px-4 py-2 border text-[10px] text-[#000] w-[32px] h-[32px] rounded p-[10px] ${
                               startIdx === index * 6 ? "border-[#006CFF] text-[#006CFF]" : "border-[#C2C2C2] bg-white"
                             }`}
                             onClick={() => handlePageClick(index)}
@@ -173,7 +174,7 @@ function Posts() {
                         );
                       } else if (index === 3 && totalPages > 4) {
                         return (
-                          <span key={index} className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 focus:outline-offset-0">
+                          <span key={index} className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 w-[32px] h-[32px] justify-center ring-inset ring-gray-300 focus:outline-offset-0">
                             ...
                           </span>
                         );

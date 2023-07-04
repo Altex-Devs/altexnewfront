@@ -27,7 +27,7 @@ function PostsAdminItem({post, getPosts}) {
                 Edit
               </div>
             </Link>
-            <div className="mx-2 border p-2 rounded shadow-lg flex justify-center flex bg-[#ef4444] w-[100px]">
+            <div className="mx-2 border p-2 rounded shadow-lg justify-center flex bg-[#ef4444] w-[100px]">
               <button
                 id="deleteButton"
                 data-modal-toggle="deleteModal"
