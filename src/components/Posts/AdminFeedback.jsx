@@ -16,18 +16,16 @@ const AdminFeedback = ()=>{
             });
             setFeedbackData(data);
             console.log(data)
-
           });
-          
           return () => unsubscribe();
         };
         fetchData();
       }, []);
     return(
         <>
-    <div className='bg-[#fff] h-full p-5 text-white bg-[#101C47] scroll-y'>
+    <div className='bg-[#fff] h-full p-5 text-white scroll-y'>
         <div className='flex justify-between'>
-    <div className='text-[#000] flex items-center bg-[#006cff] text-white rounded-3xl h-full mt-10 p-2 border w-max rounded '>
+    <div className=' flex items-center bg-[#006cff] text-white rounded-3xl h-full mt-10 p-2 border w-max '>
         <div className='m-1'>
         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXxlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 20" version="1.1">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -70,7 +68,7 @@ const AdminFeedback = ()=>{
         </thead>
         <tbody>
             {feedbackData.map((feedback)=>(
-            <tr class="bg-white border-b bg-[#6c757d] text-[#000]">
+            <tr class="bg-white border-b text-[#000]">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                     {feedback.name}
                 </th>

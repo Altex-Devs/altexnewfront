@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { FormattedMessage } from 'react-intl';
-import { IntlProvider } from 'react-intl';
 
 
 function HomeComponents() {

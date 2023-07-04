@@ -453,7 +453,7 @@ function Howto() {
             </div>
             {activeIndex === index && (
             <div className="flex float-right h-max w-[170px] mt-[24px]">
-              <div className="cursor-pointer text-[#fff] font-bold border rounded border-[#006CFF] text-[#13A9FD]" onClick={handleVideoTextClick}>
+              <div className="cursor-pointer font-bold border rounded border-[#006CFF] text-[#13A9FD]" onClick={handleVideoTextClick}>
                 <div className="py-[7px] text-[9px] flex pl-[12px] pr-[16px] items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="rounded-full mr-[10px]" width="30px" height="30px" viewBox="0 0 192 192" fill="none" strokeWidth="12">
                     <path stroke="#006CFF29" strokeLinecap="round" strokeLinejoin="round" d="M96 170c40.869 0 74-33.131 74-74 0-40.87-33.131-74-74-74-40.87 0-74 33.13-74 74 0 40.869 33.13 74 74 74Z" />

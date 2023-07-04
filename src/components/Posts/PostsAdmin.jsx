@@ -13,12 +13,10 @@ function PostsAdmin(props) {
   const [cursorAtEnd, setCursorAtEnd] = useState(false);
   const [cursorAtStart, setCursorAtStart] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
   const navigate = useNavigate();
   const paginateBy = 10;
-
   useEffect(() => {
     getPosts();
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -89,9 +87,6 @@ function PostsAdmin(props) {
     }
   }, []);
 
-  useEffect(() => {
-    setTotalPages(Math.ceil(posts.length / paginateBy));
-  }, [posts]);
 
   const logout = () => {
     auth.signOut().then(() => {
