@@ -25,133 +25,60 @@ function FAQ() {
           </div>
           {show === "button1" && (
             <div className="Харилцагчийн бүртгэл">
-              <Item title="1. Хэрхэн бүртгэлээ баталгаажуулах вэ?">
+              <Item title={intl.formatMessage({id: "faq_q1"})}>
                 <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a1"}) }} />
               </Item>
 
-              <Item title="2. Хэрхэн бүртгэлээ устгах вэ?">
-                <ul className="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li>Та Алтекс дижитал бирж дээрх бүртгэлтэй хаягаа устгахыг хүсвэл хүсэлтээ өөрийн бүртгэлтэй имэйл хаягаас бичиг баримтаа хажуудаа барьсан сельфи зургийн хамт <a className="underline text-[#0000EE]" href="mailto:contact@altex.mn">contact@altex.mn</a> хаягаар бичиж илгээнэ үү.</li>
-                  <li>Таны хаягийг устгахаас өмнө аюулгүй байдлын үүднээс тантай холбогдож баталгаажуулах үйлдэл хийгдэнэ.</li>
-                </ul>
+              <Item title={intl.formatMessage({id: "faq_q2"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a2"}) }} />
               </Item>
 
-              <Item title="3. Хувийн мэдээллээ хэрхэн шинэчлэх вэ?">
-                <ul className="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li>Та Алтекс дижитал бирж дээрх бүртгэлтэй хувийн мэдээллээ өөрчлөхийг хүсвэл хүсэлтээ өөрийн бүртгэлтэй имэйл хаягаас бичиг баримтаа хажуудаа барьсан сельфи зургийн хамт <a className="underline text-[#0000EE]" href="mailto:contact@altex.mn">contact@altex.mn</a> хаягаар бичиж илгээнэ үү.</li>
-                  <li>Таны мэдээллийг өөрчлөхөөс өмнө аюулгүй байдлын үүднээс таныг таньж баталгаажуулах үйлдэл хийгдэнэ.</li>
-                </ul>
+              <Item title={intl.formatMessage({id: "faq_q3"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a3"}) }} />
               </Item>
 
-              <Item title="4. Нууц үгээ хэрхэн шинэчлэх вэ?">
-                <ul className="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li><span className="font-bold">www.altex.mn</span> хуудсанд өөрийн үүсгэсэн <span>бүртгэлээрээ нэвтэрч орно</span>.</li>
-                  <li><span className="font-bold">Тохиргоо</span> цэсрүү орж <span className="font-bold">Password</span> товчин дээр дарснаар хуучин нууц үгээ 1 удаа, шинэ нууц үгээ 2 удаа бичиж оруулах талбар гарч ирнэ.</li>
-                  <li>Дээрх талбарыг бөглөн <span className="font-bold">Save</span> товчийг дарснаар таны шинэ нууц үг хадгалагдана.</li>
-                </ul>
+              <Item title={intl.formatMessage({id: "faq_q4"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a4"}) }} />
               </Item>
 
-              <Item title="5. 2FA хамгаалалтыг хэрхэн идэвхжүүлэх вэ?">
-                <ul className="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li><span className="font-bold">Google Authenticator app</span>-ыг өөрийн утасны Playstore болон Appstore-с татаж авна.</li>
-                  <li>www.altex.mn хуудсанд өөрийн үүсгэсэн <span className="font-bold">бүртгэлээрээ нэвтэрч орно</span>.</li>
-                  <li><span className="font-bold">Settings</span> цэсрүү орж <span className="font-bold">Security</span> хэсэгт байрлах Google Authenticator <span className="font-bold">Add new</span> товч дээр дарж <span className="font-bold">QR код</span> үүсгэнэ.</li>
-                  <li>Үүссэн <span className="font-bold">QR кодыг</span> өөрийн утасны Google Authenticator app-руу нэвтрэн орж <span className="font-bold">Scan code</span> товчийг дарснаар уншуулж идэвхжүүлнэ.</li>
-                  <li>Google Authenticator app дээр гарч ирэх <span className="font-bold">6 оронтой кодыг</span> платформ дээрээ оруулснаар таны холболт амжилттай хийгдэнэ.</li>
-                </ul>
+              <Item title={intl.formatMessage({id: "faq_q5"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a5"}) }} />
               </Item>
 
-              <Item title="6. 2FA хамгаалалтаа хэрхэн салгах вэ?">
-                <ul className="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li>Алтекс дижитал бирж дээрх 2FA хамгаалалтаа салгуулахыг хүсвэл хүсэлтээ өөрийн бүртгэлтэй имэйл хаягаас бичиг баримтаа хажуудаа барьсан селфи зургийн хамт <a className="underline text-[#0000EE]" href="mailto:contact@altex.mn">contact@altex.mn</a>  хаягаар бичиж илгээнэ үү.</li>
-                  <li>Таны мэдээллийг өөрчлөхөөс өмнө аюулгүй байдлын үүднээс таныг таньж баталгаажуулах үйлдэл хийгдэнэ.</li>
-                </ul>
-                <div className="text-[0.7rem] sm:text-[0.9rem] font-montserrat mt-10">
-                  Санамж: 2FA холболтоо шинээр дахин хийгээгүй тохиолдолд крипто арилжаа, орлого зарлага хийх боломжгүй гэдгийг анхаарна уу.</div>
+              <Item title={intl.formatMessage({id: "faq_q6"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a6"}) }} />
               </Item>
 
-              <Item title="7. Хэрхэн хаягийн баталгаажуулалт хийх вэ?">
-                <div className="text-[0.7rem] sm:text-[0.9rem] font-montserrat">Иргэний үнэмлэхийн арын хэсгийн зургийг тод гаргацтай авч илгээснээр хаягийг баталгаажуулах боломжтой.</div>
+              <Item title={intl.formatMessage({id: "faq_q3"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a3"}) }} />
               </Item>
 
-              <Item title="8. Иргэний үнэмлэхгүй бол хэрхэн хаягийн баталгаажуулалт хийх вэ?">
-                <ul className="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li>Иргэний үнэмлэхгүй тохиолдолд Монгол улсын иргэн E-mongolia-гаас Хаягийн бүртгэлийн лавлагааг авч илгээнэ.</li>
-                  <li>Гадаад улсад оршин суудаг бол хэрэглээний болон үйлчилгээний төлбөр төлсөн баримтыг хавсарган илгээнэ. </li>
-                </ul>
-                <div className="text-[0.7rem] sm:text-[0.9rem] font-montserrat mt-10">
-                  Санамж: Баримт бичиг нь Монгол эсвэл Англи хэл дээр биш бол албан ёсны баталгаат орчуулгаар орчуулан баталгаа гаргасан байхыг анхаарна уу.</div>
-
+              <Item title={intl.formatMessage({id: "faq_q3"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a3"}) }} />
               </Item>
 
-              <Item title="9. Хэрхэн Итгэмжит харилцагч болох вэ?">
-                <ul className="list-disc leading-6 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li className="mb-3">Харилцагчийн зарлагын дээд хэмжээг нэмэгдүүлэн Итгэмжит харилцагч болох хүсэлтийг өөрийн Алтекс дижитал биржид бүртгэлтэй имэйл хаягаас компанийн <a className="underline text-[#0000EE]" href="mailto:contact@altex.mn">contact@altex.mn</a>  хаяг, эсхүл бүртгэлтэй дугаараас албан ёсны телеграм болон фейсбүүк хуудсанд ирүүлнэ.</li>
-                  <li className="mb-3">Баталгаажсан харилцагч нь өөрийн хэрэгцээ шаардлагаас хамааран өдөрт хийгдэх зарлагын хэмжээг нэмэгдүүлэн Итгэмжит харилцагч болох хүсэлт гаргасан тохиолдолд Итгэмжит харилцагчийн зарлагын дээд хэмжээний 1%-тай тэнцэхүйц шимтгэлийг 1 удаа төлнө.</li>
-                  <li>Харилцагчийн бүртгэл хариуцсан ажилтан болон Эрсдэл хариуцсан ажилтан нь харилцагчийн хүсэлтийг ажлын 1 хоногт багтаан шийдвэрлэж энэ тухай харилцагчид имэйл эсхүл утсаар хариу мэдэгдэнэ.</li>
-                </ul>
+              <Item title={intl.formatMessage({id: "faq_q7"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a7"}) }} />
               </Item>
 
-              <Item title="10. Компанийн хаяг нээхэд ямар бичиг баримтууд шаардлагатай вэ?">
-                <ul className="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li className="mb-3">Харилцагчийн зарлагын дээд хэмжээг нэмэгдүүлэн Түнш харилцагч болох хүсэлтийг өөрийн Алтекс дижитал биржид бүртгэлтэй имэйл хаягаас компанийн <a className="underline text-[#0000EE]" href="mailto:contact@altex.mn">contact@altex.mn</a>  хаяг, эсхүл бүртгэлтэй дугаараас албан ёсны телеграм болон фейсбүүк хуудсанд ирүүлнэ.</li>
-                  <li className="mb-3">Баталгаажсан харилцагч нь өөрийн хэрэгцээ шаардлагаас хамааран өдөрт хийгдэх зарлагын хэмжээг нэмэгдүүлэн Түнш харилцагч болох хүсэлт гаргасан тохиолдолд Түнш харилцагчийн зарлагын дээд хэмжээний 1%-тай тэнцэхүйц шимтгэлийг 1 удаа төлнө.</li>
-                  <li>Харилцагчийн бүртгэл хариуцсан ажилтан болон Эрсдэл хариуцсан ажилтан нь харилцагчийн хүсэлтийг ажлын 1 хоногт багтаан шийдвэрлэж энэ тухай харилцагчид имэйл эсхүл утсаар хариу мэдэгдэнэ. </li>
-                </ul>
+              <Item title={intl.formatMessage({id: "faq_q8"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a8"}) }} />
               </Item>
 
-              <Item title="11. Хувь хүний бүртгэл баталгаажуулахад ямар бичиг баримтууд шаардлагатай вэ?">
-                <ul className="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li>Таны хүчинтэй бичиг баримт (Иргэний үнэмлэх эсхүл Гадаад паспорт)</li>
-                  <li>Бичиг баримтыг барьж авхуулсан селфи зураг</li>
-                  <li>Хаягийн баталгаа
-                    <ul className="list-disc px-6 list-inside">
-                      <li>Иргэний үнэмлэхийн арын хэсгийн зургийг тод гаргацтай авч илгээснээр хаягийг баталгаажуулах боломжтой. </li>
-                      <li>Иргэний үнэмлэхгүй тохиолдолд Монгол улсын иргэн E-mongolia-аас Хаягийн бүртгэлийн лавлагааг авч илгээснээр хаягийг баталгаажуулах боломжтой.</li>
-                      <li>Гадаад улсад оршин суудаг бол хэрэглээний болон үйлчилгээний төлбөр төлсөн баримтыг хавсарган илгээнэ. </li>
-                    </ul>
-                  </li>
-                </ul>
-                <div className="text-[0.9rem] font-montserrat mt-10">
-                  Санамж: Баримт бичиг нь Монгол эсвэл Англи хэл дээр биш бол албан ёсны баталгаат орчуулгаар орчуулан баталгаа гаргасан байхыг анхаарна уу.
-                </div>
+              <Item title={intl.formatMessage({id: "faq_q9"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a9"}) }} />
               </Item>
 
-              <Item title="12. Хувь хүний бүртгэл хэдий хугацаанд баталгаажих вэ?">
-                <ul className="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li>Хувь хүний бүртгэл баталгаажуулах хүсэлтийг ажлын 1 өдөрт багтаан шийдвэрлэнэ. </li>
-                  <li>Харилцагчийн бүртгэлийн мэргэжилтэн шаардлагатай гэж үзвэл тантай холбогдон нэмэлт тодруулга авч хамтран ажиллах болно. </li>
-                </ul>
+              <Item title={intl.formatMessage({id: "faq_q10"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a10"}) }} />
               </Item>
 
-              <Item title="13. Байгууллагын бүртгэл баталгаажуулахад ямар бичиг баримтууд шаардлагатай вэ?">
-                <ul className="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li>CORPORATE STRUCTURE CHART - Компанийн бүтэц зохион байгуулалтын зураглал </li>
-                  <li>COMPANY PROOF OF ADDRESS ISSUED - Компанийн төв салбарын хаягийн мэдээлэл</li>
-                  <li>CERIFICATE OF INCORPORATION - Байгууллагын улсын бүртгэлийн гэрчилгээ ард, урд талаас авсан зураг</li>
-                  <li>MEMORANDIUM AND ARTICLES OF ASSOCIATION - Байгууллагын дүрэм</li>
-                  <li>CERTIFICATE OF INCUMBENCY - Тусгай зөвшөөрлийн дагуу үйл ажиллагаа явуулдаг бол үйл ажиллагааны чиглэлийн дагуу тусгай зөвшөөрөл</li>
-                  <li>PASSPORT OF ALL DIRECTORS AND SHAREHOLDERS WITH 25% OR MORE SHAREHOLDING - Байгууллагын гүйцэтгэх захирал болон байгууллагын 25-аас дээш хувь эзэмшигчдийн бичиг баримт (Иргэний үнэмлэх эсвэл Гадаад паспорт)</li>
-                  <li>PERSONAL PROOF OF ADDRESS OF ALL - Гүйцэтгэх захирал болон хувь эзэмшигчдийн байнгын оршин суугаа хаягийн баталгаа
-                    <ul className="list-disc px-6 list-inside">
-                      <li> Иргэний үнэмлэхийн арын хэсгийн зургийг тод гаргацтай авч илгээнэ.</li>
-                      <li>Иргэний үнэмлэхгүй тохиолдолд Монгол улсын иргэн E-mongolia-аас Хаягийн бүртгэлийн лавлагааг авч илгээнэ.</li>
-                      <li>Гадаад улсад оршин суудаг бол хэрэглээний болон үйлчилгээний төлбөр төлсөн баримтыг хавсарган илгээнэ.</li>
-                    </ul>
-                  </li>
-                  <li>PASSPORT OF THE APPLICANT OR AUTHORIZED PERSONS - Алтекс дижитал бирж дээрх дансыг захиран зарцуулах эрхтэй томилогдсон байгууллагын итгэмжлэгдсэн төлөөлөгчийн бичиг баримт (Иргэний үнэмлэх эсвэл Гадаад пасспорт),</li>
-                  <li>PERSONAL PROOF OF ADDRESS - Итгэмжлэгдсэн төлөөлөгчийн байнгын оршин суугаа хаягийн баталгаа.</li>
-                </ul>
-                <div className="text-[0.7rem] sm:text-[0.9rem] font-montserrat mt-10">
-                  <div>Санамж: Дээр дурдсан бичиг баримтууд нь заавал шаардагдах бичиг баримтууд бөгөөд Монгол эсвэл Англи хэл дээр биш бол албан ёсны баталгаат орчуулгаар орчуулан баталгаа гаргасан байхыг анхаарна уу.</div>
-                  <div>Хэрэв нэмэлт материал шаардлагатай гэж үзвэл харилцагчийн бүртгэлийн ажилтан холбогдох болно.</div>
-                </div>
+              <Item title={intl.formatMessage({id: "faq_q11"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a11"}) }} />
               </Item>
-              <Item title="14. Байгууллагын бүртгэлийн хүсэлт хичнээн хугацааны дараа баталгаажих вэ?">
-                <ul className="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li>Байгууллагын хүсэлт шаардлагатай бүх материалыг хавсаргаснаас хойш ажлын 5 хоногт бүрэн шалгагдаж дуусна.</li>
-                  <li>Таны бүртгэлийг баталгаажуулах явцад манай харилцагчийн бүртгэлийн мэргэжилтэн таньтай хамтарч ажиллах болно.</li>
-                </ul>
+
+              <Item title={intl.formatMessage({id: "faq_q12"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a12"}) }} />
               </Item>
             </div>
 
@@ -159,106 +86,46 @@ function FAQ() {
 
           {show === "button2" && (
             <div className="ТӨЛБӨР ТООЦОО">
-              <Item title="1. Хэрхэн фиат орлого хийх вэ?">
-                <ul className="list-disc leading-6 px-6 text-[0.7rem] sm:text-[0.9rem] font-montserrat overflow-y-auto">
-                  <li><span className="font-bold">www.altex.mn</span> хуудсанд өөрийн үүсгэсэн <span className="font-bold">бүртгэлээрээ нэвтэрч орно</span>.</li>
-                  <li><span className="font-bold">Данс</span> цэс рүү орж <span className="font-bold">Орлого</span> гэсэн хэсэгт дарна.</li>
-                  <li><span className="font-bold">Fiat currencies</span> жагсаалтаас валютаа сонгож, <span className="font-bold">Банкны гүйлгээ</span> товчин дээр дарна. </li>
-                  <li>Дансандаа орлого хийх дүнгээ ам.доллараар бичиж оруулан <span className="font-bold">Орлого</span> товчин дээр дарна.</li>
-                  <li>
-                    <div>Үүссэн <span className="font-bold">Reference code</span>-ийг банкны шилжүүлэг хийхдээ <span className="font-bold">Гүйлгээний утга</span> хэсэгт бичиж оруулна.</div>
-                    <div>Ингэснээр таны хүсэлтийг оператор хүлээн авч баталгаажуулахад хялбар байх болно.  </div>
-                  </li>
-                  <li>
-                    <div>Алтекс дижитал бирж - Дансны мэдээлэл</div>
-                    <div>Хаан банк: 5111667508</div>
-                    <div>Голомт банк: 3005148881</div>
-                    <div>ХХБ: 404266849</div>
-                    <div>Хүлээн авагчийн нэр: Чойжин Алтекс ХХК</div>
-                  </li>
-                  <li>Хэрэглэгч та <span className="font-bold">бүртгэлээ баталгаажуулаагүй тохиолдолд</span> Орлого хийх хүсэлт гаргах боломжгүйг анхаарна уу.</li>
-                </ul>
-                <div className="text-[0.7rem] sm:text-[0.9rem] font-montserrat mt-10">
-                  <div>Санамж: Баталгаажсан харилцагч нь фиат орлого хийхдээ Алтекс дижитал биржийн зарласан тухайн өдрийн ам.долларын орлогын ханшаар тооцож төгрөгийн орлого хийнэ. </div>
-                  <div>Ханшийн мэдээллийг Харилцагчийн үйлчилгээний 7505-7775 дугаараар болон <a className="underline text-[#0000EE]" href="https://t.me/altexmn">https://t.me/altexmn</a> (Алтекс дижитал биржийн албан ёсны телеграм групп)-ээс авах боломжтой.</div>
-                </div>
+              <Item title={intl.formatMessage({id: "faq_q13"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a13"}) }} />
               </Item>
 
-              <Item title="2. Хэрхэн фиат зарлага хийх вэ?">
-                <ul className="list-disc leading-2 px-6 text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li><span className="font-bold">Данс</span> цэс рүү орж <span className="font-bold">Зарлага</span> гэсэн хэсэгт дарна.</li>
-                  <li><span className="font-bold">Fiat currencies</span> жагсаалтаас валютаа сонгож, <span className="font-bold">Bank transfer</span> товчин дээр дарна. </li>
-                  <li><span className="font-bold">Add bank</span> товчин дээр дарж хүлээн авах банкны мэдээллээ оруулах цонх руу шилжинэ.</li>
-                  <li>Гарч ирсэн цонхонд <span className="font-bold">Банкны нэр, Дансны дугаар, Хүлээн авагчийн нэр, Банкны нэрийг</span> дахин бичиж <span className="font-bold">Submit</span> товчин дээр дарна.</li>
-                  <li>Утасныхаа <span className="font-bold">Google Authenticator аппликэйшний баталгаажуулах 6 оронтой тоог</span> бичиж оруулснаар таны хүлээн авах банкны мэдээлэл хадгалагдана. (Ингэснээр та дараагийн удаад зарлага хийхдээ банкны мэдээллээ шинээр оруулах шаардлагагүй болно.)</li>
-                  <li>Дараах цонхноос хадгалсан <span className="font-bold">банкны мэдээллийг сонгож</span>, дараа нь <span className="font-bold">Continue</span> товчийг дарж үргэлжлүүлнэ.</li>
-                  <li>Зарлага хийх дүнгээ бичиж оруулаад <span className="font-bold">Зарлага</span> товчийг дарна. </li>
-                  <li>Таны хүсэлтээ баталгаажуулах үүднээс <span className="font-bold">Google Authenticator 6 оронтой тоог дахин бичиж оруулах</span> шаардлагатай.</li>
-                  <li>Таны зарлагын хүсэлтийг <span className="font-bold">Даваа-Баасан</span> гарагийн <span className="font-bold">9:00-18:00</span> хооронд хянан шийдвэрлэдэг болохыг анхаарна уу.</li>
-                </ul>
+              <Item title={intl.formatMessage({id: "faq_q14"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a14"}) }} />
               </Item>
 
-              <Item title="3. Арилжааны шимтгэл хэд вэ?">
-                <ul className="list-disc leading-2 px-6 text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li>Maker - 0.25%</li>
-                  <li>Taker - 0.35%</li>
-                </ul>
+              <Item title={intl.formatMessage({id: "faq_q15"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a15"}) }} />
               </Item>
 
-              <Item title="4. Криптовалютын сүлжээний шимтгэл хэд вэ?">
-                <ul className="list-disc leading-2 text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <div>Криптовалютын сүлжээний шимтгэлийн хэмжээ криптовалютаас хамааран өөр өөр тул та дараах холбоосоор орж дэлгэрэнгүй танилцана уу.</div>
-                  <a className="underline text-[#0000EE]" href="/fee">https://altex.mn/fee</a>
-                </ul>
+              <Item title={intl.formatMessage({id: "faq_q16"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a16"}) }} />
               </Item>
 
-              <Item title="5. Крипто зарлага хийхэд яагаад заримдаа уддаг вэ?">
-                <ul className="list-disc leading-2 text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <div>Харилцагч нь өндөр дүнтэй крипто гүйлгээ хийх хүсэлт гаргасан тохиолдолд харилцагчийн аюулгүй байдлын үүднээс Cold wallet-д байгаа криптог Hot wallet руу шилжүүлэх үйл явц хүлээлдэх тохиолдол гардаг.</div>
-                </ul>
+              <Item title={intl.formatMessage({id: "faq_q17"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a17"}) }} />
               </Item>
 
-              <Item title="6. Флоат данс гэж юу вэ?">
-                <div className="font-montserrat text-[0.7rem] sm:text-[0.9rem]">
-                  <div>Алтекс дижитал бирж дээр зөвхөн бүртгэлтэй харилцагчид хоорондоо арилжаа хийхээс гадна олон улсын нэгдсэн хөрвөх сантай арилжаа хийж болдог. Тухайн арилжаанд оролцохын тулд Алтекс дижитал бирж нь олон улсын дансанд мөнгө байршуулдаг ба биржийн харилцагчид хөрвөх сангаас токен худалдаж авсан тохиолдолд дансанд байршуулсан мөнгө багасч эсрэгээр бирж дээр токен зарсан тохиолдолд ихсэх зарчмаар арилжаа явагддаг. </div>
-                  <div className="py-6">Энэхүү мөнгө байршуулдаг дансыг Флоат гэж нэрлэдэг. </div>
-                </div>
+              <Item title={intl.formatMessage({id: "faq_q18"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a18"}) }} />
               </Item>
 
-              <Item title="7. Гуравдагч этгээд болон хамтран эзэмшигчтэй дансаар гүйлгээ хийх боломжтой юу?">
-                <ul className="list-disc leading-2 px-6 text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li>Бид гуравдагч этгээдийн гүйлгээг хүлээн авдаггүй бөгөөд гуравдагч этгээдээс ирсэн бүх мөнгийг буцаадаг.</li>
-                  <li>Хамтран эзэмшигчтэй данснаас гүйлгээ хийх тохиолдолд тухайн дансны бүх эзэмшигчид Know-Your-Customer (KYC)/ Know-Your-Business (KYB) баталгаажуулалтыг хийсний үндсэн дээр дансаараа Орлого/Зарлага хийх боломжтой болно.</li>
-                </ul>
+              <Item title={intl.formatMessage({id: "faq_q19"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a19"}) }} />
               </Item>
 
-              <Item title="8. Банкны мэдээллээ хэрхэн нэмэх вэ?">
-                <ul className="list-disc leading-2 px-6 text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <li><span className="font-bold">Данс</span> цэс рүү орж <span className="font-bold">Зарлага</span> гэсэн хэсэгт дарна.</li>
-                  <li><span className="font-bold">Fiat currencies</span> жагсаалтаас валютаа сонгож, <span className="font-bold">Bank transfer</span> товчин дээр дарна. </li>
-                  <li><span className="font-bold">Add bank</span> товчин дээр дарж хүлээн авах банкны мэдээллээ оруулах цонх руу шилжинэ.</li>
-                  <li>Гарч ирсэн цонхонд <span className="font-bold">Банкны нэр, Дансны дугаар, Хүлээн авагчийн нэр, Банкны нэрийг</span> дахин бичиж <span className="font-bold">Submit</span> товчин дээр дарна.</li>
-                  <li>Утасныхаа <span className="font-bold">Google Authenticator аппликэйшний баталгаажуулах 6 оронтой тоог</span> бичиж оруулснаар таны хүлээн авах банкны мэдээлэл хадгалагдана. (Ингэснээр та дараагийн удаад зарлага хийхдээ банкны мэдээллээ шинээр оруулах шаардлагагүй болно.)</li>
-                </ul>
-
+              <Item title={intl.formatMessage({id: "faq_q20"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a20"}) }} />
               </Item>
 
-              <Item title="9. Фиат орлогын шимтгэлтэй юу?">
-                <div className="text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <div>Байхгүй.</div>
-                  <div className="mt-5">Баталгаажсан харилцагч нь фиат орлого хийхдээ Алтекс дижитал биржийн зарласан тухайн өдрийн ам.долларын орлогын ханшаар тооцож төгрөгийн орлого хийнэ. </div>
-                  <div>Ханшийн мэдээллийг Харилцагчийн үйлчилгээний 7505-7775 дугаараар болон <a className="underline text-[#0000EE]" href="https://t.me/altexmn">https://t.me/altexmn</a> (Алтекс дижитал биржийн албан ёсны телеграм групп)-ээс авах боломжтой.</div>
-
-                </div>
+              <Item title={intl.formatMessage({id: "faq_q21"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a21"}) }} />
               </Item>
 
-              <Item title="10. Фиат зарлагын шимтгэлтэй юу?">
-                <div className="text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-                  <div>Байхгүй.</div>
-                  <div className="mt-5">Баталгаажсан харилцагч нь фиат орлого хийхдээ Алтекс дижитал биржийн зарласан тухайн өдрийн ам.долларын орлогын ханшаар тооцож төгрөгийн орлого хийнэ. </div>
-                  <div>Ханшийн мэдээллийг Харилцагчийн үйлчилгээний 7505-7775 дугаараар болон <a className="underline text-[#0000EE]" href="https://t.me/altexmn">https://t.me/altexmn</a> (Алтекс дижитал биржийн албан ёсны телеграм групп)-ээс авах боломжтой.</div>
-                </div>
+              <Item title={intl.formatMessage({id: "faq_q22"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a22"}) }} />
               </Item>
+
             </div>
           )}
 
