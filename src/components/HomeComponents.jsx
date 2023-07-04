@@ -1,8 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 
 function HomeComponents() {
+  const intl = useIntl();
+
   const submitPromo = () => {
     const emailInput = document.getElementById("email");
     const promoInput = document.getElementById("promo");
@@ -234,7 +236,7 @@ function HomeComponents() {
         <div className="absolute left-[-15px]  lg:left-[100px] xl:left-[100px] xl:right-[112px] lg:right-[112px] w-screen h-[800px] top-[-80px]  bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] pointer-events-none touch-none"></div>
         <div id="start_trade_head" className="text-[#13A9FD] text-[24px] mb-[24px] lg:mb-[40px] font-medium">
        
-          <FormattedMessage id="start_trade_head" />
+        <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "start_trade_head"}) }} />
         
         </div>
         <div id="start_trade_desc" className="font-light mb-[24px] lg:hidden" >
@@ -244,27 +246,39 @@ function HomeComponents() {
             <div className="relative w-[130px] h-[160px]">
               <div className="absolute lg:left-[-10px] top-[30px] lg:top-[34px] text-[100px] opacity-70 bg-clip-text text-transparent font-black leading-[72px] bg-gradient-to-b from-[rgba(19,169,253,1)] via-[rgba(0,108,255,0.64)] to-[rgba(5,15,54,0)]">1</div>
               <img className="absolute top-0 left-[10px]" src="/images/Path 5936.svg" />
-              <div id="start_trade_1" className="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">Бүртгэл<br />үүсгэх</div>
+              <div id="start_trade_1" className="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">
+              <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "start_trade_1"}) }} />
+              </div>
             </div>
             <div className="relative w-[130px] h-[160px]">
               <div className="absolute lg:left-[-10px] top-[30px] lg:top-[34px] text-[100px] opacity-70 bg-clip-text text-transparent font-black leading-[72px] bg-gradient-to-b from-[rgba(19,169,253,1)] via-[rgba(0,108,255,0.64)] to-[rgba(5,15,54,0)]">2</div>
               <img className="absolute top-0 left-[10px]" src="/images/Path 5936.svg" />
-              <div id="start_trade_2" className="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">Бүртгэл<br />баталгаажуулах</div>
+              <div id="start_trade_2" className="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">
+              <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "start_trade_2"}) }} />
+              </div>
             </div>
             <div className="relative w-[130px] h-[160px]">
               <div className="absolute lg:left-[-10px] top-[30px] lg:top-[34px] text-[100px] opacity-70 bg-clip-text text-transparent font-black leading-[72px] bg-gradient-to-b from-[rgba(19,169,253,1)] via-[rgba(0,108,255,0.64)] to-[rgba(5,15,54,0)]">3</div>
               <img className="absolute top-0 left-[10px]" src="/images/Path 5936.svg" />
-              <div id="start_trade_3" className="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">Дансаа<br />цэнэглэх</div>
+              <div id="start_trade_3" className="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">
+              <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "start_trade_3"}) }} />
+              </div>
             </div>
             <div className="relative w-[130px] h-[160px]">
               <div className="absolute lg:left-[-10px] top-[30px] lg:top-[34px] text-[100px] opacity-70 bg-clip-text text-transparent font-black leading-[72px] bg-gradient-to-b from-[rgba(19,169,253,1)] via-[rgba(0,108,255,0.64)] to-[rgba(5,15,54,0)]">4</div>
               <img className="absolute top-0 left-[10px]" src="/images/Path 5936.svg" />
-              <div id="start_trade_4" className="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">Арилжаа<br />хийх</div>
+              <div id="start_trade_4" className="absolute w-full left-[50%] translate-x-[-60%] top-[40px] text-center font-light">
+              <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "start_trade_4"}) }} />
+              </div>
             </div>
           </div>
           <div className="text-center sm:text-left">
-            <div id="start_trade_desc_bottom" className="font-light max-w-[210px] mb-[24px] hidden lg:block">Та бүртгэлээ үүсгээд арилжаагаа эхлүүлээрэй!</div>
-            <a href="https://trade.altex.mn/register" target="_blank" id="start_trade_button" className="inline-block rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]" rel="noreferrer">Бүртгүүлэх</a>
+            <div id="start_trade_desc_bottom" className="font-light max-w-[210px] mb-[24px] hidden lg:block">
+              <FormattedMessage id='start_trade_desc_bottom'/>
+            </div>
+            <a href="https://trade.altex.mn/register" target="_blank" id="start_trade_button" className="inline-block rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] leading-[18px] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]" rel="noreferrer">
+              <FormattedMessage id='start_trade_button'/>
+            </a>
           </div>
         </div>
       </div>
