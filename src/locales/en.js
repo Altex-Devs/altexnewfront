@@ -44,11 +44,11 @@ const en = {
     "app_head": "Mobile application",
     "app_heading":"COMING SOON",
     "app_desc": "Easiest way to buy and sell cryptocurrencies and manage your wallet",
-    "start_trade_head": "<span class='whitespace-nowrap'>4 Easy Steps</span> to Get Started",
+    "start_trade_head": `<span className='whitespace-nowrap'>4 Easy Steps</span> to Get Started`,
     "start_trade_desc": "Take your first step into the crypto trading journey today!",
-    "start_trade_1": "Sign<br />up",
-    "start_trade_2": "Get<br />verified",
-    "start_trade_3": "Cash<br />in",
+    "start_trade_1": `Sign<br />up`,
+    "start_trade_2": `Get<br />verified`,
+    "start_trade_3": `Cash<br />in`,
     "start_trade_4": "<br />Trade",
     "start_trade_desc_bottom": "Take your first step into the crypto trading journey today!",
     "start_trade_button": "Create account",
@@ -88,24 +88,36 @@ const en = {
     "feedback_fail_message": "Failed, please try again!",
     "feedback_success_message": "Your information has been received!",
 
+
+    "corporate_header_title":"Altex for your Alternative Investments",
+    "corporate_header_section":"We offer the most secure and compliant digital investment platform for institutional investors",
+    "corporate_section_title":"Altex digital exchange aims to meet client digital investment needs through a combination of world-class agile technology solutions and a comprehensive customer-centric service model.",
+    "corporate_section_title_second":"We are the first to introduce a secure and compliant digital investment service for institutional investors in the local market and enable anyone to invest safely and securely in digital assets at the most competitive prices.",
+    "corporate_management":"Wealth management",
+    "corporate_management_title":"Short, medium and long term investment portfolio services based on time, risk and return",
+    "corporate_arbitrage":"Arbitrage",
+    "corporate_arbitrage_title":"Opportunity to make risk-free profits using exchange rate differences",
+    "corporate_trading":"Spot trading",
+    "corporate_trading_title":"Ability to trade in the long and short term",
+
     "faq_title": "FAQ",
     "faq_title_customer_service": "Customer service",
     "faq_title_settlement": "Settlement",
     "faq_a1": `
-        <ul class="list-disc leading-6 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-            <li><span class="font-bold">www.altex.mn</span> хуудсанд өөрийн үүсгэсэн <span class="font-bold">бүртгэлээрээ нэвтэрч орно.</span></li>
-            <li><span class="font-bold">Тохиргоо</span> цэсрүү орж <span class="font-bold">Verify хэсэгт</span> байрлах <span class="font-bold">Verify now</span> товчин дээр дарна.</li>
-            <li>Гарч ирсэн сонголтоос <span class="font-bold">Хувь хүн буюу Personal</span> сонголтыг сонгоно.</li>
-            <li>Бүртгэл баталгаажуулалт 4 алхмаас бүрдэх бөгөөд <span class="font-bold">Үргэлжлүүлэх</span> товчийг дарж <span class="font-bold">Алхам 1 рүү шилжинэ</span>.</li>
-            <li>Үүнээс өмнө бичиг баримтын зургийг хэрхэн хуулж оруулах зөвлөгөөг сайтар <span class="font-bold">уншиж танилцаарай</span>.</li>
-            <li>Бичиг баримтын төрлөөс <span class="font-bold">Иргэний үнэмлэх</span> эсвэл <span class="font-bold">Гадаад паспортын</span> аль нэгийг сонгоно .</li>
-            <li><span class="font-bold">Иргэний үнэмлэхийг сонгосон</span> бол үнэмлэхийн <span class="font-bold">урд</span> болон <span class="font-bold">ард талын зургийг</span> дараах дарааллаар хуулж оруулаад <span class="font-bold">Үргэлжлүүлэх</span> товчийг дарна.</li>
-            <li><span class="font-bold">Гадаад паспортыг сонгосон</span> бол <span class="font-bold">хувийн мэдээлэл бүхий хуудсын зургийг</span> оруулахаас гадна <span class="font-bold">e-mongolia-гаас хаягийн бүртгэлийн лавлагааг</span> авч оруулах шаардлагатайг анхаарна уу.</li>
-            <li><span class="font-bold">Алхам 2</span> дээр <span class="font-bold">камерыг нээж</span> дэлгэцний дээр гарах <span class="font-bold">notification</span> цонхонд <span class="font-bold">allow</span> товчийг дарснаар таны видео сельфиг хийж эхэлнэ.</li>
-            <li>Дэлгэцэнд гарах зааврын дагуу дараах 4 үйлдлийг хийж гүйцэтгээд <span class="font-bold">Үргэлжлүүлэх</span> товчийг дарна.</li>
-            <li><span class="font-bold">Алхам 3</span> нь хувийн мэдээллийн хэсэг бөгөөд <span class="font-bold">ажил эрхлэлт, холбоо барих</span> болон <span class="font-bold">хаягийн мэдээллийг</span> бичиж оруулаад <span class="font-bold">Үргэлжлүүлэх</span> товчийг дарна уу.</li>
-            <li><span class="font-bold">Алхам 4</span> дээр эхний 3 алхам дээр оруулсан мэдээллүүдээ нягталж <span class="font-bold">Үйлчилгээний нөхцөл</span> болон <span class="font-bold">Нууцлалын бодлогыг</span> уншиж танилцаад хүлээн <span class="font-bold">зөвшөөрсний дараа Илгээх</span> товчийг дарж хувийн мэдээллүүдээ илгээнэ.</li>
-            <li>Таны илгээсэн мэдээллийг бид нягталж үзээд <span class="font-bold">баталгаажуулалт амжилттай болсон эсэх</span> мэдээллийг таны <span class="font-bold">бүртгэлтэй имэйлээр илгээх болно</span>.</li>
+        <ul className="list-disc leading-6 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
+            <li><span className="font-bold">www.altex.mn</span> хуудсанд өөрийн үүсгэсэн <span className="font-bold">бүртгэлээрээ нэвтэрч орно.</span></li>
+            <li><span className="font-bold">Тохиргоо</span> цэсрүү орж <span className="font-bold">Verify хэсэгт</span> байрлах <span className="font-bold">Verify now</span> товчин дээр дарна.</li>
+            <li>Гарч ирсэн сонголтоос <span className="font-bold">Хувь хүн буюу Personal</span> сонголтыг сонгоно.</li>
+            <li>Бүртгэл баталгаажуулалт 4 алхмаас бүрдэх бөгөөд <span className="font-bold">Үргэлжлүүлэх</span> товчийг дарж <span className="font-bold">Алхам 1 рүү шилжинэ</span>.</li>
+            <li>Үүнээс өмнө бичиг баримтын зургийг хэрхэн хуулж оруулах зөвлөгөөг сайтар <span className="font-bold">уншиж танилцаарай</span>.</li>
+            <li>Бичиг баримтын төрлөөс <span className="font-bold">Иргэний үнэмлэх</span> эсвэл <span className="font-bold">Гадаад паспортын</span> аль нэгийг сонгоно .</li>
+            <li><span className="font-bold">Иргэний үнэмлэхийг сонгосон</span> бол үнэмлэхийн <span className="font-bold">урд</span> болон <span className="font-bold">ард талын зургийг</span> дараах дарааллаар хуулж оруулаад <span className="font-bold">Үргэлжлүүлэх</span> товчийг дарна.</li>
+            <li><span className="font-bold">Гадаад паспортыг сонгосон</span> бол <span className="font-bold">хувийн мэдээлэл бүхий хуудсын зургийг</span> оруулахаас гадна <span className="font-bold">e-mongolia-гаас хаягийн бүртгэлийн лавлагааг</span> авч оруулах шаардлагатайг анхаарна уу.</li>
+            <li><span className="font-bold">Алхам 2</span> дээр <span className="font-bold">камерыг нээж</span> дэлгэцний дээр гарах <span className="font-bold">notification</span> цонхонд <span className="font-bold">allow</span> товчийг дарснаар таны видео сельфиг хийж эхэлнэ.</li>
+            <li>Дэлгэцэнд гарах зааврын дагуу дараах 4 үйлдлийг хийж гүйцэтгээд <span className="font-bold">Үргэлжлүүлэх</span> товчийг дарна.</li>
+            <li><span className="font-bold">Алхам 3</span> нь хувийн мэдээллийн хэсэг бөгөөд <span className="font-bold">ажил эрхлэлт, холбоо барих</span> болон <span className="font-bold">хаягийн мэдээллийг</span> бичиж оруулаад <span className="font-bold">Үргэлжлүүлэх</span> товчийг дарна уу.</li>
+            <li><span className="font-bold">Алхам 4</span> дээр эхний 3 алхам дээр оруулсан мэдээллүүдээ нягталж <span className="font-bold">Үйлчилгээний нөхцөл</span> болон <span className="font-bold">Нууцлалын бодлогыг</span> уншиж танилцаад хүлээн <span className="font-bold">зөвшөөрсний дараа Илгээх</span> товчийг дарж хувийн мэдээллүүдээ илгээнэ.</li>
+            <li>Таны илгээсэн мэдээллийг бид нягталж үзээд <span className="font-bold">баталгаажуулалт амжилттай болсон эсэх</span> мэдээллийг таны <span className="font-bold">бүртгэлтэй имэйлээр илгээх болно</span>.</li>
         </ul>
     `,
     "app.greeting": "Hello, <b>Eric</b> {icon}",
