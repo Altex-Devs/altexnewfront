@@ -34,7 +34,7 @@ function Team() {
         <img src="/images/team.png" alt="team" className="w-[800px]" />
       </div>
       
-      <div className="flex flex-col sm:flex-row  gap-[85px] mt-[160px] pb-[240px] items-center top-[-500px] ]">
+      <div className="flex flex-col sm:flex-row  gap-[85px] mt-[160px] pb-[80px] items-center top-[-500px] ]">
     
       <svg className="max-w-[150px] invisible sm:visible hidden sm:block md:block xl:block md:visible xl:visible " viewBox="0 0 190 353" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M44.596 93.7129L49.338 88.4449C52.621 91.3969 55.864 95.7039 60.129 95.7039C65.291 95.7039 68.129 93.4939 68.129 90.1189C68.129 86.5589 65.169 85.4189 61.002 83.7529L54.732 81.1849C50.214 79.4109 45.458 76.0369 45.458 69.7099C45.458 62.8099 51.911 57.5099 60.858 57.5099C66.216 57.5099 70.876 61.0829 74.467 64.5099L70.286 69.3799C67.369 67.0369 64.786 64.1799 60.858 64.1799C56.51 64.1799 53.675 66.0989 53.675 69.2619C53.675 72.6619 57.168 73.9199 60.97 75.3899L67.157 77.8379C72.614 79.9819 76.43 83.2379 76.43 89.5109C76.43 96.5259 70.257 102.375 59.96 102.375C53.76 102.375 48.944 97.7509 44.595 93.7139" fill="white" />

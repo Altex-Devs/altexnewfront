@@ -57,7 +57,6 @@ const Footer = () => {
           <a id="howto" href="/howto" className="block mb-[16px]">
             <FormattedMessage id="howto"/>
           </a>
-
         </div>
         <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px] pr-[15px]">
           <div id="footer_contact" className="text-[rgba(19,169,253,1)] mb-[32px]">

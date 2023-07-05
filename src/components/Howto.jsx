@@ -400,7 +400,7 @@ function Howto() {
 
   return (
     <>
-      <div className="max-w-[800px] mx-auto mt-[80px] mb-[240px] transition-all delay-150 duration-300 ease-in-out">
+      <div className="max-w-[800px] mx-auto mt-[80px] mb-[80px] transition-all delay-150 duration-300 ease-in-out">
         <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#1E274A] text-[18px] font-medium gap-[40px] mb-[24px]">
         
         <div

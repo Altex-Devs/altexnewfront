@@ -20,7 +20,7 @@ function About() {
         </li>
       </ul>
 
-      <div className="flex flex-col sm:flex-row mt-[160px] mb-[240px] gap-[24px] justify-items-stretch text-[14px] font-extralight text-[#E6E7EB]">
+      <div className="flex flex-col sm:flex-row mt-[160px] mb-[80px] gap-[24px] justify-items-stretch text-[14px] font-extralight text-[#E6E7EB]">
         <div className="basis-1/2 rounded-[24px] bg-[#101C47] p-[40px]">
           <div className="text-[16px] text-[#13A9FD] font-bold mb-[8px]">
             <FormattedMessage id="about_us_tech_header"/>
