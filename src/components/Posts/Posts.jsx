@@ -94,8 +94,8 @@ function Posts() {
   };
   return (
     <>
-      <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] mt-[40px] pt-[80px] pb-[240px]">
-        <div className="container mx-auto pt-[48px] max-w-[996px]">
+      <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] pt-[80px] pb-[240px]">
+        <div className="container mx-auto  max-w-[996px]">
                 <div className="font-light text-[14px] mb-[80px] text-[#3973C5]">
           <a href="/"><FormattedMessage id="terms_breadcrumbs_1"/></a> &gt; <FormattedMessage id="menu_academy"/> &gt; 
           {window.location.pathname === "/posts/projects" ? (
