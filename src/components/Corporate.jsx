@@ -7,8 +7,8 @@ const Corporate = () => {
 
   return (
     <>
-      <div className="relative top-[-100px]">
-        <div className="relative flex flex-col justify-center h-[688px] z-10 justify-items-start items-start gap-[24px]">
+      <div className="relative top-[-130px]">
+        <div className="relative flex flex-col justify-center h-[798px] z-10 justify-items-start items-start gap-[24px]">
           <div className="text-[40px] font-bold">
             <FormattedMessage id="corporate_header_title"/>
           </div>

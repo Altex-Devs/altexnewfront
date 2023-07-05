@@ -118,7 +118,9 @@ const Footer = () => {
       </div>
 
       <div className="absolute w-full left-0 h-[48px] bg-[#0A1540] flex items-center">
-        <div id="bottom" className="text-[#CDCDCE] leading-1 inline-block text-center w-full text-[12px]">Зохиогчийн эрх © 2023 Бүх эрх хуулиар хамгаалагдсан</div>
+        <div id="bottom" className="text-[#CDCDCE] leading-1 inline-block text-center w-full text-[12px]">
+          <FormattedMessage id="bottom"/>
+        </div>
       </div>
     </>
   );
