@@ -806,9 +806,9 @@ function CryptoBasicsTerms() {
   
   return (
     <>
-      <div className="relative bg-[#F5F5F5] mt-[40px] mb-[77px] w-screen -left-[calc(50vw-50%)] text-[#35363B] font-light">
+      <div className="relative bg-[#F5F5F5] mb-[17px] w-screen -left-[calc(50vw-50%)] text-[#35363B] font-light">
         <div className="container mx-auto px-[16px] pt-[80px] pb-[241px] max-w-[996px]">
-          <div className="font-light text-[14px] pt-[48px] mb-[80px] text-[#3973C5]"><a href="/"><FormattedMessage id="terms_breadcrumbs_1"/></a> &gt; <FormattedMessage id="menu_academy"/> &gt; <FormattedMessage id="footer_crypto_knowledge"/> &gt; <FormattedMessage id="crypto_basics_terms"/></div>
+          <div className="font-light text-[14px] mb-[80px] text-[#3973C5]"><a href="/"><FormattedMessage id="terms_breadcrumbs_1"/></a> &gt; <FormattedMessage id="menu_academy"/> &gt; <FormattedMessage id="footer_crypto_knowledge"/> &gt; <FormattedMessage id="crypto_basics_terms"/></div>
           <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#CDCDCE] text-[18px] font-medium gap-[40px] mb-[24px]">
             <Link to="/posts/basics" className="relative uppercase text-[#CDCDCE]">
               <FormattedMessage id="footer_crypto_knowledge"/>

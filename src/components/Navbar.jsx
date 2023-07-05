@@ -152,8 +152,8 @@ const Navbar = ({ locale, setLocale }) => {
         <a id="mobile_menu_login" className="inline-block rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] border-solid border-[1px] border-[#13A9FD] text-[#13A9FD]" href="https://trade.altex.mn/signin">Нэвтрэх</a>
       </div>
 
-      <div className="flex items-center sticky bg-[#0A1540] z-50 h-[48px] w-full absolute left-0 top-0 text-[#696F86] text-[14px]">
-        <div className="container mx-auto text-right px-[34px] max-w-[1232px] overflow-auto font-light text-[#E6E7EB]">
+      <div className="flex items-center bg-[#0A1540] z-50 h-[48px] sticky w-full left-0 top-0 text-[#696F86] text-[14px]">
+        <div className="container mx-auto text-right px-[34px] max-w-[1490px] overflow-auto font-light text-[#E6E7EB]">
           <span id="translate_lang" className="px-[24px] cursor-pointer border-x-[1px] border-[#3B4466]" onClick={() => {changeLocale()}}>
             {locale === "en" ? "Mon" : "Eng"}
           </span>
@@ -165,7 +165,7 @@ const Navbar = ({ locale, setLocale }) => {
           </Link>
         </div>
       </div>
-      <div className={`sticky transition-[500] ease-in-out delay-10000 scroll-smooth z-40 ${navbarBg ? "bg-[#050F36]" : "top-[48px]"}`}>
+      <div className={` transition-[500] ease-in-out delay-10000 scroll-smooth z-40 ${navbarBg ? "bg-[#050F36] top-0" : "top-[48px]"}`}>
       <div className={`flex  container mx-auto py-[40px] items-center justify-between px-[20px] xl:px-[55px] lg:px-[55px]  relative z-20 bg-[]`}>
         <div className="flex items-center">
           <a href="/" className="py-[1px]">
