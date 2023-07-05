@@ -76,6 +76,8 @@ const en = {
     "newsletter_desc": "Subscribe to our newsletter to receive the latest news.",
     "newsletteremail": "E-mail",
     "newsletter_send": "Submit",
+    "crypto_basics_terms":"Glossary of Terms",
+
 
     "feedback_title": "Give us feedback",
     "feedback_details": "Please fill out the form below to submit your feedback. We will review your request and get back to you right away. Thank you.",
@@ -99,6 +101,324 @@ const en = {
     "corporate_arbitrage_title":"Opportunity to make risk-free profits using exchange rate differences",
     "corporate_trading":"Spot trading",
     "corporate_trading_title":"Ability to trade in the long and short term",
+
+    "about_us_header_title":"Our mission is to provide seamless access to worldwide digital investment opportunities at low cost and at large scale.",
+    "about_us_content":"Our exchange is a professional provider of secure and frictionless digital asset trading services with deep liquidity, multi-currency, and multi-token options in accordance with international cyber security protocols.",
+    "about_us_content_second":"We aim to meet the digital investment needs of our customers with combination of our world-class agile technology solutions and comprehensive customer-centric service model.",
+    "about_us_tech_header":"Technology and Security",
+    "about_us_tech_content":"Our exchange is battle-tested and future proof as it is deployed on the high-speed server AWS, with real-time risk assessment, multi-frequency security, and a flexible user interface for beginners to professional traders.",
+    "about_us_ser_header":"24/7 Online customer service",
+    "about_us_ser_content":"We have setup a 24/7 online customer service to quickly resolve questions and comments related to the service. We provide training and counseling for beginners and professionals, and will introduce other additional customer support services as needed.",
+
+    "our_team_ceo":"CEO",
+    "our_team_ceo_name":"Enkhjavkhlan Tsogtbaatar",
+    "our_team_ceo_background":"For more than 5+ years at <span class='font-bold'>McKinsey & Company's</span> New York headquarters, a leading management consulting company, he has led digital and financial innovation, product development, AI and Machine Learning projects with Fortune 500 companies.He has a broad experience in working with banking, insurance, settlement and investment management companies. He has an MBA from The Wharton School of the University of Pennsylvania and is a CFA Level III candidate.",
+    "our_team_header":"Meet our team",
+    "our_team_content":"We are led by a customer-oriented team who are specialized in customer service, product development and technology.We also work with experts from world-leading technology and financial companies such as <span class='font-bold'>Google, Apple and McKinsey & Company.</span>",
+    "our_team_partner":"Technology partner",
+    "our_team_partner_content_first":"Backed by Asia’s leading public fintech and digital asset company, <a href='https://bc.group/' class='underline text-blue-600'>BC Technology Group</a> (stock code: HK 863), <a href='https://osl.com/en/' class='underline text-blue-600'>OSL</a> is the region’s most comprehensive licensed digital asset platform.",
+    "our_team_partner_content_second":"<a class='underline text-blue-600' href='https://osl.com/en/'>OSL</a> is the world’s first and only insured and SFC-licensed digital asset platform, providing prime brokerage, custody, exchange and SaaS services for institutional clients and professional investors.",
+    "our_team_partner_content_third":"The company offers OTC, iRFQ and electronic trading services giving traders access to the world’s deepest liquidity pools, as well as secure and insured hot and cold wallets to ensure the safekeeping of digital assets with timely transaction settlement.",
+    "our_team_partner_content_fourth":"<a href='https://bc.group/' class='underline text-blue-600'>BC Group</a> and the <a href='underline text-blue-600' class='underline text-blue-600'>OSL</a> platform are enabling institutional adoption of the digital asset class, setting the global standard for performance, security and compliance.",
+    "our_team_partner_content_footer":"For more information: <a href='https://bc.group/' class='underline text-blue-600'>bc.group</a> and <a class='underline text-blue-600' href='https://osl.com/en/'>osl.com</a>",
+
+    
+    'terms_title':"Terms of Use",
+    'terms_breadcrumbs_1':"Home",
+    'terms_breadcrumbs_2':"Service",
+    'terms_breadcrumbs_3':"Terms of Use",
+    "terms_para":`
+    <ul class="space-y-[20px] text-[16px]">
+    <li class="font-medium">FIRST. GENERAL</li>
+    <li>1.1. Below sets out the terms and conditions, as amended, supplemented and updated and published on the website at www.altex.mn (“Website”) from time to time (the “Terms”) by CHOIJIN ALTEX LLC., a company incorporated under the laws of Mongolia (“us”, “we”, “Altex”, “Choijin Altex” or the  “Company”) in relation to the use and access of such Website.</li>
+    <li>1.2. By clicking on an “I Agree” (or similar) button, or by otherwise accessing or using the Website, you agree to be bound by these Terms.</li>
+    <li>1.3. Through the Website, the Company facilitates digital asset services. Each time you access the Website, click any “I agree” (or similar) button or checkbox presented with these Terms, or use any of the digital asset trading services provided by us through the Website (“Digital Asset Services”), you are deemed to have read, understood and accepted all of these Terms.</li>
+    <li>1.4. Our Digital Asset Services include digital asset trading services provided through an Agreed Communication Channel for transactions that are not performed on an exchange (“Brokerage Services”) and those services provided through our Website for transactions that are performed on the exchange operated by Altex (“Exchange” and the related services, “Exchange Services”).</li>
+    <li>1.5. These Terms are to be read in conjunction with (and subject to) any other agreement between yourself and the Company (including where applicable, the Digital Asset Trading agreement and any country or product annexes thereto), the Privacy Policy, the Preventing Financial Crime and the Risk Disclosure Statement and any additional terms and conditions that apply at the relevant time. To the extent of any inconsistency with these Terms, the terms of any specific product, service or transaction apply to that product, service or transaction and any matters connected with it.</li>
+    <li class="font-medium">SECOND. ACCESS AND ACCOUNTS</li>
+    <li>2.1. In order to access the Website, and to further access Digital Asset Services through the Website, you must:</li>
+    <li>2.2. Create and maintain and account with us (“Account”), which may include one or more sub-accounts for you to access certain services which we may, at our sole discretion, make available to you (“Sub-Accounts” and for the avoidance of doubt, any reference to Account includes any related Sub-Accounts);</li>
+    <li>2.3. Register an email address to your Account (“Registered Email”);</li>
+    <li>2.4. Complete any other registration requirements, including the submission of required documentation for compliance with our Know-Your-Customer and/or Anti-Money Laundering policies (“AML/KYC Policies”);</li>
+    <li>2.5. Complete any other registration requirements, including the submission of required documentation for compliance with our Know-Your-Customer and/or Anti-Money Laundering policies (“AML/KYC Policies”);</li>
+    <li>2.6. We may issue you with a username and password, or other appropriate log-in details or access method for your Account on the Website. You are responsible for keeping your log-in details or access method confidential so that your Account cannot be accessed or used without your permission.</li>
+    <li>2.7. You will be responsible for any use of the Website (including, for the avoidance of doubt, the Digital Asset trading services) by anyone using your log-in details or access method to access the Account, and will be bound by and authorise the Company to accept and rely upon any agreements, communications, instructions, orders, confirmations, authorisations any other actions (including any actions through the Website) that are made, provided or taken by a person or entity that has access to your Account, whether that access is authorised or unauthorised.</li>
+    <li>2.8.  Any monies, digital assets, fiat currencies or other assets that you transfer into the Account will be transferred to us on a title transfer and proprietary basis free from any encumbrance and will not be held by us or any party with whom we may transfer any such monies, digital assets, fiat currencies or other assets in a custodial or sub-custodial basis.</li>
+    <li>2.9. Brokerage Services can be accessed via the Sub-Account named “Primary” and Exchange Services can be accessed via the Sub-Account named “Exchange” on the ALTEX Platform. </li>
+    <li>2.10. Without prejudice to any other rights, powers or authorities we may have under these Terms, any other agreement, terms and conditions in respect of the ALTEX Platform and/or the Digital Asset Services or under law, you hereby agree that we may apply any monies, digital assets, fiat currencies or other assets that were previously transferred to the Account (and which have not otherwise been applied in respect of any transaction or payment of any fees, costs, charges or other amounts for which you may be responsible in respect of any transaction, the Digital Asset Services or the ALTEX Platform) against any obligation of yours in respect of a transaction or payment of any fees, costs, charges or other amounts for which you may be responsible in respect of any transaction, the Digital Asset Services or the ALTEX Platform, and that any such balance shall reduce, accordingly, our obligations to transfer to you any such equivalent monies, digital assets, fiat currencies or other assets from the Account upon your request as referenced in this paragraph.</li>
+    <li>2.11. Subject to Paragraph 11, where under these Terms, any other agreement and/or terms and conditions in respect of the ALTEX Platform, you are entitled to request the transfer to you (by way of payment, transfer or otherwise) of any monies, digital assets, fiat currencies or other assets that were previously transferred to the Account (and which have not otherwise been applied in respect of any transaction or payment of any fees, costs, charges or other amounts for which you may be responsible in respect of any transaction, the Digital Asset Services or the ALTEX Platform) we will transfer to you monies, digital assets, fiat currencies or other assets that are equivalent to such monies, digital assets, fiat currencies or other assets that you so transferred to the Account. </li>
+    <li class="font-medium">THIRD. ELIGIBLE USERS</li>
+    <li>3.1. The following are conditions of access to the Website, and each time you access the Website, you represent and warrant to us that:
+        <ul class='list-disc list-inside px-7'>
+            <li>If you are an individual, that you are 18 years of age or older, capable of forming a binding contract with us, and under no legal impediment or incapability;</li>
+            <li>If you are an authorized representative of a company, that you have authority from that company to access the Website and form a binding agreement with us on behalf of that company;</li>
+            <li>you have not previously been suspended or removed from accessing the Website, whether under your Account or otherwise;</li>
+            <li>you are not identified as a “Specially Designated National” by the US Office of Foreign Assets Control, or otherwise subject to any sanctions or restrictions which may affect our ability to provide you with Digital Asset Services;</li>
+            <li>you have the full power and authority to agree to these Terms, and to enter into any transactions or use any service, including the Digital Asset Services, offered by the Company through the Website; </li>
+            <li>you have read the Risk Disclosure Statement prior to entering into any transaction, and that you are solely responsible for your trading or non-trading actions, and have had the opportunity to take any legal, financial, accounting or other advice that you deem appropriate prior to accessing the Website or using any of the Digital Asset Services;</li>
+            <li>all information and documentation that you have provided to us for the purposes of engaging in digital asset trading is true, accurate and not incomplete or misleading and that if such information or documentation becomes untrue, inaccurate, incomplete or misleading for any reason whatsoever, (whether due to events under your control or not), that you will update us forthwith upon becoming aware that those details are no longer true, accurate, complete and not misleading, including the date upon which the factual correctness of the details changed;</li>
+            <li>you will only trade with legally obtained digital assets or fiat currencies that belong to you, and that you have full legal and beneficial title to any such assets at the time you transfer them to us; and</li>
+            <li>you are not located in, or a resident of, any Restricted Territory (as defined below), and have not used any technical means to misrepresent your geographical location to access the Website from any Restricted Territory.</li>
+        </ul>
+    </li>
+    <li>3.2. Your access to the Website and any Digital Asset Services may be restricted based upon your jurisdiction or geographical location. You must not use the Website if you are located in, or a citizen or resident of any state, country, territory or other jurisdiction in which use of the Website or the Digital Asset Services would be illegal or otherwise violate any applicable law (a “Restricted Territory”). The fact that the Website is accessible in a Restricted Territory, or that the Website allows the use of the official language of a Restricted Territory or of a language that is commonly used in a Restricted Territory, must not be construed as a license to use the Website in such a Restricted Territory. We unconditionally reserve the right to restrict access to any Restricted Territory and may implement technical controls to prevent access to the Website or any Digital Asset Services from any Restricted Territory. </li>
+    <li>3.3. We may exercise our power under paragraph 10 if we detect any attempt to circumvent the restriction stated in paragraph 4.b, for example, by using a virtual private network (“VPN”), proxy or similar service that masks or manipulates the identification of your real location, or by otherwise providing false or misleading information regarding your citizenship, location or place of residence, or by using the Website through a third party or on behalf of a third party located in a Restricted Territory. </li>
+    <li class="font-medium">Fourth. OUR SERVICES</li>
+    <li>4.1. We may, at any time and in our absolute discretion, place limits or conditions on the number or type of transactions that we will enter into with you or in respect of the Account, without prior notice to you, including by (without limitation):
+    <ul>
+        <li>restrict the number, type, volume or value of transactions entered into by us on a periodic basis; </li>
+    </ul>
+    </li>
+    <li>4.2.  Use of the Digital Asset Services or otherwise conducting Digital Asset  Transactions through the Website may be subject to fees, including handling fees, network transaction fees, costs and charges, and the Company’s fees, costs and charges. You agree to pay any such fees, costs and charges, and authorize us to apply any digital assets or fiat currencies in your Account in satisfaction thereof from time to time as those fees, costs and charges arise.</li>
+    <li>4.3. We will process Digital Asset Transactions in accordance with the instructions we receive from you. You should verify all transaction information prior to submitting instructions to us. We do not guarantee the identity of any user, receiver, requestee or other party. Digital Asset Transactions cannot be reversed once they have been broadcast to the relevant Digital Asset network.</li>
+    <li>4.4. Once submitted to a Digital Asset network, a Digital Asset Transaction will be unconfirmed for a period of time while pending for sufficient confirmation of the transaction by the Digital Asset network. A Digital Asset Transaction is not complete while it is in a pending state. The Digital Asset associated with the Digital Asset Transaction that is in a pending state will be designated accordingly, and will not be included in your Account balance or will not be available to conduct a Digital Asset Transaction.</li>
+    <li>4.5. Our Digital Asset Services are available only in connection with those digital assets supported by ALTEX, and this may change from time to time at our sole and absolute discretion. Under no circumstances should you attempt to use your Account to store, send, request or receive digital assets in any form that we do not support (although we will use reasonable efforts to help you move or sell digital assets that we no longer support). We assume no responsibility or liability in connection with any attempt to use your Account for digital assets that we do not support.
+    For the avoidance of doubt, any digital asset that: 
+    - is transferred on any additional layer on top of a blockchain relating to another digital asset (or known as a “meta” layer) or any side chain; or
+    - is a derivative of another digital asset , has enhanced features or functionality that supplements or interacts with another digital asset (such as a digital asset that is “colored”),  is to be treated as a distinct digital asset from such other digital asset  and its use in connection with the Digital Asset Services will be at ALTEX’s sole and absolute discretion.</li>
+    <li>4.6. Unless specifically announced on the Website or other official public statement of ALTEX, we do not support metacoins, coloured coins, side chains, or other derivatives, enhanced, or forked protocols, tokens or coins which supplement or interact with a digital asset we support (collectively “Advanced Protocols”). You should not use your Account to attempt to receive, request, send, store or engage in any other type of transactions involving an Advanced Protocols. Our platform is not configured to detect and/or secure Advanced Protocol transactions. You acknowledge and agree that we have no responsibility whatsoever in respect of an unsupported Advanced Protocol.</li>
+    <li>4.7. We do not own or control the underlying software protocol which govern the operation of Digital Assets supported on our platform: generally, the underlying protocols are open source and anyone can use, copy, modify and distribute them. We assume no responsibility for the operation of the underlying protocols and we are not able to guarantee their functionality, security or availability. </li>
+    <li>4.8. Where a purchase of a Digital Asset is initiated from your Account using your credentials, we will assume that you authorized such transaction unless you notify us otherwise. It is important that you regularly check your Account balance and your transaction history and notify us in writing in case you identify any unauthorized or incorrect transactions.
+    <ul>
+        <li> If an unauthorized transaction occurs and we receive written notice that your Account has been compromised, we shall, use commercially reasonable efforts to conduct the necessary investigations. We will not be responsible for any unauthorized or incorrect transactions, access or actions taken in relation to your Account. </li>
+    </ul>
+    </li>
+    <li class="font-medium">Fifth. Withdrawal limits WITHDRAWAL LIMITS</li>
+    <li>5.1. A customer shall be promoted to “Verified” after verifying his/her registration on the digital exchange. The verified customer shall have a right to withdraw within daily limit of USD7,000.</li>
+    <li>5.2. Depending on needs of the customer, daily limit of withdrawal may be increased as follows:
+    <ul class="list-disc list-inside px-7">
+        <li>If a verified customer has been actively trading on the digital exchange for the last 3 months and total amount is USD300,000 or more, he / she may be promoted to “Trusted” with daily withdrawal limit of USD30,000 based on the customer’s request. In this case, trusted customer pays an additional fee equal to 1 percent for each and every daily total amount of withdrawal.</li>
+        <li> A verified or trusted customer may request to change customer status to “Partner” and increase the daily withdrawal limit to USD100,000, depending on his / her needs. In this case, service fee shall be agreed in written form depending on customer’s expected daily and monthly trade amounts.</li>
+    </ul>
+    </li>
+    <li class="font-medium uppercase">Sixth. Terms applicable to Exchange Services</li>
+    <li>For the purposes of this paragraph 6, the following definitions apply:
+      <ul class='list-disc list-inside px-7'>
+        <li>Exchange Materials means the Trading Tools, marketing information and other materials available on or via the Exchange.</li>
+        <li>Exchange Services Transactions means a transaction that is initiated and completed through the Exchange Services.</li>
+        <li>Trading Tools means the applications, algorithms, software (including any files, images, tables and data incorporated in or generated by the software and data accompanying the software), interfaces (including the API) or code that we may provide to you for accessing and using the Services.</li>
+      </ul>
+    </li>
+    <li>6.1. Access to Exchange Services</li>
+    <li>The Company may, at its absolute discretion, make available to you Exchange Services via the Website.  You may only access the Exchange Services using your balance recorded in the Exchange Sub-Account. You may transfer fiat currencies or digital assets into your Exchange Sub-Account only from your Primary Sub-Account. </li>
+    <li>6.2. Placing orders on the Exchange</li>
+    <li>In order to place an order to enter into an Exchange Services Transaction, you must have a sufficient amount and appropriate type of fiat currencies or digital assets recorded in your Exchange Sub-Account to instantly execute any orders placed, and any orders previously placed that remain unfilled and valid. When you place an order on the Exchange by sending an instruction through the Trading Tools, the quantity of the relevant digital asset or currency will be held and recorded in your Account as being on hold, until that instruction is executed or otherwise cancelled by us.</li>
+    <li>6.3. Exchange Services may be governed by other provisions</li>
+    <li>Without limiting any provision of these Terms, the Exchange Services are subject to:
+      <ul class="list-disc list-inside px-7">
+        <li>any Exchange trading rules adopted by the Company applicable to the Exchange Services, and published on the Website from time to time (“Trading Rules”);  </li>
+        <li>any directions, decisions, requirements or any other rules issued by us in connection with the Exchange Services;</li>
+        <li>Applicable Laws including any AML/CFT laws;</li>
+        <li>any trade confirmation relating to a transaction sent to you by us (including the correction of any manifest error and material omission in that confirmation).</li>
+      </ul>
+    </li>
+    <li>6.4. Priority of Terms</li>
+    <li>Subject to the application of any mandatory provisions of any Applicable Law, if, with respect to an Exchange Services Transaction, there is any inconsistency between:
+      <ul class="list-disc list-inside px-7">
+        <li>these Terms and the Trading Rules, the Trading Rules prevail;</li>
+        <li>these Terms and any direction, decision, requirement or other rule issued by us in connection with the Exchange Services, the latter prevails, in each case to the extent of the inconsistency.</li>
+      </ul>
+    </li>
+    <li>6.5. Access to and use of the Exchange</li>
+      <ul class="list-disc list-inside px-7">
+        <li>We may grant to you a non-exclusive, non-transferable personal right to access and use the Exchange to trade digital assets.</li>
+        <li>You may only use the Exchange Services, your Account, your Exchange Sub-Account, the Exchange and any Exchange Materials for your own needs.</li>
+      </ul>
+    <li>6.6. Compliance</li>
+    <li>You agree that prior to accessing or using the Exchange Services while you are outside of your country of residency or incorporation, you will ensure that you would not be breaking any laws, rules or regulations in that country by doing so.</li>
+    <li>6.7. How we may act on instructions relating to Exchange Services Transactions</li>
+    <li>Without limitation to any other rights we may have under these Terms with you, we may:
+      <ul class="p-2">
+        <li>decline to act on your behalf or accept your Instructions where:
+          <ul class="list-disc list-inside px-7">
+            <li>the original instruction has expired and is not reconfirmed at that time;</li>
+            <li>the basis for any quotation for the relevant digital asset has changed and the instruction has not been reconfirmed;</li>
+            <li>the digital assets are the subject of a trading halt and the instruction has not been reconfirmed;</li>
+            <li>the digital asset is no longer available for the purposes of the Exchange Services;
+              <ul class="list-disc list-inside px-7">
+                <li>cancel or reverse any Instruction or Exchange Service Transaction without contacting you where any competent legal authority has recommended or required a cancellation or reversal, or where the market was operating under an error or in a disorderly fashion.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>6.8. “As is” basis</li>
+    <li>You acknowledge that the Exchange and the Trading Tools have not been developed for your individual needs. You further acknowledge that your use the Exchange and the Trading Tools on an “as is” basis at your own risk. We are not responsible for any consequence or loss arising from your choice or use of the Exchange or Trading Tools.</li>
+    <li>6.9. Availability of the Exchange</li>
+    <li>The Exchange may not be available at certain times. In particular, there may be planned or unplanned maintenance periods (which may not be advised to Exchange users in advance), during which you will not be able to access the Exchange. We may also periodically shut down the Exchange and interrupt any automatic functions for any of the following reasons:
+       <ul class="list-disc list-inside px-7">
+        <li>planned system and software maintenance;</li>
+        <li>unscheduled emergency maintenance;</li>
+        <li>seasonal holidays; and</li>
+        <li>any other event that we consider requires suspension of the Exchange.</li>
+      </ul>
+    </li>
+    <li>6.10. Withdrawal or suspension of your access rights</li>
+    <li>We reserve the right (in our sole and absolute discretion) to withdraw or suspend your right to access and/or use the Exchange, the Exchange Services and/or the Exchange Materials at any time without prior notice to or any consent from you and with assigning any reason for that action.</li>
+    <li>6.11. Exchange Materials</li>
+    <li>Limitations on use
+      <ul class="list-disc list-inside px-7">
+        <li>You may not allow or permit any other person to access or use such Exchange Materials or otherwise deal with them for the benefit of any other person or in any way that his not specifically contemplated by these Terms (including by way of downloading, copying, reproducing, adapting, publishing, selling or distributing such materials) without our express written consent, which we may reject or grant in our sole and absolute discretion, with or without conditions.</li>
+        <li>You will keep all Exchange Materials strictly confidential, except to the extent that they are already in the public domain (other than through a breach of the Terms or any other obligation of confidence); and</li>
+        <li>You will respect and protect all rights, title and interest (including any intellectual property rights) in the Exchange Materials.</li>
+      </ul>
+    </li>
+    <li>Protection of rights in the Exchange Materials:</li>
+    <li>You undertake that you, without limitation to any other restriction, will not, and will not attempt to:tamper with, modify, adapt, translate, de-compile, reverse-engineer or otherwise alter in any way; create derivative works based on, or combine or merge with or into any other software or documentation; gain unauthorised access to, make unauthorised use of or make use of for any illegal purpose (or any other purposes that is not contemplated within these Terms); or remove, erase or tamper with any copyright or proprietary notice printed or stamped on, affixed to, or encoded or recorded on, any Exchange Materials. </li>
+
+    <li>6.11. Third party actions</li>
+    <li>You acknowledge that we and/or other third parties may take legal action against you if you breach this paragraph 6.l at any time, or if we or such third parties suspect that you have done so. You may also be subject to other fines and/or penalties in any relevant jurisdictions(s). You undertake to notify us immediately if you become aware of any breach described in this paragraph 6.l, or that any action described in this paragraph 6.l is being perpetrated or attempted by another person. </li>
+    <li>6.12. Rights of netting, set-off and lien</li>
+    <ul class="list-disc list-inside px-7">
+      <li>If, on any day, you and us (or an affiliate of us) have payment and delivery obligations in the same fiat currency or the same digital asset in respect of two or more transactions, then we may elect for such fiat currency to be paid or such digital asset to be delivered, on a net basis so that such obligations will be automatically satisfied and discharged. If, in respect of the same fiat currency or the same digital asset, the aggregate amount that would otherwise have been payable by you exceeds the aggregate amount that would otherwise have been payable by us, such payment and delivery obligations will be replaced by an obligation upon you to pay to us the excess of the larger aggregate amount over the smaller aggregate amount.</li>
+      <li>In addition to our rights under paragraph (i) above, we may at any time and without notice to you set off any amount we (or an affiliate of us) owe you against any amount that you owe us (or an affiliate of us) or, where more than one person constitutes the client, that any one or more of those persons singly or jointly owe us or an affiliate of us (in either case, whether or not the obligation is matured or contingent and irrespective of the currency, asset or place of payment). Any amounts that are so set off will be discharged promptly and in all respects.</li>
+      <li>We are entitled to exercise a lien over any or all of your property which (for any reason) is in or comes into our possession or control, except that this lien does not cover any property where it may give rise to any obligation to disclose an interest on our part.  We have the right to sell such property and apply the proceeds of sale, after deduction of reasonable costs, to satisfy any amount you owe us. </li>
+      <li>For the purposes of this clause, we may make any necessary currency or asset conversions at the rate(s) we reasonably consider appropriate.</li>
+      <li>Our rights under this clause are in addition to any other right of set-off, offset, combination of accounts, lien, right of retention or withholding or similar right or requirement to which we are at any time otherwise entitled or subject whether under any agreement we have entered into or by operation of any applicable law.</li>
+    </ul>
+
+    <li class="font-medium uppercase">Seventh. Security</li>
+    <li>7.1. You may not violate or attempt to violate the security of this Website, the Digital Asset Services or any of the products or services described or contained herein. We may investigate occurrences which may involve such violations and may involve, and co-operate with, governmental, regulatory or law enforcement authorities in investigating and prosecuting persons who have participated in such violations.</li>
+    <li>7.2. You agree that it is your responsibility to install anti-virus software and related protections against viruses or other computer programming routines or engines that are intended to damage, destroy, disrupt or otherwise impair a computers functionality or operation which may be transferred to your computer via this Website. </li>
+    <li>7.3. The Company may offer additional security features as part of the Website, such as two-factor authentication (“2FA”). It is your responsibility to ensure and maintain continuous security and control over any device or account that gives access to the Website and your Account. Failure of any such security device or account may delay or restrict your access to the Website or your Account.</li>
+    
+    <li class="font-medium uppercase">Eighth. ДАНСНЫ МЭДЭЭЛЭЛ, Intellectual Property</li>
+    <li>8.1. For the purposes of these Terms, “intellectual property rights" means any rights under patent, trademark, copyright and trade secret laws, any applications or registrations relating to such rights, and any other property or proprietary rights recognized in any country or jurisdiction worldwide, including, without limitation, moral rights and similar rights in relation to tangible or intangible expressions of ideas.</li>
+    <li>8.2. All rights in any design, text, graphics or other material on the Website are the property of the Company or our licensors or other third parties with whom we have a relationship, and are protected by intellectual property rights laws.</li>
+    <li>8.3. By accessing the Website and downloading material (including contained in any temporary cache), you acknowledge that you do not acquire any intellectual property rights or ownership rights and may not resell any of the products or Digital Asset Services appearing on the Website, nor to hotlink, frame or otherwise present any version of the Website to any other person or entity. You may download materials from this site for your personal and non-commercial use only, without altering or removing any trademark, copyright or other notice from such material.</li>
+    <li>8.4. We reserve the right to remove or disable access to any content or other materials from the Website that violates or may infringe any person’s intellectual property rights.</li>
+    <li>8.5. All rights not expressly granted hereunder are expressly reserved. </li>
+    
+    <li class="font-medium uppercase">Ninth. Privacy Policy and Personal Data</li>
+    <li>9.1. We will manage any personal information that we collect through the Website in accordance with our Privacy Policy. Please refer to our Privacy Policy for information about how the Company will collect, use and share your information.</li>
+    <li>9.2. Depending on the Digital Asset Services you wish to access through the Website, the Company may require additional information from you, and may require additional verification or screening to be conducted before you are able to access those Digital Asset Services. You hereby authorise and consent to the Company (either directly or through a third party with whom we have a confidentiality agreement):
+      <ul class="list-disc list-inside px-7">
+        <li>screening and verifying your information to prevent fraud and other suspicious transactions, including conducting screening against various sanctions and politically exposed persons lists, querying information contained in public sources and records, querying account information contained in any linked bank or other institutional accounts;</li>
+        <li>providing your personal data to any banks or other institutions that may require that personal data in order to facilitate any Digital Asset Service that you have requested;</li>
+        <li>take any action that we consider necessary as a result of such verification and screening, including further requests or inquiries to third parties, and you authorise and consent to us sharing any data held by us with those third parties, and authorise and consent to those third parties processing your personal data in order to respond to any such inquiry or request by us.</li>
+      </ul>
+    </li>
+    
+    <li class="font-medium uppercase">Tenth. Suspension, Termination and Cancellation </li>
+    <li>10.1. We may, in our sole discretion: (a) refuse to complete or block, cancel or reverse a transaction you have authorized; (b) suspend, restrict, or terminate your access to any or all of the Digital Asset Services; (c) restrict transfers of digital assets or fiat currencies into or out of your Account; and/or (d) deactivate or close your Account with immediate effect for any reason, including but not limited to where:
+      <ul class="list-disc list-inside px-7">
+        <li>We are, in our reasonable opinion, required to do so by applicable law or any court or other authority to which we are subject in any jurisdiction, including in circumstances where legislation or regulation, or changes to legislation or regulation, creates a new Restricted Territory;</li>
+        <li>We reasonably suspect you of acting in breach of these Terms;</li>
+        <li>We have concerns that a transaction is erroneous (whether the error was by you, us or a third party) or about the security of your Account or we suspect the Digital Asset Services are being used in a fraudulent or unauthorized manner;</li>
+        <li>We suspect money laundering, terrorist financing, fraud, or any other financial crime, or we act in response to a governmental, regulatory or law enforcement enquiry;</li>
+        <li>Use of your Account is subject to any pending litigation, investigation, or government proceeding and/or we perceive a heightened risk of legal or regulatory non-compliance associated with your Account activity; and / or</li>
+        <li>You take any action that may circumvent our controls such as opening multiple Accounts or abusing promotions which we may offer from time to time. You authorize the Company to attempt and effect any such correction, reversal, restriction, suspension, cancellation or termination so contemplated under paragraph 10.a. We provide no guarantee or warranty that any such attempt will be successful and will bear no responsibility or liability for any error or any error correction attempt made by us.</li>
+      </ul>
+    </li>
+    <li>10.2. We may also refuse to complete a transaction you have authorized where there is insufficient funds or digital assets in your Account to cover the transaction and (where applicable) associated fees at the time that we receive notification of the transaction.</li>
+    <li>10.3.  If we refuse to complete a transaction and / or suspend or close your Account, or terminate your use of Digital Asset Services in this way, we will (unless it would be unlawful for us to do so) not allow you to reinstate a transaction at the same price or on the same terms as the suspended, reversed or cancelled transaction.</li>
+    <li>10.4. We may suspend, restrict, or terminate your access to any or all of the Digital Asset Services and/or deactivate or close your Account, without reason. You acknowledge that our decision to take certain actions, including limiting access to, suspending, or closing your Account, may be based on confidential criteria that are essential to our risk management and security protocols. You agree that we are under no obligation to disclose the details of its risk management and security procedures to you.</li>
+    <li>10.5. Upon notice of suspension or termination of your Account, unless prohibited by applicable law or by any court or other order to which the Company is subject to in any jurisdiction and the satisfaction of our KYC/AML Policies, you must immediately transfer your digital assets and/or fiat currencies out of your Account.</li>
+    <li>10.6. You may cancel your Account at any time by withdrawing all balances and contacting contact@altex.mn to request Account deletion. You will not be charged for cancelling your Account, although you will be required to pay any outstanding amounts owed to us. You authorize us to cancel or suspend any pending transactions at the time of cancellation.</li>
+
+
+    <li class="font-medium uppercase">Eleventh. Erroneous Transfers</li>
+
+    <li>11.1. In the case of an erroneous transfer of unsupported tokens or supported tokens to an incorrect Altex address by you (an “Erroneous Transfer”), we may, solely at our discretion, use commercially reasonable efforts to reverse the Erroneous Transfer and assist you with the recovery and return of tokens that are the subject of the Erroneous Transfer. Successful reversion of an Erroneous Transfer is not guaranteed.</li>
+
+    <li class="font-medium uppercase">Twelfth. Inactive Accounts and Unclaimed Assets</li>
+    <li>12.1. Where an Account has not engaged in any activities (including but not limited to account login) for a period of twelve (12) months, the Company reserves the right, in its sole and absolute discretion to determine that the Account is no longer active (an “Inactive Account”).</li>
+    <li>12.2. With respect to any Inactive Accounts with remaining assets the Company may, upon thirty (30) days’ prior notice to you, levy an administrative fee of fifty United States Dollars (USD 50.00) per month to your Account (“Administrative Fee”).</li>
+    <li>12.3. The Company may without notice to you, elect to convert any remaining assets in the Inactive Account into another form of asset at the then-prevailing rate of conversion of those assets for the purpose of the Administrative Fee.</li>
+    <li>12.4. When an Inactive Account has dropped to a remaining balance of less than or equal to five United States Dollars (USD 5.00), the Company may elect to close the Inactive Account at its sole and absolute discretion.</li>
+
+
+    <li class="font-medium uppercase">Thirteenth. Network Events</li>
+    <li>For the purposes of this paragraph, the following definitions apply:</li>
+    <li>“Airdrop” means the attempted distribution or distribution by a digital asset network of any digital assets to digital asset addresses of a supported network.</li>
+    <li>“Fork” means changes in operating rules of the underlying protocols of a digital asset that may result in: 
+      <ul class="list-disc list-inside px-7">
+        <li>more than one version of that digital asset ; and/or </li>
+        <li>ALTEX holding an amount (which may be an identical amount) of digital assets associated with each forked network, in each case as determined by ALTEX. </li>
+      </ul>
+    </li>
+    <li>“Infrastructure Participant” means trading venues and other financial market infrastructures that facilitate the clearing, settlement, and recording of transactions relating to fiat currency or digital asset.</li>
+    <li>“Network Event” in relation to a digital asset means any event (other than an Airdrop or Fork) in respect of the blockchain or the smart contract that underlies a digital asset, which is beyond our control, and results in: 
+      <ul class="list-disc list-inside px-7">
+        <li>loss of control or ownership by us or a third party of any amount of such digital asset;</li>
+        <li>transaction records on the blockchain being altered, reversed or otherwise invalidated, whether by way of a fraudulent act or consensus, including any double spending attack, 51-percent attack, blockchain reorganisations; or </li>
+        <li> any restrictions on the transfer, withdrawal or deposit of any amount of such digital asset, including as a result of any “time lock” features; </li>
+      </ul>
+    </li>
+    <li>in each case, as determined by CHOIJIN ALTEX. </li>
+    <li>“Network Participant” means a person or entity who has the ability to cause the happening of a Network Event, including any group of persons or entities acting in concert.</li>
+    <li>13.1. Infrastructure Participant, Network Participant and Network Event if:
+      <ul class="list-disc list-inside px-7">
+        <li>any Infrastructure Participant or Network Participant gives a direction, or makes a decision or election, that affects a transaction; or</li>
+        <li>any Infrastructure Participant or Network Participant becomes Insolvent or is suspended from operating; or </li>
+        <li>Network Event has occurred, then we may take any action which we, in our sole discretion, consider appropriate to correspond with the direction, decision, election or event (including a Network Event), or to mitigate any loss incurred or potential loss or impact which may be incurred as a result of such action or event.  Subject to Applicable Law, such action may result in suspension of access to, or adjustment of the balance in, your Account. Any such action will be binding on you (including, where relevant, making any decision or election in relation to a Network Event). </li>
+      </ul>
+    </li>
+    <li>13.2. Cooperation and enquiries</li>
+    <li>Where any Infrastructure Participant, Network Participant or any regulatory body makes an enquiry which relates to any Digital Asset Service or a transaction under these Terms, you agree to co-operate with us and that any information relevant to the enquiry may be passed to any affiliate of ALTEX, or any Infrastructure Participant, Network Participant or regulatory body, as may be appropriate. </li>
+    <li>13.3. Staking</li>
+    <li>Unless specifically announced on the Website in relation to a digital asset, the consensus protocol of which is “proof-of-stake” or of an analogous nature, we do not support the staking of such digital asset and do not distribute any rewards associated with such staking.  We will not stake such digital assets and claim rewards for our own benefit. </li>
+    <li>13.4. Airdrop and Fork</li>
+    <li>Unless specifically announced on the Website in relation an Airdrop or a Fork, we do not support any new virtual assets created or forked protocol as a result of such event.</li>
+    <li>Without limiting the generality of the preceding paragraph, on each occasion of an Airdrop or a Fork, we may in our discretion consider: whether any such event would be recognised or supported by us; the terms and conditions, including the associated costs or fees we will charge, upon which we will implement support of such event as part of our Digital Asset Services; and the actions required to participate in such event, including withdrawal deadline relating to the relevant digital assets from your Account, suspension period for any trading, deposit and withdrawal or any payment terms.  If we do not recognise or support an Airdrop or a Fork, we will not make a claim for, or otherwise retain, any assets or rights associated with such event for our own benefit. </li>
+    <li>13.5.  Notification</li>
+    <li>Upon becoming aware of an Airdrop, a Fork or a Network Event, we will notify you through our Website as soon as practicable, where applicable.  We will also publish any determination we make before the occurrence of the event (if scheduled in advance and made known to the public), unless to do so is impossible or reasonably impracticable. </li>
+    
+    <li class="font-medium uppercase">Fourteenth. Assignment </li>
+    <li>14.1. The Company may, without prior consent to you, assign, transfer, charge, sub-contract or deal in any other manner with all or any of our rights or obligations under these Terms to any subsidiary and/ or affiliate at any time.</li>
+    <li>14.2. For the avoidance of doubt, such assignment shall release the Company from its obligations under these Terms. The assignee will resume the obligations of the Company under these Terms.</li>
+
+    <li class="font-medium uppercase">Fifteenth. Information </li>
+    <li>15.1. The information, opinions and data on or provided through the Website or the Digital Asset Services may, in whole or in part, have been obtained from third party sources. Accordingly, we do not guarantee the accuracy, validity, timeliness or completeness of such information, opinions or data for any purpose.</li>
+    <li>15.2. You must seek the advice of professional advisors regarding the evaluation of any specific information, opinion, advice or other content, and acknowledge that you have had the opportunity to take such advice before using the Website or the Digital Asset Services.</li>
+
+    <li class="font-medium uppercase">Sixteenth. Compliance with Laws and Regulations </li>
+    <li>16.1. You agree and acknowledge that it is your responsibility to comply with all applicable laws and regulations relating to any Digital Asset Services or transactions you use through the Website, including without limitation the reporting of any transactions, and the calculation and payment of all applicable taxes within any jurisdiction relevant to your situation. If you have any doubts about whether or which laws and regulations apply to your circumstances, you should seek independent legal, accounting or taxation advice.</li>
+    <li>16.2. The Company is not responsible for collecting, reporting, withholding or remitting any taxes arising from any transaction you conduct with the Company, but will comply with any reporting or withholding obligations that apply to it, including any reporting required under the Common Reporting Standards, Double Taxation Avoidance Agreements, or Automatic Exchange of Information agreements. For that purpose, each time you access the Website or conduct a Transaction with us, any information or representation you have made as to your tax residency is deemed to have been repeated at that time, and we will rely upon it for such reporting purposes.</li>
+
+    <li class="font-medium uppercase">Seventeenth. Disclosure, Disclaimers and Exclusion of Liability</li>
+    <li>17.1. Each time you access the Website, you agree that you have read and acknowledged our Risk Disclosure Statement (including any amendments from time to time).</li>
+    <li>17.2. While we will use reasonable care and skill in operating the Website, it is provided “as is”, and we cannot promise that the Website will always be available, meet your requirements or be completely free of faults, errors or compromise from cybersecurity events.</li>
+    <li>17.3. To the maximum extent permitted by law, except as expressly set out in these Terms, we disclaim and exclude: all conditions, representations, warranties and statutory guarantees, whether express or implied, in relation to the Website or the Digital Asset Services; and</li>
+    <li>any liability, whether in contract, tort (including negligence), or under any theory of liability or otherwise, for any indirect or consequential loss, damage or expense incurred by you or any other user in connection with the Website or the Digital Asset Services.</li>
+    <li>17.4. Without limitation to paragraph 17.c above, we disclaim and exclude, to the maximum extent permitted by law, liability for any loss or damage which may arise directly or indirectly or your inability to access the Website or the Digital Asset Services, and also the liability for any delay or failure of the transmission or the receipt of any instruction, communication or notification sent through the Website or as part of the Digital Asset Services.</li>
+    <li>17.5. Without prejudice to any other disclaimer, waiver, indemnity or exclusion of liability that you agree to in any agreement with us, you agree to: indemnify, to the extent permitted by laws of Mongolia, the Company and any affiliate against any action, claim, proceeding, loss, damage, expense or liability the Company and its affiliates have suffered or incurred directly or indirectly arising from your use of the Website or the Digital Asset Services; and release the Company and any affiliate against any action, claim, proceeding, loss, damage, expense or liability you have suffered or incurred directly or indirectly arising from your use of the Website or the Digital Asset Services. </li>
+    <li>17.6. To the extent we are unable by law to exclude any implied condition, representation, warranty or statutory guarantee in relation to the provision of goods or services through the Website or the Digital Asset Services, we limit our liability for a breach to the re-supply of equivalent goods or services, or payment for such equivalent goods. This is without limitation to any other exclusions or restrictions of our or others’ liability in connection with the Website.</li>
+    <li>17.7. Specifically, and without prejudice to the foregoing, the Company is not your fiduciary, agent or advisor, and no such obligations arise in connection with any of your activities whether through the Website, the Digital Asset Services or under any agreement with the Company, unless specified in writing by the Company from time to time. No communication or information provided by the Company to you is intended as investment advice, financial advice, legal advice, tax advice or accounting advice, and no representations or warranties are made to you in any of those capacities.</li>
+
+    <li class="font-medium uppercase">Eighteenth. Notice and Communications </li>
+    <li>18.1. You consent to receive all notices and other communications from us via Registered Email. You are deemed to have received any notice or communication sent by us to your Registered Email at the time of sending or, if a later date is specified in that notice or communication, at that later date.</li>
+    <li>18.2. It is your responsibility: to manage your Registered Email (including where necessary by adding the Company to any applicable whitelist or similar) so that we can contact you by email; and keep information you have submitted to us, including your contact details, Registered Email and phone number(s), updated and accurate at all times, to facilitate the delivery of any notices or communications the Company may need to send you.</li>
+
+    <li class="font-medium uppercase">Nineteenth. Severability</li>
+    <li>19.1.  If any of these Terms are determined to be illegal, invalid or otherwise unenforceable, then to the extent and within the jurisdiction in which that term is illegal, invalid or unenforceable, it will be severed and deleted from these Terms and the remaining Terms will survive, remain in full force and effect and continue to be binding and enforceable. </li>
+
+    <li class="font-medium uppercase">Twentieth. No Waiver </li>
+    <li>20.1. Where applicable, the Company’s failure, delay or neglect in exercising any right, power, privilege, election or discretion under these Terms shall not operate as a waiver thereof.</li>
+
+    <li class="font-medium uppercase">Twenty-First. Modification of Terms </li>
+    <li>21.1. The Company may give notice to you of such modifications by: providing notice through your Account, Registered Email or other communication methods; provide a further copy of the Terms upon accessing the Website or your Account; or  changing the Effective Date stated in paragraph 1 of these Terms.</li>
+    <li>21.2. Each time you use the Website, the Digital Asset Services, or any other service or transaction through the Website, you confirm your agreement to the most recently updated Terms, whether or not notified to you in accordance with paragraph 21.b above.</li>
+    <li>21.3. If you do not agree to any Terms, or any modification of the Terms from time to time, you must cease using the Website, and should email us to request that your Account be closed.</li>
+
+    <li class="font-medium uppercase">Twenty-Second. Governing Law </li>
+    <li>22.1. These Terms are governed by the laws in force in Mongolia</li>
+
+    <li class="font-medium uppercase">Twenty-Third. Submission to non-exclusive jurisdiction of Mongolian Courts</li>
+    <li>23.1. You hereby submit to the non-exclusive jurisdiction of the Mongolian courts (including appellate courts thereof) in relation to any dispute, controversy, difference or claim arising out of or relating to the Terms, including the existence validity, interpretation, performance, breach or termination thereof or any dispute regarding non-contractual obligations arising out of or relating to these Terms.</li>
+    <li>23.2. Notwithstanding any other provision of these Terms, you agree that we have the right to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction</li>
+
+    <li class="font-medium uppercase">Twenty-Fourth. Language </li>
+    <li>24.1. In the case of a discrepancy between the Mongolian language and English version, any other language version in respect of these Terms, the Website or the Digital Asset Services, the Mongolian version prevails. </li>
+
+    <li class="font-medium uppercase">Twenty-Fifth. Inconsistency</li>
+    <li>25.1. In the event of any inconsistency between these Terms and any other agreement between you and ALTEX, the agreement shall prevail.</li>
+
+    <li class="font-medium uppercase">Twenty-Sixth. Questions</li>
+    <li>26.1. In the event of any inconsistency between these Terms and any other agreement between you and ALTEX, the agreement shall prevail.</li>
+  </ul>
+    `,
 
     "faq_title": "FAQ",
     "faq_title_customer_service": "Customer service",

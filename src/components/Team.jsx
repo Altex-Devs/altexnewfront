@@ -1,17 +1,21 @@
+import { FormattedMessage, useIntl } from "react-intl";
+
 function Team() {
+  const intl = useIntl();
+
   return (
     <>
       <div className="flex  flex-col md:flex-row gap-[24px] pb-[160px] mt-[160px] items-center border-b-[0.5px] border-b-[#13A9FD] leading-[35px]">
         <img src="/images/ceo.png" alt="team" className="w-[283px]" />
         <div className="grow font-extralight">
           <div className="font-bold text-[32px] mb-[16px]">
-            Ц. Энхжавхлан
+            <FormattedMessage id="our_team_ceo_name"/>
           </div>
           <div className="text-[24px] mb-[40px]">
-            Гүйцэтгэх захирал
+            <FormattedMessage id="our_team_ceo"/>
           </div>
           <div className="text-[16px] z-10">
-            Олон улсын тэргүүлэх зөвлөх үйлчилгээний компани болох <span className="font-bold">McKinsey & Company</span>-ийн Нью Иорк дахь төв оффисд 5+ гаруй жил ажиллахдаа Fortune 500 компаниудтай хамтран дижитал болон санхүүгийн шинэлэг шийдэл, бүтээгдэхүүн хөгжүүлэлт, AI болон Machine Learning-ийн төслүүдийг удирдан ажиллаж байсан. Тэрээр банк, даатгал, төлбөр тооцоо, хөрөнгө оруулалтын менежментийн салбарын тэргүүлэх компаниудын дижитал шилжилтийн ажлуудыг удирдаж ажиллаж байсан туршлагатай. Мөн бизнесийн тэргүүлэх The Wharton School of the University of Pennsylvania-ийн MBA бөгөөд CFA Level III зэрэгтэй юм.
+          <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "our_team_ceo_background"}) }} />
           </div>
         </div>
       </div>
@@ -21,10 +25,10 @@ function Team() {
       <div className="flex flex-col lg:flex-row gap-[24px] pb-[160px] mt-[160px] items-center border-b-[0.5px] border-b-[#13A9FD] leading-[35px] ">
         <div className="grow font-extralight ">
           <div className="font-bold text-[32px] mb-[16px]">
-            Манай хамт олон
+            <FormattedMessage id="our_team_header"/>
           </div>
           <div className="text-[16px] z-10">
-            Манай бирж нь технологи, бүтээгдэхүүн хөгжүүлэлт, хэрэглэгчийн үйлчилгээ зэргээр мэргэшсэн, харилцагч төвтэй хамт олонтой. Мөн бид <span className="font-bold">Google, Apple, McKinsey</span> зэрэг дэлхийд тэргүүлэгч технологи, санхүүгийн компаниудын мэдлэг туршлагатай зөвлөхүүдтэй хамтран ажилладаг.
+          <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "our_team_content"}) }} />
           </div>
         </div>
         <img src="/images/team.png" alt="team" className="w-[800px]" />
@@ -49,19 +53,11 @@ function Team() {
               </g>
             </g>
         </svg>
-
-        
-      
-        
-        
-            
-          
         <div className="absolute  w-[1500px] h-[1500px] bottom-[-100] left-[500px] right-0 bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] " ></div>
-
         <div className="grow  font-extralight z-10">
           <div className="">
           <div className="font-bold text-[32px] mb-[10px]">
-            Технологийн хамтрагч
+            <FormattedMessage id="our_team_partner"/>
           </div>
           <div className="flex gap-[40px] sm:hidden">
           <svg className="w-[calc(70%/2)]  " viewBox="0 -100 190 353" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,11 +82,21 @@ function Team() {
           
           </div>
           </div>
-          <div className="mb-[25px]">Азийн тэргүүлэгч финтек, дижитал хөрөнгийн компани болох <a href="https://bc.group" className=" text-[16px] border-b-[0.1px] ">BC Технологийн Групп</a> (хувьцааны код: HK 863)-н охин компани болох <a href="https://osl.com" className="  border-b-[0.1px]  ">OSL</a> нь Азид дижитал хөрөнгө арилжааны тусгай лицензтэй дижитал хөрөнгийн платформ юм.</div>
-          <div className="mb-[25px]"><a href="https://osl.com" className="  text-[16px] border-b-[0.1px]  ">OSL</a> нь дэлхийн анхны бөгөөд цорын ганц даатгалтай, SFC лицензтэй дижитал хөрөнгийн платформ бөгөөд байгууллагын үйлчлүүлэгчид болон мэргэжлийн хөрөнгө оруулагчдад брокер, кастодиан, дижитал хөрөнгийн бирж, SaaS үйлчилгээг үзүүлдэг.</div>
-          <div className="mb-[25px]">Тус компани нь арилжаа эрхлэгчдэд дэлхийн хамгийн том хөрвөх чадварын санд нэвтрэх боломжийг олгодог бөгөөд OTC, iRFQ болон цахим арилжааны үйлчилгээг санал болгодог.</div>
-          <div className="mb-[25px]"><a href="https://bc.group" className="  text-[16px] border-b-[0.1px]  ">BC Технологийн Групп</a> болон <a href="https://osl.com" className="  text-[16px] border-b-[0.1px]  ">OSL</a> платформ нь дижитал хөрөнгө арилжааны платформд институцийн ангилалыг нэвтрүүлж, гүйцэтгэл, аюулгүй байдлаар дэлхийн стандартыг тогтоож байна.</div>
-          <div className="mb-[25px]">Дэлгэрэнгүй мэдээллийг: <a href="https://bc.group" className="  text-[16px] border-b-[0.1px] text-[#3973C5] border-[#3973C5] ">bc.group</a> and <a href="https://osl.com" className="text-[#3973C5] border-[#3973C5] text-[16px] border-b-[0.1px]  ">osl.com</a></div>
+          <div className="mb-[25px]">
+          <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "our_team_partner_content_first"}) }} />
+          </div>
+          <div className="mb-[25px]">
+            <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "our_team_partner_content_second"}) }} />
+          </div>
+          <div className="mb-[25px]">
+          <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "our_team_partner_content_third"}) }} />
+          </div>
+          <div className="mb-[25px]">
+            <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "our_team_partner_content_fourth"}) }} />
+          </div>
+          <div className="mb-[25px]">
+            <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "our_team_partner_content_footer"}) }} />
+          </div>
         </div>
       </div>
     </>

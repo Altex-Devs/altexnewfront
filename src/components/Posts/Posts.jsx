@@ -92,18 +92,22 @@ function Posts() {
     const newStartIdx = index * 6;
     setStartIdx(newStartIdx);
   };
-
   return (
     <>
       <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] mt-[40px] pt-[80px] pb-[240px]">
         <div className="container mx-auto pt-[48px] max-w-[996px]">
-          <div className="font-light text-[14px] mb-[80px] text-[#3973C5]">
-            <a href="/"><FormattedMessage id="posts_breadcrumb_home" /></a>
-            &nbsp;&gt;&nbsp;
-            <FormattedMessage id="posts_breadcrumb_academy" />
-            &nbsp;&gt;&nbsp;
-            <FormattedMessage id={"posts_breadcrumb_" + type} />
-          </div>
+                <div className="font-light text-[14px] mb-[80px] text-[#3973C5]">
+          <a href="/"><FormattedMessage id="terms_breadcrumbs_1"/></a> &gt; <FormattedMessage id="menu_academy"/> &gt; 
+          {window.location.pathname === "/posts/projects" ? (
+            <FormattedMessage id="mobile_menu_projects"/>
+          ) : window.location.pathname === "/posts/basics" ? (
+            <FormattedMessage id="mobile_menu_crypto_knowledge"/>
+          ) : window.location.pathname === "/posts/news" ? (
+            <FormattedMessage id="mobile_menu_market_news"/>
+          ) : (
+            ""
+          )}
+        </div>
 
           {type === "basics" && (
             <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#CDCDCE] text-[18px] font-medium gap-[40px] mb-[24px]">
@@ -112,7 +116,7 @@ function Posts() {
                 <div className="absolute h-[2px] w-full bg-[#13A9FD] bottom-[-17px]"></div>
               </div>
               <Link to="/cryptoterms" className="relative text-[#CDCDCE]">
-                <FormattedMessage id="basic_title" />
+                <FormattedMessage id="crypto_basics_terms"/>
               </Link>
             </div>
           )}
