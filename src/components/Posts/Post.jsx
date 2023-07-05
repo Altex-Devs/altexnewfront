@@ -42,11 +42,11 @@ function Post() {
 
   return (
     <>
-      <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] mt-[40px] pt-[80px] pb-[240px]">
+      <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] mt-[40px] pt-[80px] pb-[140px]">
         <div className="container mx-auto pt-[48px] max-w-[996px]">
           <div className="font-light text-[14px] mb-[80px] text-[#3973C5]"><a href="/"><FormattedMessage id="terms_breadcrumbs_1"/></a> &gt; <FormattedMessage id="menu_academy"/></div>
 
-          <div className="container mx-auto pt-[48px] max-w-[800px] mb-[92px]">
+          <div className="container mx-auto pt-[17px] max-w-[800px] mb-[92px]">
             <div className="text-[40px] font-bold mb-[24px] text-[#35363B]">{title}</div>
             <div className="text-[#35363B] mb-[40px]">
               <svg className="inline-block mr-[16px] mb-[5px]" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">

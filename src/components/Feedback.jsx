@@ -65,7 +65,7 @@ function Feedback() {
       </div>
 
       <form onSubmit={handleSubmit}>
-        <div className="container mx-auto bg-[#101C47] max-w-[600px] px-[40px]  mb-[240px] mt-[80px]">
+        <div className="container mx-auto bg-[#101C47] max-w-[600px] px-[40px] mb-[80px] mt-[80px]">
           <div className="text-[#13A9FD] font-medium text-[24px] pt-[24px] mb-[16px]">
             <FormattedMessage id="feedback_title" defaultMessage="Санал хүсэлт илгээх" />
           </div>
