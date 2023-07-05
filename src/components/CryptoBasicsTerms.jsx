@@ -14,7 +14,7 @@ function CryptoBasicsTerms() {
               <FormattedMessage id="footer_crypto_knowledge"/>
             </Link>
             <div className="relative">
-              НЭР ТОМЬЁОНЫ ТАЙЛБАР
+              <FormattedMessage id="basic_title"/>
               <div className="absolute h-[2px] w-full bg-[#13A9FD] bottom-[-17px]"></div>
             </div>
           </div>

@@ -359,6 +359,16 @@ const mn = {
     "fee_withdraw_title": "Зарлагын шимтгэл",
     "fee_increase_message": "Та нэг өдөрт хийх зарлагын дүнг өсгөх хүсэлтэй бол <a href='/feedback.html' class='text-[#3973C5] underline'>ЭНД</a> дарж хүсэлтээ илгээнэ үү.",
     "fee_trade_title": "Арилжааны шимтгэл",
+
+    "posts_latest": "Хамгийн сүүлийн",
+    "posts_readmore": "Цааш үзэх",
+    "posts_breadcrumb_home": "Нүүр",
+    "posts_breadcrumb_academy": "Академи",
+    "posts_breadcrumb_news": "Зах зээлийн мэдээ",
+    "posts_breadcrumb_basics": "Крипто мэдлэг",
+    "posts_breadcrumb_projects": "Төслүүд",
+
+    "basic_title": "НЭР ТОМЬЁОНЫ ТАЙЛБАР",
 }
 
 export default mn;

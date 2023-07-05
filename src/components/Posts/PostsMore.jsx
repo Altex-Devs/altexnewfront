@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useIntl } from "react-intl";
 
 function PostsMore({posts, type}) {
+  const intl = useIntl();
   return (
     <>
       <div className="grid justify-center sm:grid-cols-2 sm:justify-center lg:grid-cols-3 gap-[24px] ">
@@ -13,8 +15,8 @@ function PostsMore({posts, type}) {
               {post.title}
             </div>
               <div className="flex justify-between items-center">
-                <div className="text-[#707070] font-light">{post.date}</div>
-                <Link className="text-[14px] text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]" to={`/posts/${type}/${post.id}`}>Цааш үзэх</Link>
+                <div className="text-[#707070] font-light">{post.createdAt ? post.date : (new Date(parseInt(post.date) * 1000)).toJSON().slice(0, 10)}</div>
+                <Link className="text-[14px] text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]" to={`/posts/${type}/${post.id}`} dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "posts_readmore"}) }} />
               </div>
             </div>
           </div>

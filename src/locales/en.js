@@ -367,6 +367,16 @@ const en = {
     "fee_withdraw_title": "Payment out fee",
     "fee_increase_message": "Please <a href='/feedback.html' class='text-[#3973C5] underline'>click here</a> to sent a request to upgrade your account status.",
     "fee_trade_title": "Trading fee",
+
+    "posts_latest": "Latest",
+    "posts_readmore": "Read more",
+    "posts_breadcrumb_home": "Home",
+    "posts_breadcrumb_academy": "Academy",
+    "posts_breadcrumb_news": "Market News",
+    "posts_breadcrumb_basics": "Crypto Basic",
+    "posts_breadcrumb_projects": "Projects",
+
+    "basic_title": "GLOSSARY OF TERMS",
 }
 
 export default en;
