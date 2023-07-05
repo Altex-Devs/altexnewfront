@@ -346,6 +346,19 @@ const mn = {
             <div>Ханшийн мэдээллийг Харилцагчийн үйлчилгээний 7505-7775 дугаараар болон <a class="underline text-[#0000EE]" href="https://t.me/altexmn">https://t.me/altexmn</a> (Алтекс дижитал биржийн албан ёсны телеграм групп)-ээс авах боломжтой.</div>
         </div>
     `,
+
+    "fee_deposit_title": "Орлогын шимтгэл",
+    "fee_currency": "Валют",
+    "fee_percent": "Шимтгэлийн хэмжээ",
+    "fee_min": "Доод хэмжээ",
+    "fee_max": "Дээд хэмжээ",
+    "fee_verified": "Баталгаат",
+    "fee_trusted": "Итгэмжит",
+    "fee_partner": "Түнш",
+    "fee_nofee": "Шимтгэлгүй",
+    "fee_withdraw_title": "Зарлагын шимтгэл",
+    "fee_increase_message": "Та нэг өдөрт хийх зарлагын дүнг өсгөх хүсэлтэй бол <a href='/feedback.html' class='text-[#3973C5] underline'>ЭНД</a> дарж хүсэлтээ илгээнэ үү.",
+    "fee_trade_title": "Арилжааны шимтгэл",
 }
 
 export default mn;
