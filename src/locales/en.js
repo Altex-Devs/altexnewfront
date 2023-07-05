@@ -44,7 +44,7 @@ const en = {
     "app_head": "Mobile application",
     "app_heading":"COMING SOON",
     "app_desc": "Easiest way to buy and sell cryptocurrencies and manage your wallet",
-    "start_trade_head": `<span className='whitespace-nowrap'>4 Easy Steps</span> to Get Started`,
+    "start_trade_head": `<span class='whitespace-nowrap'>4 Easy Steps</span> to Get Started`,
     "start_trade_desc": "Take your first step into the crypto trading journey today!",
     "start_trade_1": `Sign<br />up`,
     "start_trade_2": `Get<br />verified`,
@@ -105,27 +105,27 @@ const en = {
     "faq_title_settlement": "Settlement",
     "faq_q1": "1. Хэрхэн бүртгэлээ баталгаажуулах вэ?",
     "faq_a1": `
-        <ul className="list-disc leading-6 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-            <li><span className="font-bold">www.altex.mn</span> хуудсанд өөрийн үүсгэсэн <span className="font-bold">бүртгэлээрээ нэвтэрч орно.</span></li>
-            <li><span className="font-bold">Тохиргоо</span> цэсрүү орж <span className="font-bold">Verify хэсэгт</span> байрлах <span className="font-bold">Verify now</span> товчин дээр дарна.</li>
-            <li>Гарч ирсэн сонголтоос <span className="font-bold">Хувь хүн буюу Personal</span> сонголтыг сонгоно.</li>
-            <li>Бүртгэл баталгаажуулалт 4 алхмаас бүрдэх бөгөөд <span className="font-bold">Үргэлжлүүлэх</span> товчийг дарж <span className="font-bold">Алхам 1 рүү шилжинэ</span>.</li>
-            <li>Үүнээс өмнө бичиг баримтын зургийг хэрхэн хуулж оруулах зөвлөгөөг сайтар <span className="font-bold">уншиж танилцаарай</span>.</li>
-            <li>Бичиг баримтын төрлөөс <span className="font-bold">Иргэний үнэмлэх</span> эсвэл <span className="font-bold">Гадаад паспортын</span> аль нэгийг сонгоно .</li>
-            <li><span className="font-bold">Иргэний үнэмлэхийг сонгосон</span> бол үнэмлэхийн <span className="font-bold">урд</span> болон <span className="font-bold">ард талын зургийг</span> дараах дарааллаар хуулж оруулаад <span className="font-bold">Үргэлжлүүлэх</span> товчийг дарна.</li>
-            <li><span className="font-bold">Гадаад паспортыг сонгосон</span> бол <span className="font-bold">хувийн мэдээлэл бүхий хуудсын зургийг</span> оруулахаас гадна <span className="font-bold">e-mongolia-гаас хаягийн бүртгэлийн лавлагааг</span> авч оруулах шаардлагатайг анхаарна уу.</li>
-            <li><span className="font-bold">Алхам 2</span> дээр <span className="font-bold">камерыг нээж</span> дэлгэцний дээр гарах <span className="font-bold">notification</span> цонхонд <span className="font-bold">allow</span> товчийг дарснаар таны видео сельфиг хийж эхэлнэ.</li>
-            <li>Дэлгэцэнд гарах зааврын дагуу дараах 4 үйлдлийг хийж гүйцэтгээд <span className="font-bold">Үргэлжлүүлэх</span> товчийг дарна.</li>
-            <li><span className="font-bold">Алхам 3</span> нь хувийн мэдээллийн хэсэг бөгөөд <span className="font-bold">ажил эрхлэлт, холбоо барих</span> болон <span className="font-bold">хаягийн мэдээллийг</span> бичиж оруулаад <span className="font-bold">Үргэлжлүүлэх</span> товчийг дарна уу.</li>
-            <li><span className="font-bold">Алхам 4</span> дээр эхний 3 алхам дээр оруулсан мэдээллүүдээ нягталж <span className="font-bold">Үйлчилгээний нөхцөл</span> болон <span className="font-bold">Нууцлалын бодлогыг</span> уншиж танилцаад хүлээн <span className="font-bold">зөвшөөрсний дараа Илгээх</span> товчийг дарж хувийн мэдээллүүдээ илгээнэ.</li>
-            <li>Таны илгээсэн мэдээллийг бид нягталж үзээд <span className="font-bold">баталгаажуулалт амжилттай болсон эсэх</span> мэдээллийг таны <span className="font-bold">бүртгэлтэй имэйлээр илгээх болно</span>.</li>
+        <ul class="list-disc leading-6 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
+            <li><span class="font-bold">www.altex.mn</span> хуудсанд өөрийн үүсгэсэн <span class="font-bold">бүртгэлээрээ нэвтэрч орно.</span></li>
+            <li><span class="font-bold">Тохиргоо</span> цэсрүү орж <span class="font-bold">Verify хэсэгт</span> байрлах <span class="font-bold">Verify now</span> товчин дээр дарна.</li>
+            <li>Гарч ирсэн сонголтоос <span class="font-bold">Хувь хүн буюу Personal</span> сонголтыг сонгоно.</li>
+            <li>Бүртгэл баталгаажуулалт 4 алхмаас бүрдэх бөгөөд <span class="font-bold">Үргэлжлүүлэх</span> товчийг дарж <span class="font-bold">Алхам 1 рүү шилжинэ</span>.</li>
+            <li>Үүнээс өмнө бичиг баримтын зургийг хэрхэн хуулж оруулах зөвлөгөөг сайтар <span class="font-bold">уншиж танилцаарай</span>.</li>
+            <li>Бичиг баримтын төрлөөс <span class="font-bold">Иргэний үнэмлэх</span> эсвэл <span class="font-bold">Гадаад паспортын</span> аль нэгийг сонгоно .</li>
+            <li><span class="font-bold">Иргэний үнэмлэхийг сонгосон</span> бол үнэмлэхийн <span class="font-bold">урд</span> болон <span class="font-bold">ард талын зургийг</span> дараах дарааллаар хуулж оруулаад <span class="font-bold">Үргэлжлүүлэх</span> товчийг дарна.</li>
+            <li><span class="font-bold">Гадаад паспортыг сонгосон</span> бол <span class="font-bold">хувийн мэдээлэл бүхий хуудсын зургийг</span> оруулахаас гадна <span class="font-bold">e-mongolia-гаас хаягийн бүртгэлийн лавлагааг</span> авч оруулах шаардлагатайг анхаарна уу.</li>
+            <li><span class="font-bold">Алхам 2</span> дээр <span class="font-bold">камерыг нээж</span> дэлгэцний дээр гарах <span class="font-bold">notification</span> цонхонд <span class="font-bold">allow</span> товчийг дарснаар таны видео сельфиг хийж эхэлнэ.</li>
+            <li>Дэлгэцэнд гарах зааврын дагуу дараах 4 үйлдлийг хийж гүйцэтгээд <span class="font-bold">Үргэлжлүүлэх</span> товчийг дарна.</li>
+            <li><span class="font-bold">Алхам 3</span> нь хувийн мэдээллийн хэсэг бөгөөд <span class="font-bold">ажил эрхлэлт, холбоо барих</span> болон <span class="font-bold">хаягийн мэдээллийг</span> бичиж оруулаад <span class="font-bold">Үргэлжлүүлэх</span> товчийг дарна уу.</li>
+            <li><span class="font-bold">Алхам 4</span> дээр эхний 3 алхам дээр оруулсан мэдээллүүдээ нягталж <span class="font-bold">Үйлчилгээний нөхцөл</span> болон <span class="font-bold">Нууцлалын бодлогыг</span> уншиж танилцаад хүлээн <span class="font-bold">зөвшөөрсний дараа Илгээх</span> товчийг дарж хувийн мэдээллүүдээ илгээнэ.</li>
+            <li>Таны илгээсэн мэдээллийг бид нягталж үзээд <span class="font-bold">баталгаажуулалт амжилттай болсон эсэх</span> мэдээллийг таны <span class="font-bold">бүртгэлтэй имэйлээр илгээх болно</span>.</li>
         </ul>
     `,
-    "faq_q": "2. Хэрхэн бүртгэлээ устгах вэ?",
+    "faq_q": "2. How can I delete my ALTEX account?",
     "faq_a": `
         <ul class="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-            <li>Та Алтекс дижитал бирж дээрх бүртгэлтэй хаягаа устгахыг хүсвэл хүсэлтээ өөрийн бүртгэлтэй имэйл хаягаас бичиг баримтаа хажуудаа барьсан сельфи зургийн хамт <a class="underline text-[#0000EE]" href="mailto:contact@altex.mn">contact@altex.mn</a> хаягаар бичиж илгээнэ үү.</li>
-            <li>Таны хаягийг устгахаас өмнө аюулгүй байдлын үүднээс тантай холбогдож баталгаажуулах үйлдэл хийгдэнэ.</li>
+            <li>If you would like to delete your ALTEX account, please contact <a href="mailto:contact@altex.mn">contact@altex.mn</a></li>
+            <li>Prior to deleting your account, we will need to verify your identity for security purposes.</li>
         </ul>
     `,
     "faq_q2": "3. How can I update my personal information?",
