@@ -110,7 +110,7 @@ const Navbar = ({ locale, setLocale }) => {
 
   return (
     <>
-      <div id="menu" className={`fixed  top-0 left-0 w-screen h-screen bg-[#050F36] z-50 hidden lg:hidden p-[20px] ${navbarBg ? "bg-[#050F36]" : ""}  py-[92px]`}>
+      <div id="menu" className={`fixed  top-0 left-0 max-w- h-screen bg-[#050F36] z-50 hidden lg:hidden p-[20px] ${navbarBg ? "bg-[#050F36]" : ""}  py-[92px]`}>
         <div className="flex justify-between items-center mb-[40px] mt-[-3px]">
           <img src="/images/header-logo.svg" />
           <svg id="SVGDoc" className="mr-[10px]" onClick={hideMenu} width="16" height="16" version="1.1" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fillOpacity="1"></path></g></g></svg>
@@ -166,7 +166,7 @@ const Navbar = ({ locale, setLocale }) => {
         </div>
       </div>
       <div className={` transition-[500] ease-in-out delay-10000 scroll-smooth z-40 ${navbarBg ? "bg-[#050F36] top-0" : "top-[48px]"}`}>
-      <div className={`flex  container mx-auto py-[40px] items-center justify-between px-[20px] xl:px-[55px] lg:px-[55px]  relative z-20 bg-[]`}>
+      <div className={`flex container mx-auto py-[40px] max-w-full px-[24px] items-center justify-between relative z-20`}>
         <div className="flex items-center">
           <a href="/" className="py-[1px]">
             <img src="/images/header-logo.svg" />
