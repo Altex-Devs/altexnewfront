@@ -1,107 +1,847 @@
+import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
+
+
+
+  const data = [
+      {
+          "letter": "A",
+          "terms": [
+              {
+                  "id": 1,
+                  "title": "51% Attack ",
+                  "description": "Өөрөөр олонхийн довтолгоо гэж нэрлэх бөгөөд нэг эсвэл бүлэг олборлогчид сүлжээний олборлолтын hashrate буюу тооцооллын хүчин чадлын 50-иас дээш хувийг хянах үед тохиолдох бөгөөд сүлжээг бүрэн хянаж, олборлолт гүйлгээ зэргийг зогсоож, өөрчлөх замаар криптовалютад сөрөг нөлөө үзүүлдэг"
+              },
+              {
+                  "id": 2,
+                  "title": "Addresses",
+                  "description": "Блокчейн дээр криптовалют хаана байрлаж байгааг тодорхойлдог өвөрмөц хаяг. Энэ нь криптовалютын эзэмшлийн мэдээлэл хадгалагдаж, арилжаа хийх үед гарсан өөрчлөлтүүд бүртгэгддэг газар юм."
+              },
+              {
+                  "id": 3,
+                  "title": "Airdrop",
+                  "description": "Дижитал хөрөнгийг олон нийтэд үнэгүй хуваарилах, бэлэглэх маркетингийн үйл ажиллагаа юм"
+              },
+              {
+                  "id": 4,
+                  "title": "Algorithm",
+                  "description": "Гүйцэтгэгчийн биелүүлж чадах үйлдлүүдийн дараалал"
+              },
+              {
+                  "id": 5,
+                  "title": "All-time high",
+                  "description": "Криптовалютын хүрч байсан хамгийн дээд ханш /ATH гэж товчилно/"
+              },
+              {
+                  "id": 6,
+                  "title": "All-time low",
+                  "description": "Криптовалютын хүрч байсан хамгийн доод ханш /ATL гэж товчилно/"
+              },
+              {
+                  "id": 7,
+                  "title": "Allocation",
+                  "description": "Тодорхой хөрөнгө оруулагч, баг, бүлэг, байгууллага эсвэл бусад холбогдох газруудад хуваарилсан токен эсвэл өмчийн хуваарилалт."
+              },
+              {
+                  "id": 8,
+                  "title": "Altcoin",
+                  "description": "Биткойноос бусад криптовалютууд. Ethereum, Litecoin гэх мэт"
+              },
+              {
+                  "id": 9,
+                  "title": "Angel investor",
+                  "description": "Enterpreneur эсвэл start-up компаниудад хөрөнгө оруулж буй их хэмжээний хөрөнгөтэй хөрөнгө оруулагч"
+              },
+              {
+                  "id": 10,
+                  "title": "Anti-money Laundering",
+                  "description": "Гэмт хэрэгтнүүдийг криптовалютаар дамжуулан бодит мөнгө болгон угаахаас урьдчилан сэргийлэх зорилготой олон улсын хууль тогтоомж. Мөн AML гэж нэрлэдэг"
+              },
+              {
+                  "id": 11,
+                  "title": "Application-specific integrated circuit /ASIC/",
+                  "description": "Крипто олборлолт, hashing хийхэд зориулсан компьютерийн төхөөрөмж"
+              },
+              {
+                  "id": 12,
+                  "title": "Arbitrage",
+                  "description": "2 биржийн ханшийн зөрүүн дээрээс ашиг олох"
+              },
+              {
+                  "id": 13,
+                  "title": "Atomic swap",
+                  "description": "Хүмүүст нэг төрлийн криптовалютыг нөгөөгөөр, одоогийн ханшаар, худалдаж авах, зарах шаардлагагүйгээр шууд, хэмнэлттэй солилцох боломжийг олгох арга."
+              }
+          ]
+      },
+      {
+          "letter": "B",
+          "terms": [
+              {
+                  "title": "Bag",
+                  "description": "Тодорхой криптовалютийн их хэмжээний нэгж",
+                  "id": 14
+              },
+              {
+                  "title": "Bearish, bear market",
+                  "description": "Зах зээлийн үнийн сөрөг чиг хандлага",
+                  "id": 15
+              },
+              {
+                  "title": "Bear Trap",
+                  "description": "Криптогийн үнийг унагах зорилготой хэсэг бүлэг арилжаачдын заль бөгөөд их хэмжээний криптог нэгэн зэрэг зарж зах зээлийг уналтад оруулах бөгөөд үүний дараа бага үнэ дээр өөрсдөө худалдан авч ашиг хийдэг арга юм.",
+                  "id": 16
+              },
+              {
+                  "title": "Binance",
+                  "description": "Дэлхийн хамгийн том крипто бирж",
+                  "id": 17
+              },
+              {
+                  "title": "Bid-Ask spread",
+                  "description": "Авах зарах захиалгын хоорондын зөрүү",
+                  "id": 18
+              },
+              {
+                  "title": "Bitcoin",
+                  "description": "Хамгийн анхны криптовалют. Үүнийг 2008 онд Сатоши Накамото нэрээр үйл ажиллагаа явуулдаг хувь хүн эсвэл бүлэг хүмүүс үүсгэсэн бөгөөд төвлөрсөн бус цахим мөнгөний систем байх зорилготой.",
+                  "id": 19
+              },
+              {
+                  "title": "Bitcoin Dominance",
+                  "description": "Биткойны зах зээлийн үнэлгээг бүх криптовалютуудын зах зээлийн үнэлгээний нийлбэртэй харьцуулсан харьцаа.",
+                  "id": 2
+              },
+              {
+                  "title": "Bitcoin Pizza",
+                  "description": "Хамгийн анхны биткойноор биет хөрөнгө худалдан авсан гүйлгээ бөгөөд Laszlo Hanyecz гэх программер 5 сарын 22-нд 10000 BTC-оор 2 пицца худалдан авч байжээ",
+                  "id": 21
+              },
+              {
+                  "title": "Black Swan Event",
+                  "description": "урьдчилан таамаглах боломжгүй эсвэл урьдчилан таамаглаагүй үйл явдал бөгөөд томоохон хэмжээний үр дагавар авчирдаг",
+                  "id": 22
+              },
+              {
+                  "title": "Block",
+                  "description": "Гүйлгээний мэдээллийг хадгалдаг компьютерийн файл. Тэдгээрийг шугаман дарааллаар байрлуулснаар блокчейн үүсгэх болно.",
+                  "id": 23
+              },
+              {
+                  "title": "Block Explorer",
+                  "description": "Хэрэглэгчдэд блок, гүйлгээ, үлдэгдэл, гүйлгээний түүхийн талаарх мэдээллийг үзэх боломжийг олгодог онлайн Blockchain-ийн вэб хуудас.",
+                  "id": 24
+              },
+              {
+                  "title": "Block Height",
+                  "description": "Тухайн блокчейн дээрх эхний блок болон блокчейн хоорондох гинжин хэлхээний блокуудын тоо",
+                  "id": 25
+              },
+              {
+                  "title": "Block Reward",
+                  "description": "Амжилттай олборлож, hash хийсэн блок бүрт криптовалют олборлогчдод блокчэйн протоколоор олгосон криптовалютын хэмжээ.",
+                  "id": 26
+              },
+              {
+                  "title": "Blockchain",
+                  "description": "Криптовалютын талаарх гүйлгээний мэдээллийг цаг хугацааны дарааллаар бүртгэдэг төвлөрсөн бус, дижитал дэвтэр.",
+                  "id": 27
+              },
+              {
+                  "title": "Binance Smart Chain",
+                  "description": "Binance-аас гаргасан smart contract платформ юм",
+                  "id": 28
+              },
+              {
+                  "title": "Bull/Bullish",
+                  "description": "Зах зээлийн үнийн эерэг чиг хандлага",
+                  "id": 29
+              },
+              {
+                  "title": "Burn",
+                  "description": "Ямар нэгэн криптовалютын тодорхой хэмжээг зарцуулагдах боломжгүй болгох",
+                  "id": 30
+              },
+              {
+                  "title": "Buy wall",
+                  "description": "Хэрэв криптовалю тодорхой үнэд хүрэх үед худалдан авахаар их хэмжээний захиалга байгаа бол энэ нь худалдан авах хана болно. Энэ нь криптовалютыг энэ үнээс доош унахаас сэргийлж чадна.",
+                  "id": 31
+              }
+          ]
+      },
+      {
+          "letter": "C",
+          "terms": [
+              {
+                  "title": "Central Ledger",
+                  "description": "Нэг байгууллага бүх санхүүгийн мэдээллийг удирдах/Банк г.м/",
+                  "id": 32
+              },
+              {
+                  "title": "Cipher",
+                  "description": "Мэдээллийг шифрлэх, тайлах алгоритм",
+                  "id": 33
+              },
+              {
+                  "title": "Circulating Supply",
+                  "description": "Олон нийтэд арилжаалах боломжтой криптовалютын нийт нийлүүлэлтийн хэмжээ",
+                  "id": 34
+              },
+              {
+                  "title": "Coin",
+                  "description": "Ямар нэг бусад платформоос хамааралгүй криптовалют, дижитал мөнгө",
+                  "id": 35
+              },
+              {
+                  "title": "Cold wallet",
+                  "description": "Криптовалютыг оффлайн хэлбэрээр хадгалах биет төхөөрөмж",
+                  "id": 36
+              },
+              {
+                  "title": "Consortium blockchain",
+                  "description": "Хувийн, үйл ажиллагаа явуулдаг боловч олон нийтэд ил тод, блокчэйн.",
+                  "id": 37
+              },
+              {
+                  "title": "Crypto winter",
+                  "description": "Крипто өвөл гэдэг нэр томьёо нь криптовалютын зах зээл дэх үнийн уналт, зогсонги байдал урт хугацаанд үргэлжлэхийг хэлдэг.",
+                  "id": 38
+              },
+              {
+                  "title": "Cryptocurrency",
+                  "description": "Шифрлэгдсэн, дижитал мэдээлэл хэлбэрээр байдаг мөнгөний хэлбэр. Аль ч банкнаас хараат бус үйл ажиллагаа явуулдаг криптовалют нь нарийн математикийн аргыг ашиглан байгууллага хооронд мөнгө шилжүүлэх үйл явцыг зохицуулдаг.",
+                  "id": 39
+              },
+              {
+                  "title": "Cryptography",
+                  "description": "Мэдээллийг шифрлэх, тайлах үйл явц",
+                  "id": 40
+              },
+              {
+                  "title": "Custody",
+                  "description": "үйлчлүүлэгчийн нэрийн өмнөөс, ерөнхийдөө ямар нэгэн байгууллагаар дамжуулан хөрөнгө эзэмшихийг хэлнэ.",
+                  "id": 41
+              }
+          ]
+      },
+      {
+          "letter": "D",
+          "terms": [
+              {
+                  "title": "Decentralized app/dApp/",
+                  "description": "Мэдээлэл хадгалахад блокчэйн ашигладаг, бие даан ажилладаг, ямар нэг байгууллагаас хянагддаггүй, удирддаггүй, нээлттэй эх сурвалжтай, шимтгэл эсвэл токеноор ашиг өгдөг компьютерийн программ юм.",
+                  "id": 42
+              },
+              {
+                  "title": "Decentralized Autonomous Organization",
+                  "description": "Төвлөрсөн бус байгууллага ямар арга хэмжээ авахыг тодорхойлсон хатуу кодлогдсон дүрмийн систем.",
+                  "id": 43
+              },
+              {
+                  "title": "Decryption",
+                  "description": "Шифрлэгдсэн текстийг буцаан энгийн текст болгон хувиргах.",
+                  "id": 44
+              },
+              {
+                  "title": "Delisting",
+                  "description": "Тухайн бирж эсвэл төслийн багийн хүсэлтээр хөрөнгийг биржээс хасах",
+                  "id": 45
+              },
+              {
+                  "title": "Difficulty",
+                  "description": "Криптовалют дахь хүндрэл нь блок олборлоход шаардагдах хүндрэлийг илэрхийлдэг.",
+                  "id": 46
+              },
+              {
+                  "title": "Distributed Ledger",
+                  "description": "Криптовалютын хувьд энэ нь сүлжээн дэх олон зангилаа дээр баригдсан блокчейныг хэлдэг бөгөөд бүгдийг нэгэн зэрэг шалгадаг.",
+                  "id": 47
+              },
+              {
+                  "title": "Dumping",
+                  "description": "Олон хүмүүс нэг дор зарснаар криптовалютын үнэ огцом буурахад хүргэх",
+                  "id": 48
+              },
+              {
+                  "title": "DYOR",
+                  "description": "Do your own research буюу хэн нэгнийг дагахаасаа өмнө өөрөө судалгаа шинжилгээ хийх хэрэгтэй гэсэн зөвлөгөө",
+                  "id": 49
+              }
+          ]
+      },
+      {
+          "letter": "E",
+          "terms": [
+              {
+                  "title": "Encryption",
+                  "description": "Шифр ашиглан энгийн текстийг шифрлэгдсэн текст болгон хувиргах",
+                  "id": 50
+              },
+              {
+                  "title": "ERC",
+                  "description": "Ethereum requests for comments буюу Ethereum блокчейний ухаалаг гэрээний стандарт",
+                  "id": 51
+              },
+              {
+                  "title": "Ethereum",
+                  "description": "Зах зээлийн үнэлгээгээрээ дэлхийн шилдэг гурван криптовалютын нэг. Нээлттэй эх сурвалж, блокчэйн технологид суурилсан хэдий ч энэ нь биткойноос хоёр үндсэн зүйлээр ялгаатай: хөгжүүлэгчдэд dApp үүсгэх, ухаалаг гэрээ бичих боломжийг олгодог.",
+                  "id": 52
+              },
+              {
+                  "title": "Exchange",
+                  "description": "Хэрэглэгчид койн, токен худалдаж авах, зарах боломжтой криптовалютын зах зээл.",
+                  "id": 53
+              }
+          ]
+      },
+      {
+          "letter": "F",
+          "terms": [
+              {
+                  "title": "Faucet",
+                  "description": "Ямар нэг сайтад бүртгүүлснээр үнэгүй крипто авахыг санал болгох. Гэвч ихэнх хувь нь луйвар байдаг",
+                  "id": 54
+              },
+              {
+                  "title": "Fear of missing out",
+                  "description": "Ашигтай боломжоо алдаж магадгүй гэсэн айдас, түгшүүрийн мэдрэмж.",
+                  "id": 55
+              },
+              {
+                  "title": "Fork",
+                  "description": "Блокчейний шинэ хувилбар гарах үед өмнөх хувилбар нь шинэ хувилбартайгаа цуг ажиллахыг хэлэх бөгөөд уг 2 блокчейн нь нэг сүлжээн дээр байрлана",
+                  "id": 56
+              },
+              {
+                  "title": "Fundamental analysis",
+                  "description": "Эдийн засаг, санхүүгийн үзүүлэлтүүдийг ашиглан зах зээлийн санаа бодол, хариу үйлдлийг таамаглах шинжилгээ хийх",
+                  "id": 57
+              }
+          ]
+      },
+      {
+          "letter": "G",
+          "terms": [
+              {
+                  "title": "Gas",
+                  "description": "Ухаалаг гэрээний үйл ажиллагааны зардал болон гүйлгээний хураамжийг тооцоолохын тулд Ethereum блокчейн дээр ашигладаг үнийн механизм.",
+                  "id": 58
+              },
+              {
+                  "title": "Genesis Block",
+                  "description": "Блок 0 эсвэл Блок 1 гэж нэрлэдэг тухайн блокчейн сүлжээнд бүртгэгдсэн анхны блок.",
+                  "id": 59
+              },
+              {
+                  "title": "Gwei",
+                  "description": "Ethereum-ийн багасгасан хэмжээний нэршил. Ерөнхийдөө Gas fee хэмжүүр болгон ашиглагддаг.",
+                  "id": 60
+              }
+          ]
+      },
+      {
+          "letter": "H",
+          "terms": [
+              {
+                  "title": "Halving",
+                  "description": "Биткойн гэх мэт крипто хөрөнгийн блокийн шагнал өмнөхөөсөө тал хувь хүртэл буурах",
+                  "id": 61
+              },
+              {
+                  "title": "Hard Cap",
+                  "description": "Төслийн анхдагч зоос санал болгох (ICO) эсвэл funding арга хэмжээний үеэр цуглуулахыг зорьж буй хөрөнгийн дээд хэмжээ.",
+                  "id": 62
+              },
+              {
+                  "title": "Hash",
+                  "description": "Хэсэг өгөгдлийн зураглал хийсний дараа хэш функцээр үүсгэсэн гаралт. Түүнчлэн хэш утга, хэш код эсвэл дижест гэж нэрлэж болно.",
+                  "id": 63
+              },
+              {
+                  "title": "Hash Rate",
+                  "description": "Компьютер эсвэл олборлолтын техник хангамжийн шинэ хэшийг тооцоолох хурд. Ихэвчлэн секундэд хэшээр хэмжигддэг.",
+                  "id": 64
+              },
+              {
+                  "title": "Hashing Power",
+                  "description": "Компьютерийн хэш хурдыг секундэд гаргаж буй хэшээс хамааран kH/s, MH/s, GH/s, TH/s, PH/s эсвэл EH/s-ээр хэмждэг.",
+                  "id": 65
+              },
+              {
+                  "title": "HODL",
+                  "description": "Bitcointalk-аас гаралтай \"Hold\" гэж бичихдээ буруу бичсэнээр анх үүссэн ба криптог зарахгүй хадгалах буюу \"Hold on for Dear Life\" гэсэн үгийн товчлол болсон.",
+                  "id": 66
+              }
+          ]
+      },
+      {
+          "letter": "I",
+          "terms": [
+              {
+                  "title": "ICO",
+                  "description": "Шинэ төслүүд хөрөнгө оруулагчдад криптовалютаа зарж хөрөнгө босгох арга.",
+                  "id": 67
+              },
+              {
+                  "title": "IEO",
+                  "description": "Төслийн баг болон хэрэглэгчийн хооронд итгэмжлэгдсэн зуучлагчийг/ихэвчлэн бирж/ нэвтрүүлэх замаар токен худалдан авагчдын эрсдлийг бууруулах зорилготой хөрөнгө босгох арга.",
+                  "id": 68
+              },
+              {
+                  "title": "IPO",
+                  "description": "Компани анх удаа хувьцаагаа олон нийтэд санал болгох",
+                  "id": 69
+              }
+          ]
+      },
+      {
+          "letter": "J",
+          "terms": [
+              {
+                  "title": "JOMO",
+                  "description": "Joy of missing out буюу олонхийн трендийг дагахгүй байх, түүнээсээ таашаал авах",
+                  "id": 70
+              }
+          ]
+      },
+      {
+          "letter": "K",
+          "terms": [
+              {
+                  "title": "KYC",
+                  "description": "Know your customer буюу компаниудад үйлчлүүлэгчдээ тодорхойлох, мөнгө угаахтай тэмцэх хуулийг дагаж мөрдөх боломжийг олгодог санхүүгийн салбарын стандарт журам",
+                  "id": 71
+              }
+          ]
+      },
+      {
+          "letter": "L",
+          "terms": [
+              {
+                  "title": "Layer",
+                  "description": "Давхарга /Блокчэйны давхаргыг илтгэнэ./",
+                  "id": 72
+              },
+              {
+                  "title": "Ledger",
+                  "description": "Мөнгө, санхүүгийн гүйлгээг хянаж, бүртгэдэг биет ном эсвэл дижитал компьютерийн файл.",
+                  "id": 73
+              },
+              {
+                  "title": "Leverage",
+                  "description": "Хөшүүрэг",
+                  "id": 74
+              },
+              {
+                  "title": "Lightning Network",
+                  "description": "Бага хоцрогдолтой, шуурхай төлбөр хийхэд чиглэсэн криптовалютын бичил төлбөрт зориулсан peer2peer систем",
+                  "id": 75
+              },
+              {
+                  "title": "Liquidity",
+                  "description": "Тухайн хөрөнгийн зах зээлийн үнэд мэдэгдэхүйц хэлбэлзэл үүсгэхгүйгээр аливаа хөрөнгийг худалдах, худалдан авах чадвар.",
+                  "id": 76
+              }
+          ]
+      },
+      {
+          "letter": "M",
+          "terms": [
+              {
+                  "title": "Mainnet",
+                  "description": "Гүйлгээг цацаж, баталгаажуулж, бүртгэж байгаа газруудад бүрэн боловсруулагдаж, байрлуулсан блокчейн протокол.",
+                  "id": 77
+              },
+              {
+                  "title": "Maker",
+                  "description": "Та захиалгаа өгснөөр тэр даруй арилжаа хийгдэхгүй болж Maker болж таны захиалга захиалгын дэвтэрт үлдэж, дараа нь өөр хүн биелүүлэх/тохируулахыг хүлээнэ.",
+                  "id": 78
+              },
+              {
+                  "title": "Margin trading",
+                  "description": "Туршлагатай арилжаачид арилжааныхаа эрчмийг нэмэгдүүлэхийн тулд одоо байгаа зоосоо эрсдэлд оруулдаг эрсдэлтэй стратеги. Энэ нь тэдэнд биржээс олгосон хөшүүргийг ашиглан төлж чадахаасаа илүү ихийг худалдан авах боломжийг олгодог.",
+                  "id": 79
+              },
+              {
+                  "title": "Market cap",
+                  "description": "Тухайн зоосны нийт арилжааны үнэ цэн бөгөөд тухайн зоосны нийлүүлэлтийг тухайн үеийн үнээр үржүүлэн тооцдог.",
+                  "id": 80
+              },
+              {
+                  "title": "Metadata",
+                  "description": "Тодорхой гүйлгээний онцлогуудын талаарх мэдээлэл гэх мэт бусад өгөгдлийн талаарх мэдээллийг агуулсан өгөгдөл.",
+                  "id": 81
+              },
+              {
+                  "title": "MACD",
+                  "description": "Криптовалютын техникийн шинжилгээ нэг арга бөгөөд энэ нь үнийн өөрчлөлтийн дунджийг харьцуулан, ирээдүйг урьдчилан таамаглах арга",
+                  "id": 82
+              },
+              {
+                  "title": "Multisignature",
+                  "description": "Сүлжээнд орохын өмнө өөр тал гүйлгээг зөвшөөрөхийг шаарддаг түрийвч.",
+                  "id": 83
+              }
+          ]
+      },
+      {
+          "letter": "N",
+          "terms": [
+              {
+                  "title": "Node",
+                  "description": "Системийн аюулгүй байдал, бүрэн бүтэн байдлыг хангах үүднээс бусад оролцогчидтой харилцдаг блокчейн сүлжээний оролцогч.",
+                  "id": 84
+              },
+              {
+                  "title": "Non-fungible Token (NFT)",
+                  "description": "Өвөрмөц дижитал эсвэл бодит ертөнцийн хөрөнгийг төлөөлдөг, давтагдашгүй криптограф токенын төрөл.",
+                  "id": 85
+              }
+          ]
+      },
+      {
+          "letter": "O",
+          "terms": [
+              {
+                  "title": "Offchain",
+                  "description": "Тухайн блокчейнээс гадуурх гүйлгээ",
+                  "id": 86
+              },
+              {
+                  "title": "OCO",
+                  "description": "Криптовалютын хоёр захиалгыг нэгэн зэрэг хийхдээ нэгийг нь хүлээн авбал нөгөөг нь цуцална гэсэн дүрэм үйлчилдэг захиалга",
+                  "id": 87
+              },
+              {
+                  "title": "Oracle",
+                  "description": "Ухаалаг гэрээний үр дүнг тодорхойлоход ашигладаг гуравдагч талын мэдээллийн эх сурвалж эсвэл хангамж",
+                  "id": 88
+              },
+              {
+                  "title": "Orderbook",
+                  "description": "Бирж эсвэл зах зээл дээрх тодорхой хөрөнгийн худалдан авах, худалдах захиалгын цахим жагсаалт.",
+                  "id": 89
+              }
+          ]
+      },
+      {
+          "letter": "P",
+          "terms": [
+              {
+                  "title": "Paperwallet",
+                  "description": "Криптовалютын хаяг болон түүнд харгалзах хувийн түлхүүрийг биет байдлаар хэвлэсэн цаас.",
+                  "id": 90
+              },
+              {
+                  "title": "P2P",
+                  "description": "Хоёр ба түүнээс дээш компьютерууд төвлөрсөн гуравдагч этгээдийг зуучлагчаар ашиглахгүйгээр хоорондоо холбогдох",
+                  "id": 91
+              },
+              {
+                  "title": "Phishing",
+                  "description": "халдлага үйлдэгч, өөрөөр фишер нь хэрэглэгчийн хууль ёсны нууц эсвэл мэдрэмтгий мэдээллийг итгэмжлэгдсэн олон нийтийн сүлжээг дуурайн түүгээр дамжуулан хэрэглэгчийн мэдээллийг хуурч авах гэж оролдохыг хэлнэ.",
+                  "id": 92
+              },
+              {
+                  "title": "Private Key",
+                  "description": "Криптовалютын хувьд private key нь хэрэглэгчдэд гүйлгээнд гарын үсэг зурах, хүлээн авах хаяг үүсгэх боломжийг олгодог урт тоо юм.",
+                  "id": 93
+              },
+              {
+                  "title": "Proof of Authority",
+                  "description": "Stake суурилсан зөвшилцлийн механизмаар харьцангуй хурдан гүйлгээг хийдэг блокчэйнд ашигладаг алгоритм юм. PoA ашигладаг хамгийн алдартай платформ бол VeChain юм.",
+                  "id": 94
+              },
+              {
+                  "title": "Proof of Stake",
+                  "description": "Proof-of-stake нь гүйлгээг боловсруулах, блокчейн дээр шинэ блок үүсгэх криптовалютын зөвшилцлийн механизм юм.",
+                  "id": 95
+              },
+              {
+                  "title": "Proof of Work",
+                  "description": "Нэг тал тодорхой хэмжээний тооцооллын хүчин чармайлт зарцуулсан гэдгийг бусдад нотлох криптограф нотолгооны хэлбэр юм.",
+                  "id": 96
+              },
+              {
+                  "title": "Protocols",
+                  "description": "Сүлжээгээр өгөгдөл хэрхэн солилцохыг тодорхойлсон дүрмийн багц.",
+                  "id": 97
+              },
+              {
+                  "title": "Public blockchain",
+                  "description": "Компьютерийнхээ бүтэн зангилаагаар дамжуулан хэн ч хандах боломжтой блокчейн.",
+                  "id": 98
+              },
+              {
+                  "title": "Pump",
+                  "description": "Ихэвчлэн халимууд криптовалютад их хэмжээний хөрөнгө оруулалт хийснээр үнийг өсгөх",
+                  "id": 99
+              },
+              {
+                  "title": "Pump and dump",
+                  "description": "Хямд үнээр худалдаж авсан хувьцаагаа өндөр үнээр худалдах зорилгоор худал, төөрөгдүүлсэн эерэг мэдэгдлээр өөрийн эзэмшиж буй хувьцааны үнийг зохиомлоор өсгөх явдал юм.",
+                  "id": 100
+              }
+          ]
+      },
+      {
+          "letter": "R",
+          "terms": [
+              {
+                  "title": "REKT",
+                  "description": "Хэн нэгнийг эсвэл ямар нэг зүйлийг сүйрсэн, сүйрлийн улмаас бүтэлгүйтсэн гэж тодорхойлоход хэрэглэгддэг хар ярианы хэллэг ба Wrecked гэсэн үгний товчлол юм.",
+                  "id": 101
+              },
+              {
+                  "title": "Relative Strength Index",
+                  "description": "Зах зээлийн эрч хүчийг хэмждэг техникийн үзүүлэлт бөгөөд Overbought буюу хэт худалдан авсан эсвэл Oversold буюу хэт худалдсан байдлыг тодорхойлоход ашигладаг.",
+                  "id": 102
+              },
+              {
+                  "title": "Resistance",
+                  "description": "Эсэргүүцэл гэдэг нь хөрөнгийн өсөлтийг зогсоох хангалттай хүчтэй нийлүүлэлтийн түвшин юм",
+                  "id": 103
+              },
+              {
+                  "title": "Roadmap",
+                  "description": "Компанийн богино болон урт хугацааны зорилгыг тодорхойлсон бизнес төлөвлөлтийн техник.",
+                  "id": 104
+              }
+          ]
+      },
+      {
+          "letter": "S",
+          "terms": [
+              {
+                  "title": "Satoshi",
+                  "description": "Bitcoin протоколоор тодорхойлсон биткойны хамгийн жижиг нэгж. Энэ нь биткойны зуун саяны нэг буюу 0.00000001 BTC-тэй тэнцэнэ.",
+                  "id": 105
+              },
+              {
+                  "title": "Satoshi Nakamoto",
+                  "description": "Биткойны протокол ба whitepaper-ийг бүтээгч эсвэл бүтээгчдийн нууц нэр.",
+                  "id": 106
+              },
+              {
+                  "title": "Security and exchange commission SEC",
+                  "description": "Үнэт цаасны зах зээлийг зохицуулах үүрэг бүхий бие даасан АНУ-ын ЗГ-ын байгууллага.",
+                  "id": 107
+              },
+              {
+                  "title": "Sell wall",
+                  "description": "Криптогийн тодорхой үнэ дээр байгаа маш их хэмжээний limit зарах захиалга бөгөөд үнэ өсөхөд хүчтэй эсэргүүцэл үзүүлдэг",
+                  "id": 108
+              },
+              {
+                  "title": "Sentiment",
+                  "description": "Криптовалют эсвэл хөрөнгө оруулагчдын тодорхой санхүүгийн зах зээлд хандах ерөнхий хандлага.",
+                  "id": 109
+              },
+              {
+                  "title": "Sharding",
+                  "description": "Sharding гэдэг нь том өгөгдлийн санг жижиг, хурдан, хялбар удирддаг хэсгүүдэд хуваах мэдээллийн санг хуваах арга юм.",
+                  "id": 110
+              },
+              {
+                  "title": "Shitcoin",
+                  "description": "Шиткойн гэдэг нь ямар ч үнэ цэнэгүй алткойныг тодорхойлоход ашигладаг ын нэр томъёо юм.",
+                  "id": 111
+              },
+              {
+                  "title": "Short",
+                  "description": "Худалдаачид өөрт байхгүй хөрөнгөө зарах тухай арилжааны төрөл",
+                  "id": 112
+              },
+              {
+                  "title": "Smart contract",
+                  "description": "Урьдчилан тодорхойлсон нөхцөл хангагдсан үед ажилладаг блокчейн дээр хадгалагдсан програмууд юм.",
+                  "id": 113
+              },
+              {
+                  "title": "Stablecoin",
+                  "description": "Үнэ нь жишиг хөрөнгөтэй уялдуулж хийгдсэн криптовалют юм. Жишээлбэл USDT доллартай уясан",
+                  "id": 114
+              },
+              {
+                  "title": "Staking pool",
+                  "description": "Оролцогч талууд шинэ блокыг амжилттай баталгаажуулах боломжоо нэмэгдүүлэхийн тулд эрхээ нэгтгэдэг сан.",
+                  "id": 115
+              },
+              {
+                  "title": "Support",
+                  "description": "Дэмжлэг гэдэг нь хөрөнгийн үнийн уналтыг зогсоох хангалттай хүчтэй эрэлтийн түвшин юм",
+                  "id": 116
+              }
+          ]
+      },
+      {
+          "letter": "T",
+          "terms": [
+              {
+                  "title": "Taker",
+                  "description": "Захиалгын дэвтэрт байгаа захиалгатай шууд таарч захиалга өгч буй арилжаачин",
+                  "id": 117
+              },
+              {
+                  "title": "Technical analysis",
+                  "description": "Арилжааны хэрэгслийг ашиглан криптовалютын талаарх түүхэн мэдээллийг үндэслэн тулд ирээдүйг урьдчилан таамаглах шинжилгээний арга",
+                  "id": 118
+              },
+              {
+                  "title": "Ticker",
+                  "description": "Арилжааны платформ дээрх криптог товчлон хэлдэг арилжааны \"тэмдэг\" буюу товчилсон нэр (ихэвчлэн том үсгээр бичсэн байдаг). Bitcoin-BTC",
+                  "id": 119
+              },
+              {
+                  "title": "Token",
+                  "description": "Токенууд (coin-оос ялгаатай) нь блокчейн дээр гаргасан дижитал нэгж юм. Тэд үнэ цэнийг хадгалах эсвэл хөрөнгөөр эргүүлэн авах боломжтой.",
+                  "id": 120
+              },
+              {
+                  "title": "Total supply",
+                  "description": "Блокчэйн дээр байгаа токенуудын нийт тоо бөгөөд үүнд олон нийтийн эргэлтэд ороогүй токенууд ч мөн орно.",
+                  "id": 121
+              },
+              {
+                  "title": "Transaction",
+                  "description": "Криптовалютын үнэ цэнэ блокчейн сүлжээгээр хаягаас нөгөөд шилжих үйл явц",
+                  "id": 122
+              },
+              {
+                  "title": "Transaction fee",
+                  "description": "Гүйлгээний шимтгэл",
+                  "id": 123
+              },
+              {
+                  "title": "Turing Completeness",
+                  "description": "Энэхүү машин нь ямар ч тооцоолох функцийг боловсруулах боломжтой бөгөөд орчин үеийн ихэнх компьютеруудын үйлдлийг багтаасан",
+                  "id": 124
+              }
+          ]
+      },
+      {
+          "letter": "U",
+          "terms": [
+              {
+                  "title": "Unspent Transaction Output",
+                  "description": "Энэ нь нэг данснаас нөгөө дансанд зарцуулахаар зөвшөөрөгдсөн тоон валютыг илэрхийлнэ.",
+                  "id": 125
+              }
+          ]
+      },
+      {
+          "letter": "V",
+          "terms": [
+              {
+                  "title": "Vladimir Club",
+                  "description": "криптовалютын нийт нийлүүлэлтийн 0.01%-ийг эзэмшдэг хүмүүсийг тодорхойлоход ашиглана",
+                  "id": 126
+              },
+              {
+                  "title": "Volatility",
+                  "description": "Хөрөнгийн үнийн хэлбэлзэл.Тодорхой хугацааны туршид хөрөнгийн жилийн өгөөжийн стандарт хазайлтаар тооцно.",
+                  "id": 127
+              },
+              {
+                  "title": "Volume",
+                  "description": "Тухайн хугацаанд зах зээлд арилжаалагдсан хөрөнгийн нэгжийн тоог хэмжих хэмжүүр.",
+                  "id": 128
+              }
+          ]
+      },
+      {
+          "letter": "W",
+          "terms": [
+              {
+                  "title": "Wallet",
+                  "description": "Түрийвч нь блокчейн дээрх \"хаяг\"-ыг илэрхийлдэг өвөрмөц кодоор тодорхойлогддог бөгөөд криптовалютыг илгээх хүлээн авахад ашиглагддаг",
+                  "id": 129
+              },
+              {
+                  "title": "Wei",
+                  "description": "Ethereum(ETH)-ийн хамгийн бага хэмжих нэгж бөгөөд Ethereum сүлжээнд ашигладаг. Ихэнхдээ gas fee-г тодорхойлоход ашигладаг.",
+                  "id": 130
+              },
+              {
+                  "title": "Whale",
+                  "description": "Зах зээлийг удирдах хангалттай хөрөнгөтэй маш чинээлэг хөрөнгө оруулагчид эсвэл арилжаачдыг хэлнэ.",
+                  "id": 131
+              },
+              {
+                  "title": "Whitelist",
+                  "description": "Үйлчилгээ, үйл явдалтай холбоотой зөвшөөрөгдсөн эсвэл итгэмжлэгдсэн хувь хүмүүс, компьютерийн программууд эсвэл криптовалютын хаягуудын жагсаалт.",
+                  "id": 132
+              },
+              {
+                  "title": "White paper",
+                  "description": "Хангалттай техникийн мэдээлэл өгөх, токены зорилгыг тайлбарлах, хэрхэн амжилтанд хүрэх төлөвлөгөөг гаргахад зориулагдсан криптовалютын дэлгэрэнгүй тайлбар.",
+                  "id": 133
+              }
+          ]
+      },
+      {
+          "letter": "Z",
+          "terms": [
+              {
+                  "title": "Zero Confirmation Transaction",
+                  "description": "Баталгаажаагүй гүйлгээний өөр нэршил",
+                  "id": 134
+              }
+          ]
+      }
+  ]
+
 
 function CryptoBasicsTerms() {
+  const [activeLetter, setActiveLetter] = useState("A");
+  const [items, setItems] = useState([]);
+  const handleLetterClick = (letter) => {
+    setActiveLetter(letter);
+  };
+  useEffect(() => {
+    setItems(data);
+  }, []);
+  const filteredData = items && items.filter((item) => item.letter === activeLetter);
+  
   return (
     <>
       <div className="relative bg-[#F5F5F5] mt-[40px] mb-[77px] w-screen -left-[calc(50vw-50%)] text-[#35363B] font-light">
-        <div className="container mx-auto px-[16px] pt-[80px] pb-[241px] max-w-[1232px]">
-
-          <div className="font-light text-[14px] mb-[80px] text-[#3973C5]">Нүүр &gt; Академи &gt; Крипто мэдлэг &gt; Нэр томьёоны тайлбар</div>
-
+        <div className="container mx-auto px-[16px] pt-[80px] pb-[241px] max-w-[996px]">
+          <div className="font-light text-[14px] pt-[48px] mb-[80px] text-[#3973C5]"><a href="/"><FormattedMessage id="terms_breadcrumbs_1"/></a> &gt; <FormattedMessage id="menu_academy"/> &gt; <FormattedMessage id="footer_crypto_knowledge"/> &gt; <FormattedMessage id="crypto_basics_terms"/></div>
           <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#CDCDCE] text-[18px] font-medium gap-[40px] mb-[24px]">
             <Link to="/posts/basics" className="relative uppercase text-[#CDCDCE]">
               <FormattedMessage id="footer_crypto_knowledge"/>
             </Link>
-            <div className="relative">
-              НЭР ТОМЬЁОНЫ ТАЙЛБАР
+            <div className="relative uppercase">
+              <FormattedMessage id="crypto_basics_terms"/>
               <div className="absolute h-[2px] w-full bg-[#13A9FD] bottom-[-17px]"></div>
             </div>
           </div>
-
           <div className="flex gap-[8px] flex-wrap mb-[40px]">
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#13A9FD] flex font-medium text-[14px] items-center justify-center text-[#ffffff] cursor-pointer">A</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">B</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">C</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">D</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">E</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">F</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">G</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">H</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">I</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">J</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">K</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">L</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">M</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">N</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">O</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">P</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">Q</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">R</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">S</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">T</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">U</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">V</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">W</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">X</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">Y</div>
-            <div className="w-[38px] h-[38px] rounded-[2px] bg-[#F1F1F1] flex font-medium text-[14px] items-center justify-center text-[#03040A] cursor-pointer">Z</div>
+            {Array.from({ length: 26 }, (_, index) => {
+              const letter = String.fromCharCode(65 + index);
+              return (
+                <div
+                  key={index}
+                  className={`w-[38px] h-[38px] rounded-[2px] bg-[${activeLetter === letter ? "#13A9FD" : "#F1F1F1"}] flex font-medium text-[14px] items-center justify-center text-[${activeLetter === letter ? "#ffffff" : "#03040A"}] cursor-pointer`}
+                  onClick={() => handleLetterClick(letter)}
+                >
+                  {letter}
+                </div>
+              );
+            })}
           </div>
-
-          <div className="flex flex-wrap gap-[24px] text-[#35363B]">
-            <div className="w-[282px] h-[282px] shadow-xl shadow-[#006CFF0A] rounded-[8px] bg-white p-[24px]">
-              <div className="font-bold text-[20px] mb-[16px] leading-[25px]">51% дайралт/51% attack/</div>
-              <div className="text-[12px] font-light">Өөрөөр олонхийн довтолгоо гэж нэрлэх бөгөөд нэг эсвэл бүлэг олборлогчид сүлжээний олборлолтын hashrate буюу тооцооллын хүчин чадлын 50-иас дээш хувийг хянах үед тохиолдох бөгөөд сүлжээг бүрэн хянаж, олборлолт гүйлгээ зэргийг зогсоож, өөрчлөх замаар криптовалютад сөрөг нөлөө үзүүлдэг.</div>
-            </div>
-            <div className="w-[282px] h-[282px] shadow-xl shadow-[#006CFF0A] rounded-[8px] bg-white p-[24px]">
-              <div className="font-bold text-[20px] mb-[16px] leading-[25px]">address</div>
-              <div className="text-[12px] font-light">Блокчейн дээр криптовалют хаана байрлаж байгааг тодорхойлдог өвөрмөц хаяг. Энэ нь криптовалютын эзэмшлийн мэдээлэл хадгалагдаж, арилжаа хийх үед гарсан өөрчлөлтүүд бүртгэгддэг газар юм.</div>
-            </div>
-            <div className="w-[282px] h-[282px] shadow-xl shadow-[#006CFF0A] rounded-[8px] bg-white p-[24px]">
-              <div className="font-bold text-[20px] mb-[16px] leading-[25px]">airdrop</div>
-              <div className="text-[12px] font-light">Дижитал хөрөнгийг олон нийтэд үнэгүй хуваарилах, бэлэглэх маркетингийн үйл ажиллагаа юм.</div>
-            </div>
-            <div className="w-[282px] h-[282px] shadow-xl shadow-[#006CFF0A] rounded-[8px] bg-white p-[24px]">
-              <div className="font-bold text-[20px] mb-[16px] leading-[25px]">algorithm</div>
-              <div className="text-[12px] font-light">Гүйцэтгэгчийн биелүүлж чадах үйлдлүүдийн дараалал.</div>
-            </div>
-            <div className="w-[282px] h-[282px] shadow-xl shadow-[#006CFF0A] rounded-[8px] bg-white p-[24px]">
-              <div className="font-bold text-[20px] mb-[16px] leading-[25px]">all-time high</div>
-              <div className="text-[12px] font-light">Криптовалютын хүрч байсан хамгийн дээд ханш /ATH гэж товчилно/.</div>
-            </div>
-            <div className="w-[282px] h-[282px] shadow-xl shadow-[#006CFF0A] rounded-[8px] bg-white p-[24px]">
-              <div className="font-bold text-[20px] mb-[16px] leading-[25px]">all-time low</div>
-              <div className="text-[12px] font-light">Криптовалютын хүрч байсан хамгийн доод ханш /ATL гэж товчилно/.</div>
-            </div>
-            <div className="w-[282px] h-[282px] shadow-xl shadow-[#006CFF0A] rounded-[8px] bg-white p-[24px]">
-              <div className="font-bold text-[20px] mb-[16px] leading-[25px]">allocation</div>
-              <div className="text-[12px] font-light">Тодорхой хөрөнгө оруулагч, баг, бүлэг, байгууллага эсвэл бусад холбогдох газруудад хуваарилсан токен эсвэл өмчийн хуваарилалт.</div>
-            </div>
-            <div className="w-[282px] h-[282px] shadow-xl shadow-[#006CFF0A] rounded-[8px] bg-white p-[24px]">
-              <div className="font-bold text-[20px] mb-[16px] leading-[25px]">altcoin</div>
-              <div className="text-[12px] font-light">Биткойноос бусад криптовалютууд. Ethereum, Litecoin гэх мэт.</div>
-            </div>
-            <div className="w-[282px] h-[282px] shadow-xl shadow-[#006CFF0A] rounded-[8px] bg-white p-[24px]">
-              <div className="font-bold text-[20px] mb-[16px] leading-[25px]">angel investor</div>
-              <div className="text-[12px] font-light">Enterpreneur эсвэл start-up компаниудад хөрөнгө оруулж буй их хэмжээний хөрөнгөтэй хөрөнгө оруулагч.</div>
-            </div>
-            <div className="w-[282px] h-[282px] shadow-xl shadow-[#006CFF0A] rounded-[8px] bg-white p-[24px]">
-              <div className="font-bold text-[20px] mb-[16px] leading-[25px]">anti-money laundering</div>
-              <div className="text-[12px] font-light">Гэмт хэрэгтнүүдийг криптовалютаар дамжуулан бодит мөнгө болгон угаахаас урьдчилан сэргийлэх зорилготой олон улсын хууль тогтоомж. Мөн AML гэж нэрлэдэг.</div>
-            </div>
-            <div className="w-[282px] h-[282px] shadow-xl shadow-[#006CFF0A] rounded-[8px] bg-white p-[24px]">
-              <div className="font-bold text-[20px] mb-[16px] leading-[25px]">application-specific integrated circuit /asic/</div>
-              <div className="text-[12px] font-light">Крипто олборлолт, hashing хийхэд зориулсан компьютерийн төхөөрөмж.</div>
-            </div>
-            <div className="w-[282px] h-[282px] shadow-xl shadow-[#006CFF0A] rounded-[8px] bg-white p-[24px]">
-              <div className="font-bold text-[20px] mb-[16px] leading-[25px]">arbitrage</div>
-              <div className="text-[12px] font-light">2 биржийн ханшийн зөрүүн дээрээс ашиг олох.</div>
-            </div>
-            <div className="w-[282px] h-[282px] shadow-xl shadow-[#006CFF0A] rounded-[8px] bg-white p-[24px]">
-              <div className="font-bold text-[20px] mb-[16px] leading-[25px]">atomic swap</div>
-              <div className="text-[12px] font-light">Atomic swap.</div>
-            </div>
-          </div>
+            {filteredData && filteredData.map((activeCards, index) => (
+              <div key={index} className="flex flex-wrap justify-center xl:justify-start gap-[24px] text-[#000]">
+                {activeCards.terms.map((item, itemIndex) => (
+                  <div key={itemIndex} className="w-[282px] h-[282px] shadow-xl shadow-[#006CFF0A] rounded-[8px] bg-white p-[24px]">
+                    <p className="font-bold text-[20px] mb-[16px] leading-[25px]">{item.title}</p>
+                    <p className="text-[12px] font-light">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            ))}
         </div>
       </div>
     </>

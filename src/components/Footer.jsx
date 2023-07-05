@@ -79,7 +79,7 @@ const Footer = () => {
             <div className="w-[20px] absolute left-0">
               <img src="/images/Icon material-location-on.svg" />
             </div>
-            <span id="footer_address">Сүхбаатар дүүрэг 1-р хороо, Жамъян Гүний гудамж-5, Хаан Даатгал компанийн байр</span>
+            <FormattedMessage id="footer_address"/>
           </div>
         </div>
       </div>

@@ -91,19 +91,18 @@ function Posts() {
     const newStartIdx = index * 6;
     setStartIdx(newStartIdx);
   };
-
   return (
     <>
       <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] mt-[40px] pt-[80px] pb-[240px]">
         <div className="container mx-auto pt-[48px] max-w-[996px]">
                 <div className="font-light text-[14px] mb-[80px] text-[#3973C5]">
-          <a href="/">Нүүр</a> &gt; Академи &gt; 
+          <a href="/"><FormattedMessage id="terms_breadcrumbs_1"/></a> &gt; <FormattedMessage id="menu_academy"/> &gt; 
           {window.location.pathname === "/posts/projects" ? (
-            " Төслүүд"
+            <FormattedMessage id="mobile_menu_projects"/>
           ) : window.location.pathname === "/posts/basics" ? (
-            " Крипто мэдлэг"
+            <FormattedMessage id="mobile_menu_crypto_knowledge"/>
           ) : window.location.pathname === "/posts/news" ? (
-            " Зах зээлийн мэдээ"
+            <FormattedMessage id="mobile_menu_market_news"/>
           ) : (
             ""
           )}
@@ -116,7 +115,7 @@ function Posts() {
                 <div className="absolute h-[2px] w-full bg-[#13A9FD] bottom-[-17px]"></div>
               </div>
               <Link to="/cryptoterms" className="relative text-[#CDCDCE]">
-                НЭР ТОМЬЁОНЫ ТАЙЛБАР
+              <FormattedMessage id="crypto_basics_terms"/>
               </Link>
             </div>
           )}

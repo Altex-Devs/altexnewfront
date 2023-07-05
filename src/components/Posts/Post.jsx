@@ -3,6 +3,7 @@ import PostsMore from "./PostsMore";
 import { useEffect, useState } from "react";
 import { collection, doc, getDoc, getDocs, limit, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../firebase";
+import { FormattedMessage } from "react-intl";
 
 function Post() {
   const [title, setTitle] = useState("");
@@ -43,7 +44,7 @@ function Post() {
     <>
       <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] mt-[40px] pt-[80px] pb-[240px]">
         <div className="container mx-auto pt-[48px] max-w-[996px]">
-          <div className="font-light text-[14px] mb-[80px] text-[#3973C5]">Нүүр &gt; Академи &gt; Крипто мэдлэг</div>
+          <div className="font-light text-[14px] mb-[80px] text-[#3973C5]"><a href="/"><FormattedMessage id="terms_breadcrumbs_1"/></a> &gt; <FormattedMessage id="menu_academy"/></div>
 
           <div className="container mx-auto pt-[48px] max-w-[800px] mb-[92px]">
             <div className="text-[40px] font-bold mb-[24px] text-[#35363B]">{title}</div>
