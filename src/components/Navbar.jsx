@@ -110,7 +110,7 @@ const Navbar = ({ locale, setLocale }) => {
 
   return (
     <>
-      <div id="menu" className={`fixed top-0 left-0 h-screen bg-[#050F36] z-50 hidden lg:hidden p-[20px] ${navbarBg ? "bg-[#050F36]" : ""}  py-[92px]`}>
+      <div id="menu" className={`fixed top-0 w-full left-0 h-screen bg-[#050F36] z-50 hidden lg:hidden p-[20px] ${navbarBg ? "bg-[#050F36]" : ""}  py-[92px]`}>
         <div className="flex justify-between items-center mb-[40px] mt-[-3px]">
           <img src="/images/header-logo.svg" />
           <svg id="SVGDoc" className="mr-[10px]" onClick={hideMenu} width="16" height="16" version="1.1" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fillOpacity="1"></path></g></g></svg>
@@ -130,21 +130,35 @@ const Navbar = ({ locale, setLocale }) => {
             <FormattedMessage id="mobile_menu_trade"/>
           </a>
           <div>
-            <span id="mobile_menu_about_us" className="mobile_menu" onClick={(event) => toggleMobileMenu(event)}>Бидний тухай</span>
+            <span id="mobile_menu_about_us" className="mobile_menu" onClick={(event) => toggleMobileMenu(event)}>
+              <FormattedMessage id="mobile_menu_about_us"/>
+            </span>
             <img className="inline-block relative left-[5px] icon" src="/images/menu_arrow.svg" />
             <div className="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden space-y-4 transition-[max-height] duration-700 pl-[15px]">
-              <a id="mobile_menu_about_exchange" className="block" href="/about">Биржийн тухай</a>
-              <a id="mobile_menu_team" className="block" href="/team">Баг хамт олон</a>
+              <a id="mobile_menu_about_exchange" className="block" href="/about">
+                <FormattedMessage id="mobile_menu_about_exchange"/>
+              </a>
+              <a id="mobile_menu_team" className="block" href="/team">
+                <FormattedMessage id="mobile_menu_team"/>
+              </a>
             </div>
           </div>
           <div>
 
-            <span id="mobile_menu_academy" className="mobile_menu" onClick={(event) => toggleMobileMenu(event)}>Академи</span>
+            <span id="mobile_menu_academy" className="mobile_menu" onClick={(event) => toggleMobileMenu(event)}>
+              <FormattedMessage id="mobile_menu_academy"/>
+            </span>
             <img className="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
             <div className="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden space-y-4 transition-[max-height] duration-700 pl-[15px]">
-              <a id="mobile_menu_market_news" className="block" href="/posts/news">Зах зээлийн мэдээ</a>
-              <a id="mobile_menu_crypto_knowledge" className="block" href="/posts/basics">Крипто мэдлэг</a>
-              <a id="mobile_menu_projects" className="block" href="/posts/projects">Төслүүд</a>
+              <a id="mobile_menu_market_news" className="block" href="/posts/news">
+                <FormattedMessage id="mobile_menu_market_news"/>
+              </a>
+              <a id="mobile_menu_crypto_knowledge" className="block" href="/posts/basics">
+                <FormattedMessage id="mobile_menu_crypto_knowledge"/>
+              </a>
+              <a id="mobile_menu_projects" className="block" href="/posts/projects">
+                <FormattedMessage id="mobile_menu_projects"/>
+              </a>
             </div>
           </div>
         </div>
