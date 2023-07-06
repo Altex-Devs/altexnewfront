@@ -14,7 +14,7 @@ function Home() {
     style={{ backgroundImage: 'url("/images/hero-pic.svg")' }}
     className="absolute w-screen md:w-[1151px] h-[620px] top-0 left-0 md:left-auto md:right-[-450px] lg:right-[-300px] bg-[length:600px] md:bg-auto bg-center bg-no-repeat pointer-events-none"
   ></div>
-  <div className="flex items-center md:h-[600px] relative mt-[400px] md:mt-auto">
+  <div className="flex items-center md:h-[600px] relative mt-[366px] md:mt-auto">
     <div className="md:w-[60%] drop-shadow">
       <div id="jumbo_head" className="font-bold text-[28px] md:text-[40px] mb-[24px] leading-[3.25rem]">
         <FormattedMessage id="jumbo_head" defaultMessage="Дижитал санхүүг хялбараар" />

@@ -305,73 +305,73 @@ function Fee() {
         </div>
       </div>
       {show === "button1" && (
-        <div className="w-full min-w-[700px] overflow-x-auto">
-          <div className="w-full min-w-[700px] overflow-x-auto">
-            <div className="inline-grid grid-cols-6 text-center font-light mb-[262px] w-full">
-              <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center row-span-2">
-                <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_currency" }) }} />
-              </div>
-              <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center row-span-2">
-                <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_percent" }) }} />
-              </div>
-              <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center row-span-2">
-                <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_min" }) }} />
-              </div>
-              <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center col-span-3">
-                <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_max" }) }} />
-              </div>
-              <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center">
-                <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_verified" }) }} />
-              </div>
-              <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center">
-                <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_trusted" }) }} />
-              </div>
-              <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center">
-                <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_partner" }) }} />
-              </div>
-
-              <div className="font-bold text-[18px] border-b border-[#283359] flex justify-center items-center py-[16px]">
-                <svg className="inline-block mr-[8px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g fill="none" fill-rule="evenodd">
-                    <circle cx="16" cy="16" fill="#6cde07" r="16" />
-                    <path d="M22.5 19.154c0 2.57-2.086 4.276-5.166 4.533V26h-2.11v-2.336A11.495 11.495 0 019.5 21.35l1.552-2.126c1.383 1.075 2.692 1.776 4.269 2.01v-4.58c-3.541-.888-5.19-2.173-5.19-4.813 0-2.523 2.061-4.252 5.093-4.486V6h2.11v1.402a9.49 9.49 0 014.56 1.776l-1.359 2.196c-1.067-.771-2.158-1.262-3.298-1.495v4.439c3.687.888 5.263 2.313 5.263 4.836zm-7.18-5.327V9.715c-1.527.117-2.327.935-2.327 1.963 0 .98.46 1.612 2.328 2.15zm4.318 5.49c0-1.05-.51-1.681-2.401-2.219v4.23c1.528-.118 2.401-.889 2.401-2.01z" fill="#ffffff" />
-                  </g>
-                </svg>
-                USD
-              </div>
-              <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">0.25%</div>
-              <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">$3.0</div>
-              <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">-</div>
-
-              <div className="border-b border-[#283359] text-center grid content-center">-</div>
-              <div className="border-b border-[#283359] text-center grid content-center">-</div>
-
-              {json.map((data) => {
-                return (
-                  <>
-                    <div className="border-b border-[#283359] font-bold flex pl-14 text-[18px]  py-[16px]">
-                      <div className="flex justify-center items-center">{data.pat}</div>
-                      <div className="flex justify-center items-center">{data.name}</div>
-                    </div>
-                    <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">{data.feeSize}</div>
-                    <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">
-                      {data.feeSizeLower = "0" ? '-' : data.feeSizeLower}
-                    </div>
-                    <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">
-                      {data.feeSizeLower = "0" ? '-' : data.feeSizeLower}
-                    </div>
-                    <div className="text-center grid content-center border-b border-[#283359]">-</div>
-                    <div className="text-center grid content-center border-b border-[#283359]">-</div>
-
-                  </>
-                )
-              })}
-            </div>
+        <div className="w-full min-w-[1000px]">
+        <div className="inline-grid grid-cols-6 text-center font-light mb-[262px] w-full">
+          <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center row-span-2">
+            <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_currency" }) }} />
           </div>
+          <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center row-span-2">
+            <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_percent" }) }} />
+          </div>
+          <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center row-span-2">
+            <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_min" }) }} />
+          </div>
+          <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center col-span-3">
+            <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_max" }) }} />
+          </div>
+          <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center">
+            <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_verified" }) }} />
+          </div>
+          <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center">
+            <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_trusted" }) }} />
+          </div>
+          <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center">
+            <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_partner" }) }} />
+          </div>
+
+          <div className="font-bold text-[18px] border-b border-[#283359] flex pl-11 items-center py-[16px]">
+            <svg className="inline-block mr-[8px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <circle cx="16" cy="16" fill="#6cde07" r="16" />
+                <path d="M22.5 19.154c0 2.57-2.086 4.276-5.166 4.533V26h-2.11v-2.336A11.495 11.495 0 019.5 21.35l1.552-2.126c1.383 1.075 2.692 1.776 4.269 2.01v-4.58c-3.541-.888-5.19-2.173-5.19-4.813 0-2.523 2.061-4.252 5.093-4.486V6h2.11v1.402a9.49 9.49 0 014.56 1.776l-1.359 2.196c-1.067-.771-2.158-1.262-3.298-1.495v4.439c3.687.888 5.263 2.313 5.263 4.836zm-7.18-5.327V9.715c-1.527.117-2.327.935-2.327 1.963 0 .98.46 1.612 2.328 2.15zm4.318 5.49c0-1.05-.51-1.681-2.401-2.219v4.23c1.528-.118 2.401-.889 2.401-2.01z" fill="#ffffff" />
+              </g>
+            </svg>
+            USD
+          </div>
+          <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">0.25%</div>
+          <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">$3.0</div>
+          <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">-</div>
+
+          <div className="border-b border-[#283359] text-center grid content-center">-</div>
+          <div className="border-b border-[#283359] text-center grid content-center">-</div>
+
+          
+          {json.map((data) => {
+            return (
+              <>
+                <div className="border-b border-[#283359] font-bold pl-11 flex text-[18px] py-[16px]">
+                  <div className="flex justify-center items-center">{data.pat}</div>
+                  <div className="flex justify-center items-center">{data.name}</div>
+                </div>
+                <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">{data.feeSize}</div>
+                <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">
+                  {data.feeSizeLower = "0" ? '-' : data.feeSizeLower}
+                </div>
+                <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">
+                  {data.feeSizeLower = "0" ? '-' : data.feeSizeLower}
+                </div>
+                <div className="text-center grid content-center border-b border-[#283359]">-</div>
+                <div className="text-center grid content-center border-b border-[#283359]">-</div>
+
+              </>
+            )
+          })}
+          
         </div>
+      </div>
       )}
       {show === "button2" && (
-        <div className="w-full min-w-[700px] overflow-x-auto">
+        <div className="flex w-full min-w-[1000px]">
           <div className="inline-grid grid-cols-6 text-center font-light mb-[262px]">
             <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center row-span-2">
               <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_currency" }) }} />
@@ -395,7 +395,8 @@ function Fee() {
               <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_partner" }) }} />
             </div>
 
-            <div className="font-bold text-[18px] border-b border-[#283359] flex justify-center items-center py-[16px]">
+           
+           <div className="font-bold text-[18px] border-b border-[#283359] flex pl-11 items-center py-[16px]">
               <svg className="inline-block mr-[8px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" fill-rule="evenodd">
                   <circle cx="16" cy="16" fill="#6cde07" r="16" />
@@ -414,7 +415,7 @@ function Fee() {
             {json.map((data) => {
               return (
                 <>
-                  <div className="border-b border-[#283359] font-bold flex pl-14 text-[18px]  py-[16px]">
+                  <div className="border-b border-[#283359] font-bold pl-11 flex text-[18px] py-[16px] ">
                     <div className="flex justify-center items-center">{data.pat}</div>
                     <div className="flex justify-center items-center">{data.name}</div>
                   </div>
@@ -424,11 +425,12 @@ function Fee() {
                 </>
               )
             })}
+           </div>
           </div>
-        </div>
+        
       )}
       {show === "button3" && (
-        <div className="w-full grid grid-cols-2 gap-[8px] min-w-[700px] overflow-x-auto">
+        <div className="w-full grid grid-cols-2 gap-[8px] max-w-[1400px] overflow-x-auto">
           <div className="relative">
             <div className="text-center  h-[40px] bg-[#101C47] grid content-center ">
               Maker
@@ -440,11 +442,11 @@ function Fee() {
                     <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.53846C7.32682 3.53846 3.53846 7.32682 3.53846 12C3.53846 16.6732 7.32682 20.4615 12 20.4615C16.6732 20.4615 20.4615 16.6732 20.4615 12C20.4615 7.32682 16.6732 3.53846 12 3.53846ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z" fill="#ffffff" /> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.64103C12.4248 7.64103 12.7692 7.98542 12.7692 8.41026V12.5128C12.7692 12.9377 12.4248 13.2821 12 13.2821C11.5752 13.2821 11.2308 12.9377 11.2308 12.5128V8.41026C11.2308 7.98542 11.5752 7.64103 12 7.64103Z" fill="#ffffff" /> <path d="M13.0256 15.5897C13.0256 16.1562 12.5664 16.6154 12 16.6154C11.4336 16.6154 10.9744 16.1562 10.9744 15.5897C10.9744 15.0233 11.4336 14.5641 12 14.5641C12.5664 14.5641 13.0256 15.0233 13.0256 15.5897Z" fill="#ffffff" /> </g>
                   </svg>
                 </div>
-                <div className="absolute left-[436px] z-10">
+                <div className="absolute right-[-55px] sm:right-[-115px] z-10">
                   <div class="w-16 hidden group-hover:block overflow-hidden absolute top-[-6px] left-[115px]">
                     <div class=" h-[8px] bg-white w-[10px] rotate-45 transform origin-bottom-left"></div>
                   </div>
-                  <span className="w-[258px] text-left rounded h-[78px] p-[8px] border bg-white font-normal text-[10px] text-[#000000] hidden  group-hover:block">Та захиалгаа өгснөөр тэр даруй арилжаа хийгдэхгүй болж Maker болж таны захиалга захиалгын дэвтэрт үлдэж, дараа нь өөр хүн биелүүлэх/тохируулахыг хүлээнэ.</span>
+                  <span className="sm:w-[258px] w-[200px] text-left rounded sm:h-[78px] h-[40px] p-[8px] border bg-white font-normal sm:text-[10px] text-[6px] text-[#000000] hidden  group-hover:block">Та захиалгаа өгснөөр тэр даруй арилжаа хийгдэхгүй болж Maker болж таны захиалга захиалгын дэвтэрт үлдэж, дараа нь өөр хүн биелүүлэх/тохируулахыг хүлээнэ.</span>
                 </div>
               </div>
             </div>
@@ -461,14 +463,14 @@ function Fee() {
                     <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.53846C7.32682 3.53846 3.53846 7.32682 3.53846 12C3.53846 16.6732 7.32682 20.4615 12 20.4615C16.6732 20.4615 20.4615 16.6732 20.4615 12C20.4615 7.32682 16.6732 3.53846 12 3.53846ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z" fill="#ffffff" /> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.64103C12.4248 7.64103 12.7692 7.98542 12.7692 8.41026V12.5128C12.7692 12.9377 12.4248 13.2821 12 13.2821C11.5752 13.2821 11.2308 12.9377 11.2308 12.5128V8.41026C11.2308 7.98542 11.5752 7.64103 12 7.64103Z" fill="#ffffff" /> <path d="M13.0256 15.5897C13.0256 16.1562 12.5664 16.6154 12 16.6154C11.4336 16.6154 10.9744 16.1562 10.9744 15.5897C10.9744 15.0233 11.4336 14.5641 12 14.5641C12.5664 14.5641 13.0256 15.0233 13.0256 15.5897Z" fill="#ffffff" /> </g>
                   </svg>
                 </div>
-                <div className="absolute left-[332px]">
-                  <div class=" hidden group-hover:block overflow-hidden absolute top-[-6px] left-[220px]">
+                
+                <div className="absolute right-3">
+                  <div class=" hidden group-hover:block overflow-hidden absolute top-[-6px] left-[220px] float-right">
                     <div class=" h-[8px] bg-white w-[10px] rotate-45 transform origin-bottom-left"></div>
                   </div>
-                  <span className="w-[240px] text-left rounded h-[52px] p-[8px] border bg-white font-normal text-[10px] text-[#000000] hidden  group-hover:block">Захиалгын дэвтэрт байгаа захиалгатай шууд таарч захиалга өгч буй арилжаачин</span>
+                  <span className="w-[150px] md:w-[240px] text-left rounded h-[35px] sm:h-[50px] p-[8px] border bg-white font-normal md:text-[10px] text-[6px] text-[#000000] hidden  group-hover:block">Захиалгын дэвтэрт байгаа захиалгатай шууд таарч захиалга өгч буй арилжаачин</span>
                 </div>
-              </div>
-
+                </div>
             </div>
             <div className="grid text-center h-[40px] mt-[24px] content-center mb-[256px]">0.35%</div>
           </div>

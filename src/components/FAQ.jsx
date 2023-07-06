@@ -147,7 +147,7 @@ const Item = ({ title, children }) => {
   return (
     <div>
       <div
-        className={`cursor-pointer p-[24px] rounded-[8px] bg-[#FFFFFF]  text-[#35363B] px-[18px] overflow-hidden transition-[max-height] duration-500 drop-shadow-[6px_6px_18px_rgba(0,108,255,0.04)] ${expandedItems.includes(title) ? "max-h-[800px] mb-0 rounded-b-[0px] pb-0" : "mb-[24px]"}`}
+        className={`cursor-pointer p-[24px] rounded-[8px] bg-[#FFFFFF]  text-[#35363B] px-[18px] overflow-hidden transition-[max-height] duration-500 drop-shadow-[6px_6px_18px_rgba(0,108,255,0.04)] ${expandedItems.includes(title) ? "max-h-[800px] mb-0 rounded-b-[0px] pb-0" : "mb-[16px]"}`}
         onClick={handleClick}
       >
         <div className="flex sm:pt-0 justify-between items-center font-bold">
@@ -168,7 +168,7 @@ const Item = ({ title, children }) => {
         </div>
       </div>
       {expandedItems.includes(title) && (
-        <div className="transition-transform duration-200 text-[8px] smooth bg-white text-gray-700 mb-4 p-4 rounded-b-md mt-[0px]">
+        <div className="transition-transform duration-200 text-[8px] smooth bg-[#FFFFFF] text-gray-700 mb-4 p-4 rounded-b-md mt-[0px]">
           {children}
         </div>
       )}

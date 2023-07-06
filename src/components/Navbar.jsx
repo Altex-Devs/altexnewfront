@@ -158,14 +158,14 @@ const Navbar = ({ locale, setLocale }) => {
             {locale === "en" ? "Mon" : "Eng"}
           </span>
           <Link to="/" id="industry_select" className={`ml-[24px] ${isHuunHidden ? 'hidden' : ''}`} onClick={handleHuunClick}>
-            <FormattedMessage id="industry_select" />
+            <FormattedMessage id="industry_select_individual" />
           </Link>
           <Link to="/corporate" id="industry_select" className={`ml-[24px] ${isBayguulagHidden ? 'hidden' : ''}`} onClick={handleBayguulagClick}>
             <FormattedMessage id="industry_select"/>
           </Link>
         </div>
       </div>
-      <div className={`transition-[500] ease-in-out delay-10000 scroll-smooth z-40 ${navbarBg ? "bg-[#050F36] top-0" : "top-[48px]"}`}>
+      <div className={`sticky transition-[5000] ease-in-out delay-10 scroll-smooth z-40 ${navbarBg ? "bg-[#050F36] top-[48px]" : "top-[48px]"}`}>
       <div className={`flex container mx-auto py-[40px] max-w-[1490px] px-[34px] items-center justify-between relative z-20`}>
         <div className="flex items-center">
           <a href="/" className="py-[1px]">

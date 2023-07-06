@@ -15,7 +15,7 @@ const Corporate = () => {
           <p className="max-w-[800px] text-[24px] font-light leading-[30px]">
             <FormattedMessage id="corporate_header_section"/>
           </p>
-          <button className="rounded-[4px] mt-[16px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]">Арилжаанд оролцох</button>
+          <a href="https://trade.altex.mn/" className="rounded-[4px] mt-[16px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b leading-[18px] from-[#13A9FD] to-[#006CFF] hover:to-[rgba(0,108,255,.64)] hover:from-[rgba(19,169,253,.64)]"><FormattedMessage id="jumbo_button"/></a>
         </div>
         <div style={{backgroundImage: 'url("/images/dan-2.png")'}} className="absolute bg-cover w-screen h-full top-0 -left-[calc(50vw-50%)] pointer-events-none touch-none"></div>
       </div>

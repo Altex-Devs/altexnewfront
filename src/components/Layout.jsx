@@ -77,7 +77,7 @@ const Layout = ({ locale, setLocale }) => {
 
       <div>
         <Navbar locale={locale} setLocale={setLocale} />
-        <div className="container lg:mx-auto max-w-[1200px] mx-[16px]">
+        <div className="container lg:mx-auto max-w-[1200px] px-[16px]">
         <Outlet />
         <Footer />
         </div>

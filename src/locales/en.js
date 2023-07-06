@@ -12,6 +12,7 @@ const en = {
     "mobile_menu_login": "Log In",
     "translate_lang": "Mon",
     "industry_select": "Corporate",
+    "industry_select_individual": "Individual",
     "menu_trade": "Trade",
     "menu_about_us": "About",
     "menu_about_exchange": "Digital Exchange",
@@ -77,6 +78,7 @@ const en = {
     "newsletteremail": "E-mail",
     "newsletter_send": "Submit",
     "crypto_basics_terms":"Glossary of Terms",
+    "howto":"How to guide",
 
 
     "feedback_title": "Give us feedback",
@@ -116,10 +118,10 @@ const en = {
     "our_team_header":"Meet our team",
     "our_team_content":"We are led by a customer-oriented team who are specialized in customer service, product development and technology.We also work with experts from world-leading technology and financial companies such as <span class='font-bold'>Google, Apple and McKinsey & Company.</span>",
     "our_team_partner":"Technology partner",
-    "our_team_partner_content_first":"Backed by Asia’s leading public fintech and digital asset company, <a href='https://bc.group/' class='underline text-blue-600'>BC Technology Group</a> (stock code: HK 863), <a href='https://osl.com/en/' class='underline text-blue-600'>OSL</a> is the region’s most comprehensive licensed digital asset platform.",
-    "our_team_partner_content_second":"<a class='underline text-blue-600' href='https://osl.com/en/'>OSL</a> is the world’s first and only insured and SFC-licensed digital asset platform, providing prime brokerage, custody, exchange and SaaS services for institutional clients and professional investors.",
+    "our_team_partner_content_first":"Backed by Asia’s leading public fintech and digital asset company, BC Technology Group (stock code: HK 863), OSL is the region’s most comprehensive licensed digital asset platform.",
+    "our_team_partner_content_second":"OSL is the world’s first and only insured and SFC-licensed digital asset platform, providing prime brokerage, custody, exchange and SaaS services for institutional clients and professional investors.",
     "our_team_partner_content_third":"The company offers OTC, iRFQ and electronic trading services giving traders access to the world’s deepest liquidity pools, as well as secure and insured hot and cold wallets to ensure the safekeeping of digital assets with timely transaction settlement.",
-    "our_team_partner_content_fourth":"<a href='https://bc.group/' class='underline text-blue-600'>BC Group</a> and the <a href='underline text-blue-600' class='underline text-blue-600'>OSL</a> platform are enabling institutional adoption of the digital asset class, setting the global standard for performance, security and compliance.",
+    "our_team_partner_content_fourth":"BC Group and the OSL platform are enabling institutional adoption of the digital asset class, setting the global standard for performance, security and compliance.",
     "our_team_partner_content_footer":"For more information: <a href='https://bc.group/' class='underline text-blue-600'>bc.group</a> and <a class='underline text-blue-600' href='https://osl.com/en/'>osl.com</a>",
 
     

@@ -6,7 +6,6 @@ function PostsMore({posts, type}) {
   return (
     <>
       <div className="grid justify-center sm:grid-cols-2 sm:justify-center lg:grid-cols-3 gap-[24px] ">
-
         {posts.map((post) => <div key={post.id}>
           <div className="bg-white rounded flex flex-col w-[316px] h-[340px]">
             <div className="aspect-video bg-cover inline-block h-1/2 rounded-t" style={{backgroundImage: `url("${post.image}")`}}></div>
