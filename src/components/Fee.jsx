@@ -289,8 +289,8 @@ function Fee() {
   }
 
   return (
-    <>
-      <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#1E274A] text-[18px] font-medium gap-[40px] mt-[80px] mb-[40px]">
+    <div className="overflow-x-scroll">
+      <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#1E274A] text-[17px] sm:text-[18px] font-medium gap-[40px] mt-[80px] mb-[40px] ">
         <div onClick={() => toggle("button1")} className={`relative ${show === "button1" ? "text-white cursor-pointer active" : "text-[#626880] cursor-pointer"}`}>
           <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_deposit_title" }) }} />
           <div className={`absolute h-[2px] w-full ${show === "button1" ? "bg-[#13A9FD] bottom-[-17px] active" : ""}`}></div>
@@ -305,7 +305,7 @@ function Fee() {
         </div>
       </div>
       {show === "button1" && (
-        <div className="w-full min-w-[1000px]">
+        <div className="overflow-x-scroll h-[800px] min-w-[1000px]">
         <div className="inline-grid grid-cols-6 text-center font-light mb-[262px] w-full">
           <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center row-span-2">
             <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_currency" }) }} />
@@ -362,7 +362,6 @@ function Fee() {
                 </div>
                 <div className="text-center grid content-center border-b border-[#283359]">-</div>
                 <div className="text-center grid content-center border-b border-[#283359]">-</div>
-
               </>
             )
           })}
@@ -476,7 +475,7 @@ function Fee() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
 

@@ -487,12 +487,12 @@ function Howto() {
                   {item.info.map((data, innerIndex) => (
                     <div className="mb-[24px]" key={innerIndex}>
                       <div className="pb-[16px] px-6 xl:mr-[120px] xl:ml-[30px] xl:mb-[16px] lg:mr-[120px] lg:ml-[30px] lg:mb-[16px] md:mr-[120px] md:ml-[30px] md:mb-[16px]">{data.desc}</div>
-                      <div className="w-[284px] 3xl:w-[584px] 2xl:w-[584px] xl:w-[584px] lg:w-[384px] md:w-[284px] md:max-w-3xl h-[max] mb-[] flex mx-auto justify-center">
+                      <div className="w-[284px] 3xl:w-[584px] 2xl:w-[584px] xl:w-[584px] lg:w-[384px] md:w-[284px] md:max-w-3xl h-[max] flex mx-auto justify-center">
                         {data.img && <img className="w-max h-max" src={data.img} alt="Burtgel uusgeh" />}
                         {data.img1 && <a  className="inline-block ml-[10px]" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&pli=1"><img className="inline-block mt-4" src={data.img1} alt="Burtgel uusgeh" /></a>}
                         {data.img2 && <a  className="inline-block ml-[10px]" href="https://apps.apple.com/us/app/google-authenticator/id388497605"><img className="mt-4" src={data.img2} alt="Burtgel uusgeh" /></a>}
                       </div>
-                      {data.dans && <div className="text-[14px] ml-[3rem] mb-[16px] pt-0 mt-0 text-[#E7E8ED]">{data.dans}</div>}
+                      {data.dans && <div className="sm:text-[14px] text-[10px] ml-[1.4rem] sm:ml-[3rem] mb-[16px] text-[#E7E8ED]">{data.dans}</div>}
                       <div className=" gap-[24px] grid grid-cols-3 px-4">
                         {data.imgDans1 && <img className="" src={data.imgDans1} alt="Burtgel uusgeh" />}
                         {data.imgDans2 && <img className="" src={data.imgDans2} alt="Burtgel uusgeh" />}
@@ -513,7 +513,7 @@ function Howto() {
                               </g>
                             </svg>
                           )}
-                          {data.alert && <div className=" md:pr-4 ">{data.alert}</div>}
+                          {data.alert && <div className=" md:pr-4 text-[8px] sm:text-[0.7rem]">{data.alert}</div>}
                         </div>
                       )}
                     </div>
@@ -587,14 +587,13 @@ function Howto() {
                 <div className="max-w-[800px] mx-auto mt-[100px] mb-[22px]">
                   {item.info.map((data, innerIndex) => (
                     <div className="mb-[24px]" key={innerIndex}>
-                      <div className="mb-[16px] ml-[30px] mr-[120px]">{data.desc}</div>
-                      <div className="w-[384px] h-[max] mb-[24px] flex items-center mx-auto">
-                        {data.img && <img className="inline-block mx-auto" src={data.img} alt="Burtgel uusgeh" />}
-                        {data.img1 && <a  className="inline-block ml-[10px] mb-[20px] mx-auto" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&pli=1"><img className="inline-block mt-4" src={data.img1} alt="Burtgel uusgeh" /></a>}
-                        {data.img2 && <a  className="inline-block ml-[10px] mb-[20px]" href="https://apps.apple.com/us/app/google-authenticator/id388497605"><img className="mt-4" src={data.img2} alt="Burtgel uusgeh" /></a>}
-                        
+                      <div className="pb-[16px] px-6 xl:mr-[120px] xl:ml-[30px] xl:mb-[16px] lg:mr-[120px] lg:ml-[30px] lg:mb-[16px] md:mr-[120px] md:ml-[30px] md:mb-[16px]">{data.desc}</div>
+                      <div className="w-[284px] 3xl:w-[584px] 2xl:w-[584px] xl:w-[584px] lg:w-[384px] md:w-[284px] md:max-w-3xl h-[max] flex mx-auto justify-center">
+                        {data.img && <img className="w-max h-max" src={data.img} alt="Burtgel uusgeh" />}
+                        {data.img1 && <a  className="inline-block ml-[10px]" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&pli=1"><img className="inline-block mt-4" src={data.img1} alt="Burtgel uusgeh" /></a>}
+                        {data.img2 && <a  className="inline-block ml-[10px]" href="https://apps.apple.com/us/app/google-authenticator/id388497605"><img className="mt-4" src={data.img2} alt="Burtgel uusgeh" /></a>}
                       </div>
-                      {data.dans && <div className="text-[14px] ml-[3rem] mb-[16px] text-[#E7E8ED]">{data.dans}</div>}
+                      {data.dans && <div className="sm:text-[14px] text-[10px] ml-[1.4rem] sm:ml-[3rem] mb-[16px] text-[#E7E8ED]">{data.dans}</div>}
                       <div className=" gap-[24px] grid grid-cols-3 px-4">
                         {data.imgDans1 && <img className="" src={data.imgDans1} alt="Burtgel uusgeh" />}
                         {data.imgDans2 && <img className="" src={data.imgDans2} alt="Burtgel uusgeh" />}
@@ -615,7 +614,7 @@ function Howto() {
                               </g>
                             </svg>
                           )}
-                          {data.alert && <div className=" md:pr-4 ">{data.alert}</div>}
+                          {data.alert && <div className=" md:pr-4 text-[8px] sm:text-[0.7rem]">{data.alert}</div>}
                         </div>
                       )}
                     </div>
