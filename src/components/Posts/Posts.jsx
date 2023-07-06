@@ -71,11 +71,7 @@ function Posts() {
         console.error("Error getting posts:", error);
       });
   };
-
- 
-
   const totalPages = Math.ceil(totalPosts / paginateBy);
-
   const handleNextPage = () => {
     if (startIdx + 6 < totalPosts) {
       setStartIdx(startIdx + 6);
@@ -95,7 +91,7 @@ function Posts() {
   return (
     <>
       <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] pt-[80px] pb-[240px]">
-        <div className="container mx-auto  max-w-[996px]">
+        <div className="container px-[12px] sm:mx-auto  max-w-[996px]">
           <div className="font-light text-[14px] mb-[80px] text-[#3973C5]">
           <a href="/"><FormattedMessage id="terms_breadcrumbs_1"/></a> &gt; <FormattedMessage id="menu_academy"/> &gt; 
           {window.location.pathname === "/posts/projects" ? (
@@ -108,7 +104,6 @@ function Posts() {
             ""
           )}
         </div>
-
           {type === "basics" && (
             <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#CDCDCE] text-[18px] font-medium gap-[40px] mb-[24px]">
               <div className="relative text-[#35363B] uppercase">
@@ -120,7 +115,6 @@ function Posts() {
               </Link>
             </div>
           )}
-
         {posts.length && <>
             <div className="bg-white rounded flex flex-col h-max md:flex-row gap-[24px] mb-[24px]">
               <div className="basis-2/3  aspect-video bg-cover rounded-l" style={{backgroundImage: `url(${posts[0].image})`}} ></div>
@@ -137,9 +131,7 @@ function Posts() {
                 </div>
               </div>
             </div>
-
             <PostsMore posts={posts.slice(startIdx, startIdx + 6)} type={type} />
-
             <div className=" flex justify-center mt-[60px] w-full">
               <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
                 <button
@@ -156,30 +148,61 @@ function Posts() {
                     />
                   </svg>
                 </button>
-
                 <div className="flex">
                   {Array.from({ length: totalPages }, (_, index) => {
-                    if (index < 3 || index === totalPages - 1) {
+                    if (index < 1 || index === totalPages ) {
                       return (
-                        <button
+                        <>
+                          <span
                           key={index}
-                          className={`relative mx-1 justify-center z-10 inline-flex items-center px-4 py-2 border text-[10px] text-[#000] w-[32px] h-[32px] rounded p-[10px] ${startIdx === index * 6 ? "border-[#006CFF] text-[#006CFF]" : "border-[#C2C2C2] bg-white"
+                          className={`relative mx-1 justify-center z-10 inline-flex items-center px-4 py-2 border text-[10px] text-[#000] w-[32px] h-[32px] rounded p-[10px] ${startIdx/6 === 0 ? "hidden" : "border-[#C2C2C2] bg-white"
                             }`}
                           onClick={() => handlePageClick(index)}
                         >
-                          {index + 1}
-                        </button>
-                      );
-                    } else if (index === 3 && totalPages > 4) {
-                      return (
-                        <span key={index} className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 w-[32px] h-[32px] justify-center ring-inset ring-gray-300 focus:outline-offset-0">
-                          ...
+                          {startIdx / 6 }
+                          
                         </span>
+                        </>
                       );
-                    } else {
-                      return null;
-                    }
+                    } 
+                    return null
                   })}
+                  {Array.from({ length: totalPages }, (_, index) => {
+                    if (index < 1 || index === totalPages ) {
+                      return (
+                        <>
+                          <span
+                          key={index}
+                          className={`relative mx-1 justify-center z-10 inline-flex items-center px-4 py-2 border text-[10px] text-[#000] w-[32px] h-[32px] rounded p-[10px] ${startIdx/6 >= 0 && startIdx/6+1 !== 15 ? "border-[#006CFF] text-[#006CFF]" : "border-[#C2C2C2] bg-white"
+                            }`}
+                          onClick={() => handlePageClick(index)}
+                        >
+                          {startIdx / 6 + 1}
+                          
+                        </span>
+                        </>
+                      );
+                    } 
+                    return null
+                  })}
+                  {Array.from({ length: totalPages }, (_, index) => {
+                    if (index < 1 || index === totalPages ) {
+                      return (
+                        <>
+                          <span
+                          key={index}
+                          className={`relative mx-1 justify-center z-10 inline-flex items-center px-4 py-2 border text-[10px] text-[#000] w-[32px] h-[32px] rounded p-[10px] ${startIdx/6 +2 === 15 ? "border-[#006CFF] text-[#006CFF] hidden" : "border-[#C2C2C2] bg-white "
+                            }`}
+                          onClick={() => handlePageClick(index)}
+                        >
+                          {startIdx / 6 + 2}
+                          
+                        </span>
+                        </>
+                      );
+                    } 
+                    return null
+                  })}                  
                 </div>
                 <button
                   onClick={handleNextPage}
@@ -206,3 +229,5 @@ function Posts() {
 }
 
 export default Posts;
+
+

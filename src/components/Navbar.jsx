@@ -142,9 +142,9 @@ const Navbar = ({ locale, setLocale }) => {
             <span id="mobile_menu_academy" className="mobile_menu" onClick={(event) => toggleMobileMenu(event)}>Академи</span>
             <img className="icon inline-block relative left-[5px]" src="/images/menu_arrow.svg" />
             <div className="expander flex-col max-h-0 gap-[10px] pt-[10px] overflow-hidden space-y-4 transition-[max-height] duration-700 pl-[15px]">
-              <Link id="mobile_menu_market_news" className="block" to="/posts/news">Зах зээлийн мэдээ</Link>
-              <a id="mobile_menu_crypto_knowledge" className="block" href="/cryptobasics">Крипто мэдлэг</a>
-              <a id="mobile_menu_projects" className="block" href="https://altex.mn/projects.php">Төслүүд</a>
+              <a id="mobile_menu_market_news" className="block" href="/posts/news">Зах зээлийн мэдээ</a>
+              <a id="mobile_menu_crypto_knowledge" className="block" href="/posts/basics">Крипто мэдлэг</a>
+              <a id="mobile_menu_projects" className="block" href="/posts/projects">Төслүүд</a>
             </div>
           </div>
         </div>
