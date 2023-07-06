@@ -79,6 +79,7 @@ const en = {
     "newsletter_send": "Submit",
     "crypto_basics_terms":"Glossary of Terms",
     "howto":"How to guide",
+    "seeAll":"See All",
 
 
     "feedback_title": "Give us feedback",

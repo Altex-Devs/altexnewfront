@@ -91,7 +91,7 @@ function Posts() {
   return (
     <>
       <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] pt-[80px] pb-[240px]">
-        <div className="container px-[12px] sm:mx-auto  max-w-[996px]">
+        <div className="container px-[26px] sm:mx-auto  max-w-[996px]">
           <div className="font-light text-[14px] mb-[80px] text-[#3973C5]">
           <a href="/"><FormattedMessage id="terms_breadcrumbs_1"/></a> &gt; <FormattedMessage id="menu_academy"/> &gt; 
           {window.location.pathname === "/posts/projects" ? (
@@ -110,7 +110,7 @@ function Posts() {
                 <FormattedMessage id="footer_crypto_knowledge" />
                 <div className="absolute h-[2px] w-full bg-[#13A9FD] bottom-[-17px]"></div>
               </div>
-              <Link to="/cryptoterms" className="relative text-[#CDCDCE]">
+              <Link to="/cryptoterms" className="relative text-[#CDCDCE] uppercase">
                 <FormattedMessage id="crypto_basics_terms"/>
               </Link>
             </div>
