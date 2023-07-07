@@ -1,9 +1,17 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { FormattedMessage, useIntl } from 'react-intl';
+import React, { useEffect, useState } from 'react';
 
 
 function HomeComponents() {
   const intl = useIntl();
+  const [blurred, setBlurred] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setBlurred(true);
+    }, 0);
+  }, []);
 
   const submitPromo = () => {
     const emailInput = document.getElementById("email");
@@ -103,7 +111,7 @@ function HomeComponents() {
             <div className="flex items-start gap-[24px] h-[64px]">
               <div className="relative">
                 <div className="absolute w-[40px] h-[40px] bg-gradient-to-b from-[#13A9FD] to-[#0073C6] rounded-full z-10 top-[3px] left-[3px]"></div>
-                <img className="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-1.svg" />
+                <img className={`relative min-w-[64px] z-20 ${blurred ? "backdropp" : ""} rounded-[8px]`} src="/images/adv-1.svg" />
               </div>
               <div className="flex flex-col">
                 <div id="feature_1_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">
@@ -117,7 +125,7 @@ function HomeComponents() {
             <div className="flex items-start gap-[24px] h-[64px]">
               <div className="relative">
                 <div className="absolute w-[40px] h-[40px] bg-gradient-to-b from-[#13A9FD] to-[#0073C6] rounded-full z-10 top-[3px] left-[3px]"></div>
-                <img className="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-2.svg" />
+                <img className={`relative min-w-[64px] z-20 ${blurred ? "backdropp" : ""} rounded-[8px]`} src="/images/adv-2.svg" />
               </div>
               <div className="flex flex-col">
                 <div id="feature_2_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">
@@ -131,7 +139,7 @@ function HomeComponents() {
             <div className="flex items-start gap-[24px] h-[64px]">
               <div className="relative">
                 <div className="absolute w-[40px] h-[40px] bg-gradient-to-b from-[#13A9FD] to-[#0073C6] rounded-full z-10 top-[3px] left-[3px]"></div>
-                <img className="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-3.svg" />
+                <img className={`relative min-w-[64px] z-20 ${blurred ? "backdropp" : ""} rounded-[8px]`} src="/images/adv-3.svg" />
               </div>
               <div className="flex flex-col">
                 <div id="feature_3_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">
@@ -145,7 +153,7 @@ function HomeComponents() {
             <div className="flex items-start gap-[24px] h-[64px]">
               <div className="relative">
                 <div className="absolute w-[40px] h-[40px] bg-gradient-to-b from-[#13A9FD] to-[#0073C6] rounded-full z-10 top-[3px] left-[3px]"></div>
-                <img className="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-4.svg" />
+                <img className={`relative min-w-[64px] z-20 ${blurred ? "backdropp" : ""} rounded-[8px]`} src="/images/adv-4.svg" />
               </div>
               <div className="flex flex-col">
                 <div id="feature_4_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">
@@ -157,7 +165,7 @@ function HomeComponents() {
             <div className="flex items-start gap-[24px] h-[64px]">
               <div className="relative">
                 <div className="absolute w-[40px] h-[40px] bg-gradient-to-b from-[#13A9FD] to-[#0073C6] rounded-full z-10 top-[3px] left-[3px]"></div>
-                <img className="relative min-w-[64px] z-20 backdrop-blur-lg rounded-[8px]" src="/images/adv-5.svg" />
+                <img className={`relative min-w-[64px] z-20 ${blurred ? "backdropp" : ""} rounded-[8px]`} src="/images/adv-5.svg" />
               </div>
               <div className="flex flex-col">
                 <div id="feature_5_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">
