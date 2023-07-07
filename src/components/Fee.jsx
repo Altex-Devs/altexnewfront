@@ -306,8 +306,8 @@ function Fee() {
       </div>
       <div className="overflow-x-auto">
       {show === "button1" && (
-        <div className="overflow-y-scroll overflow-auto h-[800px] min-w-[1000px]">
-        <div className="inline-grid grid-cols-6 text-center font-light mb-[262px] w-full">
+        <div className="flex w-full min-w-[1000px]">
+        <div className="inline-grid grid-cols-6 text-center font-light mb-[62px] w-full">
           <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center row-span-2">
             <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_currency" }) }} />
           </div>
@@ -372,7 +372,7 @@ function Fee() {
       )}
       {show === "button2" && (
         <div className="flex w-full min-w-[1000px]">
-          <div className="inline-grid grid-cols-6 text-center font-light mb-[262px]">
+          <div className="inline-grid grid-cols-6 text-center font-light mb-[62px]">
             <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center row-span-2">
               <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_currency" }) }} />
             </div>
