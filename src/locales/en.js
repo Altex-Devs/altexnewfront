@@ -34,7 +34,7 @@ const en = {
     "feature_3_head": "Competitive rates",
     "feature_3_desc": "Buy and sell digital assets quickly and easily at the most competitive rates",
     "feature_4_head": "Withdrawal limits",
-    "feature_4_desc": "Cash and crypto withdrawal limits up to $100,000",
+    "feature_4_desc": "Cash and crypto withdrawal limits $30,000 - $200,000",
     "feature_5_head": "Low transaction fee",
     "feature_5_desc": "Effortless and quick transaction with low fee",
     "referal_code_head": "Referral code",
