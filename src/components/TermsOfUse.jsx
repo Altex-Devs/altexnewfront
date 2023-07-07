@@ -1,5 +1,4 @@
-import {  FormattedMessage, useIntl } from "react-intl";
-
+import { FormattedMessage, useIntl } from "react-intl";
 
 function TermsOfUse() {
   const intl = useIntl();
