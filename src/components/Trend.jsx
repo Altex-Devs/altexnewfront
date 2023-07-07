@@ -4,7 +4,7 @@ import {FormattedMessage} from "react-intl";
 
 function Trend() {
   useEffect(() => {
-    fetch('http://15.164.164.183/ticker.php', {
+    fetch('https://old.altex.mn/ticker.php', {
       mode: "cors",
       // credentials: "include",
     }).then((res) => res.json()).then((res) => {
@@ -15,7 +15,7 @@ function Trend() {
           elem.innerHTML += `
             <div class="snap-center relative rounded-[10px] border-solid border border-[#13A9FD] px-[17px] py-[24px] min-w-[200px]">
               <div class="flex items-stretch">
-                <img src="http://15.164.164.183/images/${r.ticker}.svg" />
+                <img src="https://old.altex.mn/images/${r.ticker}.svg" />
                 <div class="flex flex-col justify-between">
                   <div class="text-[#FD950D] ml-[8px] text-[20px] mt-[-5px]">${r.ticker}</div>
                   <div class="text-[#FFF] ml-[8px] ${r.ticker === 'BAT' ? 'text-[9px]' : 'text-[10px]'} opacity-50">${r.name}</div>
@@ -24,7 +24,7 @@ function Trend() {
               <div class="text-[24px] mt-[21px] mb-[5px]">$${parseFloat(r.value).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
               <div class="text-[12px] text-[#${r.temp < 0 ? '13A9FD' : 'FDAE13'}]">
                 <span class="mr-[15px] mb-[2px]">( ${r.temp.toFixed(2)}% )</span>
-                <img src="http://15.164.164.183/images/bit-${r.temp < 0 ? 'down' : 'up'}.svg" class="inline" />
+                <img src="https://old.altex.mn/images/bit-${r.temp < 0 ? 'down' : 'up'}.svg" class="inline" />
               </div>
             </div>`;
         });
