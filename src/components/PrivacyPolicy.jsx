@@ -23,19 +23,15 @@ function PrivacyPolicy() {
   return (
     <>
       <div className="relative bg-[#F5F5F5] mt-[40px] mb-[77px] w-screen -left-[calc(50vw-50%)] text-[#35363B] font-light">
-      <div ref={topRef} className="fixed inset-[-1] right-10 bottom-10 border rounded-full p-2 border-[#050F36] cursor-pointer bg-[#050F36] z-50 flex justify-center items-center">
+      <div ref={topRef} className="fixed inset-[-1] right-6 bottom-6 p-1 cursor-pointer z-50 flex justify-center items-center">
         <div className="text-[#000] text-2xl">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
-        <title/>
-        <g id="Complete">
-        <g id="arrow-up">
-        <g>
-        <polyline data-name="Right" fill="none" id="Right-2" points="7 7.5 12 2.5 17 7.5" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        <line fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="21.3" y2="4.8"/>
-        </g>
-        </g>
-        </g>
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+          <g id="Group_7875" data-name="Group 7875" transform="translate(1098.6 403.6) rotate(180)">
+            <rect id="Rectangle_5582" data-name="Rectangle 5582" width="64" height="64" rx="32" transform="translate(1034.6 339.6)" fill="#006cff" opacity="0.16"/>
+            <path id="Icon_ionic-ios-arrow-up" data-name="Icon ionic-ios-arrow-up" d="M14.16,4.877l10.7,10.708a2.023,2.023,0,1,0,2.857-2.864L15.593.589A2.02,2.02,0,0,0,12.8.53L.59,12.712a2.023,2.023,0,0,0,2.857,2.864Z" transform="translate(1080.601 379.6) rotate(180)" fill="#006cff"/>
+          </g>
         </svg>
+
         </div>
     </div>
         <div className="container mx-auto px-[16px] pt-[80px] pb-[241px] max-w-[1232px]">
