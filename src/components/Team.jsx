@@ -5,8 +5,8 @@ function Team() {
 
   return (
     <>
-      <div className="flex  flex-col md:flex-row gap-[24px] pb-[160px] mt-[160px] items-center border-b-[0.5px] border-b-[#13A9FD] leading-[35px]">
-        <img src="/images/ceo.png" alt="team" className="w-[283px]" />
+      <div className="flex  flex-col md:flex-row gap-[24px] pb-[160px] mt-[80px] sm:mt-[160px] items-center border-b-[0.5px] border-b-[#13A9FD] leading-[35px]">
+        <img src="/images/ceo.png" alt="team" className="w-[283px] mb-[40px] sm:mb-0" />
         <div className="grow font-extralight">
           <div className="font-bold text-[32px] mb-[16px]">
             <FormattedMessage id="our_team_ceo_name"/>
