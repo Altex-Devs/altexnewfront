@@ -436,7 +436,7 @@ function Howto() {
           <div className="max-w-[800px] mx-auto ">
           {jsonD.map((item, index) => (
           <div key={index} className="rounded-[8px] bg-[#101C47] text-[#E6E7EB] p-[24px] pt-0 ">
-            <div onClick={() => handleTitleClick(index)} className="cursor-pointer flex pb-[17px] pt-[24px] justify-between border-b-[1px] border-b-[#283359]">
+            <div onClick={() => handleTitleClick(index)} className="cursor-pointer flex pb-[17px] pt-[24px] justify-between border-b-[1px] border-b-[#283359] gap-[16px]">
             <div className={`text-[16px] ${activeIndex === index ? 'text-[#13A9FD]' : 'text-[#E6E7EB]'}`}>{item.title}</div>
               <div className="w-[24px] h-[24px] rounded-[2px] bg-[rgba(0,108,255,0.16)] transform transition-transform duration-300" style={{ transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0)' }}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-max h-max ml-[5px]"  xmlnsXxlink="http://www.w3.org/1999/xlink" width="14px" height="20px" viewBox="0 -4.5 20 20" version="1.1">
@@ -452,7 +452,7 @@ function Howto() {
                 </div>
             </div>
             {activeIndex === index && (
-            <div className="flex float-right h-max w-[170px] mt-[24px]">
+            <div className="flex md:float-right h-max w-[170px] mt-[24px]">
               <div className="cursor-pointer font-bold border rounded border-[#006CFF] text-[#13A9FD]" onClick={handleVideoTextClick}>
                 <div className="py-[7px] text-[9px] flex pl-[12px] pr-[16px] items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="rounded-full mr-[10px]" width="30px" height="30px" viewBox="0 0 192 192" fill="none" strokeWidth="12">
@@ -484,7 +484,7 @@ function Howto() {
             )}
             {
               activeIndex === index && (
-                <div className="max-w-[800px] mx-auto mt-[100px] mb-[22px]">
+                <div className="max-w-[800px] mx-auto mt-[24px] md:mt-[100px] mb-[22px]">
                   {item.info.map((data, innerIndex) => (
                     <div className="mb-[24px]" key={innerIndex}>
                       <div className="pb-[16px] px-6 xl:mr-[120px] xl:ml-[30px] xl:mb-[16px] lg:mr-[120px] lg:ml-[30px] lg:mb-[16px] md:mr-[120px] md:ml-[30px] md:mb-[16px]">{data.desc}</div>
@@ -551,7 +551,7 @@ function Howto() {
                 </div>
               </div>
               {activeIndex === index && (
-              <div className="flex float-right h-max w-[170px] mt-[24px]">
+              <div className="flex md:float-right h-max w-[170px] mt-[24px]">
                 <div className="cursor-pointer font-bold border rounded border-[#006CFF] text-[#13A9FD]" onClick={handleVideoTextClick}>
                   <div className="py-[7px] text-[9px] flex pl-[12px] pr-[16px] items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="rounded-full mr-[10px]" width="30px" height="30px" viewBox="0 0 192 192" fill="none" strokeWidth="12">
@@ -584,7 +584,7 @@ function Howto() {
   
             {
               activeIndex === index && (
-                <div className="max-w-[800px] mx-auto mt-[100px] mb-[22px]">
+                <div className="max-w-[800px] mx-auto mt-[24px] md:mt-[100px] mb-[22px]">
                   {item.info.map((data, innerIndex) => (
                     <div className="mb-[24px]" key={innerIndex}>
                       <div className="pb-[16px] px-6 xl:mr-[120px] xl:ml-[30px] xl:mb-[16px] lg:mr-[120px] lg:ml-[30px] lg:mb-[16px] md:mr-[120px] md:ml-[30px] md:mb-[16px]">{data.desc}</div>

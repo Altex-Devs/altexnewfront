@@ -150,7 +150,7 @@ const Item = ({ title, children }) => {
         className={`cursor-pointer p-[24px] rounded-[8px] bg-[#FFFFFF]  text-[#35363B] px-[18px] overflow-hidden transition-[max-height] duration-500 drop-shadow-[6px_6px_18px_rgba(0,108,255,0.04)] ${expandedItems.includes(title) ? "max-h-[800px] mb-0 rounded-b-[0px] pb-0" : "mb-[16px]"}`}
         onClick={handleClick}
       >
-        <div className="flex sm:pt-0 justify-between items-center font-bold">
+        <div className="flex sm:pt-0 justify-between items-center font-bold gap-[16px]">
           <div className="font-montserrat text-[12px] w-[290px] sm:text-[16px] sm:w-max">{title}</div>
           <svg
             className={`bg-[rgba(0,108,255,0.16)] p-1 rounded w-6 h-6 transition-transform duration-200 transform ${expandedItems.includes(title) ? "rotate-180" : ""}`}
