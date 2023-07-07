@@ -430,13 +430,13 @@ function Howto() {
           </div>
         </div>
 
-        <div className="rounded-[8px] text-[16px] bg-[#101C47] text-[#E6E7EB]  pt-0">
+        <div className="rounded-[8px] text-[16px] bg-[#101C47] text-[#E6E7EB] pt-[14px]">
         
         {activeSection === 'КОМПЬЮТЕР' && (
-          <div className="max-w-[800px] mx-auto ">
+          <div className="max-w-[800px] mx-auto">
           {jsonD.map((item, index) => (
-          <div key={index} className="rounded-[8px] bg-[#101C47] text-[#E6E7EB] p-[24px] pt-0 ">
-            <div onClick={() => handleTitleClick(index)} className="cursor-pointer flex pb-[17px] pt-[24px] justify-between border-b-[1px] border-b-[#283359] gap-[16px]">
+          <div key={index} className="rounded-[8px] bg-[#101C47] text-[#E6E7EB] p-[20px]">
+            <div onClick={() => handleTitleClick(index)} className="cursor-pointer flex pb-[17px] justify-between border-b-[1px] border-b-[#283359] gap-[16px]">
             <div className={`text-[16px] ${activeIndex === index ? 'text-[#13A9FD]' : 'text-[#E6E7EB]'}`}>{item.title}</div>
               <div className="w-[24px] h-[24px] rounded-[2px] bg-[rgba(0,108,255,0.16)] transform transition-transform duration-300" style={{ transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0)' }}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-max h-max ml-[5px]"  xmlnsXxlink="http://www.w3.org/1999/xlink" width="14px" height="20px" viewBox="0 -4.5 20 20" version="1.1">
