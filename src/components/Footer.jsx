@@ -16,7 +16,7 @@ const Footer = () => {
             <FormattedMessage id="footer_team"/>
           </a>
         </div>
-        <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px] pr-[15px]">
+        <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px] pr-[15px] z-20">
           <div id="footer_academy" className="text-[rgba(19,169,253,1)] mb-[32px]">
             <FormattedMessage id="footer_academy" />
           </div>
@@ -30,7 +30,7 @@ const Footer = () => {
             <FormattedMessage id="footer_projects" />
           </a>
         </div>
-        <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px] pr-[15px]">
+        <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px] pr-[15px] z-20">
           <div id="footer_service" className="text-[rgba(19,169,253,1)] mb-[32px]">
             <FormattedMessage id="footer_service"/>
           </div>
@@ -44,7 +44,7 @@ const Footer = () => {
             <FormattedMessage id="footer_fee"/>
           </a>
         </div>
-        <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px] pr-[15px]">
+        <div className="basis-full min-[310px]:basis-1/2 md:basis-1/3 lg:basis-1/5 mb-[30px] pr-[15px] z-20">
           <div id="footer_help" className="text-[rgba(19,169,253,1)] mb-[32px]">
             <FormattedMessage id="footer_help"/>
           </div>
