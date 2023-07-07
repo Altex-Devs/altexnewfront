@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FormattedMessage } from "react-intl";
 
 function Howto() {
   const [activeSection, setActiveSection] = useState('КОМПЬЮТЕР');
@@ -30,173 +31,173 @@ function Howto() {
   
   const jsonD = [
     {
-      title:'Бүртгэл үүсгэх',
+      title:<FormattedMessage id="howto_Registration"/>,
       video:'images/how-to-videos/how-to-register/11.mp4',
       info:[
         {
-          desc:'1. www.altex.mn хуудас руу орж "Бүртгүүлэх" товчин дээр дарна.',
+          desc:<FormattedMessage id="desktop_reg_1"/>,
           img:'images/desktop/burtgel-uusgeh/Intersection.png'
         },
         {
-          desc:'2. Өөрийн и-мэйл хаяг, утасны дугаараа оруулан бүртгүүлнэ.',
+          desc:<FormattedMessage id="desktop_reg_2"/>,
           img:'images/desktop/burtgel-uusgeh/2.png'
         },
         {
-          desc:'3. Таны бүртгүүлсэн и-мэйл хаягт бүртгэл үүссэнийг баталгаажуулах и-мэйл очих бөгөөд баталгаажуулах товчийг дарна.',
+          desc:<FormattedMessage id="desktop_reg_3"/>,
           img:'images/desktop/burtgel-uusgeh/3.png'
         },
         {
-          desc:'4. Нууц үг шинээр оруулснаар таньд бүртгэл үүснэ.',
+          desc:<FormattedMessage id="desktop_reg_4"/>,
           img:'images/desktop/burtgel-uusgeh/4.png'
         }
       ]
     },
     {
-      title:'2FA хамгаалалтаа идэвхжүүлэх',
+      title:<FormattedMessage id="howto_2fa"/>,
       video:'images/how-to-videos/how-to-enable-2fa/1.mp4',
       info:[
         {
-          desc:'1. Google Authenticator app-ыг өөрийн утасны Playstore болон Appstore-с татаж авна.',
+          desc:<FormattedMessage id="desktop_2fa_1"/>,
           img1:'images/android.svg',
           img:'images/desktop/2fa/Allitems-02.svg',
           img2:'images/ios.svg'
         },
         {
-          desc:'2. Платформ руу нэвтэрсний дараа Тохиргоо цэс рүү орно.',
+          desc:<FormattedMessage id="desktop_2fa_2"/>,
           img:'images/desktop/2fa/1.png'
         },
         {
-          desc:'3. Security хэсэгт байрлах Google Authenticator Add new дээр дарна.',
+          desc:<FormattedMessage id="desktop_2fa_3"/>,
           img:'images/desktop/2fa/2.png'
         },
         {
-          desc:'4. Үүссэн QR кодыг өөрийн утасны Google Authenticator апп руу нэвтрэн орж Scan code товчийг дарснаар уншуулж идэвхжүүлнэ.',
+          desc:<FormattedMessage id="desktop_2fa_4"/>,
           img:'images/desktop/2fa/3.png'
         },
         {
-          desc:'5. Google Authenticator app дээр гарч ирэх 6 оронтой кодыг платформ дээрээ оруулснаар таны холболт амжилттай хийгдэнэ. Үүний дараа та бүртгэлээ баталгаажуулснаар арилжаагаа эхлэх боломжтой болно :)',
+          desc:<FormattedMessage id="desktop_2fa_5"/>,
           img:'images/desktop/2fa/4.png'
         }
       ]
     },
     {
-      title:'Бүртгэлээ баталгаажуулах',
+      title:<FormattedMessage id="howto_verify"/>,
       video:'images/how-to-videos/how-to-verify/1.mp4',
       info:[
         {
-          desc:'1. Платформ руу нэвтэрсний дараа Тохиргоо цэс рүү орно.',
+          desc:<FormattedMessage id="desktop_ver_1"/>,
           img:'images/desktop/burtgel-batalgaajuulah/1.png'
         },
         {
-          desc:'2. Verify хэсэгт байрлах Verify now товчин дээр дарна.',
+          desc:<FormattedMessage id="desktop_ver_2"/>,
           img:'images/desktop/burtgel-batalgaajuulah/2.png'        },
         {
-          desc:'3. Гарч ирсэн сонголтоос Хувь хүн буюу Personal сонголтыг сонгоно.',
+          desc:<FormattedMessage id="desktop_ver_3"/>,
           img:'images/desktop/burtgel-batalgaajuulah/3.png'        },
         {
-          desc:'4. Бүртгэл баталгаажуулалт 4 алхмаас бүрдэх бөгөөд Үргэлжүүлэх товчийг дарж Алхам 1 рүү шилжинэ.',
+          desc:<FormattedMessage id="desktop_ver_4"/>,
           img:'images/desktop/burtgel-batalgaajuulah/4.png'        },
         {
-          desc:'5. Бичиг баримтын төрлөөс Иргэний үнэмлэх эсвэл Гадаад паспортын аль нэгийг сонгоно. Иргэний үнэмлэх сонгосон бол үнэмлэхний урд болон ард талын зургийг оруулаад Үргэлжүүлэх товчийг дарна.',
+          desc:<FormattedMessage id="desktop_ver_5"/>,
           img:'images/desktop/burtgel-batalgaajuulah/5.png' 
          },
         {
-          desc:'6. Гадаад паспорт сонгосон бол хувийн мэдээлэл бүхий хуудсын зургийг оруулахаас гадна e-mongolia-аас хаягийн бүртгэлийн лавлагааг авч оруулах шаардлагатайг анхаарна уу.',
+          desc:<FormattedMessage id="desktop_ver_6"/>,
           img:'images/desktop/burtgel-batalgaajuulah/6.png'
         },
         {
-          desc:'7. Алхам 2 дээр камерыг нээж дэлгэцний дээр гарах notification цонхонд allow товчийг дарснаар таны видео сельфиг хийж эхэлнэ.',
+          desc:<FormattedMessage id="desktop_ver_7"/>,
           img:'images/desktop/burtgel-batalgaajuulah/7.png'
         },
         {
-          desc:'8. Дэлгэцэнд гарах зааврын дагуу дараах 4 үйлдлийг хийж гүйцэтгээд Үргэлжлүүлэх товчийг дарна.',
+          desc:<FormattedMessage id="desktop_ver_8"/>,
           img:'images/desktop/burtgel-batalgaajuulah/8.png'
         },
         {
-          desc:'9. Алхам 3 нь хувийн мэдээллийн хэсэг бөгөөд ажил эрхлэлт, холбоо барих болон хаягийн мэдээллийг бичиж оруулаад Үргэлжлүүлэх товчийг дарна уу.',
+          desc:<FormattedMessage id="desktop_ver_9"/>,
           img:'images/desktop/burtgel-batalgaajuulah/9.png'
         },
         {
-          desc:'10. Дэлгэцэнд гарах зааврын дагуу дараах 4 үйлдлийг хийж гүйцэтгээд Илгээх товчийг дарна.',
+          desc:<FormattedMessage id="desktop_ver_10"/>,
           img:'images/desktop/burtgel-batalgaajuulah/10.png'
         },
         {
-          desc:'11. Таны илгээсэн мэдээллийг бид нягталж үзээд баталгаажуулалт амжилттай болсон эсэх мэдээллийг таны бүртгэлтэй имэйлээр илгээх болно.',
+          desc:<FormattedMessage id="desktop_ver_11"/>,
           img:'images/desktop/burtgel-batalgaajuulah/11.png'
         },
         {
-          desc:'12. Бүртгэл баталгаажсанаар та арилжаагаа эхлэхэд ердөө 1 алхам үлдэх бөгөөд дансаа цэнэглээд арилжаагаа эхлүүлээрэй. Амжилт хүсье',
+          desc:<FormattedMessage id="desktop_ver_12"/>,
           img:'images/desktop/burtgel-batalgaajuulah/12.png'
         }
       ]
     },
     {
-      title:'Дансаа цэнэглэх',
+      title:<FormattedMessage id="howto_deposit"/>,
       video:'images/how-to-videos/deposit/1.mp4',
       info:[
         {
-          desc:'1. Данс цэс рүү орж Орлого гэсэн хэсэгт дарна.',
+          desc:<FormattedMessage id="desktop_depo_1"/>,
           img:'images/desktop/dansaa-tsenegleh/1.png'
         },
         {
-          desc:'2. Fiat currencies жагсаалтаас валютаа сонгож, Банкны гүйлгээ товчин дээр дарна.',
+          desc:<FormattedMessage id="desktop_depo_2"/>,
           img:'images/desktop/dansaa-tsenegleh/2.png'
         },
         {
-          desc:'3. Дансандаа орлого хийх дүнгээ ам.доллараар бичиж оруулан Орлого товчин дээр дарна.',
+          desc:<FormattedMessage id="desktop_depo_3"/>,
           img:'images/desktop/dansaa-tsenegleh/3.png'
         },
         {
-          desc:'4. Үүссан Reference code-ыг банкны шилжүүлэг хийхдээ Гүйлгээний утга хэсэгт бичиж оруулна. Ингэснээр таны хүсэлтийг оператор хүлээн авч баталгаажуулахад хялбар байх болно.',
+          desc:<FormattedMessage id="desktop_depo_4"/>,
           img:'images/desktop/dansaa-tsenegleh/4.png'
         },
         {
-          dans:'АЛТЕКС Дижитал Биржийн дансны мэдээлэл, Хүлээн авагчийн нэр: Чойжин Алтекс ХХК',
+          dans:<FormattedMessage id="desktop_depo_dans"/>,
           imgDans1:'images/mobile/dansaa-tsenegleh/7.png',
           imgDans2:'images/mobile/dansaa-tsenegleh/8.png',
           imgDans3:'images/mobile/dansaa-tsenegleh/9.png',
-          alert:'Хэрэглэгч та бүртгэлээ баталгаажуулаагүй тохиолдолд Орлого хийх хүсэлт гаргах боломжгүйг анхаарна уу.'
+          alert:<FormattedMessage id="desktop_depo_alert"/>,
         }
       ]
     },
     {
-      title:'Мөнгөө татаж авах',
+      title:<FormattedMessage id="howto_withdraw"/>,
       video:'images/how-to-videos/withdraw/111.mp4',
       info:[
         {
-          desc:'1. Данс цэс рүү орж Зарлага гэсэн хэсэгт дарна.',
+          desc:<FormattedMessage id="desktop_with_1"/>,
           img:'images/desktop/withdraw/1.png'
         },
         {
-          desc:'2. Fiat currencies жагсаалтаас валютаа сонгож, Bank transfer товчин дээр дарна.',
+          desc:<FormattedMessage id="desktop_with_2"/>,
           img:'images/desktop/withdraw/2.png'
         },
         {
-          desc:'3. Add bank дээр дарж хүлээн авах банкны мэдээллээ оруулах цонх руу шилжинэ.',
+          desc:<FormattedMessage id="desktop_with_3"/>,
           img:'images/desktop/withdraw/3.png'
         },
         {
-          desc:'4. Гарч ирсэн цонхонд Банкны нэр, Дансны дугаар, Хүлээн авагчийн нэр, Банкны нэрийг дахин бичиж Submit товчин дээр дарна.',
+          desc:<FormattedMessage id="desktop_with_4"/>,
           img:'images/desktop/withdraw/4.png'
         },
         {
-          desc:'5. Утасныхаа Google Authenticator аппликэйшний баталгаажуулах 6 оронтой тоог бичиж оруулснаар таны хүлээн авах банкны мэдээлэл хадгалагдана. "Ингэснээр та дараагийн удаад зарлага хийхдээ банкны мэдээллээ шинээр оруулах шаардлагагүй болно."',
+          desc:<FormattedMessage id="desktop_with_5"/>,
           img:'images/desktop/withdraw/5.png'
         },
         {
-          desc:'6. Дараах цонхноос хадгалсан банкны мэдээллийг сонгоно.',
+          desc:<FormattedMessage id="desktop_with_6"/>,
           img:'images/desktop/withdraw/6.png'
         },
         {
-          desc:'7. Continue товчийг дарж үргэлжүүлнэ.',
+          desc:<FormattedMessage id="desktop_with_7"/>,
           img:'images/desktop/withdraw/7.png'
         },
         {
-          desc:'8. Зарлага хийх дүнгээ бичиж оруулаад Зарлага товчийг дарна.',
+          desc:<FormattedMessage id="desktop_with_8"/>,
           img:'images/desktop/withdraw/8.png'
         },
         {
-          desc:'9. Таны хүсэлтийг баталгаажуулах үүднээс Google Authenticator 6 оронтой тоог дахин бичиж оруулах шаардлагатай.',
+          desc:<FormattedMessage id="desktop_with_9"/>,
           img:'images/desktop/withdraw/9.png'
         }
       ]
@@ -205,193 +206,193 @@ function Howto() {
 
   const jsonM = [
     {
-      title:'Бүртгэл үүсгэх',
+      title:<FormattedMessage id="howto_Registration"/>,
       video:'images/how-to-videos/how-to-register/2.mp4',
       info:[
         {
-          desc:'1. www.altex.mn хуудас руу орж баруун дээд товчин дээр дарна.',
+          desc:<FormattedMessage id="mobile_req_1"/>,
           img:'images/mobile/burtgel-uusgeh/1.svg'
         },
         {
-          desc:'2. "Бүртгүүлэх" товчин дээр дарна.',
+          desc:<FormattedMessage id="mobile_req_2"/>,
           img:'images/mobile/burtgel-uusgeh/2.svg'
         },
         {
-          desc:'3. Өөрийн и-мэйл хаяг, утасны дугаараа оруулан бүртгүүлнэ.',
+          desc:<FormattedMessage id="mobile_req_3"/>,
           img:'images/mobile/burtgel-uusgeh/3.svg'
         },
         {
-          desc:'4. Таны бүртгүүлсэн и-мэйл хаягт бүртгэл үүссэнийг баталгаажуулах и-мэйл очих бөгөөд баталгаажуулах товчийг дарна.',
+          desc:<FormattedMessage id="mobile_req_4"/>,
           img:'images/mobile/burtgel-uusgeh/4.svg'
         },
         {
-          desc:'5. Нууц үг шинээр оруулснаар таньд бүртгэл үүснэ.',
+          desc:<FormattedMessage id="mobile_req_5"/>,
           img:'images/mobile/burtgel-uusgeh/5.svg'
         }
       ]
     },
     {
-      title:'2FA хамгаалалтаа идэвхжүүлэх',
+      title:<FormattedMessage id="howto_2fa"/>,
       video:'images/how-to-videos/how-to-enable-2fa/2.mp4',
       info:[
         {
-          desc:'1. Google Authenticator app-ыг өөрийн утасны Playstore болон Appstore-с татаж авна.',
+          desc:<FormattedMessage id="mobile_2fa_1"/>,
           img:'images/desktop/2fa/Allitems-02.svg',
           img1:'images/android.svg',
           img2:'images/ios.svg'
         },
         {
-          desc:'2. Платформ руу нэвтэрсний дараа Тохиргоо цэс рүү орно.',
+          desc:<FormattedMessage id="mobile_2fa_2"/>,
           img:'images/mobile/2fa/3.svg'
         },
         {
-          desc:'3. Security хэсэгт байрлах Google Authenticator Add new дээр дарна.',
+          desc:<FormattedMessage id="mobile_2fa_3"/>,
           img:'images/mobile/2fa/4.svg'
         },
         {
-          desc:'4. Үүссэн Secret key кодыг өөрийн утасны Google Authenticator апп руу нэвтрэн орж Enter a setup key товчийг дарж хуулж идэвхжүүлнэ.',
+          desc:<FormattedMessage id="mobile_2fa_4"/>,
           img:'images/mobile/2fa/5.svg'
         },
         {
-          desc:'5. Google Authenticator app дээр гарч ирэх 6 оронтой кодыг платформ дээрээ оруулснаар таны холболт амжилттай хийгдэнэ. Үүний дараа та бүртгэлээ баталгаажуулснаар арилжаагаа эхлэх боломжтой болно :)',
+          desc:<FormattedMessage id="mobile_2fa_5"/>,
           img:'images/mobile/2fa/6.svg'
         }
       ]
     },
     {
-      title:'Бүртгэлээ баталгаажуулах',
+      title:<FormattedMessage id="howto_verify"/>,
       video:'images/how-to-videos/how-to-verify/2.mp4',
       info:[
         {
-          desc:'1. Платформ руу нэвтэрсний дараа Тохиргоо цэс рүү орно.',
+          desc:<FormattedMessage id="desktop_ver_1"/>,
           img:'images/mobile/burtgel-batalgaajulah/1.svg'
         },
         {
-          desc:'2. Verify хэсэгт байрлах Verify now товчин дээр дарна.',
+          desc:<FormattedMessage id="desktop_ver_2"/>,
           img:'images/mobile/burtgel-batalgaajulah/2.svg'        },
         {
-          desc:'3. Гарч ирсэн сонголтоос Хувь хүн буюу Personal сонголтыг сонгоно.',
+          desc:<FormattedMessage id="mobile_depo_3"/>,
           img:'images/mobile/burtgel-batalgaajulah/3.svg'        },
         {
-          desc:'4. Бүртгэл баталгаажуулалт 4 алхмаас бүрдэх бөгөөд Үргэлжүүлэх товчийг дарж Алхам 1 рүү шилжинэ.',
+          desc:<FormattedMessage id="desktop_ver_4"/>,
           img:'images/mobile/burtgel-batalgaajulah/4.svg'        },
         {
-          desc:'5. Бичиг баримтын төрлөөс Иргэний үнэмлэх эсвэл Гадаад паспортын аль нэгийг сонгоно. Иргэний үнэмлэх сонгосон бол үнэмлэхний урд болон ард талын зургийг оруулаад Үргэлжүүлэх товчийг дарна.',
+          desc:<FormattedMessage id="desktop_ver_5"/>,
           img:'images/mobile/burtgel-batalgaajulah/5.svg' 
          },
         {
-          desc:'6. Гадаад паспорт сонгосон бол хувийн мэдээлэл бүхий хуудсын зургийг оруулахаас гадна e-mongolia-аас хаягийн бүртгэлийн лавлагааг авч оруулах шаардлагатайг анхаарна уу.',
+          desc:<FormattedMessage id="desktop_ver_6"/>,
           img:'images/mobile/burtgel-batalgaajulah/6.svg'
         },
         {
-          desc:'7. Алхам 2 дээр камерыг нээж дэлгэцний дээр гарах notification цонхонд allow товчийг дарснаар таны видео сельфиг хийж эхэлнэ.',
+          desc:<FormattedMessage id="desktop_ver_7"/>,
           img:'images/mobile/burtgel-batalgaajulah/7.svg'
         },
         {
-          desc:'8. Дэлгэцэнд гарах зааврын дагуу дараах 4 үйлдлийг хийж гүйцэтгээд Үргэлжлүүлэх товчийг дарна.',
+          desc:<FormattedMessage id="desktop_ver_8"/>,
           img:'images/mobile/burtgel-batalgaajulah/8.svg'
         },
         {
-          desc:'9. Алхам 3 нь хувийн мэдээллийн хэсэг бөгөөд ажил эрхлэлт, холбоо барих болон хаягийн мэдээллийг бичиж оруулаад Үргэлжлүүлэх товчийг дарна уу.',
+          desc:<FormattedMessage id="desktop_ver_9"/>,
           img:'images/mobile/burtgel-batalgaajulah/9.svg'
         },
         {
-          desc:'10. Дэлгэцэнд гарах зааврын дагуу дараах 4 үйлдлийг хийж гүйцэтгээд Илгээх товчийг дарна.',
+          desc:<FormattedMessage id="desktop_ver_10"/>,
           img:'images/mobile/burtgel-batalgaajulah/10.svg'
         },
         {
-          desc:'11. Таны илгээсэн мэдээллийг бид нягталж үзээд баталгаажуулалт амжилттай болсон эсэх мэдээллийг таны бүртгэлтэй имэйлээр илгээх болно.',
+          desc:<FormattedMessage id="desktop_ver_11"/>,
           img:'images/mobile/burtgel-batalgaajulah/11.svg'
         },
         {
-          desc:'12. Бүртгэл баталгаажсанаар та арилжаагаа эхлэхэд ердөө 1 алхам үлдэх бөгөөд дансаа цэнэглээд арилжаагаа эхлүүлээрэй. Амжилт хүсье',
+          desc:<FormattedMessage id="desktop_ver_12"/>,
           img:'images/mobile/burtgel-batalgaajulah/12.svg'
         }
       ]
     },
     {
-      title:'Дансаа цэнэглэх',
+      title:<FormattedMessage id="howto_deposit"/>,
       video:'images/how-to-videos/deposit/2.mp4',
       info:[
         {
-          desc:'1. Данс цэс рүү орно.',
+          desc:<FormattedMessage id="mobile_depo_1"/>,
           img:'images/mobile/dansaa-tsenegleh/1.svg'
         },
         {
-          desc:'2. Орлог хэсэг дээр дарна.',
+          desc:<FormattedMessage id="mobile_depo_2"/>,
           img:'images/mobile/dansaa-tsenegleh/2.svg'
         },
         {
-          desc:'3. Fiat currencies жагсаалтаас валютаа сонгоно.',
+          desc:<FormattedMessage id="mobile_depo_3"/>,
           img:'images/mobile/dansaa-tsenegleh/3.svg'
         },
         {
-          desc:'4. Банкны гүйлгээ товчин дээр дарна.',
+          desc:<FormattedMessage id="mobile_depo_4"/>,
           img:'images/mobile/dansaa-tsenegleh/4.svg'
         },
         {
-          desc:'5. Дансандаа орлого хийх дүнгээ ам.доллараар бичиж оруулан Орлого товчин дээр дарна.',
+          desc:<FormattedMessage id="mobile_depo_5"/>,
           img:'images/mobile/dansaa-tsenegleh/5.svg'
         },
         {
-          desc:'6. Үүссан Reference code-ыг банкны шилжүүлэг хийхдээ Гүйлгээний утга хэсэгт бичиж оруулна. Ингэснээр таны хүсэлтийг оператор хүлээн авч баталгаажуулахад хялбар байх болно.',
+          desc:<FormattedMessage id="mobile_depo_6"/>,
           img:'images/mobile/dansaa-tsenegleh/6.svg'
         },
         {
-          dans:'АЛТЕКС Дижитал Биржийн дансны мэдээлэл, Хүлээн авагчийн нэр: Чойжин Алтекс ХХК',
+          dans:<FormattedMessage id="desktop_depo_dans"/>,
           imgDans1:'images/mobile/dansaa-tsenegleh/7.png',
           imgDans2:'images/mobile/dansaa-tsenegleh/8.png',
           imgDans3:'images/mobile/dansaa-tsenegleh/9.png',
-          alert:'Хэрэглэгч та бүртгэлээ баталгаажуулаагүй тохиолдолд Орлого хийх хүсэлт гаргах боломжгүйг анхаарна уу.'
+          alert:<FormattedMessage id="desktop_depo_alert"/>,
         }
       ]
     },
     {
-      title:'Мөнгөө татаж авах',
+      title:<FormattedMessage id="howto_withdraw"/>,
       video:'images/how-to-videos/withdraw/2.mp4',
       info:[
         {
-          desc:'1. Данс цэс рүү орно.',
+          desc:<FormattedMessage id="mobile_with_1"/>,
           img:'images/mobile/munguu-tataj-avah/1.svg'
         },
         {
-          desc:'2. Зарлага гэсэн хэсэгт дарна.',
+          desc:<FormattedMessage id="mobile_with_2"/>,
           img:'images/mobile/munguu-tataj-avah/2.svg'
         },
         {
-          desc:'3. Fiat currencies жагсаалтаас валютаа сонгоно.',
+          desc:<FormattedMessage id="mobile_with_3"/>,
           img:'images/mobile/munguu-tataj-avah/3.svg'
         },
         {
-          desc:'4. Bank transfer товчин дээр дарна.',
+          desc:<FormattedMessage id="mobile_with_4"/>,
           img:'images/mobile/munguu-tataj-avah/4.svg'
         },
         {
-          desc:'5. Add bank дээр дарж хүлээн авах банкны мэдээллээ оруулах цонх руу шилжинэ.',
+          desc:<FormattedMessage id="mobile_with_5"/>,
           img:'images/mobile/munguu-tataj-avah/5.svg'
         },
         {
-          desc:'6. Гарч ирсэн цонхонд Банкны нэр, Дансны дугаар, Хүлээн авагчийн нэр, Банкны нэрийг дахин бичиж Submit товчин дээр дарна.',
+          desc:<FormattedMessage id="mobile_with_6"/>,
           img:'images/mobile/munguu-tataj-avah/6.svg'
         },
         {
-          desc:'7. Утасныхаа Google Authenticator аппликэйшний баталгаажуулах 6 оронтой тоог бичиж оруулснаар таны хүлээн авах банкны мэдээлэл хадгалагдана. (Ингэснээр та дараагийн удаад зарлага хийхдээ банкны мэдээллээ шинээр оруулах шаардлагагүй болно.)',
+          desc:<FormattedMessage id="mobile_with_7"/>,
           img:'images/mobile/munguu-tataj-avah/7.svg'
         },
         {
-          desc:'8. Дараах цонхноос хадгалсан банкны мэдээллийг сонгоно.',
+          desc:<FormattedMessage id="mobile_with_8"/>,
           img:'images/mobile/munguu-tataj-avah/8.svg'
         },
         {
-          desc:'9. Continue товчийг дарж үргэлжүүлнэ.',
+          desc:<FormattedMessage id="mobile_with_9"/>,
           img:'images/mobile/munguu-tataj-avah/9.svg'
         },
         {
-          desc:'10. Зарлага хийх дүнгээ бичиж оруулаад Зарлага товчийг дарна.',
+          desc:<FormattedMessage id="mobile_with_10"/>,
           img:'images/mobile/munguu-tataj-avah/10.svg'
         },
         {
-          desc:'11. Таны хүсэлтийг баталгаажуулах үүднээс Google Authenticator 6 оронтой тоог дахин бичиж оруулах шаардлагатай.',
+          desc:<FormattedMessage id="mobile_with_11"/>,
           img:'images/mobile/munguu-tataj-avah/11.svg'
         }
       ]
@@ -410,7 +411,7 @@ function Howto() {
             <svg xmlns="http://www.w3.org/2000/svg" width="20px" className="mt-1 mr-[8px]" height="20px" viewBox="0 0 24 24" fill="none">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 4.34315 3.34315 3 5 3H19C20.6569 3 22 4.34315 22 6V15C22 16.6569 20.6569 18 19 18H13V19H15C15.5523 19 16 19.4477 16 20C16 20.5523 15.5523 21 15 21H9C8.44772 21 8 20.5523 8 20C8 19.4477 8.44772 19 9 19H11V18H5C3.34315 18 2 16.6569 2 15V6ZM5 5C4.44772 5 4 5.44772 4 6V15C4 15.5523 4.44772 16 5 16H19C19.5523 16 20 15.5523 20 15V6C20 5.44772 19.5523 5 19 5H5Z" fill={activeSection === 'КОМПЬЮТЕР' ? '#fff' : '#626880'}/>
           </svg>
-            КОМПЬЮТЕР
+            <FormattedMessage id="howto_desktop"/>
             {activeSection === 'КОМПЬЮТЕР' && (
               <div className="absolute h-[2px] w-full bg-[#13A9FD] bottom-[-17px]"></div>
             )}
@@ -422,7 +423,7 @@ function Howto() {
             <svg xmlns="http://www.w3.org/2000/svg" width="20px" className="mt-1 mr-[8px]" height="20px" viewBox="0 0 24 24" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M14.795 2h-5.59c-1.115 0-1.519.116-1.926.334a2.272 2.272 0 0 0-.945.945C6.116 3.686 6 4.09 6 5.205v13.59c0 1.114.116 1.519.334 1.926.218.407.538.727.945.945.407.218.811.334 1.926.334h5.59c1.114 0 1.519-.116 1.926-.334.407-.218.727-.538.945-.945.218-.407.334-.811.334-1.926V5.205c0-1.115-.116-1.519-.334-1.926a2.272 2.272 0 0 0-.945-.945C16.314 2.116 15.91 2 14.795 2zM8 17.995V6.005h8v11.99H8z" fill={activeSection === 'ГАР УТАС' ? '#fff' : '#626880'}/>
             </svg>
-            ГАР УТАС
+            <FormattedMessage id="howto_mobile"/>
             {activeSection === 'ГАР УТАС' && (
               <div className="absolute h-[2px] w-full bg-[#13A9FD] bottom-[-17px]"></div>
             )}
@@ -525,8 +526,7 @@ function Howto() {
               ))}
             </div>
           )}
-          
-
+        
         {activeSection === 'ГАР УТАС' && (
             <div className="max-w-[800px] mx-auto ">
             {jsonM.map((item, index) => (
