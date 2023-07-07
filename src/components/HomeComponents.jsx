@@ -151,9 +151,7 @@ function HomeComponents() {
                 <div id="feature_4_head" className="text-[#13A9FD] font-light mt-[-2px] mb-[8px]">
                   <FormattedMessage id='feature_4_head'/>
                 </div>
-                <div id="feature_4_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]">
-                  <FormattedMessage id='feature_4_desc'/>
-                </div>
+                <div id="feature_4_desc" className="text-[#ffffff] font-light mb-[-2px] text-[14px] leading-[18px]" dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "feature_4_desc"}) }} />
               </div>
             </div>
             <div className="flex items-start gap-[24px] h-[64px]">

@@ -23,7 +23,7 @@ const json = [
     fee:'0.001',
     feeLower:'0.005',
     proof:'1.1',
-    feeSize:"Шимтгэлгүй",
+    feeSize: "Шимтгэлгүй",
     feeSizeLower:'0'
   },
   {
@@ -354,7 +354,7 @@ function Fee() {
                   <div className="flex justify-center items-center">{data.pat}</div>
                   <div className="flex justify-center items-center">{data.name}</div>
                 </div>
-                <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">{data.feeSize}</div>
+                <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">{data.feeSize !== "Шимтгэлгүй" ? data.feeSize : intl.formatMessage({id: "fee_nofee"})}</div>
                 <div className="border-b border-[#283359] flex justify-center items-center py-[16px]">
                   {data.feeSizeLower = "0" ? '-' : data.feeSizeLower}
                 </div>
@@ -446,7 +446,7 @@ function Fee() {
                   <div class="w-16 hidden group-hover:block overflow-hidden absolute top-[-6px] left-[115px]">
                     <div class=" h-[8px] bg-white w-[10px] rotate-45 transform origin-bottom-left"></div>
                   </div>
-                  <span className="sm:w-[258px] w-[200px] text-left rounded sm:h-[78px] h-[56px] p-[8px] border bg-white font-normal sm:text-[10px] text-[7px] text-[#000000] hidden  group-hover:block">Та захиалгаа өгснөөр тэр даруй арилжаа хийгдэхгүй болж Maker болж таны захиалга захиалгын дэвтэрт үлдэж, дараа нь өөр хүн биелүүлэх/тохируулахыг хүлээнэ.</span>
+                  <span className="sm:w-[258px] w-[200px] text-left rounded sm:h-[78px] h-[56px] p-[8px] border bg-white font-normal sm:text-[10px] text-[7px] text-[#000000] hidden group-hover:block" dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_maker_info" }) }} />
                 </div>
               </div>
             </div>
@@ -468,7 +468,7 @@ function Fee() {
                   <div class=" hidden group-hover:block overflow-hidden absolute top-[-6px] left-[220px] float-right">
                     <div class=" h-[8px] bg-white w-[10px] rotate-45 transform origin-bottom-left"></div>
                   </div>
-                  <span className="w-[150px] md:w-[240px] text-left rounded h-[46px] sm:h-[50px] p-[8px] border bg-white font-normal md:text-[10px] text-[7px] text-[#000000] hidden  group-hover:block">Захиалгын дэвтэрт байгаа захиалгатай шууд таарч захиалга өгч буй арилжаачин</span>
+                  <span className="w-[150px] md:w-[240px] text-left rounded h-[46px] sm:h-[50px] p-[8px] border bg-white font-normal md:text-[10px] text-[7px] text-[#000000] hidden  group-hover:block" dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_taker_info" }) }} />
                 </div>
                 </div>
             </div>

@@ -119,8 +119,8 @@ function Posts() {
           )}
         {posts.length && <>
             <div className="bg-white rounded flex flex-col h-max md:flex-row gap-[24px] mb-[24px]">
-              <div className="basis-2/3  aspect-video bg-cover rounded-l" style={{backgroundImage: `url(${posts[0].image})`}} ></div>
-              <div className="basis-1/3 p-[24px] pl-0 flex flex-col justify-between">
+              <div className="basis-2/3 aspect-video bg-cover rounded-t md:rounded-l md:rounded-tr-none" style={{backgroundImage: `url(${posts[0].image})`}} ></div>
+              <div className="basis-1/3 p-[24px] md:pl-0 flex flex-col justify-between">
                 <div className="">
                   {cursorAtStart && <>
                     <div className="inline-block text-[12px] font-light rounded bg-[#FDAE13] py-[4px] px-[8px] mb-[23px]" dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "posts_latest" }) }} />

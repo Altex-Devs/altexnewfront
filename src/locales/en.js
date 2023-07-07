@@ -34,7 +34,7 @@ const en = {
     "feature_3_head": "Competitive rates",
     "feature_3_desc": "Buy and sell digital assets quickly and easily at the most competitive rates",
     "feature_4_head": "Withdrawal limits",
-    "feature_4_desc": "Cash and crypto withdrawal limits $30,000 - $200,000",
+    "feature_4_desc": "Cash and crypto withdrawal limits<br />$30,000 - $200,000",
     "feature_5_head": "Low transaction fee",
     "feature_5_desc": "Effortless and quick transaction with low fee",
     "referal_code_head": "Referral code",
@@ -885,6 +885,8 @@ const en = {
     "fee_withdraw_title": "Payment out fee",
     "fee_increase_message": "Please <a href='/feedback' class='text-[#3973C5] underline'>click here</a> to sent a request to upgrade your account status.",
     "fee_trade_title": "Trading fee",
+    "fee_maker_info": "When you place an order, the trade does not take place immediately, as a Maker your order remains in the order book and then waits for someone else to fill/set.",
+    "fee_taker_info": "A trader placing an order directly matching the order in the order book.",
 
     "posts_latest": "Latest",
     "posts_readmore": "Read more",
