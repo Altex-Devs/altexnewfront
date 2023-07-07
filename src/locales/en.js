@@ -501,6 +501,123 @@ const en = {
   </ul>
     `,
 
+    "privacypolicy_title": "Privacy policy",
+    "privacypolicy_content": `
+        <div className="font-bold text-[32px] mb-[24px]">Privacy policy</div>
+        <p>Your privacy is important to us at CHOIJIN ALTEX LLC. ("we", "us" and "our"), we take each individuals' privacy seriously.</p>
+        <p>The following Privacy Policy is served in compliance with the Mongolian Person Personal Data Protection Act (No. 1st July of 1995) and any applicable regulations in force thereafter (the “Act”) in connection with your dealings with, and provision of Personal  Data or information (“Personal Data”) to us and/or our affiliates. For the purpose of this Privacy Policy, shall mean CHOIJIN ALTEX or any of its affiliates, subsidiaries, holding companies, associated entities and any of their branches and offices, wherever situated. The rights and obligations of each of the member of the Altex under this Privacy Policy are several and not joint.</p>
+        <p>We are committed to protecting the privacy interests of those who provide us with information about themselves. Your Personal Data will not be sold, exchanged, transferred, or disclosed to any other parties for any reasons whatsoever without prescribed consent, other than for the Purposes (as hereinafter defined) expressed below.</p>
+        <p>All members of the Altex, our employees and third parties, including our Sub-Processors (as hereinafter defined) are bound by contract to uphold the standards of privacy, confidentiality and security in compliance with the Act.</p>
+        <p class="upper">When do we collect Personal Data?</p>
+        <p>We will be collecting Personal Data from you in connection with the Purposes (as hereinafter defined). We may collect Personal Data from you in various circumstances including but not limited to when you apply to register a user account with us; order products or services from us; subscribe to our newsletter; complete any application form to us or submit any query or request to us. In some cases, we may be required by law to collect certain types of information about you. The information will generally be collected from you directly, but sometimes we may obtain information through a third party, such as representatives, agents or contractors who provide services to us, or third parties acting on your behalf or from another sources, as the case may be.</p>
+        <p class="upper">What Personal Data do we collect?</p>
+        <p>The types of Personal Data that we collect may include:</p>
+        <ul>
+            <li><p>identification information, such as your name and date of birth;</p></li>
+            <li><p>contact information, such as your postal address, email address, telephone number and facsimile number;</p></li>
+            <li><p>social media handles and other social media profile information that you make available to us or to the public;</p></li>
+            <li><p>financial status details, such as credit card, bank account or other payment details;</p></li>
+            <li><p>blockchain identifiers, such as blockchain addresses and public keys;</p></li>
+            <li><p>usernames and passwords that you create when registering for an account with us; and</p></li>
+            <li><p>records of our communications with you, including any messages you send us.</p></li>
+        </ul>
+        <p>Failure to supply any Personal Data may result in us or being unable to provide you with our products or services (or with all of the features and functionality offered by our products or services), to respond to queries or requests that you submit to us or to comply with any laws, regulations, guidelines and codes issued by regulatory or other authorities.</p>
+        <p>You may, however, visit our website at www.altex.mn (“Site”) anonymously.</p>
+        <p class="upper">What do we use the Personal Data for?</p>
+        <p>We collect your information to enable us to provide the requested services to you and for improving service, customer support, and browsing experiences for our site visitors. We will indicate clearly on relevant forms and applications as to whether the information is mandatory or voluntary. Should the information be mandatory, you must submit valid personal information in order to complete the application to respective services. Without such information, we will not be able to undertake the service.</p>
+        <p>The Personal Data we collect may be used in any one of the following purposes (“Purposes”):</p>
+        <ul>
+            <li><p>to administer the products and services we deliver, including developing new ways or products to meet your needs and grow our business, and processing transactions;</p></li>
+            <li><p>to manage your relationship with us and personalize your experience;</p></li>
+            <li><p>to improve our Site;</p></li>
+            <li><p>to improve our customer service;</p></li>
+            <li><p>to send periodic emails;</p></li>
+            <li><p>to match (or compare, as the case may be) user information with other user Personal Data or third-party Personal Data necessary to our provision of services;</p></li>
+            <li><p>to create and maintain our risk related models, as modified or amended from time to time;</p></li>
+            <li><p>to meet our obligations, requirements or arrangements or those of any member of the Altex, whether compulsory or voluntary, to comply with or in connection with:  </p></li>
+            <ul>
+            <li><p>any law, regulation, judgment, court order, voluntary code, sanctions regime, binding or applicable within or outside Mongolia existing currently and in the future; </p></li>
+            <li><p>any guidelines, guidance or requests given or issued by any legal, regulatory, governmental, tax, law enforcement or other authorities, or self-regulatory or industry bodies or associations of financial services 
+                providers within or outside Mongolia existing currently and in the future and any international guidance, internal 
+                policies or procedures (where applicable);</p></li>
+            <li><p>any present or future contractual or other commitment with local or foreign legal, regulatory, judicial, administrative, public or law enforcement body, or governmental, tax, revenue, monetary, securities or futures 
+                exchange, court, central bank or other authorities, or self-regulatory or industry bodies or associations of financial 
+                service providers or any of their agents with jurisdiction over all or any part of the Altex (together the "Authorities" 
+                and each an "Authority") that is assumed by, imposed on or applicable to us ; or</p></li>
+            <li>
+                <p>any agreement or treaty between the Authorities;</p>
+            </li>
+            </ul>
+            <li><p>to comply with any obligations, requirements, policies, procedures, measures or arrangements for sharing Personal Data and information within the Altex and/or any other use of Personal Data and information in 
+            accordance with any programmes for compliance with sanctions or prevention or detection of money 
+            laundering, terrorist financing or other unlawful activities;</p></li>
+            <li><p>to conduct any action to meet our obligations to comply with laws or international guidance or regulatory requests relating to or in connection with the detection, investigation and prevention of money laundering, 
+            terrorist financing, bribery, corruption, tax evasion, fraud, evasion of economic or trade sanctions and/or any acts 
+            or attempts to circumvent or violate any laws relating to these matters;</p></li>
+            <li>
+            <p>to meet our obligations to comply with any demand or request from the Authorities;</p>
+            </li>
+            <li><p>to enable actual or proposed assignee(s), or participant(s) or sub-participant(s) of our rights in respect of you to evaluate the transaction intended to be the subject of assignment, participation or sub-participation and 
+            enabling the actual assignee(s) to use your Personal Data in the operation of the business or rights assigned; and</p></li>
+            <li><p>any other purposes relating to or incidental to any of the above.</p></li>
+        </ul>
+        <p>In addition, where permitted under the Act, we may also collect, use and disclose your Personal Data for the following purposes (which we shall describe in our documents and agreements as “Additional Purposes” for the handling of Personal Data):</p>
+        <ul>
+            <li><p>providing or marketing services, products and benefits to you, including promotions, loyalty and reward programmes;</p></li>
+            <li><p>matching Personal Data with other data collected for other purposes and from other sources (including third parties) in connection with the provision or offering of products and services, whether by us or other third 
+            parties;</p></li>
+            <li><p>sending you details of products, services, special offers and rewards, investment or research reports or guides, either to our customers generally, or which we have identified may be of interest to you; and/or</p></li>
+            <li><p>conducting market research, understanding and analyzing customer behavior, location, preferences and demographics for us to offer you products and services as well as special offers and marketing programs which 
+            may be relevant to your preference and profile.</p></li>
+        </ul>
+        <p class="upper">When will the Personal Data be disclosed?</p>
+        <p>Personal Data held by us will be kept confidential but we may provide Personal Data to the following parties or any of them (whether within or outside of Mongolia) for the Purposes listed above:</p>
+        <ul>
+            <li><p>any member of the Altex;</p></li>
+            <li><p>any agents, contractors, sub-contractors or associates of the Altex, including their employees, officers, agents, contractors, service providers and professional advisers that we engage(s) in connection with the operation or 
+            maintenance of our business and services (e.g. back office processing, individual and corporate Know-Your-
+            Client processing) (“Sub-Processors”);</p></li>
+            <li><p>any Authorities;</p></li>
+            <li>
+            <p>any persons under a duty of confidentiality to us which have undertaken to keep such Personal Data confidential;</p>
+            </li>
+            <li><p>any persons acting on your behalf whose Personal Data are provided, including but not limited to authorized representatives or nominees;</p></li>
+            <li><p>any persons to whom we are is under an obligation or required or expected to make disclosure by operation of law;</p></li>
+            <li><p>any actual or proposed assignee(s) of ours;</p></li>
+            <li><p>any actual or proposed participant(s), sub-participant(s) or transferee(s) of our rights in respect of you;</p></li>
+            <li><p>any person(s) in whose favor of our obligations with respect to you are, or are intended to be a subject of any assignment, participation, sub-participation, transfer, novation or other similar arrangement; and</p></li>
+            <li><p>any other person(s) directly related to the Purpose.</p></li>
+        </ul>
+        <p>For the purpose of this section, please note that a party (or parties) mentioned above may have places of business outside of Mongolia. Your Personal Data may be provided or transferred out of Mongolia as a result. Customers based in the European Union (EU) accept that to fulfil our services we will transfer your Personal Data outside the EU, and explicitly consent to such transfer. These parties adhere to their own privacy customs and policies which we have no control over and may be subject to a lower level of protection. Consequently, your Personal Data may cease to be protected by any relevant confidentiality or Personal Data protection laws of Mongolia.</p>
+        <p class="upper">Security of Personal Data</p>
+        <p>We implement a variety of security measures to maintain the safety of the Personal Data when you place an order or enter, submit, or access your personal information. We offer the use of a secure server. All supplied sensitive information is transmitted via Secure Socket Layer (SSL) technology and then encrypted into our Personal Database to be accessed only by those authorized with special access rights to our systems, and are required to keep the information confidential.</p>
+        <p>More generally, we will develop, implement and maintain safeguards appropriate to our size, scope and business, our available resources, the amount of Personal Data that we hold and identified risks (including use of encryption and pseudonymization where applicable). We will regularly evaluate and test the effectiveness of those safeguards to ensure security of our processing of the Personal Data.</p>
+        <p class="upper">Online Privacy Policy</p>
+        <p>This online privacy policy applies to all Personal Data we collect from sources outside the company, both online and offline (excepting Personal Data relating to our employees).</p>
+        <p class="upper">Your Consent</p>
+        <p>By submitting your Personal Data to us or using our service, making an application or visiting our Site, you acknowledge and agree to the collection, use and processing set out in this Privacy Policy, as amended and updated from time to time. If you do not agree with the use of your Personal Data as set out in this policy, or the Terms of Service, please do not use this Site.</p>
+        <p class="upper">Our legitimate interests in processing your Personal Data</p>
+        <p>In deciding what Personal Data we collect, and what uses we make of that Personal Data, we have carefully balanced your interests, as a customer or potential customer providing Personal Data to us, and your reasonable expectations, with the needs of our business.</p>
+        <p>We have a legitimate interest in using your Personal Data, in addition to providing the service you have engaged us to deliver or registered your interest in us delivering, for the purposes of fraud prevention, intra-group transfers, IT security, direct marketing of our related services, and disclosing information about possible criminal acts or security threats to the authorities.</p>
+        <p class="upper">Your right to object</p>
+        <p>You may at any time require us to stop using your Personal Data for direct marketing, by contacting us at any of the contact points below.</p>
+        <p>If you wish us to stop using your Personal Data for a purpose other than direct marketing, we will stop unless our legitimate interests prevail. In such circumstances, it is possible that we will be unable to fulfil the services you have contacted us to provide and you may remain liable for charges for the services foregone.</p>
+        <p class="upper">Changes to our Privacy Policy</p>
+        <p>If we decide to change our privacy policy, we will post those changes on this page.</p>
+        <p class="upper">Retention of Personal Data</p>
+        <p>The Personal Data collected will not be retained any longer than is necessary for the fulfilment of the Purposes. We shall securely delete or destroy Personal Data retained at the end of such period, and require our Sub-Processors to do likewise.</p>
+        <p class="upper">Personal Data Access and Correction</p>
+        <p>Relevant privacy laws and regulations permit you to request us to correct and provide you with access to the Personal Data. We shall honour such requests, although we reserve the right to charge a reasonable fee, as allowed by the Act.</p>
+        <p>Individuals in the EU also have the right to lodge a complaint about the processing of their Personal Data with their local Personal Data protection authority.</p>
+        <p>If you have any inquiries regarding the access and amendment of information, or other query regarding our information policies and practice, please contact:</p>
+        <p class="upper">CHOIJIN ALTEX LLC.</p>
+        <p>Email: contact@altex.mn</p>
+        <p>In order to deal with any of such requests, we may require evidence from you to verify that you are the individual in respect of whom the request is made or a person permitted under the Act (or any other applicable laws) to make the request on that individual's behalf.</p>
+        <p>Nothing in this Privacy Policy shall limit your rights under the Act.</p>
+        <p>In the event of any inconsistencies between the Mongolian language and English versions of this policy, the Mongolian version prevails.</p>
+        <p><i>Last Update: 11 Jan 2022</i></p>
+    `,
+
     "faq_title": "FAQ",
     "faq_title_customer_service": "Customer service",
     "faq_title_settlement": "Settlement",
