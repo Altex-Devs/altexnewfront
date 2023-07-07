@@ -29,7 +29,7 @@ const Corporate = () => {
      
 
 
-     <div className="mx-[-180px] bg-[#0B163F] h-[682px] mb-[180px]">
+     <div className="mx-[-180px] bg-[#0B163F] sm:h-[682px] mb-[180px]">
      <div className="mx-[180px] py-[80px]">
      <div className="text-[#13A9FD] text-[24px] mb-[24px] ">
         <FormattedMessage id="feature_2_head"/>
@@ -43,8 +43,8 @@ const Corporate = () => {
       <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "corporate_section_title_second"}) }} />
       </p>
       
-      <div className="grid grid-cols-3 md:flex-row gap-[24px] mt-[64px] mb-[240px] font-light">
-        <div className="rounded-[8px] w-[384px] border-[#13A9FD] border px-[48px] py-[40px]">
+      <div className="sm:grid sm:grid-cols-3 w-full md:flex-row gap-[24px] inline-block mt-[64px] sm:mb-[240px] font-light">
+        <div className="rounded-[8px] flex-wrap mb-[16px] sm:w-[384px] border-[#13A9FD] border px-[30px] py-[25px] sm:px-[48px] sm:py-[40px]">
           <img src="/images/Group 7818.svg" alt="" className="mb-[16px]"/>
           <div className="text-[#13A9FD] font-bold mb-[8px]">
             <FormattedMessage id="corporate_management"/>
@@ -53,7 +53,7 @@ const Corporate = () => {
             <FormattedMessage id="corporate_management_title"/>
           </p>
         </div>
-        <div className="rounded-[8px] w-[384px] border-[#13A9FD] border px-[48px] py-[40px]">
+        <div className="rounded-[8px] flex-wrap mb-[16px] sm:w-[384px] border-[#13A9FD] border px-[30px] py-[25px] sm:px-[48px] sm:py-[40px]">
           <img src="/images/Union 57.svg" alt="" className="mb-[16px]"/>
           <div className="text-[#13A9FD] font-bold mb-[8px]">
             <FormattedMessage id="corporate_arbitrage"/>
@@ -62,7 +62,7 @@ const Corporate = () => {
             <FormattedMessage id="corporate_arbitrage_title" />
           </p>
         </div>
-        <div className="rounded-[8px] w-[384px] border-[#13A9FD] border px-[48px] py-[40px]">
+        <div className="rounded-[8px] flex-wrap mb-[16px] sm:w-[384px] border-[#13A9FD] border px-[30px] py-[25px] sm:px-[48px] sm:py-[40px]">
           <img src="/images/Union 58.svg" alt="" className="mb-[16px]"/>
           <div className="text-[#13A9FD] font-bold mb-[8px]">
             <FormattedMessage id="corporate_trading"/>
