@@ -289,8 +289,8 @@ function Fee() {
   }
 
   return (
-    <div className="overflow-x-scroll">
-      <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#1E274A] text-[17px] sm:text-[18px] font-medium gap-[40px] mt-[80px] mb-[40px] ">
+    <div className="">
+      <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#1E274A] text-[17px] sm:text-[18px] font-medium gap-[40px] mt-[80px] mb-[40px]">
         <div onClick={() => toggle("button1")} className={`relative ${show === "button1" ? "text-white cursor-pointer active" : "text-[#626880] cursor-pointer"}`}>
           <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_deposit_title" }) }} />
           <div className={`absolute h-[2px] w-full ${show === "button1" ? "bg-[#13A9FD] bottom-[-17px] active" : ""}`}></div>
@@ -304,8 +304,9 @@ function Fee() {
           <div className={`absolute h-[2px] w-full ${show === "button3" ? "bg-[#13A9FD] bottom-[-17px] active" : ""}`}></div>
         </div>
       </div>
+      <div className="overflow-x-auto">
       {show === "button1" && (
-        <div className="overflow-x-scroll h-[800px] min-w-[1000px]">
+        <div className="overflow-y-scroll overflow-auto h-[800px] min-w-[1000px]">
         <div className="inline-grid grid-cols-6 text-center font-light mb-[262px] w-full">
           <div className="p-[10px] bg-[#101C47] border-[4px] border-[#050F36] flex justify-center items-center row-span-2">
             <span dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "fee_currency" }) }} />
@@ -445,7 +446,7 @@ function Fee() {
                   <div class="w-16 hidden group-hover:block overflow-hidden absolute top-[-6px] left-[115px]">
                     <div class=" h-[8px] bg-white w-[10px] rotate-45 transform origin-bottom-left"></div>
                   </div>
-                  <span className="sm:w-[258px] w-[200px] text-left rounded sm:h-[78px] h-[40px] p-[8px] border bg-white font-normal sm:text-[10px] text-[6px] text-[#000000] hidden  group-hover:block">Та захиалгаа өгснөөр тэр даруй арилжаа хийгдэхгүй болж Maker болж таны захиалга захиалгын дэвтэрт үлдэж, дараа нь өөр хүн биелүүлэх/тохируулахыг хүлээнэ.</span>
+                  <span className="sm:w-[258px] w-[200px] text-left rounded sm:h-[78px] h-[56px] p-[8px] border bg-white font-normal sm:text-[10px] text-[7px] text-[#000000] hidden  group-hover:block">Та захиалгаа өгснөөр тэр даруй арилжаа хийгдэхгүй болж Maker болж таны захиалга захиалгын дэвтэрт үлдэж, дараа нь өөр хүн биелүүлэх/тохируулахыг хүлээнэ.</span>
                 </div>
               </div>
             </div>
@@ -467,7 +468,7 @@ function Fee() {
                   <div class=" hidden group-hover:block overflow-hidden absolute top-[-6px] left-[220px] float-right">
                     <div class=" h-[8px] bg-white w-[10px] rotate-45 transform origin-bottom-left"></div>
                   </div>
-                  <span className="w-[150px] md:w-[240px] text-left rounded h-[35px] sm:h-[50px] p-[8px] border bg-white font-normal md:text-[10px] text-[6px] text-[#000000] hidden  group-hover:block">Захиалгын дэвтэрт байгаа захиалгатай шууд таарч захиалга өгч буй арилжаачин</span>
+                  <span className="w-[150px] md:w-[240px] text-left rounded h-[46px] sm:h-[50px] p-[8px] border bg-white font-normal md:text-[10px] text-[7px] text-[#000000] hidden  group-hover:block">Захиалгын дэвтэрт байгаа захиалгатай шууд таарч захиалга өгч буй арилжаачин</span>
                 </div>
                 </div>
             </div>
@@ -475,6 +476,7 @@ function Fee() {
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 }
