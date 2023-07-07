@@ -13,7 +13,7 @@ function Posts() {
   const [cursorAtStart, setCursorAtStart] = useState(true);
   const [totalPosts, setTotalPosts] = useState(0);
   const [startIdx, setStartIdx] = useState(0);
-  const paginateBy = 7;
+  const paginateBy = 6;
 
   useEffect(() => {
     getPosts();
@@ -88,6 +88,8 @@ function Posts() {
     const newStartIdx = index * 6;
     setStartIdx(newStartIdx);
   };
+
+  console.log()
   return (
     <>
       <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] pt-[80px] pb-[240px]">
@@ -133,7 +135,7 @@ function Posts() {
             </div>
             <PostsMore posts={posts.slice(startIdx, startIdx + 6)} type={type} />
             <div className=" flex justify-center mt-[60px] w-full">
-              <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+              <nav className="isolate inline-flex -space-x-px rounded-md" aria-label="Pagination">
                 <button
                   onClick={handlePreviousPage}
                   disabled={startIdx === 0}
@@ -148,6 +150,7 @@ function Posts() {
                     />
                   </svg>
                 </button>
+                <span className={`text-[#000] relative mx-1 justify-end inline-flex items-end px-4 text-[10px] ${startIdx/6 === 0 ? "hidden" : ""}`}>.{" "}.{" "}.</span>       
                 <div className="flex">
                   {Array.from({ length: totalPages }, (_, index) => {
                     if (index < 1 || index === totalPages ) {
@@ -155,9 +158,9 @@ function Posts() {
                         <>
                           <span
                           key={index}
-                          className={`relative mx-1 justify-center z-10 inline-flex items-center px-4 py-2 border text-[10px] text-[#000] w-[32px] h-[32px] rounded p-[10px] ${startIdx/6 === 0 ? "hidden" : "border-[#C2C2C2] bg-white"
+                          className={`relative mx-1 cursor-pointer justify-center z-10 inline-flex items-center px-4 py-2 border text-[10px] text-[#000] w-[32px] h-[32px] rounded p-[10px] ${startIdx/6 === 0 ? "hidden" : "border-[#C2C2C2] bg-white"
                             }`}
-                          onClick={() => handlePageClick(index)}
+                          onClick={() => handlePageClick(startIdx / 6 - 1)}
                         >
                           {startIdx / 6 }
                           
@@ -173,9 +176,9 @@ function Posts() {
                         <>
                           <span
                           key={index}
-                          className={`relative mx-1 justify-center z-10 inline-flex items-center px-4 py-2 border text-[10px] text-[#000] w-[32px] h-[32px] rounded p-[10px] ${startIdx/6 >= 0 && startIdx/6+1 !== 15 ? "border-[#006CFF] text-[#006CFF]" : "border-[#C2C2C2] bg-white"
+                          className={`relative mx-1 cursor-pointer justify-center z-10 inline-flex items-center px-4 py-2 border text-[10px] text-[#000] w-[32px] h-[32px] rounded p-[10px] ${startIdx/6 >= 0 && startIdx/6+1 !== Math.ceil(totalPosts/6) + 1 ? "border-[#006CFF] text-[#006CFF]" : "border-[#C2C2C2] bg-white"
                             }`}
-                          onClick={() => handlePageClick(index)}
+                          onClick={() => handlePageClick(startIdx / 6 )}
                         >
                           {startIdx / 6 + 1}
                           
@@ -191,9 +194,9 @@ function Posts() {
                         <>
                           <span
                           key={index}
-                          className={`relative mx-1 justify-center z-10 inline-flex items-center px-4 py-2 border text-[10px] text-[#000] w-[32px] h-[32px] rounded p-[10px] ${startIdx/6 +2 === 15 ? "border-[#006CFF] text-[#006CFF] hidden" : "border-[#C2C2C2] bg-white "
+                          className={`relative mx-1 cursor-pointer justify-center z-10 inline-flex items-center px-4 py-2 border text-[10px] text-[#000] w-[32px] h-[32px] rounded p-[10px] ${startIdx/6 +2 === Math.ceil(totalPosts/6) + 1 ? "border-[#006CFF] text-[#006CFF] hidden" : "border-[#C2C2C2] bg-white "
                             }`}
-                          onClick={() => handlePageClick(index)}
+                          onClick={() => handlePageClick(startIdx / 6 + 1)}
                         >
                           {startIdx / 6 + 2}
                           
@@ -202,7 +205,8 @@ function Posts() {
                       );
                     } 
                     return null
-                  })}                  
+                  })}
+                  <span className={`text-[#000] relative mx-3 justify-end inline-flex items-end px-[2px] text-[10px] ${startIdx/6 +2 === Math.ceil(totalPosts/6) + 1 ? "border-[#006CFF] text-[#006CFF] hidden" : " "}`}>.{"  "}.{" "}.</span>       
                 </div>
                 <button
                   onClick={handleNextPage}
