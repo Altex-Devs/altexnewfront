@@ -688,7 +688,7 @@ const en = {
     "fee_partner": "Partner",
     "fee_nofee": "Free",
     "fee_withdraw_title": "Payment out fee",
-    "fee_increase_message": "Please <a href='/feedback.html' class='text-[#3973C5] underline'>click here</a> to sent a request to upgrade your account status.",
+    "fee_increase_message": "Please <a href='/feedback' class='text-[#3973C5] underline'>click here</a> to sent a request to upgrade your account status.",
     "fee_trade_title": "Trading fee",
 
     "posts_latest": "Latest",

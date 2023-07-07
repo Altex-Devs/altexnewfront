@@ -495,7 +495,7 @@ const mn = {
     "fee_partner": "Түнш",
     "fee_nofee": "Шимтгэлгүй",
     "fee_withdraw_title": "Зарлагын шимтгэл",
-    "fee_increase_message": "Та нэг өдөрт хийх зарлагын дүнг өсгөх хүсэлтэй бол <a href='/feedback.html' class='text-[#3973C5] underline'>ЭНД</a> дарж хүсэлтээ илгээнэ үү.",
+    "fee_increase_message": "Та нэг өдөрт хийх зарлагын дүнг өсгөх хүсэлтэй бол <a href='/feedback' class='text-[#3973C5] underline'>ЭНД</a> дарж хүсэлтээ илгээнэ үү.",
     "fee_trade_title": "Арилжааны шимтгэл",
 
     "posts_latest": "Хамгийн сүүлийн",
