@@ -59,7 +59,7 @@ function Howto() {
         {
           desc:<FormattedMessage id="desktop_2fa_1"/>,
           img1:'images/android.svg',
-          img:'images/desktop/2fa/Allitems-02.svg',
+          imgR:'images/desktop/2fa/Allitems-02.svg',
           img2:'images/ios.svg'
         },
         {
@@ -430,13 +430,13 @@ function Howto() {
           </div>
         </div>
 
-        <div className="rounded-[8px] text-[16px] bg-[#101C47] text-[#E6E7EB]  pt-0">
+        <div className="rounded-[8px] text-[16px] bg-[#101C47] text-[#E6E7EB] pt-[14px]">
         
         {activeSection === 'КОМПЬЮТЕР' && (
-          <div className="max-w-[800px] mx-auto ">
+          <div className="max-w-[800px] mx-auto">
           {jsonD.map((item, index) => (
-          <div key={index} className="rounded-[8px] bg-[#101C47] text-[#E6E7EB] p-[24px] pt-0 ">
-            <div onClick={() => handleTitleClick(index)} className="cursor-pointer flex pb-[17px] pt-[24px] justify-between border-b-[1px] border-b-[#283359] gap-[16px]">
+          <div key={index} className="rounded-[8px] bg-[#101C47] text-[#E6E7EB] p-[20px]">
+            <div onClick={() => handleTitleClick(index)} className="cursor-pointer flex pb-[17px] justify-between border-b-[1px] border-b-[#283359] gap-[16px]">
             <div className={`text-[16px] ${activeIndex === index ? 'text-[#13A9FD]' : 'text-[#E6E7EB]'}`}>{item.title}</div>
               <div className="min-w-[24px] min-h-[24px] rounded-[2px] bg-[rgba(0,108,255,0.16)] transform transition-transform duration-300" style={{ transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0)' }}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-[14px] h-[20px] ml-[5px]"  xmlnsXxlink="http://www.w3.org/1999/xlink" width="14px" height="20px" viewBox="0 -4.5 20 20" version="1.1">
@@ -489,9 +489,10 @@ function Howto() {
                     <div className="mb-[24px]" key={innerIndex}>
                       <div className="pb-[16px] px-6 xl:mr-[120px] xl:ml-[30px] xl:mb-[16px] lg:mr-[120px] lg:ml-[30px] lg:mb-[16px] md:mr-[120px] md:ml-[30px] md:mb-[16px]">{data.desc}</div>
                       <div className="w-[284px] 3xl:w-[584px] 2xl:w-[584px] xl:w-[584px] lg:w-[384px] md:w-[284px] md:max-w-3xl h-[max] flex mx-auto justify-center">
-                        {data.img && <img className="w-max h-max" src={data.img} alt="Burtgel uusgeh" />}
-                        {data.img1 && <a  className="inline-block ml-[10px]" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&pli=1"><img className="inline-block mt-4" src={data.img1} alt="Burtgel uusgeh" /></a>}
-                        {data.img2 && <a  className="inline-block ml-[10px]" href="https://apps.apple.com/us/app/google-authenticator/id388497605"><img className="mt-4" src={data.img2} alt="Burtgel uusgeh" /></a>}
+                        {data.img && <img className="w-max h-[160px] sm:h-max" src={data.img} alt="Burtgel uusgeh" />}
+                        {data.imgR && <img className="w-max h-[70px] flex items-center" src={data.imgR} alt="2fa"/>}
+                        {data.img1 && <a  className="flex items-center pb-4 sm:pb-10 ml-[10px]" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&pli=1"><img className="inline-block mt-4" src={data.img1} alt="Burtgel uusgeh" /></a>}
+                        {data.img2 && <a  className="flex items-center pb-4 sm:pb-10 ml-[10px]" href="https://apps.apple.com/us/app/google-authenticator/id388497605"><img className="mt-4" src={data.img2} alt="Burtgel uusgeh" /></a>}
                       </div>
                       {data.dans && <div className="sm:text-[14px] text-[10px] ml-[1.4rem] sm:ml-[3rem] mb-[16px] text-[#E7E8ED]">{data.dans}</div>}
                       <div className=" gap-[24px] grid grid-cols-3 px-4">

@@ -162,8 +162,12 @@ const Navbar = ({ locale, setLocale }) => {
             </div>
           </div>
         </div>
-        <a id="mobile_menu_register" className="inline-block rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] mr-[42px] mb-[32px]" href="https://trade.altex.mn/register">Бүртгүүлэх</a>
-        <a id="mobile_menu_login" className="inline-block rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] border-solid border-[1px] border-[#13A9FD] text-[#13A9FD]" href="https://trade.altex.mn/signin">Нэвтрэх</a>
+        <a id="mobile_menu_register" className="inline-block rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] bg-gradient-to-b from-[#13A9FD] to-[#006CFF] mr-[42px] mb-[32px]" href="https://trade.altex.mn/register">
+          <FormattedMessage id="mobile_menu_register"/>
+        </a>
+        <a id="mobile_menu_login" className="inline-block rounded-[4px] font-bold text-[14px] px-[24px] py-[15px] border-solid border-[1px] border-[#13A9FD] text-[#13A9FD]" href="https://trade.altex.mn/signin">
+          <FormattedMessage id="mobile_menu_login"/>
+        </a>
       </div>
 
       <div className="flex items-center bg-[#0A1540] z-50 h-[48px] sticky w-full left-0 top-0 text-[#696F86] text-[14px]">
