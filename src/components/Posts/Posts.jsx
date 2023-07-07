@@ -91,8 +91,7 @@ function Posts() {
   return (
     <>
       <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] pt-[80px] pb-[240px]">
-        <div className="container px-[26px] sm:mx-auto  max-w-[996px]">
-          <div className="font-Montserrat text-[10px] sm:text-[14px] mb-[80px] text-[#3973C5]">
+          <div className="font-Montserrat max-w-[1490px] mx-auto px-[34px] text-[10px] sm:text-[14px] mb-[80px] text-[#3973C5]">
           <a href="/"><FormattedMessage id="terms_breadcrumbs_1"/></a> &gt; <FormattedMessage id="menu_academy"/> {" "} &gt; {" "}
           {window.location.pathname === "/posts/projects" ? (
             <FormattedMessage id="mobile_menu_projects"/>
@@ -104,6 +103,7 @@ function Posts() {
             ""
           )}
         </div>
+        <div className="container px-[26px] sm:mx-auto  max-w-[996px]">
           {type === "basics" && (
             <div className="flex w-full pb-[16px] border-b-[1px] border-b-[#CDCDCE] text-[18px] font-medium gap-[40px] mb-[24px]">
               <div className="relative text-[#35363B] uppercase">
