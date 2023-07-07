@@ -44,17 +44,21 @@ function Post() {
     <>
       <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] pt-[80px] pb-[140px]">
         <div className="container px-[26px] sm:mx-auto max-w-[996px]">
-          <div className="font-light text-[14px] mb-[80px] text-[#3973C5]">
-          <a href="/"><FormattedMessage id="terms_breadcrumbs_1"/></a> &gt; <FormattedMessage id="menu_academy"/> &gt; 
-          {window.location.pathname.includes("/posts/projects") ? (
-            <FormattedMessage id="mobile_menu_projects"/>
-          ) : window.location.pathname.includes("/posts/basics") ? (
-            <FormattedMessage id="mobile_menu_crypto_knowledge"/>
-          ) : window.location.pathname.includes("/posts/news") ? (
-            <FormattedMessage id="mobile_menu_market_news"/>
-          ) : (
-            ""
-          )}
+          <div className="font-Montserrat text-[10px] sm:text-[14px] mb-[80px] text-[#3973C5]">
+          <a href="/">
+            <FormattedMessage id="terms_breadcrumbs_1" />
+          </a> &gt; <FormattedMessage id="menu_academy" /> {" "}&gt; {" "} 
+          {(() => {
+            if (window.location.pathname.includes("/posts/projects")) {
+              return <FormattedMessage id="mobile_menu_projects" />;
+            } else if (window.location.pathname.includes("/posts/basics")) {
+              return <FormattedMessage id="mobile_menu_crypto_knowledge" />;
+            } else if (window.location.pathname.includes("/posts/news")) {
+              return <FormattedMessage id="mobile_menu_market_news" />;
+            } else {
+              return "";
+            }
+          })()}
           </div>
           <div className="container sm:mx-auto pt-[17px] max-w-[800px] mb-[92px]">
             <div className="text-[40px] leading-10 font-bold mb-[24px] text-[#35363B]">{title}</div>
