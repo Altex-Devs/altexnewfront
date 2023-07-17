@@ -32,7 +32,7 @@ function Howto() {
   const jsonD = [
     {
       title:<FormattedMessage id="howto_Registration"/>,
-      video:'images/how-to-videos/how-to-register/11.mp4',
+      video:'w4NH8b8FXrg',
       info:[
         {
           desc:<FormattedMessage id="desktop_reg_1"/>,
@@ -54,7 +54,7 @@ function Howto() {
     },
     {
       title:<FormattedMessage id="howto_2fa"/>,
-      video:'images/how-to-videos/how-to-enable-2fa/1.mp4',
+      video:'O50k6SlV34M',
       info:[
         {
           desc:<FormattedMessage id="desktop_2fa_1"/>,
@@ -82,7 +82,7 @@ function Howto() {
     },
     {
       title:<FormattedMessage id="howto_verify"/>,
-      video:'images/how-to-videos/how-to-verify/1.mp4',
+      video:'naolvuvD3yg',
       info:[
         {
           desc:<FormattedMessage id="desktop_ver_1"/>,
@@ -133,7 +133,7 @@ function Howto() {
     },
     {
       title:<FormattedMessage id="howto_deposit"/>,
-      video:'images/how-to-videos/deposit/1.mp4',
+      video:'CJk6q5LEA_4',
       info:[
         {
           desc:<FormattedMessage id="desktop_depo_1"/>,
@@ -162,7 +162,7 @@ function Howto() {
     },
     {
       title:<FormattedMessage id="howto_withdraw"/>,
-      video:'images/how-to-videos/withdraw/111.mp4',
+      video:'B5-lDOcNYF0',
       info:[
         {
           desc:<FormattedMessage id="desktop_with_1"/>,
@@ -207,7 +207,7 @@ function Howto() {
   const jsonM = [
     {
       title:<FormattedMessage id="howto_Registration"/>,
-      video:'images/how-to-videos/how-to-register/2.mp4',
+      video:'C5G2j_vqmQQ',
       info:[
         {
           desc:<FormattedMessage id="mobile_req_1"/>,
@@ -233,7 +233,7 @@ function Howto() {
     },
     {
       title:<FormattedMessage id="howto_2fa"/>,
-      video:'images/how-to-videos/how-to-enable-2fa/2.mp4',
+      video:'NHadPMjKnqg',
       info:[
         {
           desc:<FormattedMessage id="mobile_2fa_1"/>,
@@ -261,7 +261,7 @@ function Howto() {
     },
     {
       title:<FormattedMessage id="howto_verify"/>,
-      video:'images/how-to-videos/how-to-verify/2.mp4',
+      video:'D2MleEugODQ',
       info:[
         {
           desc:<FormattedMessage id="desktop_ver_1"/>,
@@ -312,7 +312,7 @@ function Howto() {
     },
     {
       title:<FormattedMessage id="howto_deposit"/>,
-      video:'images/how-to-videos/deposit/2.mp4',
+      video:'vK8YBXMSHMs',
       info:[
         {
           desc:<FormattedMessage id="mobile_depo_1"/>,
@@ -349,7 +349,7 @@ function Howto() {
     },
     {
       title:<FormattedMessage id="howto_withdraw"/>,
-      video:'images/how-to-videos/withdraw/2.mp4',
+      video:'ditTRh3jBR8',
       info:[
         {
           desc:<FormattedMessage id="mobile_with_1"/>,
@@ -438,7 +438,7 @@ function Howto() {
           <div key={index} className="rounded-[8px] bg-[#101C47] text-[#E6E7EB] py-[8px] pb-[16px] px-[24px]">
             <div onClick={() => handleTitleClick(index)} className="cursor-pointer flex pb-[18px] justify-between border-b-[1px] border-b-[#283359] gap-[16px]">
             <div className={`text-[16px] ${activeIndex === index ? 'text-[#13A9FD]' : 'text-[#E6E7EB]'}`}>{item.title}</div>
-              <div className="min-w-[24px] max-h-[24px] min-h-[24px] rounded-[2px] bg-[rgba(0,108,255,0.16)] transform transition-transform duration-300" style={{ transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0)' }}>
+              <div className="min-w-[24px] min-h-[24px] rounded-[2px] bg-[rgba(0,108,255,0.16)] transform transition-transform duration-300" style={{ transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0)' }}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-[14px] h-[20px] ml-[5px]"  xmlnsXxlink="http://www.w3.org/1999/xlink" width="14px" height="20px" viewBox="0 -4.5 20 20" version="1.1">
                       <g id="Page-1"  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                           <g id="Dribbble-Light-Preview" transform="translate(-220.000000, -6680.000000)" fill="#006CFF">
@@ -467,10 +467,7 @@ function Howto() {
                   <div className="fixed inset-0 flex items-center justify-center z-50">
                     <div className="absolute inset-0 bg-black opacity-75"></div>
                     <div className="relative z-10">
-                      <video className="h-[480px] w-[640px] rounded-lg" controls>
-                        <source src={item.video} type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
+                    <iframe height="315px" width="640px" src={`https://www.youtube.com/embed/${item.video}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                       <button className="absolute top-4 right-4 text-white" onClick={closeVideoModal}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                         <path id="Union_32" data-name="Union 32" d="M14.593,16.573l-5.61-5.61-5.61,5.61a1.4,1.4,0,0,1-1.979-1.979L7,8.984l-5.61-5.61a1.4,1.4,0,0,1,1.98-1.981L8.984,7l5.61-5.61a1.4,1.4,0,0,1,1.979,1.979l-5.61,5.61,5.611,5.61a1.4,1.4,0,0,1-1.981,1.981Z" transform="translate(-0.983 -0.983)" fill="#fff"/>
@@ -534,7 +531,7 @@ function Howto() {
               <div key={index} className="rounded-[8px] bg-[#101C47] text-[#E6E7EB] py-[8px] pb-[16px] px-[24px]">
               <div onClick={() => handleTitleClick(index)} className="cursor-pointer flex pb-[18px] justify-between border-b-[1px] border-b-[#283359]">
                 <div className={`text-[16px] ${activeIndex === index ? 'text-[#13A9FD]' : 'text-[#E6E7EB]'}`}>{item.title}</div>
-                <div className="min-w-[24px] max-h-[24px] min-h-[24px] rounded-[2px] bg-[rgba(0,108,255,0.16)] transform transition-transform duration-300" style={{ transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0)' }}>
+                <div className="min-w-[24px] min-h-[24px] rounded-[2px] bg-[rgba(0,108,255,0.16)] transform transition-transform duration-300" style={{ transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0)' }}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-[14px] h-[20px] ml-[5px]" xmlnsXxlink="http://www.w3.org/1999/xlink" width="14px" height="20px" viewBox="0 -4.5 20 20" version="1.1">
                       <title>arrow_down [#338]</title>
                       <desc>Created with Sketch.</desc>
@@ -567,10 +564,7 @@ function Howto() {
                     <div className="fixed inset-0 flex items-center justify-center z-50">
                       <div className="absolute inset-0 bg-black opacity-75"></div>
                       <div className="relative z-10">
-                        <video className="h-[480px] w-[640px] rounded-lg" controls autoPlay>
-                          <source src={item.video} type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
+                      <iframe height="515px" width='290px' src={`https://www.youtube.com/embed/${item.video}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         <button className="absolute top-4 right-4 text-white" onClick={closeVideoModal}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                           <path id="Union_32" data-name="Union 32" d="M14.593,16.573l-5.61-5.61-5.61,5.61a1.4,1.4,0,0,1-1.979-1.979L7,8.984l-5.61-5.61a1.4,1.4,0,0,1,1.98-1.981L8.984,7l5.61-5.61a1.4,1.4,0,0,1,1.979,1.979l-5.61,5.61,5.611,5.61a1.4,1.4,0,0,1-1.981,1.981Z" transform="translate(-0.983 -0.983)" fill="#fff"/>
