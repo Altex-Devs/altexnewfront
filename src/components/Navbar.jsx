@@ -112,8 +112,8 @@ const Navbar = ({ locale, setLocale }) => {
     <>
       <div id="menu" className={`fixed top-0 w-full left-0 h-screen bg-[#050F36] z-50 hidden lg:hidden p-[20px] ${navbarBg ? "bg-[#050F36]" : ""}  py-[92px]`}>
         <div className="flex justify-between items-center mb-[40px] mt-[-3px]">
-          {/* <img src="/images/header-logo.svg" /> */}
-          <img src="/images/naadam-logo-10-05-05.svg" />
+          <img src="/images/header-logo.svg" />
+          {/* <img src="/images/naadam-logo-10-05-05.svg" /> */}
           <svg id="SVGDoc" className="mr-[10px]" onClick={hideMenu} width="16" height="16" version="1.1" viewBox="0 0 16 16"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Icon ionic-md-close</title><path d="M16,1.59989v0l-1.59989,-1.59989v0l-6.40011,6.40011v0l-6.40011,-6.40011v0l-1.59989,1.59989v0l6.40011,6.40011v0l-6.40011,6.40011v0l1.59989,1.59989v0l6.40011,-6.40011v0l6.40011,6.40011v0l1.59989,-1.59989v0l-6.40011,-6.40011v0z" fill="#ffffff" fillOpacity="1"></path></g></g></svg>
         </div>
         <div className="flex items-center  bg-[#0A1540] h-[48px] w-full absolute left-0 top-0 text-[#696F86] text-[14px]">
@@ -188,8 +188,8 @@ const Navbar = ({ locale, setLocale }) => {
       <div className={`flex container mx-auto py-[40px] max-w-[1490px] px-[34px] items-center justify-between relative z-20`}>
         <div className="flex items-center">
           <a href="/" className="py-[1px]">
-            {/* <img src="/images/header-logo.svg" /> */}
-            <img src="/images/naadam-logo-10-05-05.svg" />
+            <img src="/images/header-logo.svg" />
+            {/* <img src="/images/naadam-logo-10-05-05.svg" /> */}
           </a>
         </div>
         <div className="lg:hidden">
