@@ -49,14 +49,6 @@ function FAQ() {
                 <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a6"}) }} />
               </Item>
 
-              <Item title={intl.formatMessage({id: "faq_q3"})}>
-                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a3"}) }} />
-              </Item>
-
-              <Item title={intl.formatMessage({id: "faq_q3"})}>
-                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a3"}) }} />
-              </Item>
-
               <Item title={intl.formatMessage({id: "faq_q7"})}>
                 <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a7"}) }} />
               </Item>
@@ -80,12 +72,7 @@ function FAQ() {
               <Item title={intl.formatMessage({id: "faq_q12"})}>
                 <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a12"}) }} />
               </Item>
-            </div>
 
-          )}
-
-          {show === "button2" && (
-            <div className="ТӨЛБӨР ТООЦОО">
               <Item title={intl.formatMessage({id: "faq_q13"})}>
                 <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a13"}) }} />
               </Item>
@@ -93,7 +80,12 @@ function FAQ() {
               <Item title={intl.formatMessage({id: "faq_q14"})}>
                 <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a14"}) }} />
               </Item>
+            </div>
 
+          )}
+
+          {show === "button2" && (
+            <div className="ТӨЛБӨР ТООЦОО">
               <Item title={intl.formatMessage({id: "faq_q15"})}>
                 <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a15"}) }} />
               </Item>
@@ -124,6 +116,14 @@ function FAQ() {
 
               <Item title={intl.formatMessage({id: "faq_q22"})}>
                 <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a22"}) }} />
+              </Item>
+
+              <Item title={intl.formatMessage({id: "faq_q23"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a23"}) }} />
+              </Item>
+
+              <Item title={intl.formatMessage({id: "faq_q24"})}>
+                <div dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "faq_a24"}) }} />
               </Item>
 
             </div>

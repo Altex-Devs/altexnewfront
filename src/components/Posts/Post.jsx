@@ -13,6 +13,22 @@ function Post() {
   const [createdAt, setCreatedAt] = useState("");
   const [posts, setPosts] = useState([]);
   const { type, postId } = useParams();
+  
+
+  useEffect(() => {
+    const handlePopState = () => {
+      console.log('Browser back button clicked');
+      // Perform your desired actions here
+    };
+
+    // Add event listener for the popstate event
+    window.addEventListener('popstate', handlePopState);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
 
   useEffect(() => {
     const docRef = doc(db, "posts", postId);
