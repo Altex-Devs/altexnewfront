@@ -13,7 +13,7 @@ function Post() {
   const [createdAt, setCreatedAt] = useState("");
   const [posts, setPosts] = useState([]);
   const { type, postId } = useParams();
-  
+
 
   useEffect(() => {
     const handlePopState = () => {
@@ -83,9 +83,6 @@ function Post() {
               </svg>
               {createdAt ? date : (new Date(parseInt(date) * 1000)).toJSON()?.slice(0, 10)}
             </div>
-            {createdAt && <>
-              <img className="mb-[25px] w-full" src={image} alt="News_header_image" />
-            </>}
             <div className="richcontent text-[#35363B] text-[16px] leading-9 mb-[40px]" dangerouslySetInnerHTML={{ __html: content }}></div>
             <div className="inline-block rounded bg-[#0075FF] text-white text-[14px] font-bold py-[12px] pl-[18px] pr-[20px] cursor-pointer mr-[24px]">
               <svg className="inline-block mr-[23px]" width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
