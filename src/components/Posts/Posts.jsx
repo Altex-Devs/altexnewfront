@@ -22,25 +22,32 @@ function Posts() {
 
   const getPosts = (direction) => {
     let q;
-    if (direction === "next") {
-      q = query(
-        collection(db, "posts"),
-        where("type", "==", type),
-        orderBy("date", "desc"),
-        startAfter(posts[posts.length - 1]?.ref),
-        limit(paginateBy)
-      );
-    } else if (direction === "prev") {
-      q = query(
-        collection(db, "posts"),
-        where("type", "==", type),
-        orderBy("date", "desc"),
-        endBefore(posts[0]?.ref),
-        limit(paginateBy)
-      );
-    } else {
-      q = query(collection(db, "posts"), where("type", "==", type), orderBy("date", "desc"));
-    }
+  if (direction === 'next') {
+    q = query(
+      collection(db, 'posts'),
+      where('type', '==', type),
+      where('is_active', '==', true),
+      orderBy('date', 'desc'),
+      startAfter(posts[posts.length - 1]?.ref),
+      limit(paginateBy)
+    );
+  } else if (direction === 'prev') {
+    q = query(
+      collection(db, 'posts'),
+      where('type', '==', type),
+      where('is_active', '==', true),
+      orderBy('date', 'desc'),
+      endBefore(posts[0]?.ref),
+      limit(paginateBy)
+    );
+  } else {
+    q = query(
+      collection(db, 'posts'),
+      where('type', '==', type),
+      where('is_active', '==', true),
+      orderBy('date', 'desc')
+    );
+  }
 
     getDocs(q)
       .then((querySnapshot) => {
