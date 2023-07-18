@@ -8,7 +8,6 @@ import { FormattedMessage } from "react-intl";
 function Post() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [image, setImage] = useState("");
   const [date, setDate] = useState("");
   const [createdAt, setCreatedAt] = useState("");
   const [posts, setPosts] = useState([]);
@@ -39,7 +38,6 @@ function Post() {
         setTitle(data.title);
         setContent(data.content);
         setDate(data.date);
-        setImage(data.image);
         setCreatedAt(data.createdAt);
       } else {
         console.log("No such document!");
