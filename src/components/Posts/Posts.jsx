@@ -1,100 +1,112 @@
-import { Link, useParams } from "react-router-dom";
-import PostsMore from "./PostsMore";
-import { useEffect, useState } from "react";
-import { collection, endBefore, getDocs, limit, orderBy, query, startAfter, where } from "firebase/firestore";
-import { db } from "../../firebase";
-import { useIntl, FormattedMessage } from "react-intl";
+  import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+  import PostsMore from "./PostsMore";
+  import { useEffect, useState } from "react";
+  import { collection, endBefore, getDocs, limit, orderBy, query, startAfter, where } from "firebase/firestore";
+  import { db } from "../../firebase";
+  import { useIntl, FormattedMessage } from "react-intl";
 
-function Posts() {
-  const intl = useIntl();
+  function Posts() {
+    const intl = useIntl();
   const [posts, setPosts] = useState([]);
   const { type } = useParams();
+  const { search } = useLocation();
+  const navigate = useNavigate();
   const [cursorAtEnd, setCursorAtEnd] = useState(false);
   const [cursorAtStart, setCursorAtStart] = useState(true);
   const [totalPosts, setTotalPosts] = useState(0);
   const [startIdx, setStartIdx] = useState(0);
   const paginateBy = 6;
 
-  useEffect(() => {
-    getPosts();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    useEffect(() => {
+      const params = new URLSearchParams(search);
+      const page = parseInt(params.get("page")) || 1;
+      setStartIdx((page - 1) * paginateBy);
+      getPosts();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-  const getPosts = (direction) => {
-    let q;
-  if (direction === 'next') {
-    q = query(
-      collection(db, 'posts'),
-      where('type', '==', type),
-      where('is_active', '==', true),
-      orderBy('date', 'desc'),
-      startAfter(posts[posts.length - 1]?.ref),
-      limit(paginateBy)
-    );
-  } else if (direction === 'prev') {
-    q = query(
-      collection(db, 'posts'),
-      where('type', '==', type),
-      where('is_active', '==', true),
-      orderBy('date', 'desc'),
-      endBefore(posts[0]?.ref),
-      limit(paginateBy)
-    );
-  } else {
-    q = query(
-      collection(db, 'posts'),
-      where('type', '==', type),
-      where('is_active', '==', true),
-      orderBy('date', 'desc')
-    );
-  }
-
-    getDocs(q)
-      .then((querySnapshot) => {
-        const data = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ref: doc,
-          ...doc.data()
-        }));
-
-        if (data.length) {
-          setPosts(data);
-          setTotalPosts(querySnapshot.size);
-
-          if (direction === "next") {
-            setCursorAtStart(false);
-          } else if (direction === "prev") {
-            setCursorAtEnd(false);
-          }
-        } else {
-          if (direction === "next") {
-            setCursorAtEnd(true);
-          } else if (direction === "prev") {
-            setCursorAtStart(true);
-          }
-        }
-      })
-      .catch((error) => {
-        console.error("Error getting posts:", error);
-      });
-  };
-  const totalPages = Math.ceil(totalPosts / paginateBy);
-  const handleNextPage = () => {
-    if (startIdx + 6 < totalPosts) {
-      setStartIdx(startIdx + 6);
+    const getPosts = (direction) => {
+      let q;
+    if (direction === 'next') {
+      q = query(
+        collection(db, 'posts'),
+        where('type', '==', type),
+        where('is_active', '==', true),
+        orderBy('date', 'desc'),
+        startAfter(posts[posts.length - 1]?.ref),
+        limit(paginateBy)
+      );
+    } else if (direction === 'prev') {
+      q = query(
+        collection(db, 'posts'),
+        where('type', '==', type),
+        where('is_active', '==', true),
+        orderBy('date', 'desc'),
+        endBefore(posts[0]?.ref),
+        limit(paginateBy)
+      );
+    } else {
+      q = query(
+        collection(db, 'posts'),
+        where('type', '==', type),
+        where('is_active', '==', true),
+        orderBy('date', 'desc')
+      );
     }
-  };
-  
-  const handlePreviousPage = () => {
-    if (startIdx - 6 >= 0) {
-      setStartIdx(startIdx - 6);
-    }
-  };
 
-  const handlePageClick = (index) => {
-    const newStartIdx = index * 6;
-    setStartIdx(newStartIdx);
-  };
+      getDocs(q)
+        .then((querySnapshot) => {
+          const data = querySnapshot.docs.map((doc) => ({
+            id: doc.id,
+            ref: doc,
+            ...doc.data()
+          }));
+
+          if (data.length) {
+            setPosts(data);
+            setTotalPosts(querySnapshot.size);
+
+            if (direction === "next") {
+              setCursorAtStart(false);
+            } else if (direction === "prev") {
+              setCursorAtEnd(false);
+            }
+          } else {
+            if (direction === "next") {
+              setCursorAtEnd(true);
+            } else if (direction === "prev") {
+              setCursorAtStart(true);
+            }
+          }
+        })
+        .catch((error) => {
+          console.error("Error getting posts:", error);
+        });
+    };
+    const totalPages = Math.ceil(totalPosts / paginateBy);
+    const handleNextPage = () => {
+      if (startIdx + 6 < totalPosts) {
+        setStartIdx(startIdx + 6);
+        updateURL(startIdx/6);
+      }
+    };
+    
+    const handlePreviousPage = () => {
+      if (startIdx - 6 >= 0) {
+        setStartIdx(startIdx - 6);
+        updateURL(startIdx/6 - 2);
+      }
+    };
+
+    const handlePageClick = (index) => {
+      const newStartIdx = index * 6;
+      setStartIdx(newStartIdx);
+      updateURL(newStartIdx);
+    };
+
+    const updateURL = (page) => {
+      navigate(`?page=${page + 2}`);
+    };
 
   console.log()
   return (

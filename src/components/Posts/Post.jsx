@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import PostsMore from "./PostsMore";
 import { useEffect, useState } from "react";
 import { collection, doc, getDoc, getDocs, limit, orderBy, query, where } from "firebase/firestore";
@@ -12,22 +12,8 @@ function Post() {
   const [createdAt, setCreatedAt] = useState("");
   const [posts, setPosts] = useState([]);
   const { type, postId } = useParams();
+  const navigate = useNavigate();
 
-
-  useEffect(() => {
-    const handlePopState = () => {
-      console.log('Browser back button clicked');
-      // Perform your desired actions here
-    };
-
-    // Add event listener for the popstate event
-    window.addEventListener('popstate', handlePopState);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('popstate', handlePopState);
-    };
-  }, []);
 
   useEffect(() => {
     const docRef = doc(db, "posts", postId);
@@ -44,14 +30,27 @@ function Post() {
       }
     });
 
+    const handleBackButtonClick = () => {
+      navigate(-1);
+    };
+
+    window.addEventListener("popstate", handleBackButtonClick);
+
     const q = query(collection(db, "posts"), where("type", "==", type), orderBy("date", "desc"), limit(4));
 
     getDocs(q).then((querySnapshot) => {
-      const data = querySnapshot.docs.filter((doc) => doc.id !== postId).map((doc) => ({ id: doc.id, ...doc.data() })).slice(-3);
-      console.log(data);
+      const data = querySnapshot.docs
+        .filter((doc) => doc.id !== postId)
+        .map((doc) => ({ id: doc.id, ...doc.data() }))
+        .slice(-3);
       setPosts(data);
     });
-  }, [postId, type]);
+
+    return () => {
+      // Clean up the event listener when the component unmounts
+      window.removeEventListener("popstate", handleBackButtonClick);
+    };
+  }, [postId, type, navigate]);
 
   return (
     <>
