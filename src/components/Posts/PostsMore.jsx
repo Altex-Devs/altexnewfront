@@ -10,7 +10,7 @@ function PostsMore({posts, type}) {
           <div className="bg-white rounded flex flex-col w-full">
             <div className="aspect-video bg-cover inline-block h-1/2 rounded-t" style={{backgroundImage: `url("${post.image}")`}}></div>
             <div className="pt-[18px] px-[16px] pb-[24px] flex flex-col justify-between grow">
-            <div className="text-[#03040A] text-[18px] font-bold mb-[40px] overflow-hidden" style={{ maxHeight: "3em", lineClamp: 3 }}>
+            <div className="text-[#03040A] text-[18px] font-bold mb-[40px] line-clamp-2" style={{ maxHeight: "3em", lineClamp: 2 }}>
               {post.title}
             </div>
               <div className="flex justify-between items-center">

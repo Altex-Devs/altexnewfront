@@ -132,7 +132,7 @@ function Posts() {
                   {cursorAtStart && <>
                     <div className="inline-block text-[12px] font-light rounded bg-[#FDAE13] py-[4px] px-[8px] mb-[23px]" dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "posts_latest" }) }} />
                   </>}
-                  <div className="text-[#03040A] text-[28px] font-bold">{posts[0].title}​</div>
+                  <div className="text-[#03040A] text-[28px] font-bold overflow-hidden line-clamp-5">{posts[0].title}</div>
                 </div>
                 <div className="flex justify-between items-center ">
                   <div className="text-[#707070] font-light">{posts[0].createdAt ? posts[0].date : (new Date(parseInt(posts[0].date) * 1000)).toJSON().slice(0, 10)}</div>
@@ -140,7 +140,7 @@ function Posts() {
                 </div>
               </div>
             </div>
-            <PostsMore posts={posts.slice(startIdx, startIdx + 6)} type={type} />
+            <PostsMore posts={posts.slice(startIdx === 0 ? 1 : startIdx, startIdx + (startIdx === 0 ? 7 : 6))} type={type} />
             <div className=" flex justify-center mt-[60px] w-full">
               <nav className="isolate inline-flex -space-x-px rounded-md" aria-label="Pagination">
                 <button
