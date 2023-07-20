@@ -4,6 +4,7 @@ import { app } from "../firebase";
 import { getFirestore, collection,  onSnapshot ,getDocs, query, where } from 'firebase/firestore';
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
+import AdminPanel from './Posts/AdminPanel';
 
 
 const db = getFirestore(app);
@@ -15,10 +16,8 @@ function Admin() {
   const [manageNewsQuantity, setManageNewsQuantity] = useState(0);
   const [manageProjectQuantity, setManageProjectQuantity] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
-
-
+  const [showAdminPanel, setShowAdminPanel] = useState(false);
   const navigate = useNavigate();
-  
   useEffect(() => {
     const feedbacksCollection = collection(db, 'feedbacks');
     const unsubscribe = onSnapshot(feedbacksCollection, (snapshot) => {
@@ -34,7 +33,6 @@ function Admin() {
     const cryptoBasicsQuery = query(collection(db, "posts"), where("type", "==", "basics"));
     const manageNewsQuery = query(collection(db, "posts"), where("type", "==", "news"));
     const manageProjectQuery = query(collection(db, "posts"), where("type", "==", "projects"));
-
     const [cryptoBasicsSnapshot, manageNewsSnapshot, manageProjectSnapshot] = await Promise.all([
       getDocs(cryptoBasicsQuery),
       getDocs(manageNewsQuery),
@@ -62,6 +60,10 @@ function Admin() {
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleAdminPanelToggle = () => {
+    setShowAdminPanel(!showAdminPanel);
   };
 
 
@@ -153,87 +155,96 @@ function Admin() {
          <Link className="flex" to="/admin/posts/projects">Manage Projects</Link>
          <br /> 
          <Link className="flex" to="/admin/posts/AdminFeedback" >Feedback</Link>
+         <br/>
+          <button className='flex' onClick={handleAdminPanelToggle}>Add Admin</button>
+          <div>
+          {showAdminPanel && (
+          <div>
+           <AdminPanel/>
+          </div>
+        )}
+          </div>
      </div>
      <div>
-      <h1 className='text-[#6e768e] text-[40px] flex font-[500] p-10'>Welcome To Admin</h1>
-     <div className="flex text-[#000] grid grid-cols-4 my-10">
-          <a href="/admin/posts/AdminFeedback"><div className="text-[#000] bg-[#fff]   h-[120px] mx-2">
-            <div className='flex justify-between py-8 px-4'>
-              <div className="flex items-center justify-center ml-4">
+        <h1 className='text-[#6e768e] text-[40px] flex font-[500] p-10'>Welcome To Admin</h1>
+        <div className="flex text-[#000] grid grid-cols-4 my-10">
+            <a href="/admin/posts/AdminFeedback"><div className="text-[#000] bg-[#fff]   h-[120px] mx-2">
+              <div className='flex justify-between py-8 px-4'>
+                <div className="flex items-center justify-center ml-4">
+                  <div className=" rounded-full bg-[#f5f6f8] w-[50px] h-[50px] border-4 flex items-center justify-center text-white text-[24px] font-bold">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="10px" height="20px" viewBox="0 0 1920 1920">
+                      <path fill='#006cff' d="M84 0v1423.143h437.875V1920l621.235-496.857h692.39V0z" fill-rule="evenodd"/>
+                  </svg>
+                  </div>
+                </div>
+                <div>
+                  <div className='mx-10 font-sans flex justify-end  text-[#343a40] text-[1.5rem] font-[500]'>{feedbacksCount}</div>
+                  <div className='mx-10 font-sans flex justify-center text-[0.8rem] text-[#6c757d]'> Feedbacks</div>
+                </div>
+              </div>
+            </div></a>
+            <Link to='/admin/posts/news'>
+            <div className="text-[#000] bg-[#fff]  h-[120px] mx-2">
+              <div className='flex justify-between py-8 px-4'>
+                <div className="flex items-center justify-center ml-4">
                 <div className=" rounded-full bg-[#f5f6f8] w-[50px] h-[50px] border-4 flex items-center justify-center text-white text-[24px] font-bold">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="10px" height="20px" viewBox="0 0 1920 1920">
-                    <path fill='#006cff' d="M84 0v1423.143h437.875V1920l621.235-496.857h692.39V0z" fill-rule="evenodd"/>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#006cff" width="10px" height="20px" viewBox="0 0 48 48">
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="invisible_box" data-name="invisible box">
+                      <rect width="48" height="48" fill="none"/>
+                      <rect width="48" height="48" fill="none"/>
+                    </g>
+                    <g id="icons_Q2" data-name="icons Q2">
+                      <path d="M42,4H6A2,2,0,0,0,4,6V42a2,2,0,0,0,2,2H42a2,2,0,0,0,2-2V6A2,2,0,0,0,42,4ZM12,16a2,2,0,0,1,2-2h6a2,2,0,0,1,2,2v8a2,2,0,0,1-2,2H14a2,2,0,0,1-2-2ZM34,34H14a2,2,0,0,1,0-4H34a2,2,0,0,1,0,4Zm0-8H28a2,2,0,0,1,0-4h6a2,2,0,0,1,0,4Zm0-8H28a2,2,0,0,1,0-4h6a2,2,0,0,1,0,4Z"/>
+                    </g>
+                  </g>
                 </svg>
+                  </div>
+                </div>
+                <div>
+                  <div className='mx-10 font-sans flex justify-end  text-[#343a40] text-[1.5rem] font-[500]'>{manageNewsQuantity}</div>
+                  <div className='mx-10 font-sans flex justify-center text-[0.8rem] text-[#6c757d]'> News</div>
                 </div>
               </div>
-              <div>
-                <div className='mx-10 font-sans flex justify-end  text-[#343a40] text-[1.5rem] font-[500]'>{feedbacksCount}</div>
-                <div className='mx-10 font-sans flex justify-center text-[0.8rem] text-[#6c757d]'> Feedbacks</div>
-              </div>
             </div>
-          </div></a>
-          <Link to='/admin/posts/news'>
-          <div className="text-[#000] bg-[#fff]  h-[120px] mx-2">
-            <div className='flex justify-between py-8 px-4'>
-              <div className="flex items-center justify-center ml-4">
-              <div className=" rounded-full bg-[#f5f6f8] w-[50px] h-[50px] border-4 flex items-center justify-center text-white text-[24px] font-bold">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="#006cff" width="10px" height="20px" viewBox="0 0 48 48">
-                <g id="Layer_2" data-name="Layer 2">
-                  <g id="invisible_box" data-name="invisible box">
-                    <rect width="48" height="48" fill="none"/>
-                    <rect width="48" height="48" fill="none"/>
-                  </g>
-                  <g id="icons_Q2" data-name="icons Q2">
-                    <path d="M42,4H6A2,2,0,0,0,4,6V42a2,2,0,0,0,2,2H42a2,2,0,0,0,2-2V6A2,2,0,0,0,42,4ZM12,16a2,2,0,0,1,2-2h6a2,2,0,0,1,2,2v8a2,2,0,0,1-2,2H14a2,2,0,0,1-2-2ZM34,34H14a2,2,0,0,1,0-4H34a2,2,0,0,1,0,4Zm0-8H28a2,2,0,0,1,0-4h6a2,2,0,0,1,0,4Zm0-8H28a2,2,0,0,1,0-4h6a2,2,0,0,1,0,4Z"/>
-                  </g>
-                </g>
-              </svg>
+            </Link>
+            <Link to='/admin/posts/basics'>
+            <div className="text-[#000] bg-[#fff]  h-[120px] mx-2">
+              <div className='flex justify-between py-8 px-4'>
+                <div className="flex items-center justify-center ml-4">
+                <div className=" rounded-full bg-[#f5f6f8] w-[50px] h-[50px] border-4 flex items-center justify-center text-white text-[24px] font-bold">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#006cff" width="10px" height="20px" viewBox="0 0 24 24"><path d="M8.5,23a9.044,9.044,0,0,0,3.506-.682A7,7,0,1,0,15,9V5.333C15,2.9,12.145,1,8.5,1S2,2.9,2,5.333V18.667C2,21.1,4.855,23,8.5,23ZM15,11a5,5,0,1,1-5,5A5.006,5.006,0,0,1,15,11ZM8.5,3C11.152,3,13,4.23,13,5.333S11.152,7.667,8.5,7.667,4,6.437,4,5.333,5.848,3,8.5,3ZM4,8.482A8.466,8.466,0,0,0,8.5,9.667,8.466,8.466,0,0,0,13,8.482V9.3A7.024,7.024,0,0,0,9.219,12.06c-.239.021-.476.051-.719.051-2.652,0-4.5-1.23-4.5-2.333Zm0,4.445A8.383,8.383,0,0,0,8.268,14.1,6.981,6.981,0,0,0,8,16c0,.178.014.353.027.528C5.636,16.39,4,15.257,4,14.222Zm0,4.444a8.462,8.462,0,0,0,4.49,1.184,7.01,7.01,0,0,0,1.479,2.3A7.835,7.835,0,0,1,8.5,21C5.848,21,4,19.77,4,18.667Z"/></svg>
+                  </div>
+                </div>
+                <div>
+                  <div className='mx-10 font-sans flex justify-end  text-[#343a40] text-[1.5rem] font-[500]'>{cryptoBasicsQuantity}</div>
+                  <div className='mx-10 font-sans flex justify-center text-[0.8rem] text-[#6c757d]'> CryptoBasics</div>
                 </div>
               </div>
-              <div>
-                <div className='mx-10 font-sans flex justify-end  text-[#343a40] text-[1.5rem] font-[500]'>{manageNewsQuantity}</div>
-                <div className='mx-10 font-sans flex justify-center text-[0.8rem] text-[#6c757d]'> News</div>
-              </div>
             </div>
-          </div>
-          </Link>
-          <Link to='/admin/posts/basics'>
-          <div className="text-[#000] bg-[#fff]  h-[120px] mx-2">
-            <div className='flex justify-between py-8 px-4'>
-              <div className="flex items-center justify-center ml-4">
-              <div className=" rounded-full bg-[#f5f6f8] w-[50px] h-[50px] border-4 flex items-center justify-center text-white text-[24px] font-bold">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="#006cff" width="10px" height="20px" viewBox="0 0 24 24"><path d="M8.5,23a9.044,9.044,0,0,0,3.506-.682A7,7,0,1,0,15,9V5.333C15,2.9,12.145,1,8.5,1S2,2.9,2,5.333V18.667C2,21.1,4.855,23,8.5,23ZM15,11a5,5,0,1,1-5,5A5.006,5.006,0,0,1,15,11ZM8.5,3C11.152,3,13,4.23,13,5.333S11.152,7.667,8.5,7.667,4,6.437,4,5.333,5.848,3,8.5,3ZM4,8.482A8.466,8.466,0,0,0,8.5,9.667,8.466,8.466,0,0,0,13,8.482V9.3A7.024,7.024,0,0,0,9.219,12.06c-.239.021-.476.051-.719.051-2.652,0-4.5-1.23-4.5-2.333Zm0,4.445A8.383,8.383,0,0,0,8.268,14.1,6.981,6.981,0,0,0,8,16c0,.178.014.353.027.528C5.636,16.39,4,15.257,4,14.222Zm0,4.444a8.462,8.462,0,0,0,4.49,1.184,7.01,7.01,0,0,0,1.479,2.3A7.835,7.835,0,0,1,8.5,21C5.848,21,4,19.77,4,18.667Z"/></svg>
+            </Link>
+            <Link to='/admin/posts/projects'>
+            <div className="text-[#000] bg-[#fff] h-[120px] mx-2">
+              <div className='flex justify-between py-8 px-4'>
+                <div className="flex items-center justify-center ml-4">
+                <div className=" rounded-full bg-[#f5f6f8] w-[50px] h-[50px] border-4 flex items-center justify-center text-white text-[24px] font-bold">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlnsXxlink="http://www.w3.org/1999/xlink" width="10px" height="20px" viewBox="0 0 512 512" version="1.1">                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Combined-Shape" fill="#006cff" transform="translate(64.000000, 34.346667)">
+                            <path d="M192,7.10542736e-15 L384,110.851252 L384,332.553755 L192,443.405007 L1.42108547e-14,332.553755 L1.42108547e-14,110.851252 L192,7.10542736e-15 Z M42.666,157.654 L42.6666667,307.920144 L170.666,381.82 L170.666,231.555 L42.666,157.654 Z M341.333,157.655 L213.333,231.555 L213.333,381.82 L341.333333,307.920144 L341.333,157.655 Z M192,49.267223 L66.1333333,121.936377 L192,194.605531 L317.866667,121.936377 L192,49.267223 Z"></path>
+                        </g>
+                    </g>
+                </svg>
+                  </div>
+                </div>
+                <div>
+                  <div className='mx-10 font-sans flex justify-end  text-[#343a40] text-[1.5rem] font-[500]'>{manageProjectQuantity}</div>
+                  <div className='mx-10 font-sans flex justify-center text-[0.8rem] text-[#6c757d]'> Project</div>
                 </div>
               </div>
-              <div>
-                <div className='mx-10 font-sans flex justify-end  text-[#343a40] text-[1.5rem] font-[500]'>{cryptoBasicsQuantity}</div>
-                <div className='mx-10 font-sans flex justify-center text-[0.8rem] text-[#6c757d]'> CryptoBasics</div>
-              </div>
             </div>
-          </div>
-          </Link>
-          <Link to='/admin/posts/projects'>
-          <div className="text-[#000] bg-[#fff] h-[120px] mx-2">
-            <div className='flex justify-between py-8 px-4'>
-              <div className="flex items-center justify-center ml-4">
-              <div className=" rounded-full bg-[#f5f6f8] w-[50px] h-[50px] border-4 flex items-center justify-center text-white text-[24px] font-bold">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlnsXxlink="http://www.w3.org/1999/xlink" width="10px" height="20px" viewBox="0 0 512 512" version="1.1">                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="Combined-Shape" fill="#006cff" transform="translate(64.000000, 34.346667)">
-                          <path d="M192,7.10542736e-15 L384,110.851252 L384,332.553755 L192,443.405007 L1.42108547e-14,332.553755 L1.42108547e-14,110.851252 L192,7.10542736e-15 Z M42.666,157.654 L42.6666667,307.920144 L170.666,381.82 L170.666,231.555 L42.666,157.654 Z M341.333,157.655 L213.333,231.555 L213.333,381.82 L341.333333,307.920144 L341.333,157.655 Z M192,49.267223 L66.1333333,121.936377 L192,194.605531 L317.866667,121.936377 L192,49.267223 Z"></path>
-                      </g>
-                  </g>
-              </svg>
-                </div>
-              </div>
-              <div>
-                <div className='mx-10 font-sans flex justify-end  text-[#343a40] text-[1.5rem] font-[500]'>{manageProjectQuantity}</div>
-                <div className='mx-10 font-sans flex justify-center text-[0.8rem] text-[#6c757d]'> Project</div>
-              </div>
-            </div>
-          </div>
-          </Link>
-     </div>
-     </div>
+            </Link>
+        </div>
+        </div>
    </div>
  </div>
     </>
