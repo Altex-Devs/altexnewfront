@@ -19,8 +19,8 @@ function Team() {
           </div>
         </div>
       </div>
-      <div className="absolute  w-[1500px] h-[1500px] bottom-[-600px] left-[600px] bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] " ></div>
-      <div className="absolute w-[1500px] h-[1500px] top-[500px] right-[400px] bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] " ></div>
+      <div className="absolute w-[1500px] hidden sm:block h-[1500px] bottom-[-400px] left-[600px] bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] " ></div>
+      <div className="absolute w-[1500px] hidden sm:block h-[1500px] top-[500px] right-[400px] bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] " ></div>
 
       <div className="flex flex-col lg:flex-row gap-[24px] pb-[160px] mt-[160px] items-center border-b-[0.5px] border-b-[#13A9FD] leading-[35px] ">
         <div className="grow font-extralight ">
@@ -53,14 +53,14 @@ function Team() {
               </g>
             </g>
         </svg>
-        <div className="absolute  w-[1500px] h-[1500px] bottom-[-100] left-[500px] right-0 bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] " ></div>
+        <div className="absolute  w-[1500px] h-[1500px] hidden sm:block h-[1500px] bottom-[-100] left-[500px] right-0 bg-gradient-radial-bottom from-[rgba(0,108,255,0.26)] to-[rgba(19,169,253,0)] " ></div>
         <div className="grow  font-extralight z-10">
           <div className="">
           <div className="font-bold text-[32px] mb-[10px]">
             <FormattedMessage id="our_team_partner"/>
           </div>
           <div className="flex gap-[40px] sm:hidden">
-          <svg className="w-[calc(70%/2)]  " viewBox="0 -100 190 353" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="w-[calc(70%/2)] " viewBox="0 -100 190 353" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M44.596 93.7129L49.338 88.4449C52.621 91.3969 55.864 95.7039 60.129 95.7039C65.291 95.7039 68.129 93.4939 68.129 90.1189C68.129 86.5589 65.169 85.4189 61.002 83.7529L54.732 81.1849C50.214 79.4109 45.458 76.0369 45.458 69.7099C45.458 62.8099 51.911 57.5099 60.858 57.5099C66.216 57.5099 70.876 61.0829 74.467 64.5099L70.286 69.3799C67.369 67.0369 64.786 64.1799 60.858 64.1799C56.51 64.1799 53.675 66.0989 53.675 69.2619C53.675 72.6619 57.168 73.9199 60.97 75.3899L67.157 77.8379C72.614 79.9819 76.43 83.2379 76.43 89.5109C76.43 96.5259 70.257 102.375 59.96 102.375C53.76 102.375 48.944 97.7509 44.595 93.7139" fill="white" />
           <path d="M21.463 57.5879C9.612 57.5879 0 67.6409 0 80.0379C0 92.4349 9.612 102.488 21.463 102.488C33.314 102.488 42.939 92.4359 42.939 80.0379C42.939 67.6399 33.327 57.5879 21.463 57.5879ZM21.463 95.5579C13.263 95.5579 6.616 88.6159 6.616 80.0379C6.616 71.4599 13.267 64.5059 21.463 64.5059C29.659 64.5059 36.322 71.4599 36.322 80.0379C36.322 88.6159 29.67 95.5579 21.463 95.5579Z" fill="white" />
           <path d="M105.762 95.4759V102.487H80.073V57.2159H87.061V95.4759H105.762Z" fill="white" />
