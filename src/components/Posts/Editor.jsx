@@ -2,6 +2,7 @@ import { storage } from '../../firebase';
 import { ref, uploadBytes } from "firebase/storage";
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import './editor.css'
 
 const Editor = ({ content, setContent }) => {
   const upload = (e) => {
