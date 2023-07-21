@@ -11,14 +11,14 @@ function FAQ() {
   };
   return (
     <>
-      <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] mt-[40px] pt-[80px] pb-[240px]">
+      <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] mt-[40px] pt-[80px] pb-[200px]">
         <div className="container mx-auto pt-[48px] p-4 max-w-[1200px]">
           <div className="flex w-full pb-[7px] sm:pb-[16px] border-b-[1px] border-b-[#CDCDCE] text-[18px] font-medium gap-[40px] mb-[24px]">
-            <div className={`relative cursor-pointer w-[120px] text-[15px] sm:w-max sm:text-[18px] ${show === "button1" ? "active text-[#35363B]" : "text-[#CDCDCE]"}`} onClick={() => toggle("button1")}>
+            <div className={`relative cursor-pointer w-[220px] sm:w-[250px] text-[15px] sm:w-max sm:text-[18px] ${show === "button1" ? "active text-[#35363B]" : "text-[#CDCDCE]"}`} onClick={() => toggle("button1")}>
               <FormattedMessage id="faq_title_customer_service" />
               <div className={`absolute h-[2px] w-full bg-[#13A9FD] bottom-[-8px] sm:bottom-[-18px] ${show === "button1" ? "visible" : "hidden"}`}></div>            
             </div>
-            <div className={`relative cursor-pointer w-[120px] text-[16px] sm:w-max sm:text-[18px] ${show === "button2" ? "active text-[#35363B]" : "text-[#CDCDCE]"}`} onClick={() => toggle("button2")}>
+            <div className={`relative cursor-pointer w-[220px] sm:w-[250px] text-[16px] sm:w-max sm:text-[18px] ${show === "button2" ? "active text-[#35363B]" : "text-[#CDCDCE]"}`} onClick={() => toggle("button2")}>
               <FormattedMessage id="faq_title_settlement" />
               <div className={`absolute h-[2px] w-full bg-[#13A9FD] bottom-[-8px] sm:bottom-[-18px] ${show === "button2" ? "visible" : "hidden"}`}></div>            
             </div>

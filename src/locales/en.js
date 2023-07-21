@@ -639,38 +639,30 @@ const en = {
             <li>Таны илгээсэн мэдээллийг бид нягталж үзээд <span class="font-bold">баталгаажуулалт амжилттай болсон эсэх</span> мэдээллийг таны <span class="font-bold">бүртгэлтэй имэйлээр илгээх болно</span>.</li>
         </ul>
     `,
-    "faq_q": "2. How can I delete my ALTEX account?",
-    "faq_a": `
-        <ul class="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-            <li>If you would like to delete your ALTEX account, please contact <a href="mailto:contact@altex.mn">contact@altex.mn</a></li>
-            <li>Prior to deleting your account, we will need to verify your identity for security purposes.</li>
-        </ul>
-    `,
-    "faq_q2": "3. How can I update my personal information?",
+    "faq_q2": "2. Хэрхэн бүртгэлээ устгах вэ?",
     "faq_a2": `
         <ul class="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-            <li>If you would like to change your personal details in your ALTEX account, please contact contact@altex.mn</li>
-            <li>Prior to changing your personal information, we will need to verify your identity for security purposes.</li>
+            <li>Та Алтекс дижитал бирж дээрх бүртгэлтэй хаягаа устгахыг хүсвэл хүсэлтээ өөрийн бүртгэлтэй имэйл хаягаас бичиг баримтаа хажуудаа барьсан сельфи зургийн хамт <a class="underline text-[#0000EE]" href="mailto:contact@altex.mn">contact@altex.mn</a> хаягаар бичиж илгээнэ үү.</li>
+            <li>Таны хаягийг устгахаас өмнө аюулгүй байдлын үүднээс тантай холбогдож баталгаажуулах үйлдэл хийгдэнэ.</li>
         </ul>
     `,
-    "faq_q3": "4. How do I reset my password?",
+    "faq_q3": "3. Хувийн мэдээллээ хэрхэн шинэчлэх вэ?",
     "faq_a3": `
-        <div class="text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-            In order to reset your password, please follow the below steps:
-        </div>
         <ul class="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-            <li>At the log-in page, click on 'Forgot Password?' OR Visit https://trade.altex.mn/register/forgotPassword directly</li>
-            <li>Submit the email address associated to your account.</li>
-            <li>Click 'Reset my password'</li>
-            <li>An email with subject 'ALTEX Password Reset' will be sent. Click on 'Reset Your Password' to be redirected back to the platform.</li>
-            <li>Add in your new secure password in the fields provided, confirm you are not a robot and click 'Set My Password'.</li>
+            <li>Та Алтекс дижитал бирж дээрх бүртгэлтэй хувийн мэдээллээ өөрчлөхийг хүсвэл хүсэлтээ өөрийн бүртгэлтэй имэйл хаягаас бичиг баримтаа хажуудаа барьсан сельфи зургийн хамт <a class="underline text-[#0000EE]" href="mailto:contact@altex.mn">contact@altex.mn</a> хаягаар бичиж илгээнэ үү.</li>
+            <li>Таны мэдээллийг өөрчлөхөөс өмнө аюулгүй байдлын үүднээс таныг таньж баталгаажуулах үйлдэл хийгдэнэ.</li>
         </ul>
-        <div class="text-[0.7rem] sm:text-[0.9rem] font-montserrat">
-            In case, if you cannot find our email link in your inbox, please do not forget to check Spam folder as well.
-        </div>
     `,
-    "faq_q4": "5. 2FA хамгаалалтыг хэрхэн идэвхжүүлэх вэ?",
+    "faq_q4": "4. Нууц үгээ хэрхэн шинэчлэх вэ?",
     "faq_a4": `
+        <ul class="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
+            <li><span class="font-bold">www.altex.mn</span> хуудсанд өөрийн үүсгэсэн <span>бүртгэлээрээ нэвтэрч орно</span>.</li>
+            <li><span class="font-bold">Тохиргоо</span> цэсрүү орж <span class="font-bold">Password</span> товчин дээр дарснаар хуучин нууц үгээ 1 удаа, шинэ нууц үгээ 2 удаа бичиж оруулах талбар гарч ирнэ.</li>
+            <li>Дээрх талбарыг бөглөн <span class="font-bold">Save</span> товчийг дарснаар таны шинэ нууц үг хадгалагдана.</li>
+        </ul>
+    `,
+    "faq_q5": "5. 2FA хамгаалалтыг хэрхэн идэвхжүүлэх вэ?",
+    "faq_a5": `
         <ul class="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <li><span class="font-bold">Google Authenticator app</span>-ыг өөрийн утасны Playstore болон Appstore-с татаж авна.</li>
             <li>www.altex.mn хуудсанд өөрийн үүсгэсэн <span class="font-bold">бүртгэлээрээ нэвтэрч орно</span>.</li>
@@ -679,8 +671,8 @@ const en = {
             <li>Google Authenticator app дээр гарч ирэх <span class="font-bold">6 оронтой кодыг</span> платформ дээрээ оруулснаар таны холболт амжилттай хийгдэнэ.</li>
         </ul>
     `,
-    "faq_q5": "6. 2FA хамгаалалтаа хэрхэн салгах вэ?",
-    "faq_a5": `
+    "faq_q6": "6. 2FA хамгаалалтаа хэрхэн салгах вэ?",
+    "faq_a6": `
         <ul class="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <li>Алтекс дижитал бирж дээрх 2FA хамгаалалтаа салгуулахыг хүсвэл хүсэлтээ өөрийн бүртгэлтэй имэйл хаягаас бичиг баримтаа хажуудаа барьсан селфи зургийн хамт <a class="underline text-[#0000EE]" href="mailto:contact@altex.mn">contact@altex.mn</a>  хаягаар бичиж илгээнэ үү.</li>
             <li>Таны мэдээллийг өөрчлөхөөс өмнө аюулгүй байдлын үүднээс таныг таньж баталгаажуулах үйлдэл хийгдэнэ.</li>
@@ -688,12 +680,12 @@ const en = {
         <div class="text-[0.7rem] sm:text-[0.9rem] font-montserrat mt-10">
         Санамж: 2FA холболтоо шинээр дахин хийгээгүй тохиолдолд крипто арилжаа, орлого зарлага хийх боломжгүй гэдгийг анхаарна уу.</div>
     `,
-    "faq_q23": "7. Хэрхэн хаягийн баталгаажуулалт хийх вэ?",
-    "faq_a23": `
+    "faq_q7": "7. Хэрхэн хаягийн баталгаажуулалт хийх вэ?",
+    "faq_a7": `
         <div class="text-[0.7rem] sm:text-[0.9rem] font-montserrat">Иргэний үнэмлэхийн арын хэсгийн зургийг тод гаргацтай авч илгээснээр хаягийг баталгаажуулах боломжтой.</div>
     `,
-    "faq_q6": "8. Иргэний үнэмлэхгүй бол хэрхэн хаягийн баталгаажуулалт хийх вэ?",
-    "faq_a6": `
+    "faq_q8": "8. Иргэний үнэмлэхгүй бол хэрхэн хаягийн баталгаажуулалт хийх вэ?",
+    "faq_a8": `
         <ul class="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <li>Иргэний үнэмлэхгүй тохиолдолд Монгол улсын иргэн E-mongolia-гаас Хаягийн бүртгэлийн лавлагааг авч илгээнэ.</li>
             <li>Гадаад улсад оршин суудаг бол хэрэглээний болон үйлчилгээний төлбөр төлсөн баримтыг хавсарган илгээнэ. </li>
@@ -702,24 +694,24 @@ const en = {
             Санамж: Баримт бичиг нь Монгол эсвэл Англи хэл дээр биш бол албан ёсны баталгаат орчуулгаар орчуулан баталгаа гаргасан байхыг анхаарна уу.
         </div>
     `,
-    "faq_q7": "9. Хэрхэн Итгэмжит харилцагч болох вэ?",
-    "faq_a7": `
+    "faq_q9": "9. Хэрхэн Итгэмжит харилцагч болох вэ?",
+    "faq_a9": `
         <ul class="list-disc leading-6 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <li class="mb-3">Харилцагчийн зарлагын дээд хэмжээг нэмэгдүүлэн Итгэмжит харилцагч болох хүсэлтийг өөрийн Алтекс дижитал биржид бүртгэлтэй имэйл хаягаас компанийн <a class="underline text-[#0000EE]" href="mailto:contact@altex.mn">contact@altex.mn</a>  хаяг, эсхүл бүртгэлтэй дугаараас албан ёсны телеграм болон фейсбүүк хуудсанд ирүүлнэ.</li>
             <li class="mb-3">Баталгаажсан харилцагч нь өөрийн хэрэгцээ шаардлагаас хамааран өдөрт хийгдэх зарлагын хэмжээг нэмэгдүүлэн Итгэмжит харилцагч болох хүсэлт гаргасан тохиолдолд Итгэмжит харилцагчийн зарлагын дээд хэмжээний 1%-тай тэнцэхүйц шимтгэлийг 1 удаа төлнө.</li>
             <li>Харилцагчийн бүртгэл хариуцсан ажилтан болон Эрсдэл хариуцсан ажилтан нь харилцагчийн хүсэлтийг ажлын 1 хоногт багтаан шийдвэрлэж энэ тухай харилцагчид имэйл эсхүл утсаар хариу мэдэгдэнэ.</li>
         </ul>
     `,
-    "faq_q8": "10. Компанийн хаяг нээхэд ямар бичиг баримтууд шаардлагатай вэ?",
-    "faq_a8": `
+    "faq_q10": "10. Хэрхэн Түнш харилцагч болох вэ? ",
+    "faq_a10": `
         <ul class="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <li class="mb-3">Харилцагчийн зарлагын дээд хэмжээг нэмэгдүүлэн Түнш харилцагч болох хүсэлтийг өөрийн Алтекс дижитал биржид бүртгэлтэй имэйл хаягаас компанийн <a class="underline text-[#0000EE]" href="mailto:contact@altex.mn">contact@altex.mn</a>  хаяг, эсхүл бүртгэлтэй дугаараас албан ёсны телеграм болон фейсбүүк хуудсанд ирүүлнэ.</li>
             <li class="mb-3">Баталгаажсан харилцагч нь өөрийн хэрэгцээ шаардлагаас хамааран өдөрт хийгдэх зарлагын хэмжээг нэмэгдүүлэн Түнш харилцагч болох хүсэлт гаргасан тохиолдолд Түнш харилцагчийн зарлагын дээд хэмжээний 1%-тай тэнцэхүйц шимтгэлийг 1 удаа төлнө.</li>
             <li>Харилцагчийн бүртгэл хариуцсан ажилтан болон Эрсдэл хариуцсан ажилтан нь харилцагчийн хүсэлтийг ажлын 1 хоногт багтаан шийдвэрлэж энэ тухай харилцагчид имэйл эсхүл утсаар хариу мэдэгдэнэ. </li>
         </ul>
     `,
-    "faq_q9": "11. Хувь хүний бүртгэл баталгаажуулахад ямар бичиг баримтууд шаардлагатай вэ?",
-    "faq_a9": `
+    "faq_q11": "11. Хувь хүний бүртгэл баталгаажуулахад ямар бичиг баримтууд шаардлагатай вэ?",
+    "faq_a11": `
         <ul class="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <li>Таны хүчинтэй бичиг баримт (Иргэний үнэмлэх эсхүл Гадаад паспорт)</li>
             <li>Бичиг баримтыг барьж авхуулсан селфи зураг</li>
@@ -735,15 +727,15 @@ const en = {
             Санамж: Баримт бичиг нь Монгол эсвэл Англи хэл дээр биш бол албан ёсны баталгаат орчуулгаар орчуулан баталгаа гаргасан байхыг анхаарна уу.
         </div>
     `,
-    "faq_q10": "12. Хувь хүний бүртгэл хэдий хугацаанд баталгаажих вэ?",
-    "faq_a10": `
+    "faq_q12": "12. Хувь хүний бүртгэл хэдий хугацаанд баталгаажих вэ?",
+    "faq_a12": `
         <ul class="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <li>Хувь хүний бүртгэл баталгаажуулах хүсэлтийг ажлын 1 өдөрт багтаан шийдвэрлэнэ. </li>
             <li>Харилцагчийн бүртгэлийн мэргэжилтэн шаардлагатай гэж үзвэл тантай холбогдон нэмэлт тодруулга авч хамтран ажиллах болно. </li>
         </ul>
     `,
-    "faq_q11": "13. Байгууллагын бүртгэл баталгаажуулахад ямар бичиг баримтууд шаардлагатай вэ?",
-    "faq_a11": `
+    "faq_q13": "13. Байгууллагын бүртгэл баталгаажуулахад ямар бичиг баримтууд шаардлагатай вэ?",
+    "faq_a13": `
         <ul class="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <li>CORPORATE STRUCTURE CHART - Компанийн бүтэц зохион байгуулалтын зураглал </li>
             <li>COMPANY PROOF OF ADDRESS ISSUED - Компанийн төв салбарын хаягийн мэдээлэл</li>
@@ -766,15 +758,15 @@ const en = {
             <div>Хэрэв нэмэлт материал шаардлагатай гэж үзвэл харилцагчийн бүртгэлийн ажилтан холбогдох болно.</div>
         </div>
     `,
-    "faq_q12": "14. Байгууллагын бүртгэлийн хүсэлт хичнээн хугацааны дараа баталгаажих вэ?",
-    "faq_a12": `
+    "faq_q14": "14. Байгууллагын бүртгэлийн хүсэлт хичнээн хугацааны дараа баталгаажих вэ?",
+    "faq_a14": `
         <ul class="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <li>Байгууллагын хүсэлт шаардлагатай бүх материалыг хавсаргаснаас хойш ажлын 5 хоногт бүрэн шалгагдаж дуусна.</li>
             <li>Таны бүртгэлийг баталгаажуулах явцад манай харилцагчийн бүртгэлийн мэргэжилтэн таньтай хамтарч ажиллах болно.</li>
         </ul>
     `,
-    "faq_q13": "1. Хэрхэн фиат орлого хийх вэ?",
-    "faq_a13": `
+    "faq_q15": "1. Хэрхэн фиат орлого хийх вэ?",
+    "faq_a15": `
         <ul class="list-disc leading-6 px-6 text-[0.7rem] sm:text-[0.9rem] font-montserrat overflow-y-auto">
             <li><span class="font-bold">www.altex.mn</span> хуудсанд өөрийн үүсгэсэн <span class="font-bold">бүртгэлээрээ нэвтэрч орно</span>.</li>
             <li><span class="font-bold">Данс</span> цэс рүү орж <span class="font-bold">Орлого</span> гэсэн хэсэгт дарна.</li>
@@ -798,8 +790,8 @@ const en = {
             <div>Ханшийн мэдээллийг Харилцагчийн үйлчилгээний 7505-7775 дугаараар болон <a class="underline text-[#0000EE]" href="https://t.me/altexmn">https://t.me/altexmn</a> (Алтекс дижитал биржийн албан ёсны телеграм групп)-ээс авах боломжтой.</div>
         </div>
     `,
-    "faq_q14": "2. Хэрхэн фиат зарлага хийх вэ?",
-    "faq_a14": `
+    "faq_q16": "2. Хэрхэн фиат зарлага хийх вэ?",
+    "faq_a16": `
         <ul class="list-disc leading-2 px-6 text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <li><span class="font-bold">Данс</span> цэс рүү орж <span class="font-bold">Зарлага</span> гэсэн хэсэгт дарна.</li>
             <li><span class="font-bold">Fiat currencies</span> жагсаалтаас валютаа сонгож, <span class="font-bold">Bank transfer</span> товчин дээр дарна. </li>
@@ -812,42 +804,42 @@ const en = {
             <li>Таны зарлагын хүсэлтийг <span class="font-bold">Даваа-Баасан</span> гарагийн <span class="font-bold">9:00-18:00</span> хооронд хянан шийдвэрлэдэг болохыг анхаарна уу.</li>
         </ul>
     `,
-    "faq_q15": "3. Арилжааны шимтгэл хэд вэ?",
-    "faq_a15": `
+    "faq_q17": "3. Арилжааны шимтгэл хэд вэ?",
+    "faq_a17": `
         <ul class="list-disc leading-2 px-6 text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <li>Maker - 0.25%</li>
             <li>Taker - 0.35%</li>
         </ul>
     `,
-    "faq_q16": "4. Криптовалютын сүлжээний шимтгэл хэд вэ?",
-    "faq_a16": `
+    "faq_q18": "4. Криптовалютын сүлжээний шимтгэл хэд вэ?",
+    "faq_a18": `
         <ul class="list-disc leading-2 text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <div>Криптовалютын сүлжээний шимтгэлийн хэмжээ криптовалютаас хамааран өөр өөр тул та дараах холбоосоор орж дэлгэрэнгүй танилцана уу.</div>
             <a class="underline text-[#0000EE]" href="/fee">https://altex.mn/fee</a>
         </ul>
     `,
-    "faq_q17": "5. Крипто зарлага хийхэд яагаад заримдаа уддаг вэ?",
-    "faq_a17": `
+    "faq_q19": "5. Крипто зарлага хийхэд яагаад заримдаа уддаг вэ?",
+    "faq_a19": `
         <ul class="list-disc leading-2 text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <div>Харилцагч нь өндөр дүнтэй крипто гүйлгээ хийх хүсэлт гаргасан тохиолдолд харилцагчийн аюулгүй байдлын үүднээс Cold wallet-д байгаа криптог Hot wallet руу шилжүүлэх үйл явц хүлээлдэх тохиолдол гардаг.</div>
         </ul>
     `,
-    "faq_q18": "6. Флоат данс гэж юу вэ?",
-    "faq_a18": `
+    "faq_q20": "6. Флоат данс гэж юу вэ?",
+    "faq_a20": `
         <div class="font-montserrat text-[0.7rem] sm:text-[0.9rem]">
             <div>Алтекс дижитал бирж дээр зөвхөн бүртгэлтэй харилцагчид хоорондоо арилжаа хийхээс гадна олон улсын нэгдсэн хөрвөх сантай арилжаа хийж болдог. Тухайн арилжаанд оролцохын тулд Алтекс дижитал бирж нь олон улсын дансанд мөнгө байршуулдаг ба биржийн харилцагчид хөрвөх сангаас токен худалдаж авсан тохиолдолд дансанд байршуулсан мөнгө багасч эсрэгээр бирж дээр токен зарсан тохиолдолд ихсэх зарчмаар арилжаа явагддаг. </div>
             <div class="py-6">Энэхүү мөнгө байршуулдаг дансыг Флоат гэж нэрлэдэг. </div>
         </div>
     `,
-    "faq_q19": "7. Гуравдагч этгээд болон хамтран эзэмшигчтэй дансаар гүйлгээ хийх боломжтой юу?",
-    "faq_a19": `
+    "faq_q21": "7. Гуравдагч этгээд болон хамтран эзэмшигчтэй дансаар гүйлгээ хийх боломжтой юу?",
+    "faq_a21": `
         <ul class="list-disc leading-2 px-6 text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <li>Бид гуравдагч этгээдийн гүйлгээг хүлээн авдаггүй бөгөөд гуравдагч этгээдээс ирсэн бүх мөнгийг буцаадаг.</li>
             <li>Хамтран эзэмшигчтэй данснаас гүйлгээ хийх тохиолдолд тухайн дансны бүх эзэмшигчид Know-Your-Customer (KYC)/ Know-Your-Business (KYB) баталгаажуулалтыг хийсний үндсэн дээр дансаараа Орлого/Зарлага хийх боломжтой болно.</li>
         </ul>
     `,
-    "faq_q20": "8. Банкны мэдээллээ хэрхэн нэмэх вэ?",
-    "faq_a20": `
+    "faq_q22": "8. Банкны мэдээллээ хэрхэн нэмэх вэ?",
+    "faq_a22": `
         <ul class="list-disc leading-2 px-6 text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <li><span class="font-bold">Данс</span> цэс рүү орж <span class="font-bold">Зарлага</span> гэсэн хэсэгт дарна.</li>
             <li><span class="font-bold">Fiat currencies</span> жагсаалтаас валютаа сонгож, <span class="font-bold">Bank transfer</span> товчин дээр дарна. </li>
@@ -856,19 +848,19 @@ const en = {
             <li>Утасныхаа <span class="font-bold">Google Authenticator аппликэйшний баталгаажуулах 6 оронтой тоог</span> бичиж оруулснаар таны хүлээн авах банкны мэдээлэл хадгалагдана. (Ингэснээр та дараагийн удаад зарлага хийхдээ банкны мэдээллээ шинээр оруулах шаардлагагүй болно.)</li>
         </ul>
     `,
-    "faq_q21": "9. Фиат орлогын шимтгэлтэй юу?",
-    "faq_a21": `
+    "faq_q23": "9. Фиат орлогын шимтгэлтэй юу?",
+    "faq_a23": `
         <div class="text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <div>Байхгүй.</div>
             <div class="mt-5">Баталгаажсан харилцагч нь фиат орлого хийхдээ Алтекс дижитал биржийн зарласан тухайн өдрийн ам.долларын орлогын ханшаар тооцож төгрөгийн орлого хийнэ. </div>
             <div>Ханшийн мэдээллийг Харилцагчийн үйлчилгээний 7505-7775 дугаараар болон <a class="underline text-[#0000EE]" href="https://t.me/altexmn">https://t.me/altexmn</a> (Алтекс дижитал биржийн албан ёсны телеграм групп)-ээс авах боломжтой.</div>
         </div>
     `,
-    "faq_q22": "10. Фиат зарлагын шимтгэлтэй юу?",
-    "faq_a22": `
+    "faq_q24": "10. Фиат зарлагын шимтгэлтэй юу?",
+    "faq_a24": `
         <div class="text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <div>Байхгүй.</div>
-            <div class="mt-5">Баталгаажсан харилцагч нь фиат орлого хийхдээ Алтекс дижитал биржийн зарласан тухайн өдрийн ам.долларын орлогын ханшаар тооцож төгрөгийн орлого хийнэ. </div>
+            <div class="mt-5">Баталгаажсан харилцагч нь фиат зарлага хийх хүсэлт гаргасан тохиолдолд Алтекс дижитал биржийн зарласан тухайн өдрийн ам.долларын зарлагын ханшаар тооцож төгрөгийн зарлага хийгдэнэ. </div>
             <div>Ханшийн мэдээллийг Харилцагчийн үйлчилгээний 7505-7775 дугаараар болон <a class="underline text-[#0000EE]" href="https://t.me/altexmn">https://t.me/altexmn</a> (Алтекс дижитал биржийн албан ёсны телеграм групп)-ээс авах боломжтой.</div>
         </div>
     `,
