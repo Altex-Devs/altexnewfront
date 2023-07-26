@@ -25,7 +25,7 @@ const AdminFeedback = ()=>{
         <>
     <div className='bg-[#fff] h-full p-5 text-white scroll-y'>
         <div className='flex justify-between'>
-    <div className=' flex items-center bg-[#006cff] text-white rounded-3xl h-full mt-10 p-2 border w-max '>
+    <div className=' flex items-center bg-[#006cff] text-white rounded-3xl h-full mt-10 p-2 border w-max'>
         <div className='m-1'>
         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXxlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 20" version="1.1">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -40,9 +40,9 @@ const AdminFeedback = ()=>{
         </div>
         <Link to={'/admin'} className='mr-3'>Back</Link>
     </div>
-    <h1 className='font-Montserrat pb-10 text-[50px] text-[#000] '>Feedback Data</h1>
+    <h1 className='font-Montserrat pb-10 text-[50px] text-[#000]'>Feedback Data</h1>
         </div>
-    <div class="relative overflow-x-auto ">
+    <div class="relative overflow-x-auto">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs uppercase bg-[#006cff] text-[#fff]">
             <tr>
@@ -69,7 +69,7 @@ const AdminFeedback = ()=>{
         <tbody>
             {feedbackData.map((feedback)=>(
             <tr class="bg-white border-b text-[#000]">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                     {feedback.name}
                 </th>
                 <td class="px-6 py-4">
