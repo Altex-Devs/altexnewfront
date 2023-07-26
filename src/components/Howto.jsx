@@ -459,7 +459,7 @@ function Howto() {
                     <path stroke="#006CFF29" strokeLinecap="round" strokeLinejoin="round" d="M96 170c40.869 0 74-33.131 74-74 0-40.87-33.131-74-74-74-40.87 0-74 33.13-74 74 0 40.869 33.13 74 74 74Z" />
                     <path stroke="#006CFF" strokeLinecap="round" strokeLinejoin="round" d="M80 124V68l48 28-48 28Z" />
                   </svg>
-                  Видео заавар үзэх
+                  <FormattedMessage id="watchVideo" />
                 </div>
               </div>
               <div>

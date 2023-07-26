@@ -88,6 +88,8 @@ const en = {
     "howto_withdraw":"Withdraw",
     "seeAll":"See All",
 
+    "watchVideo":"Watch video tutorial",
+
     "desktop_reg_1":"1. Go to www.altex.mn and click the 'Register' button.",
      "desktop_reg_2":"2. Register by entering your email address and phone number.",
      "desktop_reg_3":"3. An e-mail will be sent to your registered e-mail address to confirm the creation of the registration, click the confirm button.",
