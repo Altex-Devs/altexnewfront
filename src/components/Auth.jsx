@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { auth } from '../firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import '../index.css'
@@ -49,6 +49,22 @@ const Auth = () => {
       signInWithEmail();
     }
   }
+  const handleResetPassword = () => {
+    setSending(true);
+    setError('');
+    setSuccess('');
+  
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        setSending(false);
+        setSuccess('Password reset email sent. Please check your inbox.');
+      })
+      .catch((error) => {
+        console.error(error);
+        setSending(false);
+        setError('Failed to send password reset email. Please try again.');
+      });
+  };
 
   return (
     <body className="flex h-screen bg-indigo-700">
@@ -70,7 +86,6 @@ const Auth = () => {
               <path id="Path_4945" data-name="Path 4945" d="M526.67,135.135h-.893v0h-3.19v-7.975h-2.748v10.722h7.745Z" transform="translate(-455.32 -111.439)" fill="indigo-100"/>
             </g>
           </svg>
-
           </div>
         </header>
         <form>
@@ -112,10 +127,9 @@ const Auth = () => {
           </div>
         </form>
         <footer>
-          <Link className="text-indigo-700 hover:text-pink-700 text-sm float-left" href="#">Forgot Password?</Link>
+          <Link className="text-indigo-700 hover:text-pink-700 text-sm float-left" href="#" onClick={handleResetPassword}>Forgot Password?</Link>
         </footer>
         <div>
-        
         </div>
       </div>
     </body>
