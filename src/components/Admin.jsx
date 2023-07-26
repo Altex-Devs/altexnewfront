@@ -66,8 +66,6 @@ function Admin() {
     setShowAdminPanel(!showAdminPanel);
   };
 
-
-
   return (
     <>
        <div className="bg-[#f5f6f8]  text-center leading-7 font-sans bg-[#eeeff3]">
@@ -154,6 +152,8 @@ function Admin() {
          <br />
          <Link className="flex" to="/admin/posts/projects">Manage Projects</Link>
          <br /> 
+         <Link className="flex" to="/admin/posts/report">Report performance</Link>
+         <br /> 
          <Link className="flex" to="/admin/posts/AdminFeedback" >Feedback</Link>
          <br/>
           <button className='flex' onClick={handleAdminPanelToggle}>Add Admin</button>
@@ -177,7 +177,7 @@ function Admin() {
                   </svg>
                   </div>
                 </div>
-                <div>
+                <div>x
                   <div className='mx-10 font-sans flex justify-end  text-[#343a40] text-[1.5rem] font-[500]'>{feedbacksCount}</div>
                   <div className='mx-10 font-sans flex justify-center text-[0.8rem] text-[#6c757d]'> Feedbacks</div>
                 </div>

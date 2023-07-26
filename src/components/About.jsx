@@ -1,6 +1,35 @@
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
+import { useEffect, useState } from "react";
+import { getDocs } from "firebase/firestore";
+import { collection, query, where } from "firebase/firestore";
+import { db } from "../firebase";
+import { Link } from "react-router-dom";
 
 function About() {
+  const [posts, setPosts] = useState([]);
+  const intl = useIntl();
+  console.log('post:', posts);
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const q = query(
+        collection(db, "posts"),
+        where("type", "==", "about")
+      );
+      const querySnapshot = await getDocs(q);
+      const data = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setPosts(data); // Update the 'posts' state with the fetched data
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  
   return (
     <>
       <div className="relative border-b-[0.5px] border-[#13A9FD] pt-[360px] pb-[80px] z-10">
@@ -39,6 +68,25 @@ function About() {
             <img src="/images/CallPro-new-tsenher-logo-texttei.svg" alt="aws" className="inline"/>
           </div>
         </div>
+      </div>
+      <div className="mt-[160px]">
+        <h2 className="w-[335px] text-[32px] mb-[42px]">Тайлан гүйцэтгэл</h2>
+        <div className="grid justify-center sm:grid-cols-2 sm:justify-center lg:grid-cols-3 gap-[24px] ">
+        {posts.map((post) => <div key={post.id}>
+          <div className=" rounded flex flex-col w-full">
+              <div className="border border-[#1B337B] w-[380px] h-[210px]">
+                <div className="aspect-video bg-cover w-full h-full inline-block h-1/2 rounded-t" style={{backgroundImage: `url("${post.image}")`}}></div>
+                <div className="pt-[18px] px-[16px] pb-[24px] flex flex-col justify-between grow">
+              </div>
+              </div>
+                <div className="justify-between items-center">
+                  <div className="text-[#E6E7EB] font-light border-t pt-[12px] mb-[24px] border-[#1B337B]">{post.createdAt ? post.date : (new Date(parseInt(post.date) * 1000)).toJSON().slice(0, 10)}</div>
+                  <Link className="text-[14px] text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]" to={`/posts/report/${post.id}`} dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "posts_readmore"}) }} />
+                </div>
+              </div>
+        </div>
+        )}
+      </div>
       </div>
     </>
   );
