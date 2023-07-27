@@ -17,7 +17,7 @@ function About() {
     try {
       const q = query(
         collection(db, "posts"),
-        where("type", "==", "about")
+        where("type", "==", "report")
       );
       const querySnapshot = await getDocs(q);
       const data = querySnapshot.docs.map((doc) => ({
@@ -48,7 +48,6 @@ function About() {
           <FormattedMessage id="about_us_content_second"/>
         </li>
       </ul>
-
       <div className="flex flex-col sm:flex-row mt-[160px] mb-[80px] gap-[24px] justify-items-stretch text-[14px] font-extralight text-[#E6E7EB]">
         <div className="basis-1/2 rounded-[24px] bg-[#101C47] p-[40px]">
           <div className="text-[16px] text-[#13A9FD] font-bold mb-[8px]">
@@ -81,10 +80,10 @@ function About() {
               </div>
                 <div className="justify-between items-center">
                   <div className="text-[#E6E7EB] font-light border-t pt-[12px] mb-[24px] border-[#1B337B]">{post.createdAt ? post.date : (new Date(parseInt(post.date) * 1000)).toJSON().slice(0, 10)}</div>
-                  <Link className="text-[14px] text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]" to={`/posts/report/${post.id}`} dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "posts_readmore"}) }} />
+                  <Link to={post.pdf} donwload="Example-PDF-document" className="text-[14px] text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]" dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "posts_readmore"}) }} />
                 </div>
               </div>
-        </div>
+            </div>
         )}
       </div>
       </div>

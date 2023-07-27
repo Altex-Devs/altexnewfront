@@ -88,7 +88,6 @@ function Admin() {
        </g>
      </svg>
      </div>
-     
      <div className="bg-[] text-[20px] w-full flex justify-end items-center ">
      <div className="relative inline-block text-left">
       <div>
@@ -140,8 +139,6 @@ function Admin() {
     </div>
     </div>
      </div>
-     
-   
    <div className="flex">
      <div className="w-[300px] bg-[#fff] text-[14px] text-[#6e768e] h-screen p-4 px-8">
           <Link className="flex mt-6 text-[#006cff]" to="/admin">Dashboard</Link>
@@ -177,7 +174,7 @@ function Admin() {
                   </svg>
                   </div>
                 </div>
-                <div>x
+                <div>
                   <div className='mx-10 font-sans flex justify-end  text-[#343a40] text-[1.5rem] font-[500]'>{feedbacksCount}</div>
                   <div className='mx-10 font-sans flex justify-center text-[0.8rem] text-[#6c757d]'> Feedbacks</div>
                 </div>
