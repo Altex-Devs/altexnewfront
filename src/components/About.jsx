@@ -80,7 +80,7 @@ function About() {
               </div>
               </div>
                 <div className="justify-between items-center">
-                <div className="text-[#E6E7EB] font-light border-t pt-[30px] mb-[24px] border-[#1B337B]">
+                <div className="text-[#E6E7EB] font-light pt-[30px] mb-[24px]">
                   {post.createdAt
                     ? post.date
                     : new Date(parseInt(post.date) * 1000).toLocaleDateString("en-US", {
@@ -102,7 +102,7 @@ function About() {
               </div>
               </div>
                 <div className="justify-between items-center">
-                  <div className="text-[#E6E7EB] font-light border-t pt-[30px] mb-[24px] border-[#1B337B]">--/--/2023</div>
+                  <div className="text-[#E6E7EB] font-light pt-[30px] mb-[24px]">--/--/2023</div>
                   <Link to=''  className="text-[14px] isDisabled text-current cursor-not-allowed opacity-50 no-underline text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]" dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "posts_readmore"}) }} />
                 </div>
               </div>
@@ -114,7 +114,7 @@ function About() {
                 </div>
               </div>
                 <div className="justify-between items-center">
-                  <div className="text-[#E6E7EB] font-light border-t pt-[30px] mb-[24px] border-[#1B337B]">--/--/2023</div>
+                  <div className="text-[#E6E7EB] font-light pt-[30px] mb-[24px]">--/--/2023</div>
                   <Link to=''  className="text-[14px] isDisabled text-current cursor-not-allowed opacity-50 no-underline text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]" dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "posts_readmore"}) }} />
                 </div>
               </div>
