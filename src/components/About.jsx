@@ -72,7 +72,7 @@ function About() {
         <h2 className="w-[335px] text-[32px] mb-[42px]"><FormattedMessage id="Reporting_performance"/></h2>
         <div className="grid justify-center sm:grid-cols-2 sm:justify-center lg:grid-cols-3 gap-[24px] ">
         {posts.map((post) => <div key={post.id}>
-          <div className=" rounded flex flex-col w-full">
+          <div className="rounded flex flex-col w-full mb-[80px]">
               <div className="border border-[#1B337B] w-[380px] h-[210px]">
                 <div className="aspect-video bg-cover w-full h-full inline-block h-1/2 rounded-t" style={{ backgroundImage: 'url("/images/report/report1.png")' }}></div>
                 <div className="border-t border-[#1B337B] mt-[14px]"></div>
@@ -89,7 +89,13 @@ function About() {
                         day: "2-digit",
                       })}
                 </div>
-                  <a href='https://acrobat.adobe.com/id/urn:aaid:sc:AP:ef61eba8-6686-4d39-bc5f-cce89aab2ee8' className="text-[14px] text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]" dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "posts_readmore"}) }} />
+                <a
+                    href="https://firebasestorage.googleapis.com/v0/b/altexmn.appspot.com/o/20230727_Altex_digital_exchange_2023Q1_quarterly_report_v15h07%20(1).pdf?alt=media&token=43ee8b73-7e97-4409-a001-4dc8e6b437b7"
+                    className="text-[14px] text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]"
+                    target="_blank"
+                    rel="noopener noreferrer" // Add rel="noopener noreferrer" for maximum security
+                    dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: "posts_readmore" }) }}
+                  />
                 </div>
               </div>
             </div>
