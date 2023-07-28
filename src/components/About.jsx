@@ -69,23 +69,56 @@ function About() {
         </div>
       </div>
       <div className="mt-[160px]">
-        <h2 className="w-[335px] text-[32px] mb-[42px]">Тайлан гүйцэтгэл</h2>
+        <h2 className="w-[335px] text-[32px] mb-[42px]"><FormattedMessage id="Reporting_performance"/></h2>
         <div className="grid justify-center sm:grid-cols-2 sm:justify-center lg:grid-cols-3 gap-[24px] ">
         {posts.map((post) => <div key={post.id}>
           <div className=" rounded flex flex-col w-full">
               <div className="border border-[#1B337B] w-[380px] h-[210px]">
-                <div className="aspect-video bg-cover w-full h-full inline-block h-1/2 rounded-t" style={{backgroundImage: `url("${post.image}")`}}></div>
+                <div className="aspect-video bg-cover w-full h-full inline-block h-1/2 rounded-t" style={{ backgroundImage: 'url("/images/report/report1.png")' }}></div>
+                <div className="border-t border-[#1B337B] mt-[14px]"></div>
                 <div className="pt-[18px] px-[16px] pb-[24px] flex flex-col justify-between grow">
               </div>
               </div>
                 <div className="justify-between items-center">
-                  <div className="text-[#E6E7EB] font-light border-t pt-[12px] mb-[24px] border-[#1B337B]">{post.createdAt ? post.date : (new Date(parseInt(post.date) * 1000)).toJSON().slice(0, 10)}</div>
-                  <Link to={post.pdf} donwload="Example-PDF-document" className="text-[14px] text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]" dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "posts_readmore"}) }} />
+                <div className="text-[#E6E7EB] font-light border-t pt-[30px] mb-[24px] border-[#1B337B]">
+                  {post.createdAt
+                    ? post.date
+                    : new Date(parseInt(post.date) * 1000).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "2-digit",
+                        day: "2-digit",
+                      })}
+                </div>
+                  <a href='https://acrobat.adobe.com/id/urn:aaid:sc:AP:ef61eba8-6686-4d39-bc5f-cce89aab2ee8' className="text-[14px] text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]" dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "posts_readmore"}) }} />
                 </div>
               </div>
             </div>
         )}
-      </div>
+        <div className=" rounded flex flex-col w-full">
+              <div className="border border-[#1B337B] w-[380px] h-[210px]">
+                <div className="aspect-video bg-cover w-full h-full inline-block h-1/2 rounded-t" style={{backgroundImage: 'url("/images/report/report2.png")'}}></div>
+                <div className="border-t border-[#1B337B] mt-[14px]"></div>
+                <div className="pt-[18px] px-[16px] pb-[24px] flex flex-col justify-between grow">
+              </div>
+              </div>
+                <div className="justify-between items-center">
+                  <div className="text-[#E6E7EB] font-light border-t pt-[30px] mb-[24px] border-[#1B337B]">--/--/2023</div>
+                  <Link to=''  className="text-[14px] isDisabled text-current cursor-not-allowed opacity-50 no-underline text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]" dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "posts_readmore"}) }} />
+                </div>
+              </div>
+              <div className=" rounded flex flex-col w-full">
+              <div className="border border-[#1B337B] w-[380px] h-[210px]">
+                <div className="aspect-video bg-cover w-full h-full inline-block h-1/2 rounded-t" style={{backgroundImage: 'url("/images/report/report3.png")'}}></div>
+                <div className="border-t border-[#1B337B] mt-[14px]"></div>
+                <div className="pt-[18px] px-[16px] pb-[24px] flex flex-col justify-between grow">
+                </div>
+              </div>
+                <div className="justify-between items-center">
+                  <div className="text-[#E6E7EB] font-light border-t pt-[30px] mb-[24px] border-[#1B337B]">--/--/2023</div>
+                  <Link to=''  className="text-[14px] isDisabled text-current cursor-not-allowed opacity-50 no-underline text-white font-light bg-[#006CFF] rounded py-[8px] px-[16px]" dangerouslySetInnerHTML={{ __html: intl.formatMessage({id: "posts_readmore"}) }} />
+                </div>
+              </div>
+            </div>
       </div>
     </>
   );

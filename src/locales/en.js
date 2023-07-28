@@ -204,7 +204,7 @@ const en = {
     "our_team_partner_content_third":"The company offers OTC, iRFQ and electronic trading services giving traders access to the world’s deepest liquidity pools, as well as secure and insured hot and cold wallets to ensure the safekeeping of digital assets with timely transaction settlement.",
     "our_team_partner_content_fourth":"<a class='underline' href='https://bc.group/'>BC Technology Group</a> and the <a class='underline' href='https://osl.com/en/'>OSL</a>  platform are enabling institutional adoption of the digital asset class, setting the global standard for performance, security and compliance.",
     "our_team_partner_content_footer":"For more information: <a href='https://bc.group/' class='underline text-blue-600'>bc.group</a> and <a class='underline text-blue-600' href='https://osl.com/en/'>osl.com</a>",
-
+    "Reporting_performance":"Reporting performance",
     
     'terms_title':"Terms of Use",
     'terms_breadcrumbs_1':"Home",
