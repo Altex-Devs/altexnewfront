@@ -68,9 +68,9 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="mt-[160px] px-[40px] sm:px-[0px]">
+      <div className="mt-[160px]">
         <h2 className="w-[335px] text-[32px] mb-[42px] w-[500px]"><FormattedMessage id="Reporting_performance"/></h2>
-        <div className="grid justify-center sm:grid-cols-2 sm:justify-center lg:grid-cols-3 gap-[24px] ">
+        <div className="grid justify-center px-[20px] sm:grid-cols-2 sm:justify-center lg:grid-cols-3 gap-[24px] ">
         {posts.map((post) => <div key={post.id}>
           <div className="rounded flex flex-col w-full sm:mb-[80px]">
               <div className="border border-[#1B337B] w-[380px] h-[210px]">
