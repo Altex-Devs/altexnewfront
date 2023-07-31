@@ -68,11 +68,11 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="mt-[160px]">
+      <div className="mt-[160px] px-[40px] sm:px-[0px]">
         <h2 className="w-[335px] text-[32px] mb-[42px] w-[500px]"><FormattedMessage id="Reporting_performance"/></h2>
         <div className="grid justify-center sm:grid-cols-2 sm:justify-center lg:grid-cols-3 gap-[24px] ">
         {posts.map((post) => <div key={post.id}>
-          <div className="rounded flex flex-col w-full mb-[80px]">
+          <div className="rounded flex flex-col w-full sm:mb-[80px]">
               <div className="border border-[#1B337B] w-[380px] h-[210px]">
                 <div className="aspect-video bg-cover w-full h-full inline-block h-1/2 rounded-t" style={{ backgroundImage: 'url("/images/report/report1.png")' }}></div>
                 <div className="border-t border-[#1B337B] mt-[14px]"></div>
