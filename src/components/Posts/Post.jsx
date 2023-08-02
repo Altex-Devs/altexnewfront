@@ -64,7 +64,8 @@ function Post() {
   return (
     <>
     <Helmet>
-        <meta property="og:image" content={img} />
+        {img && <meta property="og:image" content={img} />}
+        {!img && <meta property="og:image" content="https://example.com/default-image.jpg" />}
       </Helmet>
      <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] pt-[80px] pb-[140px]">
       <div className="font-Montserrat max-w-[1490px] mx-auto px-[34px] text-[10px] sm:text-[14px] mb-[80px] text-[#3973C5]">
