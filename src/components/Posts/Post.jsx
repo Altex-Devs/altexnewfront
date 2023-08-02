@@ -5,6 +5,8 @@ import { collection, doc, getDoc, getDocs, limit, orderBy, query, where } from "
 import { db } from "../../firebase";
 import { FormattedMessage } from "react-intl";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
+import { Helmet } from "react-helmet";
+
 
 function Post() {
   const [title, setTitle] = useState("");
@@ -14,11 +16,7 @@ function Post() {
   const [createdAt, setCreatedAt] = useState("");
   const [posts, setPosts] = useState([]);
   const { type, postId } = useParams();
-
   const navigate = useNavigate();
-  console.log('type:',type)
-  console.log('postId:',postId)
-  console.log('content:', content)
   useEffect(() => {
     const docRef = doc(db, "posts", postId);
 
@@ -27,7 +25,7 @@ function Post() {
         const data = docSnap.data();
         setTitle(data.title);
         setContent(data.content);
-        setImg(data.img)
+        setImg(getImageFromContent(data.content))
         setDate(data.date);
         setCreatedAt(data.createdAt);
       } else {
@@ -57,9 +55,17 @@ function Post() {
       window.removeEventListener("popstate", handleBackButtonClick);
     };
   }, [postId, type, navigate,content]);
+  const getImageFromContent = (content) => {
+    const regex = /<img.*?src="(.*?)"/;
+    const match = regex.exec(content);
+    return match ? match[1] : ''; // Returns the URL of the first image found
+  };
 
   return (
     <>
+    <Helmet>
+        <meta property="og:image" content={img} />
+      </Helmet>
      <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] pt-[80px] pb-[140px]">
       <div className="font-Montserrat max-w-[1490px] mx-auto px-[34px] text-[10px] sm:text-[14px] mb-[80px] text-[#3973C5]">
           <a href="/">
