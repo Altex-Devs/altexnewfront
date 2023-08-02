@@ -5,7 +5,6 @@ import { collection, doc, getDoc, getDocs, limit, orderBy, query, where } from "
 import { db } from "../../firebase";
 import { FormattedMessage } from "react-intl";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
-import { Helmet } from "react-helmet";
 
 
 function Post() {
@@ -16,18 +15,38 @@ function Post() {
   const [createdAt, setCreatedAt] = useState("");
   const [posts, setPosts] = useState([]);
   const { type, postId } = useParams();
+  console.log('img:', img)
   const navigate = useNavigate();
   useEffect(() => {
     const docRef = doc(db, "posts", postId);
-
+    
     getDoc(docRef).then((docSnap) => {
       if (docSnap.exists()) {
         const data = docSnap.data();
         setTitle(data.title);
         setContent(data.content);
-        setImg(getImageFromContent(data.content))
+        setImg(getImageFromContent(data.content));
         setDate(data.date);
         setCreatedAt(data.createdAt);
+
+        // Update the meta tags here
+        const ogTitleTag = document.querySelector('meta[property="og:title"]');
+        const ogDescTag = document.querySelector('meta[property="og:description"]');
+        const ogImageTag = document.querySelector('meta[property="og:image"]');
+        const ogImageSecureUrlTag = document.querySelector('meta[property="og:image:secure_url"]');
+        const ogImageAltTag = document.querySelector('meta[property="og:image:alt"]');
+        const twitterTitleTag = document.querySelector('meta[name="twitter:title"]');
+        const twitterDescTag = document.querySelector('meta[name="twitter:description"]');
+        const twitterImageTag = document.querySelector('meta[name="twitter:image"]');
+
+        ogTitleTag.setAttribute("content", title);
+        ogDescTag.setAttribute("content", content);
+        ogImageTag.setAttribute("content", img);
+        ogImageSecureUrlTag.setAttribute("content", img); // Use the secure URL of the image
+        ogImageAltTag.setAttribute("content", title); // Set the alt text of the image
+        twitterTitleTag.setAttribute("content", title);
+        twitterDescTag.setAttribute("content", content);
+        twitterImageTag.setAttribute("content", img);
       } else {
         console.log("No such document!");
       }
@@ -54,7 +73,7 @@ function Post() {
       // Clean up the event listener when the component unmounts
       window.removeEventListener("popstate", handleBackButtonClick);
     };
-  }, [postId, type, navigate,content]);
+  }, [postId, type, navigate, img, title,content]);
   const getImageFromContent = (content) => {
     const regex = /<img.*?src="(.*?)"/;
     const match = regex.exec(content);
@@ -63,10 +82,6 @@ function Post() {
 
   return (
     <>
-    <Helmet>
-        {img && <meta property="og:image" content={img} />}
-        {!img && <meta property="og:image" content="https://example.com/default-image.jpg" />}
-      </Helmet>
      <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] pt-[80px] pb-[140px]">
       <div className="font-Montserrat max-w-[1490px] mx-auto px-[34px] text-[10px] sm:text-[14px] mb-[80px] text-[#3973C5]">
           <a href="/">
