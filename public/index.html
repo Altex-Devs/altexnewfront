@@ -7,8 +7,6 @@
   <meta property="og:title" content="Altex" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.altex.mn" />
-  <meta property="og:image" content="%PUBLIC_URL%/images/dan-2.png" /> <!-- Replace this with the actual image URL -->
-  <meta property="og:description" content="Digital Exchange" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,30 +35,25 @@
   <div id="root" class="bg-[#050F36] w-full"></div>
   <div id="sign-in-button"></div>
 
-  <!-- Load Facebook SDK for JavaScript -->
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" 
-        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1
-             &version={graph-api-version}
-             &appId={your-facebook-app-id}
-             &autoLogAppEvents=1" 
-        nonce="FOKrbAYI">
+  <!-- Add a button to trigger the Facebook sharer function -->
+  <button onclick="shareOnFacebook()">Share on Facebook</button>
+
+  <!-- Your existing JavaScript code -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="%PUBLIC_URL%/favicon.ico">
+  <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!-- Your existing script and any other code -->
+  <script>
+    function shareOnFacebook() {
+      const url = "https://www.altex.mn"; // Replace with your website URL
+      const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+      window.open(shareUrl, "_blank", "width=600,height=400");
+    }
   </script>
-
-  <!-- Your like button code -->
-  <div class="fb-like" 
-       data-href="https://www.altex.mn/index.html" 
-       data-width=""
-       data-layout="standard" 
-       data-action="like" 
-       data-size="large"  
-       data-share="true">
-  </div>
-
 </body>
 </html>
-
-
-
-
-

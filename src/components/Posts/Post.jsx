@@ -14,6 +14,7 @@ function Post() {
   const [createdAt, setCreatedAt] = useState("");
   const [posts, setPosts] = useState([]);
   const { type, postId } = useParams();
+
   const navigate = useNavigate();
   console.log('type:',type)
   console.log('postId:',postId)
@@ -56,6 +57,11 @@ function Post() {
       window.removeEventListener("popstate", handleBackButtonClick);
     };
   }, [postId, type, navigate,content]);
+  function shareOnFacebook() {
+    const url = `https://altex.mn/posts/${type}/${postId}`;
+    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+    window.open(shareUrl, "_blank", "width=600,height=400");
+  }
 
   return (
     <>
@@ -88,8 +94,9 @@ function Post() {
             <div className="richcontent text-[#35363B] text-[16px] mb-[40px]" dangerouslySetInnerHTML={{ __html: content }}></div>
             <FacebookShareButton
           url={`https://altex.mn/posts/${type}/${postId}`}
+          onClick={shareOnFacebook}
           className="Demo__some-network__share-button"
-      >
+        >
             
             <div className="inline-block rounded bg-[#0075FF] text-white text-[14px] font-bold py-[12px] pl-[18px] pr-[20px] cursor-pointer mr-[24px]">
               <svg className="inline-block mr-[23px]" width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
