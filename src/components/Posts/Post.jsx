@@ -16,6 +16,7 @@ function Post() {
   const [posts, setPosts] = useState([]);
   const { type, postId } = useParams();
   console.log('img:', img)
+  console.log('title:',title)
   const navigate = useNavigate();
   useEffect(() => {
     const docRef = doc(db, "posts", postId);
@@ -31,21 +32,17 @@ function Post() {
 
         // Update the meta tags here
         const ogTitleTag = document.querySelector('meta[property="og:title"]');
-        const ogDescTag = document.querySelector('meta[property="og:description"]');
         const ogImageTag = document.querySelector('meta[property="og:image"]');
         const ogImageSecureUrlTag = document.querySelector('meta[property="og:image:secure_url"]');
         const ogImageAltTag = document.querySelector('meta[property="og:image:alt"]');
         const twitterTitleTag = document.querySelector('meta[name="twitter:title"]');
-        const twitterDescTag = document.querySelector('meta[name="twitter:description"]');
         const twitterImageTag = document.querySelector('meta[name="twitter:image"]');
 
         ogTitleTag.setAttribute("content", title);
-        ogDescTag.setAttribute("content", content);
         ogImageTag.setAttribute("content", img);
         ogImageSecureUrlTag.setAttribute("content", img); // Use the secure URL of the image
         ogImageAltTag.setAttribute("content", title); // Set the alt text of the image
         twitterTitleTag.setAttribute("content", title);
-        twitterDescTag.setAttribute("content", content);
         twitterImageTag.setAttribute("content", img);
       } else {
         console.log("No such document!");
