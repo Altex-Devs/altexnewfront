@@ -57,11 +57,6 @@ function Post() {
       window.removeEventListener("popstate", handleBackButtonClick);
     };
   }, [postId, type, navigate,content]);
-  function shareOnFacebook() {
-    const url = `https://altex.mn/posts/${type}/${postId}`;
-    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-    window.open(shareUrl, "_blank", "width=600,height=400");
-  }
 
   return (
     <>
@@ -94,7 +89,6 @@ function Post() {
             <div className="richcontent text-[#35363B] text-[16px] mb-[40px]" dangerouslySetInnerHTML={{ __html: content }}></div>
             <FacebookShareButton
           url={`https://altex.mn/posts/${type}/${postId}`}
-          onClick={shareOnFacebook}
           className="Demo__some-network__share-button"
         >
             
