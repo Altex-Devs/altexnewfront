@@ -7,7 +7,7 @@
   <meta property="og:title" content="Altex" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.altex.mn" />
-  <meta property="og:image" content="%PUBLIC_URL%/images" />
+  <meta property="og:image" content="%PUBLIC_URL%/images/dan-2.png" /> <!-- Replace this with the actual image URL -->
   <meta property="og:description" content="Digital Exchange" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,5 +36,31 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root" class="bg-[#050F36] w-full"></div>
   <div id="sign-in-button"></div>
+
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1
+             &version={graph-api-version}
+             &appId={your-facebook-app-id}
+             &autoLogAppEvents=1" 
+        nonce="FOKrbAYI">
+  </script>
+
+  <!-- Your like button code -->
+  <div class="fb-like" 
+       data-href="https://www.altex.mn/index.html" 
+       data-width=""
+       data-layout="standard" 
+       data-action="like" 
+       data-size="large"  
+       data-share="true">
+  </div>
+
 </body>
 </html>
+
+
+
+
+
