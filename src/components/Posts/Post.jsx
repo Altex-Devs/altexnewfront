@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { collection, doc, getDoc, getDocs, limit, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../firebase";
 import { FormattedMessage } from "react-intl";
-import { FacebookShareButton, TwitterShareButton } from "react-share";
+import {  TwitterShareButton } from "react-share";
 
 
 function Post() {
@@ -15,8 +15,6 @@ function Post() {
   const [createdAt, setCreatedAt] = useState("");
   const [posts, setPosts] = useState([]);
   const { type, postId } = useParams();
-  console.log('img:', img)
-  console.log('title:',title)
   const navigate = useNavigate();
   useEffect(() => {
     const docRef = doc(db, "posts", postId);
@@ -106,19 +104,9 @@ function Post() {
               {createdAt ? date : (new Date(parseInt(date) * 1000)).toJSON()?.slice(0, 10)}
             </div>
             <div className="richcontent text-[#35363B] text-[16px] mb-[40px]" dangerouslySetInnerHTML={{ __html: content }}></div>
-            <FacebookShareButton
-          url={`https://altex.mn/posts/${type}/${postId}`}
-          className="Demo__some-network__share-button"
-        >
-            
-            <div className="inline-block rounded bg-[#0075FF] text-white text-[14px] font-bold py-[12px] pl-[18px] pr-[20px] cursor-pointer mr-[24px]">
-              <svg className="inline-block mr-[23px]" width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.214 13.5L11.836 9.157H7.946V6.338C7.90756 6.02587 7.93971 5.70909 8.04008 5.41106C8.14045 5.11302 8.30648 4.84132 8.5259 4.61604C8.74533 4.39076 9.01256 4.21763 9.30785 4.10945C9.60315 4.00127 9.91897 3.96079 10.232 3.991H12.001V0.293C10.9636 0.113582 9.91371 0.0156159 8.861 0C5.661 0 3.561 2.08 3.561 5.846V9.156H0V13.5H3.562V24H7.946V13.5H11.214Z" fill="white" />
-              </svg>
-              Share
+            <div className="inline-block rounded bg-[#0075FF] text-white text-[14px] font-bold py-[12px] pl-[18px] pr-[20px] cursor-pointer">
+            <iframe className="inline-block" title="facebook" src={`https://www.facebook.com/plugins/share_button.php?href=https://altex.mn/posts/${postId}/&layout=button_count&size=large&mobile_iframe=false&width=83&height=28&appId`} width="83" height="28"  scrolling="no" frameborder="0" allowTransparency="true"></iframe> 
             </div>
-            </FacebookShareButton>
-
             <TwitterShareButton
               url={`https://altex.mn/posts/${type}/${postId}`}
               title={title}
