@@ -26,3 +26,14 @@
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
 }
+
+.ck-content ol{
+  margin-left: 10px;
+}
+.ck-content ul{
+  margin-left: 10px;
+}
+
+ol li {
+  list-style-type: decimal;
+}

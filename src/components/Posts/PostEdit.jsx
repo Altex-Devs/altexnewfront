@@ -49,7 +49,7 @@ const PostEdit =  () => {
         updatedAt: serverTimestamp(),
         type: type,
       });
-      navigate(`/${type}/${postId}`);
+      navigate(`/posts/${type}/${postId}`);
     } else {
       const docRef = await addDoc(collection(db, "posts"), {
         title: title,

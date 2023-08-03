@@ -6,7 +6,6 @@ import { db } from "../../firebase";
 import { FormattedMessage } from "react-intl";
 import {  TwitterShareButton } from "react-share";
 
-
 function Post() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -18,7 +17,6 @@ function Post() {
   const navigate = useNavigate();
   useEffect(() => {
     const docRef = doc(db, "posts", postId);
-    
     getDoc(docRef).then((docSnap) => {
       if (docSnap.exists()) {
         const data = docSnap.data();
@@ -27,7 +25,6 @@ function Post() {
         setImg(getImageFromContent(data.content));
         setDate(data.date);
         setCreatedAt(data.createdAt);
-
         // Update the meta tags here
         const ogTitleTag = document.querySelector('meta[property="og:title"]');
         const ogImageTag = document.querySelector('meta[property="og:image"]');
@@ -36,8 +33,6 @@ function Post() {
         const twitterTitleTag = document.querySelector('meta[name="twitter:title"]');
         const twitterImageTag = document.querySelector('meta[name="twitter:image"]');
         const ogUrlTag = document.getElementById('ogUrl'); // Get the og:url meta tag element
-
-
         ogTitleTag.setAttribute("content", title);
         ogImageTag.setAttribute("content", img);
         ogImageSecureUrlTag.setAttribute("content", img); // Use the secure URL of the image
@@ -45,7 +40,6 @@ function Post() {
         twitterTitleTag.setAttribute("content", title);
         twitterImageTag.setAttribute("content", img);
         ogUrlTag.setAttribute('content', window.location.href);
-
       } else {
         console.log("No such document!");
       }
@@ -56,9 +50,7 @@ function Post() {
     };
 
     window.addEventListener("popstate", handleBackButtonClick);
-
     const q = query(collection(db, "posts"), where("type", "==", type), orderBy("date", "desc"), limit(4));
-
     getDocs(q).then((querySnapshot) => {
       const data = querySnapshot.docs
         .filter((doc) => doc.id !== postId)
@@ -66,7 +58,6 @@ function Post() {
         .slice(-3);
       setPosts(data);
     });
-    
 
     return () => {
       // Clean up the event listener when the component unmounts
@@ -124,9 +115,7 @@ function Post() {
               Share
             </div>
             </TwitterShareButton>
-
           </div>
-
           <div className="border border-b-[0.5px] border-b-[#3973C5] mb-[30px]"></div>
           <PostsMore posts={posts} type={type} />
           <Link to={`/posts/${type}`} className="block text-[#3973C5] text-[18px] underline mt-[24px] text-right">
