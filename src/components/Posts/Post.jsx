@@ -35,6 +35,8 @@ function Post() {
         const ogImageAltTag = document.querySelector('meta[property="og:image:alt"]');
         const twitterTitleTag = document.querySelector('meta[name="twitter:title"]');
         const twitterImageTag = document.querySelector('meta[name="twitter:image"]');
+        const ogUrlTag = document.getElementById('ogUrl'); // Get the og:url meta tag element
+
 
         ogTitleTag.setAttribute("content", title);
         ogImageTag.setAttribute("content", img);
@@ -42,6 +44,8 @@ function Post() {
         ogImageAltTag.setAttribute("content", title); // Set the alt text of the image
         twitterTitleTag.setAttribute("content", title);
         twitterImageTag.setAttribute("content", img);
+        ogUrlTag.setAttribute('content', window.location.href);
+
       } else {
         console.log("No such document!");
       }

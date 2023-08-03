@@ -10,7 +10,7 @@
   <meta property="og:image:secure_url" content="" />
   <meta property="og:image:alt" content="" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.altex.mn" />
+  <meta property="og:url" id="ogUrl" content="" />
   
   <!-- Twitter meta tags -->
   <meta name="twitter:title" content="" />
@@ -62,6 +62,10 @@
       const facebookShareButton = document.getElementById('facebookShareButton');
       const newSrc = `https://www.facebook.com/plugins/share_button.php?href=https://altex.mn/posts/${postId}/&layout=button_count&size=large&mobile_iframe=false&width=83&height=28&appId&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
       facebookShareButton.setAttribute('src', newSrc);
+  
+      // Update the og:url meta tag with the current window URL
+      const ogUrlMetaTag = document.getElementById('ogUrl');
+      ogUrlMetaTag.setAttribute('content', window.location.href);
     }
   
     // Example usage: Call the function with the desired title and description
