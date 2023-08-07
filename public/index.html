@@ -5,6 +5,8 @@
   <meta name="viewport" content="minimum-scale=1,initial-scale=1,width=device-width,shrink-to-fit=no">
   <!-- Open Graph meta tags -->
   <meta property="og:title" content="" />
+  <meta name="og:description" content="" />
+  <meta property="og:image" content="" />
   <meta property="og:image:secure_url" content="" />
   <meta property="og:image:alt" content="" />
   <meta property="og:type" content="website" />
@@ -54,20 +56,5 @@
   <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="%PUBLIC_URL%/favicon.ico">
   <meta name="theme-color" content="#000000" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <script>
-    function updateFacebookShareButton(title, description) {
-      const facebookShareButton = document.getElementById('facebookShareButton');
-      const newHref = `https://www.facebook.com/plugins/share_button.php?href=${encodeURIComponent(window.location.href)}&layout=button_count&size=large&mobile_iframe=false&width=83&height=28&appId&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
-      facebookShareButton.setAttribute('href', newHref);
-
-      const ogUrlMetaTag = document.getElementById('ogUrl');
-      ogUrlMetaTag.setAttribute('content', window.location.href);
-    }
-
-    // Example usage: Call the function with the desired title and description
-    const newTitle = 'New Title';
-    const newDescription = 'New Description';
-    updateFacebookShareButton(newTitle, newDescription);
-  </script>
 </body>
 </html>
