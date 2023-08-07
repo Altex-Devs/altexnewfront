@@ -66,6 +66,8 @@ function Post() {
     <>
     <Helmet>
         <meta property="og:description" content={title} />
+        <meta property="og:image" content={img} />
+
         {/* Other meta tags */}
       </Helmet>
      <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] pt-[80px] pb-[140px]">
