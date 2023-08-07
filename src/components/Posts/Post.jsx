@@ -65,8 +65,7 @@ function Post() {
   return (
     <>
     <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={content.substring(0, 150)} />
+        <meta property="og:description" content={title} />
         {/* Other meta tags */}
       </Helmet>
      <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] pt-[80px] pb-[140px]">

@@ -54,7 +54,7 @@ function App() {
   return (
     <IntlProvider messages={messages[locale]} locale={locale} defaultLocale="mn">
       <Helmet>
-        <title>My Page Title</title>
+        <meta property="og:description" content="" />
         <meta name="description" content="This is the description of my page." />
         {/* Add more meta tags as needed */}
       </Helmet>
