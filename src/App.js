@@ -30,6 +30,8 @@ import Auth from "./components/Auth";
 import PostsAdmin from "./components/Posts/PostsAdmin";
 import Admin from "./components/Admin";
 import AdminFeedback from "./components/Posts/AdminFeedback";
+import { Helmet } from 'react-helmet';
+
 
 const messages = {
   mn: mn,
@@ -51,6 +53,11 @@ function App() {
 
   return (
     <IntlProvider messages={messages[locale]} locale={locale} defaultLocale="mn">
+      <Helmet>
+        <title>My Page Title</title>
+        <meta name="description" content="This is the description of my page." />
+        {/* Add more meta tags as needed */}
+      </Helmet>
       <Router>
         <Routes>
           <Route element={<Layout locale={locale} setLocale={setLocale} />}>

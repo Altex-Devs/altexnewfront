@@ -57,17 +57,15 @@
   <meta name="theme-color" content="#000000" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <script>
-    // Function to update the Facebook share button with the specified title and description
     function updateFacebookShareButton(title, description) {
       const facebookShareButton = document.getElementById('facebookShareButton');
-      const newSrc = `https://www.facebook.com/plugins/share_button.php?href=${encodeURIComponent(window.location.href)}&layout=button_count&size=large&mobile_iframe=false&width=83&height=28&appId&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
-      facebookShareButton.setAttribute('src', newSrc);
-  
-      // Update the og:url meta tag with the current window URL
+      const newHref = `https://www.facebook.com/plugins/share_button.php?href=${encodeURIComponent(window.location.href)}&layout=button_count&size=large&mobile_iframe=false&width=83&height=28&appId&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+      facebookShareButton.setAttribute('href', newHref);
+
       const ogUrlMetaTag = document.getElementById('ogUrl');
       ogUrlMetaTag.setAttribute('content', window.location.href);
     }
-  
+
     // Example usage: Call the function with the desired title and description
     const newTitle = 'New Title';
     const newDescription = 'New Description';
