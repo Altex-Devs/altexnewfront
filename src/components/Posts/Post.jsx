@@ -27,12 +27,14 @@ function Post() {
         setCreatedAt(data.createdAt);
         // Update the meta tags here
         const ogTitleTag = document.querySelector('meta[property="og:title"]');
+        const ogDescriptionTag = document.querySelector('meta[property="og:description"]');
         const ogImageTag = document.querySelector('meta[property="og:image"]');
         const ogImageSecureUrlTag = document.querySelector('meta[property="og:image:secure_url"]');
         const ogImageAltTag = document.querySelector('meta[property="og:image:alt"]');
         const twitterTitleTag = document.querySelector('meta[name="twitter:title"]');
         const twitterImageTag = document.querySelector('meta[name="twitter:image"]');
         const ogUrlTag = document.getElementById('ogUrl'); // Get the og:url meta tag element
+        ogDescriptionTag.setAttribute("content", title)
         ogTitleTag.setAttribute("content", title);
         ogImageTag.setAttribute("content", img);
         ogImageSecureUrlTag.setAttribute("content", img); // Use the secure URL of the image
