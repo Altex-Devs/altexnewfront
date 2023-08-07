@@ -5,6 +5,8 @@ import { collection, doc, getDoc, getDocs, limit, orderBy, query, where } from "
 import { db } from "../../firebase";
 import { FormattedMessage } from "react-intl";
 import {  TwitterShareButton } from "react-share";
+import { Helmet } from 'react-helmet';
+
 
 function Post() {
   const [title, setTitle] = useState("");
@@ -25,23 +27,18 @@ function Post() {
         setImg(getImageFromContent(data.content));
         setDate(data.date);
         setCreatedAt(data.createdAt);
-        // Update the meta tags here
         const ogTitleTag = document.querySelector('meta[property="og:title"]');
-        const ogDescriptionTag = document.querySelector('meta[property="og:description"]');
-        const ogImageTag = document.querySelector('meta[property="og:image"]');
-        const ogImageSecureUrlTag = document.querySelector('meta[property="og:image:secure_url"]');
-        const ogImageAltTag = document.querySelector('meta[property="og:image:alt"]');
-        const twitterTitleTag = document.querySelector('meta[name="twitter:title"]');
-        const twitterImageTag = document.querySelector('meta[name="twitter:image"]');
-        const ogUrlTag = document.getElementById('ogUrl'); // Get the og:url meta tag element
-        ogDescriptionTag.setAttribute("content", title)
-        ogTitleTag.setAttribute("content", title);
-        ogImageTag.setAttribute("content", img);
-        ogImageSecureUrlTag.setAttribute("content", img); // Use the secure URL of the image
-        ogImageAltTag.setAttribute("content", title); // Set the alt text of the image
-        twitterTitleTag.setAttribute("content", title);
-        twitterImageTag.setAttribute("content", img);
-        ogUrlTag.setAttribute('content', window.location.href);
+    const ogImageTag = document.querySelector('meta[property="og:image"]');
+    const twitterTitleTag = document.querySelector('meta[name="twitter:title"]');
+    const twitterImageTag = document.querySelector('meta[name="twitter:image"]');
+
+    ogTitleTag.setAttribute("content", title);
+    twitterTitleTag.setAttribute("content", title);
+
+    // Set dynamic image URL for meta tags
+    const imageUrl = getImageFromContent(data.content);
+    ogImageTag.setAttribute("content", imageUrl);
+    twitterImageTag.setAttribute("content", imageUrl);
       } else {
         console.log("No such document!");
       }
@@ -74,6 +71,11 @@ function Post() {
 
   return (
     <>
+    <Helmet>
+        <title>{title}</title>
+        <meta name="description" content="This is a dynamically generated page." />
+        {/* Other meta tags */}
+      </Helmet>
      <div className="bg-[#F5F5F5] relative w-screen -left-[calc(50vw-50%)] pt-[80px] pb-[140px]">
       <div className="font-Montserrat max-w-[1490px] mx-auto px-[34px] text-[10px] sm:text-[14px] mb-[80px] text-[#3973C5]">
           <a href="/">
