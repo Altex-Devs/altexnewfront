@@ -1,16 +1,23 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * const {onCall} = require("firebase-functions/v2/https");
- * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+const functions = require('firebase-functions');
 
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
-
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+exports.bigben = functions.https.onRequest(async (req, res) => {
+  console.log(req.originalUrl);
+  console.log(req.get('user-agent'));
+  if (req.get('user-agent') === "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)") {
+    console.log("PASS");
+    res.status(200).send(`
+      <!doctype html>
+        <head>
+          <meta property="og:title" content="Test title from function" />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/altexmn.appspot.com/o/1691121312508.jpeg?alt=media" />
+          <meta property="og:url" content="https://altexmn--altexnew-xgp4u0st.web.app/posts/basics/wKg9xkMXuAmjMEFFzO7c" />
+        </head>
+        <body>
+        </body>
+      </html>
+    `);
+  } else {
+    res.redirect(req.originalUrl.replace("/og", ""))
+  }
+});
