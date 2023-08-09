@@ -8,8 +8,8 @@
     ],
     "rewrites": [
       {
-        "source": "/og/**",
-        "function": "bigben"
+        "source": "/posts/@(news|basics|projects)/**",
+        "function": "crawlpost"
       },
       {
         "source": "**",

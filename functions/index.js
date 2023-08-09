@@ -1,23 +1,37 @@
 const functions = require('firebase-functions');
+const {getFirestore} = require("firebase-admin/firestore");
+const {initializeApp} = require("firebase-admin/app");
+const admin = initializeApp();
+const db = getFirestore(admin);
 
-exports.bigben = functions.https.onRequest(async (req, res) => {
-  console.log(req.originalUrl);
-  console.log(req.get('user-agent'));
+exports.crawlpost = functions.https.onRequest(async (req, res) => {
+  res.set('Cache-Control', 'public, max-age=3600, s-maxage=604800');
   if (req.get('user-agent') === "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)") {
-    console.log("PASS");
+    const postRef = db.collection("posts").doc(req.originalUrl.match(/\/posts\/[^/]*\/([a-zA-Z0-9]*)/)[1]);
+    const postDoc = await postRef.get()
+    
+    if (!postDoc.exists) {
+      throw new functions.https.HttpsError("not-found", "Мэдээ олдсонгүй!");
+    }
+    const postData = postDoc.data();
+
     res.status(200).send(`
       <!doctype html>
         <head>
-          <meta property="og:title" content="Test title from function" />
+          <meta property="og:title" content="${postData.title}" />
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/altexmn.appspot.com/o/1691121312508.jpeg?alt=media" />
-          <meta property="og:url" content="https://altexmn--altexnew-xgp4u0st.web.app/posts/basics/wKg9xkMXuAmjMEFFzO7c" />
+          <meta property="og:image" content="${postData.image}" />
+          <meta property="og:url" content="${req.protocol + "://" + req.headers['x-forwarded-host'] + req.originalUrl}" />
         </head>
         <body>
         </body>
       </html>
     `);
   } else {
-    res.redirect(req.originalUrl.replace("/og", ""))
+    const url = req.protocol + "://" + req.headers['x-forwarded-host'] + req.originalUrl.replace("/posts", "/crawlpost");
+    const response = await fetch(url);
+    const content = await response.text();
+
+    res.status(200).send(content);
   }
 });

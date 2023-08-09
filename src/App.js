@@ -75,6 +75,7 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/posts/:type" element={<Posts />} />
             <Route path="/posts/:type/:postId" element={<Post />} />
+            <Route path="/crawlpost/:type/:postId" element={<Post />} />
             
             <Route path="*" element={<NotFound />} />
           </Route>
