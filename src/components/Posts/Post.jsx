@@ -98,7 +98,7 @@ function Post() {
             </div>
             <div className="richcontent text-[#35363B] text-[16px] mb-[40px]" dangerouslySetInnerHTML={{ __html: content }}></div>
             <div className="inline-block rounded bg-[#0075FF] text-white text-[14px] font-bold py-[12px] pl-[18px] pr-[20px] cursor-pointer">
-            <iframe className="inline-block" title="facebook" src={`https://www.facebook.com/plugins/share_button.php?href=https://altex.mn/posts/${type}/${postId}/&layout=button_count&size=large&mobile_iframe=false&width=83&height=28&appId`} width="100" height="28"  scrolling="no" frameborder="0" allowTransparency="true"></iframe> 
+            <iframe className="inline-block" title="facebook" src={`https://www.facebook.com/plugins/share_button.php?href=https://altex.mn/posts/${postId}/&layout=button_count&size=large&mobile_iframe=false&width=83&height=28&appId`} width="100" height="28"  scrolling="no" frameborder="0" allowTransparency="true"></iframe> 
             </div>
             <TwitterShareButton
                 url={`https://altex.mn/posts/${type}/${postId}`}
