@@ -120,9 +120,7 @@
             <FormattedMessage id="mobile_menu_crypto_knowledge"/>
           ) : window.location.pathname === "/posts/news" ? (
             <FormattedMessage id="mobile_menu_market_news"/>
-          ) : (
-            ""
-          )}
+          ) : window.location.pathname === "/posts/release" ? (<FormattedMessage id="menu_release" />) : ("")}
         </div>
         <div className="container px-[26px] sm:mx-auto  max-w-[996px]">
           {type === "basics" && (

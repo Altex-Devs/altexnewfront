@@ -41,21 +41,21 @@ const Navbar = ({ locale, setLocale }) => {
     const icon = parent.querySelector(".icon");
     const expander = parent.querySelector(".expander");
     icon.classList.toggle("rotate-180");
-    const isExpanded = expander.classList.contains("max-h-[140px]");
+    const isExpanded = expander.classList.contains("max-h-[180px]");
     const allExpanders = document.querySelectorAll(".expander");
     const allIcons = document.querySelectorAll(".icon");
 
     allExpanders.forEach((exp) => {
-      exp.classList.remove("max-h-[140px]");
+      exp.classList.remove("max-h-[180px]");
     });
     allIcons.forEach((icn) => {
       icn.classList.remove("rotate-180");
     });
     if (!isExpanded) {
-      expander.classList.add("max-h-[140px]");
+      expander.classList.add("max-h-[180px]");
       icon.classList.add("rotate-180");
     } else {
-      expander.classList.remove("max-h-[140px]");
+      expander.classList.remove("max-h-[180px]");
       icon.classList.remove("rotate-180");
     }
 }
@@ -66,7 +66,7 @@ const Navbar = ({ locale, setLocale }) => {
     const icon = parent.querySelector(".icon");
     const expander = parent.querySelector(".expander");
     icon.classList.toggle("rotate-180");
-    expander.classList.toggle("max-h-[140px]");
+    expander.classList.toggle("max-h-[180px]");
   }
 
   // Hide all menu
@@ -74,12 +74,12 @@ const Navbar = ({ locale, setLocale }) => {
     if (!e.target.closest(".menu") || !e.target.closest(".mobile_menu")) {
       const mobileMenuExpanders = document.querySelectorAll("#mobile_menu .expander");
       mobileMenuExpanders.forEach((mobileMenuExpander) => {
-        mobileMenuExpander.classList.remove("max-h-[140px]");
+        mobileMenuExpander.classList.remove("max-h-[180px]");
       });
 
       const menuExpanders = document.querySelectorAll("#main_menu .expander");
       menuExpanders.forEach((menuExpander) => {
-        menuExpander.classList.remove("max-h-[140px]");
+        menuExpander.classList.remove("max-h-[180px]");
       });
 
       const menuIcons = document.querySelectorAll(".icon");
@@ -160,6 +160,9 @@ const Navbar = ({ locale, setLocale }) => {
               <a id="mobile_menu_projects" className="block" href="/posts/projects">
                 <FormattedMessage id="mobile_menu_projects"/>
               </a>
+              <a id="menu_release" className="block" href="/posts/release">
+                  <FormattedMessage id="menu_release" />
+                </a>
             </div>
           </div>
         </div>
@@ -217,6 +220,7 @@ const Navbar = ({ locale, setLocale }) => {
                 <a id="menu_team" className="hover:text-[#13A9FD] cursor-pointer" href="/team">
                   <FormattedMessage id="menu_team" />
                 </a>
+                
               </div>
             </div>
           </div>
@@ -236,6 +240,9 @@ const Navbar = ({ locale, setLocale }) => {
                 </a>
                 <a id="menu_projects" className="hover:text-[#13A9FD] cursor-pointer" href="/posts/projects">
                   <FormattedMessage id="menu_projects" />
+                </a>
+                <a id="menu_release" className="hover:text-[#13A9FD] cursor-pointer" href="/posts/release">
+                  <FormattedMessage id="menu_release" />
                 </a>
               </div>
             </div>

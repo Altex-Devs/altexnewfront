@@ -21,6 +21,7 @@ const en = {
     "menu_market_news": "Market News",
     "menu_crypto_knowledge": "Crypto Basic",
     "menu_projects": "Projects",
+    "menu_release":"Press Release",
     "menu_register": "Register",
     "menu_login": "Log In",
     "jumbo_head": "Altex for your Alternative Investments",

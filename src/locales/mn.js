@@ -21,6 +21,7 @@ const mn = {
     "menu_market_news": "Зах зээлийн мэдээ",
     "menu_crypto_knowledge": "Крипто мэдлэг",
     "menu_projects": "Төслүүд",
+    "menu_release":"Хэвлэлийн мэдээ",
     "menu_register": "Бүртгүүлэх",
     "menu_login": "Нэвтрэх",
     "jumbo_head": "Дижитал санхүүг хялбараар",

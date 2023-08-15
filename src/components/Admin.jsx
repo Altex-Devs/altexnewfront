@@ -4,8 +4,6 @@ import { app } from "../firebase";
 import { getFirestore, collection,  onSnapshot ,getDocs, query, where } from 'firebase/firestore';
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
-import AdminPanel from './Posts/AdminPanel';
-
 
 const db = getFirestore(app);
 
@@ -16,7 +14,6 @@ function Admin() {
   const [manageNewsQuantity, setManageNewsQuantity] = useState(0);
   const [manageProjectQuantity, setManageProjectQuantity] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
-  const [showAdminPanel, setShowAdminPanel] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     const feedbacksCollection = collection(db, 'feedbacks');
@@ -60,10 +57,6 @@ function Admin() {
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
-  };
-
-  const handleAdminPanelToggle = () => {
-    setShowAdminPanel(!showAdminPanel);
   };
 
   return (
@@ -151,15 +144,12 @@ function Admin() {
          <br /> 
          <Link className="flex" to="/admin/posts/report">Report performance</Link>
          <br /> 
+         <Link className="flex" to="/admin/posts/release">News release</Link>
+         <br /> 
          <Link className="flex" to="/admin/posts/AdminFeedback" >Feedback</Link>
          <br/>
-          <button className='flex' onClick={handleAdminPanelToggle}>Add Admin</button>
+         
           <div>
-          {showAdminPanel && (
-          <div>
-           <AdminPanel/>
-          </div>
-        )}
           </div>
      </div>
      <div>

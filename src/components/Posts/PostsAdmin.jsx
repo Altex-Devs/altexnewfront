@@ -187,6 +187,8 @@ function PostsAdmin(props) {
             <br />
             <a className={`flex ${type === 'projects' ? 'text-[#006cff]' : ''}`} href="/admin/posts/projects">Manage Projects</a>
             <br /> 
+            <a className={`flex ${type === 'release' ? 'text-[#006cff]' : ''}`} href="/admin/posts/release">News release</a>
+            <br /> 
             <Link className="flex" to="/admin/posts/AdminFeedback" >Feedback</Link>
           </div>
           <div className="text-[#000]">
