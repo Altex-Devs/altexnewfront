@@ -377,7 +377,7 @@ const mn = {
     "faq_title_settlement": "Төлбөр тооцоо",
     "faq_q1": "1. Хэрхэн бүртгэлээ баталгаажуулах вэ?",
     "faq_a1": `
-        <ul class="list-disc leading-6 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
+        <ul class="list-disc leading-2 px-6 list-inside text-[0.7rem] sm:text-[0.9rem] font-montserrat">
             <li><span class="font-bold">www.altex.mn</span> хуудсанд өөрийн үүсгэсэн <span class="font-bold">бүртгэлээрээ нэвтэрч орно.</span></li>
             <li><span class="font-bold">Тохиргоо</span> цэсрүү орж <span class="font-bold">Verify хэсэгт</span> байрлах <span class="font-bold">Verify now</span> товчин дээр дарна.</li>
             <li>Гарч ирсэн сонголтоос <span class="font-bold">Хувь хүн буюу Personal</span> сонголтыг сонгоно.</li>
