@@ -171,8 +171,8 @@ const PostEdit =  () => {
           </div>
           </div>
           </div>
-      <div className='w-screen flex h-max '>
-      <div className="w-[300px] bg-[#fff] text-[14px] text-[#6e768e] h-screen p-4 px-8">
+      <div className='w-screen flex h-screen '>
+      <div className="w-[300px] bg-[#fff] text-[14px] text-[#6e768e] h-full p-4 px-8">
             <Link className="flex mt-6" to="/admin">Dashboard</Link>
             <br />
             <a className={`flex ${type === 'news' ? 'text-[#006cff]' : ''}`} href="/admin/posts/news">Manage News</a>
@@ -183,8 +183,9 @@ const PostEdit =  () => {
             <br /> 
             <Link className="flex" to="/admin/posts/AdminFeedback" >Feedback</Link>
      </div>
-        <div className='w-full p-10'>
-        <div className='grid grid-cols-2 gap-4 '>
+     <div className='p-4 ml-20 mt-10 w-[1000px] bg-[#006cff] rounded-2xl'>
+        <div className='bg-[#fff] p-10 rounded-2xl'>
+        <div className='grid grid-cols-2 gap-4'>
           <div>
             <h2 className='text-2xl font-bold mb-2'>Title</h2>
             <input
@@ -250,6 +251,7 @@ const PostEdit =  () => {
           >
             Save
           </button>
+        </div>
         </div>
         </div>
       </div>
