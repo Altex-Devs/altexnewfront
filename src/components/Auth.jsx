@@ -124,6 +124,8 @@ const Auth = () => {
            >
              {sending ? 'Signing In...' : 'Sign In'}
            </button>
+           {error && <p className="text-red-600 text-sm mt-2">Нэвтрэх нэр/нууц үг тохирохгүй байна! Та шалгаад дахин оролдоно уу.</p>}
+            {success && <p className="text-green-600 text-sm mt-2">{success}</p>}
           </div>
         </form>
         <footer>
