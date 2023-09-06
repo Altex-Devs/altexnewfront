@@ -124,13 +124,17 @@ const Auth = () => {
            >
              {sending ? 'Signing In...' : 'Sign In'}
            </button>
-           {error && <p className="text-red-600 text-sm mt-2">Нэвтрэх нэр/нууц үг тохирохгүй байна! Та шалгаад дахин оролдоно уу.</p>}
             {success && <p className="text-green-600 text-sm mt-2">{success}</p>}
           </div>
         </form>
+        <div className='mt-2'>
         <footer>
           <Link className="text-indigo-700 hover:text-pink-700 text-sm float-left" href="#" onClick={handleResetPassword}>Forgot Password?</Link>
         </footer>
+        <div className='w-full inline-block'>
+        {error && <p className="text-red-600 text-sm mt-2">Нэвтрэх нэр/нууц үг тохирохгүй байна! Та шалгаад дахин оролдоно уу.</p>}
+        </div>
+        </div>
         <div>
         </div>
       </div>

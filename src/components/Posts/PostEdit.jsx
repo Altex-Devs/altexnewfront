@@ -183,7 +183,7 @@ const PostEdit =  () => {
             <br /> 
             <Link className="flex" to="/admin/posts/AdminFeedback" >Feedback</Link>
      </div>
-     <div className='p-4 ml-20 mt-10 w-[1000px] bg-[#006cff] rounded-2xl'>
+     <div className='p-4 ml-20 mt-10 w-[1000px] h-max bg-[#006cff] rounded-2xl'>
         <div className='bg-[#fff] p-10 rounded-2xl'>
         <div className='grid grid-cols-2 gap-4'>
           <div>
@@ -216,7 +216,7 @@ const PostEdit =  () => {
             </div>
           )}
           {image && (
-            <img className='w-[1000px] mt-4 mb-[24px]' src={image} alt='post_image' />
+            <img className='w-[700px] mt-4 mb-[24px]' src={image} alt='post_image' />
           )}
         </div>
         <div className='mt-8'>
