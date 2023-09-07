@@ -22,7 +22,7 @@ function HomeComponents() {
     document.querySelector("#promoAlert").classList.add("hidden");
 
     if (emailInput.value && /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(emailInput.value).toLowerCase()) && promoInput.value) {
-      fetch("https://api.apispreadsheets.com/data/VrHiEVYyfwBHlXh1/", {
+      fetch("https://api.apispreadsheets.com/data/vxBygpXBbUpgVQXe/", {
         method: "POST",
         body: JSON.stringify({"data": [{
           "E-mail": emailInput.value,
