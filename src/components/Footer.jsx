@@ -43,6 +43,9 @@ const Footer = () => {
           <a href="/privacypolicy" id="footer_privacy_policy" className="block mb-[16px]">
             <FormattedMessage id="footer_privacy_policy"/>
           </a>
+          <a id="footer_fee" href="/isp" className="block mb-[16px]">
+            <FormattedMessage id="footer_isp"/>
+          </a>
           <a id="footer_fee" href="/fee" className="block mb-[16px]">
             <FormattedMessage id="footer_fee"/>
           </a>

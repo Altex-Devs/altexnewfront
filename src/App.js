@@ -31,6 +31,7 @@ import PostsAdmin from "./components/Posts/PostsAdmin";
 import Admin from "./components/Admin";
 import AdminFeedback from "./components/Posts/AdminFeedback";
 import { Helmet } from 'react-helmet';
+import Isp from "./components/Isp";
 
 
 const messages = {
@@ -71,6 +72,7 @@ function App() {
             <Route path="/privacypolicy" element={<PrivacyPolicy />} />
             <Route path="/cryptoterms" element={<CryptoBasicsTerms />} />
             <Route path="/fee" element={<Fee />} />
+            <Route path="/isp" element={<Isp />} />
             <Route path="/feedback" element={<Feedback />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/posts/:type" element={<Posts />} />
