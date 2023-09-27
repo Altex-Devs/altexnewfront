@@ -77,10 +77,8 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/posts/:type" element={<Posts />} />
             <Route path="/posts/:type/:postId" element={<Post />} />
-            
             <Route path="*" element={<NotFound />} />
           </Route>
-
           <Route path="/admin" element={<RequireAuth><Admin /></RequireAuth>} />
             <Route path="/admin/posts/:type" element={<RequireAuth><PostsAdmin /></RequireAuth>} />
             <Route path="/admin/posts/:type/create" element={<RequireAuth><PostEdit /></RequireAuth>} />
