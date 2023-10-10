@@ -12,7 +12,7 @@ const Footer = ({ locale, setLocale }) => {
     <>
       <div className="bg-[#050F36] w-full px-16">
         <div className="flex flex-row flex-wrap lg:flex-nowrap mb-[50px] pt-[40px]">
-          <div className="basis-full min-[310px]:basis-1/2 md:basis-1/2 lg:basis-1/4 mb-[30px] pr-[15px]">
+          <div className="basis-full min-[310px]:basis-1/2 md:basis-1/2 lg:basis-1/4 pr-[15px]">
             <div
               id="footer_about_us"
               className="text-[rgba(19,169,253,1)] mb-[32px]"
@@ -30,7 +30,7 @@ const Footer = ({ locale, setLocale }) => {
             </a>
             <a
               id="footer_team"
-              className="block mb-[16px] text-[#B4B7C3]"
+              className="block text-[#B4B7C3]"
               href="/team"
               target="_blank"
               rel="noreferrer"
@@ -38,7 +38,7 @@ const Footer = ({ locale, setLocale }) => {
               <FormattedMessage id="footer_team" />
             </a>
           </div>
-          <div className="basis-full min-[310px]:basis-1/2 md:basis-1/2 lg:basis-1/4 mb-[30px] pr-[15px] z-20">
+          <div className="basis-full min-[310px]:basis-1/2 md:basis-1/2 lg:basis-1/4 pr-[15px] z-20">
             <div
               id="footer_academy"
               className="text-[rgba(19,169,253,1)] mb-[32px]"
@@ -72,13 +72,13 @@ const Footer = ({ locale, setLocale }) => {
               id="menu_release"
               href="/posts/release"
               target="_blank"
-              className="block mb-[16px] text-[#B4B7C3]"
+              className="block text-[#B4B7C3]"
               rel="noreferrer"
             >
               <FormattedMessage id="menu_release" />
             </a>
           </div>
-          <div className="basis-full min-[310px]:basis-1/2 md:basis-1/2 lg:basis-1/4 mb-[30px] pr-[15px] z-20">
+          <div className="basis-full min-[310px]:basis-1/2 md:basis-1/2 lg:basis-1/4 pr-[15px] z-20">
             <div
               id="footer_service"
               className="text-[rgba(19,169,253,1)] mb-[32px]"
@@ -95,7 +95,7 @@ const Footer = ({ locale, setLocale }) => {
             <a
               href="/privacypolicy"
               id="footer_privacy_policy"
-              className="block mb-[16px] text-[#B4B7C3]"
+              className="block text-[#B4B7C3]"
             >
               <FormattedMessage id="footer_privacy_policy" />
             </a>
@@ -106,7 +106,7 @@ const Footer = ({ locale, setLocale }) => {
               <FormattedMessage id="footer_fee" />
             </a> */}
           </div>
-          <div className="basis-full min-[310px]:basis-1/2 md:basis-1/2 lg:basis-1/4 mb-[30px] pr-[15px] z-20">
+          <div className="basis-full min-[310px]:basis-1/2 md:basis-1/2 lg:basis-1/4 pr-[15px] z-20">
             <div
               id="footer_help"
               className="text-[rgba(19,169,253,1)] mb-[32px]"
@@ -130,12 +130,12 @@ const Footer = ({ locale, setLocale }) => {
             <a
               id="howto"
               href="/howto"
-              className="block mb-[16px] text-[#B4B7C3]"
+              className="block text-[#B4B7C3]"
             >
               <FormattedMessage id="howto" />
             </a>
           </div>
-          {/* <div className="basis-full min-[310px]:basis-1/2 md:basis-1/2 lg:basis-1/4 mb-[30px] pr-[15px]">
+          {/* <div className="basis-full min-[310px]:basis-1/2 md:basis-1/2 lg:basis-1/4 pr-[15px]">
             <div
               id="footer_contact"
               className="text-[rgba(19,169,253,1)] mb-[32px]"
@@ -167,7 +167,7 @@ const Footer = ({ locale, setLocale }) => {
         </div>
 
         <div className="border-solid border-t-[1px] border-[#006cff] py-[40px]">
-          <div className="mb-[20px]">
+          <div>
             <div className="flex justify-between items-center mb-[40px] md:mb-[24px]">
               <div className="">
                 <img src="/images/header-logo-small.svg" />

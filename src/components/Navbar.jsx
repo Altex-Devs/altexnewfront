@@ -250,11 +250,11 @@ const Navbar = ({ locale, setLocale }) => {
         className={`flex items-center z-50 h-[85px] sticky w-full left-0 top-0 text-[#696F86] text-[14px]`}
       >
         <div
-          className={`container mx-auto text-right px-[34px] py-[24px] max-w-[1490px] overflow-auto font-light text-[#E6E7EB] flex justify-between items-center ${
+          className={`mx-auto text-right px-[34px] py-[24px] w-full overflow-auto font-light text-[#E6E7EB] flex justify-between items-center ${
             navbarBg ? "bg-[#050F36] top-[48px]" : "top-[48px]"
           }`}
         >
-          <a href="/" className="py-[1px]">
+          <a href="https://www.altex.mn/" className="py-[1px]">
             <div
               className="w-[106px] h-[37px]"
               style={{
