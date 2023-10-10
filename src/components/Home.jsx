@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import HomeComponents from "./HomeComponents";
-import Trend from "./Trend";
+// import Trend from "./Trend";
 import {FormattedMessage} from "react-intl";
-
 
 function Home() {
   return (
