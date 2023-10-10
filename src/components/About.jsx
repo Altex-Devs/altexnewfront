@@ -34,7 +34,7 @@ function About() {
     <>
       <div className="relative border-b-[0.5px] border-[#13A9FD] pt-[360px] pb-[80px] z-10">
         <div className="relative text-[32px] max-w-[800px] font-extralight">
-          <FormattedMessage id="about_us_header_title"/>
+          <FormattedMessage id="about_us_header_sub_title"/>
         </div>
       </div>
 
