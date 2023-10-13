@@ -199,7 +199,7 @@ const en = {
 
     "our_team":"Our team",
     "our_team_ceo":"CEO",
-    "our_team_ceo_name":"Enkhjavkhlan Tsogtbaatar",
+    "our_team_ceo_name":"ENKHJAVKHLAN Tsogtbaatar",
     "our_team_ceo_background":"<p align='justify'>For more than 5+ years at McKinsey & Company's New York headquarters, a leading management consulting company, he has led digital and financial innovation, product development, AI and Machine Learning projects with Fortune 500 companies.<br/><br/>He has a broad experience in working with banking, insurance, settlement and investment management companies. He has an MBA from The Wharton School of the University of Pennsylvania and is a CFA Level III candidate.</p>",
     "our_team_header":"Meet our team",
     "our_team_content":"<p align='justify'>We are led by a customer-oriented team who are specialized in customer service, product development and technology.<br/><br/>We also work with experts from world-leading technology and financial companies such as Google, Apple and McKinsey & Company.</p>",

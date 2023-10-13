@@ -4,7 +4,16 @@ export const CEO = () => {
   const intl = useIntl();
 
   return (
-    <div className="relative flex flex-col md:flex-row gap-[24px] pb-[160px] mt-[80px] sm:mt-[120px] items-center border-b-[0.5px] border-b-[#13A9FD] leading-[35px]">
+    <div className="relative flex flex-col md:flex-row gap-[40px] pb-[160px] mt-[80px] sm:mt-[120px] items-center border-b-[0.5px] border-b-[#13A9FD] leading-[35px]">
+      <div
+        className="absolute w-[1618px] h-[1618px] left-[-400px]"
+        style={{
+          backgroundImage: "url(/images/layer-light.png)",
+          backgroundPosition: "left",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain"
+        }}
+      />
       <img
         src="/images/ceo-new.png"
         alt="ceo"

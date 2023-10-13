@@ -37,7 +37,3 @@
 ol li {
   list-style-type: decimal;
 }
-
-ul::marker {
-  text-shadow: 2px 2px red;
-}

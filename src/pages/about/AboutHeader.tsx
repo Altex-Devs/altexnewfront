@@ -6,7 +6,7 @@ export const AboutHeader = () => {
   return (
     <div>
       <div className="relative border-b-[0.5px] border-[#13A9FD] pt-[183px] pb-[80px] z-10">
-        <div className="text-[64px] font-bold mb-[120px]">
+        <div className="text-[64px] font-bold mb-[120px] uppercase">
           <FormattedMessage id="about_us_header_title" />
         </div>
         <div className="relative text-[32px] max-w-[800px] font-extralight text-[#B4B7C3]">

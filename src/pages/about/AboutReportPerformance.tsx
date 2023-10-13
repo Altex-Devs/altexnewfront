@@ -36,7 +36,7 @@ export const AboutReportPerformance = () => {
         <div className="grid justify-center sm:grid-cols-2 sm:justify-center lg:grid-cols-3 gap-[24px] ">
           {posts.map((post) => (
             <div key={post.id}>
-              <div className="rounded flex flex-col w-full sm:mb-[80px]">
+              <div className="rounded flex flex-col w-full">
                 <div className="border border-[#1B337B] w-full h-[203px]">
                   <div
                     className="aspect-video w-full h-full inline-block h-1/2 rounded-t"

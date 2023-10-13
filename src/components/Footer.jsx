@@ -22,7 +22,7 @@ const Footer = ({ locale, setLocale }) => {
             <a
               id="footer_about_exchange"
               className="block mb-[16px] text-[#B4B7C3]"
-              href="/about"
+              // href="/about"
               target="_blank"
               rel="noreferrer"
             >
@@ -31,7 +31,7 @@ const Footer = ({ locale, setLocale }) => {
             <a
               id="footer_team"
               className="block text-[#B4B7C3]"
-              href="/team"
+              // href="/team"
               target="_blank"
               rel="noreferrer"
             >
@@ -47,21 +47,21 @@ const Footer = ({ locale, setLocale }) => {
             </div>
             <a
               id="footer_market_news"
-              href="/posts/news"
+              // href="/posts/news"
               className="block mb-[16px] text-[#B4B7C3]"
             >
               <FormattedMessage id="footer_market_news" />
             </a>
             <a
               id="footer_crypto_knowledge"
-              href="/posts/basics"
+              // href="/posts/basics"
               className="block mb-[16px] text-[#B4B7C3]"
             >
               <FormattedMessage id="footer_crypto_knowledge" />
             </a>
             <a
               id="footer_projects"
-              href="/posts/projects"
+              // href="/posts/projects"
               target="_blank"
               className="block mb-[16px] text-[#B4B7C3]"
               rel="noreferrer"
@@ -70,7 +70,7 @@ const Footer = ({ locale, setLocale }) => {
             </a>
             <a
               id="menu_release"
-              href="/posts/release"
+              // href="/posts/release"
               target="_blank"
               className="block text-[#B4B7C3]"
               rel="noreferrer"
@@ -87,13 +87,13 @@ const Footer = ({ locale, setLocale }) => {
             </div>
             <a
               id="footer_terms_of_service"
-              href="/termsofuse"
+              // href="/termsofuse"
               className="block mb-[16px] text-[#B4B7C3]"
             >
               <FormattedMessage id="footer_terms_of_service" />
             </a>
             <a
-              href="/privacypolicy"
+              // href="/privacypolicy"
               id="footer_privacy_policy"
               className="block text-[#B4B7C3]"
             >
@@ -115,7 +115,7 @@ const Footer = ({ locale, setLocale }) => {
             </div>
             <a
               id="footer_faq"
-              href="/faq"
+              // href="/faq"
               className="block mb-[16px] text-[#B4B7C3]"
             >
               <FormattedMessage id="footer_faq" />
@@ -129,7 +129,7 @@ const Footer = ({ locale, setLocale }) => {
             </a> */}
             <a
               id="howto"
-              href="/howto"
+              // href="/howto"
               className="block text-[#B4B7C3]"
             >
               <FormattedMessage id="howto" />
@@ -181,38 +181,42 @@ const Footer = ({ locale, setLocale }) => {
             </div>
             <div className="flex justify-between sm:justify-start sm:flex-wrap sm:gap-[30px]">
               <a
-                href="https://www.facebook.com/altex.mn"
+                // href="https://www.facebook.com/altex.mn"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img src="/images/fb.svg" />
               </a>
               <a
-                href="https://twitter.com/altex_mn"
+                // href="https://twitter.com/altex_mn"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img src="/images/tw.svg" />
               </a>
               <a
-                href="https://www.instagram.com/accounts/login/?next=/altex.mn/"
+                // href="https://www.instagram.com/accounts/login/?next=/altex.mn/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img src="/images/ins.svg" />
               </a>
-              <a href="https://t.me/altexmn" target="_blank" rel="noreferrer">
+              <a
+                // href="https://t.me/altexmn"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src="/images/tel.svg" />
               </a>
               <a
-                href="https://www.youtube.com/channel/UC0cP-OEOj_b2LJaSW8vxjHA"
+                // href="https://www.youtube.com/channel/UC0cP-OEOj_b2LJaSW8vxjHA"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img src="/images/tube.svg" />
               </a>
               <a
-                href="https://www.linkedin.com/company/altex-digital-exchange/"
+                // href="https://www.linkedin.com/company/altex-digital-exchange/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -240,7 +244,9 @@ const Footer = ({ locale, setLocale }) => {
               className="inline-block icon mr-[5px]"
               src="/images/language-icon.svg"
             />
-            <span className="text-[#B4B7C3]">{locale === "en" ? "Mon" : "En"}</span>
+            <span className="text-[#B4B7C3]">
+              {locale === "en" ? "Mon" : "En"}
+            </span>
           </span>
         </div>
       </div>
