@@ -22,7 +22,7 @@ const Footer = ({ locale, setLocale }) => {
             <a
               id="footer_about_exchange"
               className="block mb-[16px] text-[#B4B7C3]"
-              // href="/about"
+              href="/about"
               target="_blank"
               rel="noreferrer"
             >
@@ -31,7 +31,7 @@ const Footer = ({ locale, setLocale }) => {
             <a
               id="footer_team"
               className="block text-[#B4B7C3]"
-              // href="/team"
+              href="/team"
               target="_blank"
               rel="noreferrer"
             >

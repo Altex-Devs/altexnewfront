@@ -1,4 +1,5 @@
 import { FormattedMessage, useIntl } from "react-intl";
+import { BgEarth } from "../../SVG/altex.mn-fee-coin-icons/bg-earth";
 
 export const AboutHeader = () => {
   const intl = useIntl();
@@ -27,9 +28,10 @@ export const AboutHeader = () => {
         </div>
       </div>
       <div
-        style={{ backgroundImage: 'url("/images/Group 7821.svg")' }}
-        className="absolute bg-no-repeat bg-[right_-230px_bottom_-480px] w-screen h-[930px] top-0 -left-[calc(50vw-50%)] pointer-events-none touch-none"
-      ></div>
+        className="absolute top-0 right-0"
+      >
+        <BgEarth />
+      </div>
     </div>
   );
 };

@@ -20,13 +20,13 @@ export const CEO = () => {
         className="max-w-[350px] h-full sm:mb-0 mr-[40px] z-10"
       />
       <div className="grow font-extralight z-10">
-        <div className="font-bold text-[32px] mb-[16px]">
+        <div className="font-bold text-[32px] mb-[16px] text-[#E6E7EB]">
           <FormattedMessage id="our_team_ceo_name" />
         </div>
         <div className="text-[24px] mb-[40px] text-[#B4B7C3]">
           <FormattedMessage id="our_team_ceo" />
         </div>
-        <div className="text-[16px] z-10">
+        <div className="text-[24px] z-10">
           <span
             className="text-[#B4B7C3] leading-[32px]"
             dangerouslySetInnerHTML={{
