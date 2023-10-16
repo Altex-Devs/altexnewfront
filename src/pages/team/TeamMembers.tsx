@@ -14,11 +14,11 @@ export const TeamMembers = () => {
           backgroundSize: "contain"
         }}
       />
-      <div className="flex-1 font-extralight">
+      <div className="flex-1 font-light">
         <div className="font-bold text-[32px] mb-[40px] uppercase">
           <FormattedMessage id="our_team_header" />
         </div>
-        <div className="text-[24px] z-10">
+        <div className="text-[16px] 2xl:text-[24px] z-10">
           <span
             className="text-[#B4B7C3] leading-[32px]"
             dangerouslySetInnerHTML={{

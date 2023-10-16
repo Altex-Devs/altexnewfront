@@ -4,7 +4,7 @@ export const CEO = () => {
   const intl = useIntl();
 
   return (
-    <div className="relative flex flex-col md:flex-row gap-[40px] pb-[160px] mt-[80px] sm:mt-[120px] items-center border-b-[0.5px] border-b-[#13A9FD] leading-[35px]">
+    <div className="relative flex flex-row md:flex-row gap-[40px] pb-[160px] mt-[80px] sm:mt-[120px] items-center border-b-[0.5px] border-b-[#13A9FD]">
       <div
         className="absolute w-[1618px] h-[1618px] left-[-400px]"
         style={{
@@ -17,18 +17,18 @@ export const CEO = () => {
       <img
         src="/images/ceo-new.png"
         alt="ceo"
-        className="max-w-[350px] h-full sm:mb-0 mr-[40px] z-10"
+        className="max-w-[360px] sm:mb-0 mr-[40px] z-10"
       />
-      <div className="grow font-extralight z-10">
+      <div className="z-10 grow">
         <div className="font-bold text-[32px] mb-[16px] text-[#E6E7EB]">
           <FormattedMessage id="our_team_ceo_name" />
         </div>
-        <div className="text-[24px] mb-[40px] text-[#B4B7C3]">
+        <div className="lg:text-[24px] sm:text-[16px] mb-[40px] text-[#B4B7C3] font-semibold">
           <FormattedMessage id="our_team_ceo" />
         </div>
-        <div className="text-[24px] z-10">
+        <div className="z-10 font-normal">
           <span
-            className="text-[#B4B7C3] leading-[32px]"
+            className="text-[#B4B7C3] leading-[32px] text-[16px] 2xl:text-[24px] font-light"
             dangerouslySetInnerHTML={{
               __html: intl.formatMessage({ id: "our_team_ceo_background" }),
             }}
